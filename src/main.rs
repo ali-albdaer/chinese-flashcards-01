@@ -2,11 +2,11 @@ use std::collections::HashMap;
 use rand::Rng;
 use serde::Deserialize;
 use yew::prelude::*;
-use web_sys::{HtmlSelectElement, HtmlInputElement};
+use web_sys::{HtmlSelectElement, HtmlInputElement, HtmlElement};
 
-// -------------------------------
-// 1. Define data structures
-// -------------------------------
+//───────────────────────────────────────────────────────────────────────────────
+// 1. Data structures (deserialize from JSON)
+//───────────────────────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, PartialEq, Deserialize)]
 struct Example {
@@ -27,17 +27,27 @@ struct Card {
     character: String,
     pinyin:    String,
     english:   String,
-    examples:  Vec<Example>,   // Three example sentences
-    radicals:  Vec<Radical>,   // Each radical has character + pinyin + meaning
+    examples:  Vec<Example>,
+    radicals:  Vec<Radical>,
 }
 
-// We’ll parse the entire JSON into a HashMap<String, Vec<Card>>:
 type DecksMap = HashMap<String, Vec<Card>>;
 
 
-// -------------------------------
-// 2. Main App Component
-// -------------------------------
+//───────────────────────────────────────────────────────────────────────────────
+// 2. Animation state
+//───────────────────────────────────────────────────────────────────────────────
+
+enum AnimationState {
+    None,
+    Removing,
+    Replacing,
+}
+
+
+//───────────────────────────────────────────────────────────────────────────────
+// 3. Main App component
+//───────────────────────────────────────────────────────────────────────────────
 
 struct App {
     decks: DecksMap,
@@ -45,21 +55,29 @@ struct App {
     cards: Vec<Card>,
     current_index: usize,
     show_back: bool,
+    anim_state: AnimationState,
 
-    // Toggles for each field on back:
+    // Toggles for back‐side fields
     show_pinyin: bool,
     show_english: bool,
     show_examples: bool,
     show_examples_pinyin: bool,
     show_examples_english: bool,
     show_radicals: bool,
+
+    // Initial count for “Removed” counter
+    initial_count: usize,
+
+    // For capturing keyboard focus
+    container_ref: NodeRef,
+    focus_set: bool,
 }
 
 enum Msg {
     Flip,
-    Next,
-    Remove,
-    Shuffle,
+    StartRemove,
+    StartReplace,
+    AnimDone,
     SelectDeck(String),
     AddToFavorites,
     TogglePinyin(bool),
@@ -75,26 +93,28 @@ impl Component for App {
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        // 1. At compile time, include the JSON file:
+        // Load JSON at compile time
         let raw_json = include_str!("cards.json");
         let mut decks: DecksMap = serde_json::from_str(raw_json)
-            .expect("cards.json should be valid JSON with correct structure");
+            .expect("Error parsing cards.json");
 
-        // Ensure there's a "Favorites" deck even if absent:
+        // Guarantee “Favorites” deck exists
         if !decks.contains_key("Favorites") {
             decks.insert("Favorites".to_string(), Vec::new());
         }
 
-        // Start with HSK1 as default:
-        let current_deck = "HSK1".to_string();
-        let cards = decks.get(&current_deck).unwrap().to_vec();
+        // Default deck: HSK3
+        let current_deck = "HSK3".to_string();
+        let cards = decks.get(&current_deck).unwrap().clone();
+        let initial_count = cards.len();
 
-        Self {
+        App {
             decks,
             current_deck,
             cards,
             current_index: 0,
             show_back: false,
+            anim_state: AnimationState::None,
 
             show_pinyin: true,
             show_english: true,
@@ -102,65 +122,131 @@ impl Component for App {
             show_examples_pinyin: true,
             show_examples_english: true,
             show_radicals: true,
+
+            initial_count,
+            container_ref: NodeRef::default(),
+            focus_set: false,
         }
     }
 
-    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+    fn rendered(&mut self, _ctx: &Context<Self>, first_render: bool) {
+        // On first render, focus the container so arrow keys work immediately
+        if first_render && !self.focus_set {
+            if let Some(elem) = self.container_ref.cast::<HtmlElement>() {
+                let _ = elem.focus();
+                self.focus_set = true;
+            }
+        }
+    }
+
+    fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
         match msg {
             Msg::Flip => {
-                self.show_back = !self.show_back;
-                true
-            }
-            Msg::Next => {
-                if !self.cards.is_empty() {
-                    self.current_index = (self.current_index + 1) % self.cards.len();
+                if let AnimationState::None = self.anim_state {
+                    self.show_back = !self.show_back;
+                    true
+                } else {
+                    false
                 }
-                self.show_back = false;
-                true
             }
-            Msg::Remove => {
-                if !self.cards.is_empty() {
-                    self.cards.remove(self.current_index);
-                    // Also remove from the underlying deck if it's not "Favorites"
-                    if self.current_deck != "Favorites" {
-                        if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
-                            if self.current_index < deck_vec.len() {
-                                deck_vec.remove(self.current_index);
-                            }
-                        }
-                    }
-                    if self.current_index >= self.cards.len() && !self.cards.is_empty() {
-                        self.current_index = 0;
-                    }
-                }
-                self.show_back = false;
-                true
-            }
-            Msg::Shuffle => {
-                let mut rng = rand::thread_rng();
-                let len = self.cards.len();
-                for i in (1..len).rev() {
-                    let j = rng.gen_range(0..=i);
-                    self.cards.swap(i, j);
-                }
-                self.current_index = 0;
-                self.show_back = false;
-                true
-            }
-            Msg::SelectDeck(name) => {
-                if let Some(deck_cards) = self.decks.get(&name) {
-                    self.current_deck = name.clone();
-                    self.cards = deck_cards.clone();
-                    self.current_index = 0;
+
+            Msg::StartRemove => {
+                if let AnimationState::None = self.anim_state {
+                    self.anim_state = AnimationState::Removing;
                     self.show_back = false;
                     true
                 } else {
                     false
                 }
             }
+
+            Msg::StartReplace => {
+                if let AnimationState::None = self.anim_state {
+                    self.anim_state = AnimationState::Replacing;
+                    self.show_back = false;
+                    true
+                } else {
+                    false
+                }
+            }
+
+            Msg::AnimDone => {
+                match std::mem::replace(&mut self.anim_state, AnimationState::None) {
+                    AnimationState::Removing => {
+                        if !self.cards.is_empty() {
+                            let _removed = self.cards.remove(self.current_index);
+                            if self.current_deck != "Favorites" {
+                                if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
+                                    if self.current_index < deck_vec.len() {
+                                        deck_vec.remove(self.current_index);
+                                    }
+                                }
+                            }
+                            if !self.cards.is_empty() {
+                                self.current_index %= self.cards.len();
+                            }
+                        }
+                    }
+                    AnimationState::Replacing => {
+                        if !self.cards.is_empty() {
+                            // Clone and remove current card
+                            let card = self.cards[self.current_index].clone();
+                            self.cards.remove(self.current_index);
+                            if self.current_deck != "Favorites" {
+                                if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
+                                    if self.current_index < deck_vec.len() {
+                                        deck_vec.remove(self.current_index);
+                                    }
+                                }
+                            }
+
+                            // reinsert at random index ≠ 0
+                            let mut rng = rand::thread_rng();
+                            let len = self.cards.len();
+                            if len == 0 {
+                                // If no other cards, just push to end (still index 0)
+                                self.cards.push(card.clone());
+                                if self.current_deck != "Favorites" {
+                                    self.decks.get_mut(&self.current_deck).unwrap().push(card);
+                                }
+                                self.current_index = 0;
+                            } else {
+                                // Choose a random index in 1..=len
+                                let idx = rng.gen_range(1..=len);
+                                self.cards.insert(idx, card.clone());
+                                if self.current_deck != "Favorites" {
+                                    self.decks.get_mut(&self.current_deck).unwrap().insert(idx, card);
+                                }
+                                // current_index remains pointing at the new “top” card (index 0)
+                                self.current_index = 0;
+                            }
+                        }
+                    }
+                    AnimationState::None => {}
+                }
+                self.show_back = false;
+                true
+            }
+
+            Msg::SelectDeck(deck_name) => {
+                if let AnimationState::None = self.anim_state {
+                    if let Some(deck_cards) = self.decks.get(&deck_name) {
+                        self.current_deck = deck_name.clone();
+                        self.cards = deck_cards.clone();
+                        self.current_index = 0;
+                        self.show_back = false;
+                        self.initial_count = self.cards.len();
+                        true
+                    } else {
+                        false
+                    }
+                } else {
+                    false
+                }
+            }
+
             Msg::AddToFavorites => {
                 if let Some(card) = self.cards.get(self.current_index).cloned() {
-                    // Check if it already exists
                     let fav_deck = self.decks.get_mut("Favorites").unwrap();
                     let already = fav_deck.iter().any(|c| c.character == card.character);
                     if !already {
@@ -169,35 +255,36 @@ impl Component for App {
                 }
                 false
             }
-            Msg::TogglePinyin(val) => {
-                self.show_pinyin = val;
+
+            Msg::TogglePinyin(v) => {
+                self.show_pinyin = v;
                 true
             }
-            Msg::ToggleEnglish(val) => {
-                self.show_english = val;
+            Msg::ToggleEnglish(v) => {
+                self.show_english = v;
                 true
             }
-            Msg::ToggleExamples(val) => {
-                self.show_examples = val;
+            Msg::ToggleExamples(v) => {
+                self.show_examples = v;
                 true
             }
-            Msg::ToggleExamplesPinyin(val) => {
-                self.show_examples_pinyin = val;
+            Msg::ToggleExamplesPinyin(v) => {
+                self.show_examples_pinyin = v;
                 true
             }
-            Msg::ToggleExamplesEnglish(val) => {
-                self.show_examples_english = val;
+            Msg::ToggleExamplesEnglish(v) => {
+                self.show_examples_english = v;
                 true
             }
-            Msg::ToggleRadicals(val) => {
-                self.show_radicals = val;
+            Msg::ToggleRadicals(v) => {
+                self.show_radicals = v;
                 true
             }
         }
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        // Build a <select> with deck names:
+        // Build deck <option> tags
         let deck_options = self.decks.keys().map(|deck_name| {
             let selected = *deck_name == self.current_deck;
             html! {
@@ -205,227 +292,253 @@ impl Component for App {
             }
         });
 
-        // Current card (if any):
+        // Remaining & Removed counts
+        let remaining = self.cards.len();
+        let removed = self.initial_count.saturating_sub(remaining);
+
+        // Current card & next card (for pile peek)
         let card_opt = self.cards.get(self.current_index);
+        let next_card_opt = if self.cards.len() > 1 {
+            Some(self.cards.get((self.current_index + 1) % self.cards.len()).unwrap())
+        } else {
+            None
+        };
+
+        // CSS classes for the active card
+        let mut inner_classes = classes!("card-inner");
+        if self.show_back {
+            inner_classes.push("flipped");
+        }
+        match self.anim_state {
+            AnimationState::Removing => inner_classes.push("removing"),
+            AnimationState::Replacing => inner_classes.push("replacing"),
+            AnimationState::None => {}
+        }
 
         html! {
-            <div style="padding: 1em;">
-                <h1>{ "Chinese Flashcards" }</h1>
-
-                // Deck selector + Shuffle
-                <div style="margin-bottom: 1em;">
-                    <label for="deck-select"><b>{ "Deck: " }</b></label>
+            <div class="app-container"
+                 ref={ self.container_ref.clone() }
+                 tabindex="0"
+                 onkeydown={ ctx.link().callback(|e: KeyboardEvent| {
+                     match e.key().as_str() {
+                         "ArrowLeft"  => Msg::StartRemove,
+                         "ArrowRight" => Msg::StartReplace,
+                         _ => Msg::Flip,
+                     }
+                 }) }
+            >
+                // Controls row: deck, shuffle, counter
+                <div class="controls">
+                  <div class="controls-left">
+                    <label for="deck-select"><b>{ "Deck:" }</b></label>
                     <select id="deck-select"
-                        onchange={ctx.link().callback(|e: Event| {
+                        onchange={ ctx.link().callback(|e: Event| {
                             let sel = e.target_unchecked_into::<HtmlSelectElement>();
                             Msg::SelectDeck(sel.value())
-                        })}
+                        }) }
                     >
-                        { for deck_options }
+                      { for deck_options }
                     </select>
-                    <button onclick={ctx.link().callback(|_| Msg::Shuffle)} style="margin-left: 1em;">
-                        { "Shuffle" }
+                    <button onclick={ ctx.link().callback(|_| Msg::StartReplace) }>
+                      { "Shuffle (Replace)" }
                     </button>
+                  </div>
+                  <div class="controls-right">
+                    { format!("Remaining: {} Removed: {}", remaining, removed) }
+                  </div>
                 </div>
 
-                // Toggles
-                <div style="margin-bottom: 1em;">
-                    <label style="margin-right: 1em;">
-                        <input type="checkbox"
-                            checked={self.show_pinyin}
-                            onchange={ctx.link().callback(|e:Event| {
-                                let chk = e.target_unchecked_into::<HtmlInputElement>();
-                                Msg::TogglePinyin(chk.checked())
-                            })}
-                        />{ "Pinyin" }
-                    </label>
-                    <label style="margin-right: 1em;">
-                        <input type="checkbox"
-                            checked={self.show_english}
-                            onchange={ctx.link().callback(|e:Event| {
-                                let chk = e.target_unchecked_into::<HtmlInputElement>();
-                                Msg::ToggleEnglish(chk.checked())
-                            })}
-                        />{ "English" }
-                    </label>
-                    <label style="margin-right: 1em;">
-                        <input type="checkbox"
-                            checked={self.show_examples}
-                            onchange={ctx.link().callback(|e:Event| {
-                                let chk = e.target_unchecked_into::<HtmlInputElement>();
-                                Msg::ToggleExamples(chk.checked())
-                            })}
-                        />{ "Examples" }
-                    </label>
-                    <label style="margin-right: 1em;">
-                        <input type="checkbox"
-                            checked={self.show_examples_pinyin}
-                            onchange={ctx.link().callback(|e:Event| {
-                                let chk = e.target_unchecked_into::<HtmlInputElement>();
-                                Msg::ToggleExamplesPinyin(chk.checked())
-                            })}
-                        />{ "Examples Pinyin" }
-                    </label>
-                    <label style="margin-right: 1em;">
-                        <input type="checkbox"
-                            checked={self.show_examples_english}
-                            onchange={ctx.link().callback(|e:Event| {
-                                let chk = e.target_unchecked_into::<HtmlInputElement>();
-                                Msg::ToggleExamplesEnglish(chk.checked())
-                            })}
-                        />{ "Examples Eng." }
-                    </label>
-                    <label>
-                        <input type="checkbox"
-                            checked={self.show_radicals}
-                            onchange={ctx.link().callback(|e:Event| {
-                                let chk = e.target_unchecked_into::<HtmlInputElement>();
-                                Msg::ToggleRadicals(chk.checked())
-                            })}
-                        />{ "Radicals" }
-                    </label>
+                // Toggle checkboxes
+                <div class="toggles">
+                  <label>
+                    <input type="checkbox"
+                           checked={ self.show_pinyin }
+                           onchange={ ctx.link().callback(|e: Event| {
+                               let chk = e.target_unchecked_into::<HtmlInputElement>();
+                               Msg::TogglePinyin(chk.checked())
+                           }) } />
+                    { "Pinyin" }
+                  </label>
+                  <label>
+                    <input type="checkbox"
+                           checked={ self.show_english }
+                           onchange={ ctx.link().callback(|e: Event| {
+                               let chk = e.target_unchecked_into::<HtmlInputElement>();
+                               Msg::ToggleEnglish(chk.checked())
+                           }) } />
+                    { "English" }
+                  </label>
+                  <label>
+                    <input type="checkbox"
+                           checked={ self.show_examples }
+                           onchange={ ctx.link().callback(|e: Event| {
+                               let chk = e.target_unchecked_into::<HtmlInputElement>();
+                               Msg::ToggleExamples(chk.checked())
+                           }) } />
+                    { "Examples" }
+                  </label>
+                  <label>
+                    <input type="checkbox"
+                           checked={ self.show_examples_pinyin }
+                           onchange={ ctx.link().callback(|e: Event| {
+                               let chk = e.target_unchecked_into::<HtmlInputElement>();
+                               Msg::ToggleExamplesPinyin(chk.checked())
+                           }) } />
+                    { "Ex. Pinyin" }
+                  </label>
+                  <label>
+                    <input type="checkbox"
+                           checked={ self.show_examples_english }
+                           onchange={ ctx.link().callback(|e: Event| {
+                               let chk = e.target_unchecked_into::<HtmlInputElement>();
+                               Msg::ToggleExamplesEnglish(chk.checked())
+                           }) } />
+                    { "Ex. Eng." }
+                  </label>
+                  <label>
+                    <input type="checkbox"
+                           checked={ self.show_radicals }
+                           onchange={ ctx.link().callback(|e: Event| {
+                               let chk = e.target_unchecked_into::<HtmlInputElement>();
+                               Msg::ToggleRadicals(chk.checked())
+                           }) } />
+                    { "Radicals" }
+                  </label>
                 </div>
 
-                // Card container (fixed size so it always looks like a “card”)
-                <div
-                    style="
-                        width: 100%;
-                        max-width: 400px;
-                        height: 300px;
-                        margin: 0 auto;
-                        border: 1px solid #ccc;
-                        border-radius: 8px;
-                        background-color: #fff;
-                        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-                        padding: 1em;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
-                        overflow-y: auto;
-                        cursor: pointer;
-                    "
-                    onclick={ctx.link().callback(|_| Msg::Flip)}
-                >
-                    {
-                        if let Some(card) = card_opt {
-                            if !self.show_back {
-                                html! {
-                                    <div style="font-size: 3em; line-height: 1; margin-bottom: 0.5em;">
-                                        { &card.character }
-                                    </div>
-                                }
-                            } else {
-                                html! {
-                                    <div>
-                                        // Pinyin
-                                        { if self.show_pinyin {
-                                            html! {
-                                                <p style="font-size: 1.2em; margin: 0.2em 0;">
-                                                    <b>{ "Pinyin: " }</b>{ &card.pinyin }
-                                                </p>
-                                            }
-                                        } else { html!{} } }
-
-                                        // English
-                                        { if self.show_english {
-                                            html! {
-                                                <p style="font-size: 1em; margin: 0.2em 0;">
-                                                    <b>{ "English: " }</b>{ &card.english }
-                                                </p>
-                                            }
-                                        } else { html!{} } }
-
-                                        // Examples (three)
-                                        { if self.show_examples {
-                                            html! {
-                                                <div style="margin-top: 0.5em; text-align: left;">
-                                                    { for card.examples.iter().map(|ex| html! {
-                                                        <div style="margin-bottom: 0.5em;">
-                                                          <p style="margin:0;"><i>{ &ex.chinese }</i></p>
-                                                          { if self.show_examples_pinyin {
-                                                              html! {
-                                                                <p style="margin:0; font-size:0.9em; color:gray;">
-                                                                  { &ex.pinyin }
-                                                                </p>
-                                                              }
-                                                            } else { html!{} } }
-                                                          { if self.show_examples_english {
-                                                              html! {
-                                                                <p style="margin:0; font-size:0.9em; color:gray;">
-                                                                  { &ex.english }
-                                                                </p>
-                                                              }
-                                                            } else { html!{} } }
-                                                        </div>
-                                                    })}
-                                                </div>
-                                            }
-                                        } else { html!{} } }
-
-                                        // Radicals
-                                        { if self.show_radicals {
-                                            html! {
-                                                <div style="margin-top: 0.5em; text-align:left;">
-                                                    <b>{ "Radicals: " }</b>
-                                                    { for card.radicals.iter().map(|r| html! {
-                                                        <div style="margin: 0.2em 0;">
-                                                          <span style="font-size:1.1em;">{ &r.character }</span>
-                                                          <span style="margin-left:0.5em; font-size:0.9em;">
-                                                            { "(" }{ &r.pinyin }{ " – " }{ &r.meaning }{ ")" }
-                                                          </span>
-                                                        </div>
-                                                    })}
-                                                </div>
-                                            }
-                                        } else { html!{} } }
-                                    </div>
-                                }
-                            }
-                        } else {
-                            html! {
-                                <p style="font-size:1.2em; color: #888;">
-                                    { "No cards in this deck." }
-                                </p>
-                            }
-                        }
+                // Card “pile” + active card
+                <div class="card-container">
+                  {
+                    // Show the “peek” of the next card behind
+                    if let Some(next_card) = next_card_opt {
+                      html! {
+                        <div class="pile-card">
+                          <div class="card-face front">
+                            { &next_card.character }
+                          </div>
+                        </div>
+                      }
+                    } else {
+                      html! {}
                     }
+                  }
+
+                  // The active, flipping/animating card
+                  <div class={ inner_classes.clone() }
+                       onclick={ ctx.link().callback(|_| Msg::Flip) }
+                       onanimationend={ ctx.link().callback(|_| Msg::AnimDone) }
+                  >
+                    // Front face: large character
+                    <div class="card-face front">
+                      {
+                        if let Some(card) = card_opt {
+                          html! { <div> { &card.character } </div> }
+                        } else {
+                          html! { <div style="color:#888;">{ "No cards." }</div> }
+                        }
+                      }
+                    </div>
+
+                    // Back face: tidy layout
+                    <div class="card-face back">
+                      {
+                        if let Some(card) = card_opt {
+                          html! {
+                            <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden;">
+                              // Line 1 (centered): CHARACTER (pinyin) Radical(s)
+                              <div style="font-size:2.5em; font-weight:bold; text-align:center; color:#333; margin-bottom:0.5em;">
+                                { &card.character }
+                                { " (" }{ &card.pinyin }{ ")" }
+                                { if self.show_radicals {
+                                    let radials = card.radicals.iter()
+                                      .map(|r| r.character.clone())
+                                      .collect::<Vec<_>>()
+                                      .join(", ");
+                                    html! { <span style="margin-left:0.5em; font-size:1.2em; color:#555;">{ radials }</span> }
+                                  } else { html!{} } }
+                              </div>
+
+                              // Line 2: all definitions, comma-separated
+                              {
+                                if self.show_english {
+                                  let defs = card.english.clone();
+                                  html! {
+                                    <div style="text-align:center; font-size:1.1em; margin-bottom:0.5em; color:#444;">
+                                      { defs }
+                                    </div>
+                                  }
+                                } else {
+                                  html! {}
+                                }
+                              }
+
+                              // Lines 3+: example sentences
+                              {
+                                if self.show_examples {
+                                  html! {
+                                    <div style="flex-grow:1; overflow:hidden; margin-top:0.3em;">
+                                      { for card.examples.iter().map(|ex| html! {
+                                        <div style="margin-bottom:0.4em;">
+                                          <div style="font-style:italic; color:#222;">{ &ex.chinese }</div>
+                                          { if self.show_examples_pinyin {
+                                              html! {
+                                                <div style="font-size:0.9em; color:gray;">
+                                                  { &ex.pinyin }
+                                                </div>
+                                              }
+                                            } else { html!{} } }
+                                          { if self.show_examples_english {
+                                              html! {
+                                                <div style="font-size:0.9em; color:gray;">
+                                                  { &ex.english }
+                                                </div>
+                                              }
+                                            } else { html!{} } }
+                                        </div>
+                                      })}
+                                    </div>
+                                  }
+                                } else {
+                                  html! {}
+                                }
+                              }
+                            </div>
+                          }
+                        } else {
+                          html! { <div style="color:#888;">{ "No cards in this deck." }</div> }
+                        }
+                      }
+                    </div>
+                  </div>
                 </div>
 
-                // Buttons under the card
-                <div style="margin-top: 1em; text-align:center;">
-                    <button
-                        onclick={ctx.link().callback(|_| Msg::Next)}
-                        disabled={self.cards.is_empty()}
-                    >
-                        { "Next" }
-                    </button>
-                    <button
-                        onclick={ctx.link().callback(|_| Msg::Remove)}
-                        disabled={self.cards.is_empty()}
-                        style="margin-left: 1em;"
-                    >
-                        { "Remove" }
-                    </button>
-                    <button
-                        onclick={ctx.link().callback(|_| Msg::AddToFavorites)}
-                        disabled={self.cards.is_empty() || self.current_deck == "Favorites"}
-                        style="margin-left: 1em;"
-                    >
-                        { "Add to Favorites" }
-                    </button>
+                // Buttons
+                <div style="margin-top:1em; text-align:center;">
+                  <button
+                    onclick={ ctx.link().callback(|_| Msg::StartRemove) }
+                    disabled={ self.cards.is_empty() ||
+                              matches!(self.anim_state, AnimationState::Removing|AnimationState::Replacing) }
+                  >{ "I know this (Remove)" }</button>
+
+                  <button
+                    onclick={ ctx.link().callback(|_| Msg::StartReplace) }
+                    disabled={ self.cards.is_empty() ||
+                              matches!(self.anim_state, AnimationState::Removing|AnimationState::Replacing) }
+                    style="margin-left:1em;"
+                  >{ "I don't know (Replace)" }</button>
+
+                  <button
+                    onclick={ ctx.link().callback(|_| Msg::AddToFavorites) }
+                    disabled={ self.cards.is_empty() || self.current_deck == "Favorites" }
+                    style="margin-left:1em;"
+                  >{ "Add to Favorites" }</button>
                 </div>
             </div>
         }
     }
 }
 
-// -------------------------------
-// 3. Boot the App
-// -------------------------------
-
 fn main() {
-    // Yew 0.20+ uses Renderer rather than start_app
+    // Yew 0.20+ uses Renderer
     yew::Renderer::<App>::new().render();
 }

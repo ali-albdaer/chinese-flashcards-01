@@ -1,9 +1,9 @@
 {
-  "HSK1": [
+  "HSK3": [
     {
       "character": "学习",
       "pinyin": "xué xí",
-      "english": "to study; to learn",
+      "english": "to study, to learn",
       "examples": [
         {
           "chinese": "我喜欢学习中文。",
@@ -18,7 +18,7 @@
         {
           "chinese": "学习可以让我们成长。",
           "pinyin": "Xué xí kě yǐ ràng wǒ men chéng zhǎng.",
-          "english": "Learning can help us grow."
+          "english": "Learning helps us grow."
         }
       ],
       "radicals": [
@@ -47,7 +47,7 @@
         {
           "chinese": "我们一起去看电影，成为了好朋友。",
           "pinyin": "Wǒ men yī qǐ qù kàn diàn yǐng, chéng wéi le hǎo péng yǒu.",
-          "english": "We went to the movies together and became good friends."
+          "english": "We went to the movies and became good friends."
         },
         {
           "chinese": "朋友之间要互相帮助。",
@@ -67,13 +67,110 @@
           "meaning": "again; also"
         }
       ]
+    },
+    {
+      "character": "水",
+      "pinyin": "shuǐ",
+      "english": "water",
+      "examples": [
+        {
+          "chinese": "我每天喝很多水。",
+          "pinyin": "Wǒ měi tiān hē hěn duō shuǐ.",
+          "english": "I drink a lot of water every day."
+        },
+        {
+          "chinese": "池塘里的水很清澈。",
+          "pinyin": "Chí táng lǐ de shuǐ hěn qīng chè.",
+          "english": "The water in the pond is very clear."
+        },
+        {
+          "chinese": "水是生命的源泉。",
+          "pinyin": "Shuǐ shì shēng mìng de yuán quán.",
+          "english": "Water is the source of life."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "氵",
+          "pinyin": "shuǐ",
+          "meaning": "water"
+        }
+      ]
+    },
+    {
+      "character": "手机",
+      "pinyin": "shǒu jī",
+      "english": "mobile phone",
+      "examples": [
+        {
+          "chinese": "他的手机丢了。",
+          "pinyin": "Tā de shǒu jī diū le.",
+          "english": "He lost his phone."
+        },
+        {
+          "chinese": "我用手机拍照片。",
+          "pinyin": "Wǒ yòng shǒu jī pāi zhào piàn.",
+          "english": "I take pictures with my phone."
+        },
+        {
+          "chinese": "请把手机调成静音。",
+          "pinyin": "Qǐng bǎ shǒu jī tiáo chéng jìng yīn.",
+          "english": "Please put your phone on silent."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "手",
+          "pinyin": "shǒu",
+          "meaning": "hand"
+        },
+        {
+          "character": "机",
+          "pinyin": "jī",
+          "meaning": "machine"
+        }
+      ]
+    },
+    {
+      "character": "火车",
+      "pinyin": "huǒ chē",
+      "english": "train",
+      "examples": [
+        {
+          "chinese": "我坐火车去北京。",
+          "pinyin": "Wǒ zuò huǒ chē qù Běi jīng.",
+          "english": "I take the train to Beijing."
+        },
+        {
+          "chinese": "火车晚点了。",
+          "pinyin": "Huǒ chē wǎn diǎn le.",
+          "english": "The train is delayed."
+        },
+        {
+          "chinese": "火车站很拥挤。",
+          "pinyin": "Huǒ chē zhàn hěn yōng jǐ.",
+          "english": "The train station is crowded."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "火",
+          "pinyin": "huǒ",
+          "meaning": "fire"
+        },
+        {
+          "character": "车",
+          "pinyin": "chē",
+          "meaning": "vehicle"
+        }
+      ]
     }
   ],
   "HSK4": [
     {
       "character": "努力",
       "pinyin": "nǔ lì",
-      "english": "to strive; effort",
+      "english": "to strive, effort",
       "examples": [
         {
           "chinese": "他很努力地学习。",
@@ -83,19 +180,19 @@
         {
           "chinese": "只要努力就能成功。",
           "pinyin": "Zhǐ yào nǔ lì jiù néng chéng gōng.",
-          "english": "As long as you work hard, you can succeed."
+          "english": "If you work hard, you can succeed."
         },
         {
           "chinese": "努力工作会有回报。",
           "pinyin": "Nǔ lì gōng zuò huì yǒu huí bào.",
-          "english": "Working hard will be rewarded."
+          "english": "Hard work will be rewarded."
         }
       ],
       "radicals": [
         {
           "character": "力",
           "pinyin": "lì",
-          "meaning": "power; strength"
+          "meaning": "power, strength"
         },
         {
           "character": "女",
@@ -129,12 +226,80 @@
         {
           "character": "口",
           "pinyin": "kǒu",
-          "meaning": "mouth; opening"
+          "meaning": "mouth, opening"
         },
         {
           "character": "木",
           "pinyin": "mù",
-          "meaning": "wood; tree"
+          "meaning": "wood, tree"
+        }
+      ]
+    },
+    {
+      "character": "电脑",
+      "pinyin": "diàn nǎo",
+      "english": "computer",
+      "examples": [
+        {
+          "chinese": "我的电脑坏了。",
+          "pinyin": "Wǒ de diàn nǎo huài le.",
+          "english": "My computer broke."
+        },
+        {
+          "chinese": "他在电脑上工作。",
+          "pinyin": "Tā zài diàn nǎo shàng gōng zuò.",
+          "english": "He works on a computer."
+        },
+        {
+          "chinese": "你会用电脑吗？",
+          "pinyin": "Nǐ huì yòng diàn nǎo ma?",
+          "english": "Can you use a computer?"
+        }
+      ],
+      "radicals": [
+        {
+          "character": "电",
+          "pinyin": "diàn",
+          "meaning": "electricity"
+        },
+        {
+          "character": "脑",
+          "pinyin": "nǎo",
+          "meaning": "brain"
+        }
+      ]
+    },
+    {
+      "character": "森林",
+      "pinyin": "sēn lín",
+      "english": "forest",
+      "examples": [
+        {
+          "chinese": "这座森林很美丽。",
+          "pinyin": "Zhè zuò sēn lín hěn měi lì.",
+          "english": "This forest is very beautiful."
+        },
+        {
+          "chinese": "我们去森林里散步。",
+          "pinyin": "Wǒ men qù sēn lín lǐ sàn bù.",
+          "english": "We go for a walk in the forest."
+        },
+        {
+          "chinese": "森林里有很多动物。",
+          "pinyin": "Sēn lín lǐ yǒu hěn duō dòng wù.",
+          "english": "There are many animals in the forest."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "木",
+          "pinyin": "mù",
+          "meaning": "wood, tree"
+        },
+        {
+          "character": "林",
+          "pinyin": "lín",
+          "meaning": "grove, forest"
         }
       ]
     },
@@ -144,99 +309,31 @@
       "english": "culture",
       "examples": [
         {
-          "chinese": "中国有着悠久的文化。",
-          "pinyin": "Zhōng guó yǒu zhe yōu jiǔ de wén huà.",
-          "english": "China has a long-standing culture."
+          "chinese": "我们要了解不同的文化。",
+          "pinyin": "Wǒ men yào liǎo jiě bù tóng de wén huà.",
+          "english": "We need to understand different cultures."
         },
         {
-          "chinese": "了解不同的文化很重要。",
-          "pinyin": "Liǎo jiě bù tóng de wén huà hěn zhòng yào.",
-          "english": "Understanding different cultures is important."
+          "chinese": "文化遗产很重要。",
+          "pinyin": "Wén huà yí chǎn hěn zhòng yào.",
+          "english": "Cultural heritage is very important."
         },
         {
-          "chinese": "文化交流促进了友谊。",
-          "pinyin": "Wén huà jiāo liú cù jìn le yǒu yì.",
-          "english": "Cultural exchange promotes friendship."
+          "chinese": "城市的文化氛围很浓。",
+          "pinyin": "Chéng shì de wén huà fēn wéi hěn nóng.",
+          "english": "The city has a strong cultural atmosphere."
         }
       ],
       "radicals": [
         {
           "character": "文",
           "pinyin": "wén",
-          "meaning": "script; literature"
+          "meaning": "script, culture"
         },
         {
           "character": "化",
           "pinyin": "huà",
-          "meaning": "to change; to transform"
-        }
-      ]
-    },
-    {
-      "character": "健康",
-      "pinyin": "jiàn kāng",
-      "english": "health",
-      "examples": [
-        {
-          "chinese": "保持健康的生活方式。",
-          "pinyin": "Bǎo chí jiàn kāng de shēng huó fāng shì.",
-          "english": "Maintain a healthy lifestyle."
-        },
-        {
-          "chinese": "运动对身体健康有益。",
-          "pinyin": "Yùn dòng duì shēn tǐ jiàn kāng yǒu yì.",
-          "english": "Exercise is beneficial for health."
-        },
-        {
-          "chinese": "健康是最大的财富。",
-          "pinyin": "Jiàn kāng shì zuì dà de cái fù.",
-          "english": "Health is the greatest wealth."
-        }
-      ],
-      "radicals": [
-        {
-          "character": "亻",
-          "pinyin": "rén",
-          "meaning": "person"
-        },
-        {
-          "character": "康",
-          "pinyin": "kāng",
-          "meaning": "healthy; peaceful"
-        }
-      ]
-    },
-    {
-      "character": "教育",
-      "pinyin": "jiào yù",
-      "english": "education",
-      "examples": [
-        {
-          "chinese": "教育是国家的未来。",
-          "pinyin": "Jiào yù shì guó jiā de wèi lái.",
-          "english": "Education is the future of the country."
-        },
-        {
-          "chinese": "良好的教育可以改变命运。",
-          "pinyin": "Liáng hǎo de jiào yù kě yǐ gǎi biàn mìng yùn.",
-          "english": "Good education can change destiny."
-        },
-        {
-          "chinese": "教育需要耐心和爱心。",
-          "pinyin": "Jiào yù xū yào nài xīn hé ài xīn.",
-          "english": "Education requires patience and love."
-        }
-      ],
-      "radicals": [
-        {
-          "character": "教",
-          "pinyin": "jiào",
-          "meaning": "to teach; religion"
-        },
-        {
-          "character": "育",
-          "pinyin": "yù",
-          "meaning": "to raise; to educate"
+          "meaning": "to transform"
         }
       ]
     }
