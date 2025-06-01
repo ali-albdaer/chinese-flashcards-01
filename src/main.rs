@@ -85,8 +85,8 @@ impl Component for App {
             decks.insert("Favorites".to_string(), Vec::new());
         }
 
-        // Start with HSK3 as default:
-        let current_deck = "HSK3".to_string();
+        // Start with HSK1 as default:
+        let current_deck = "HSK1".to_string();
         let cards = decks.get(&current_deck).unwrap().to_vec();
 
         Self {

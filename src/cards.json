@@ -1,5 +1,5 @@
 {
-  "HSK3": [
+  "HSK1": [
     {
       "character": "学习",
       "pinyin": "xué xí",
@@ -135,6 +135,108 @@
           "character": "木",
           "pinyin": "mù",
           "meaning": "wood; tree"
+        }
+      ]
+    },
+    {
+      "character": "文化",
+      "pinyin": "wén huà",
+      "english": "culture",
+      "examples": [
+        {
+          "chinese": "中国有着悠久的文化。",
+          "pinyin": "Zhōng guó yǒu zhe yōu jiǔ de wén huà.",
+          "english": "China has a long-standing culture."
+        },
+        {
+          "chinese": "了解不同的文化很重要。",
+          "pinyin": "Liǎo jiě bù tóng de wén huà hěn zhòng yào.",
+          "english": "Understanding different cultures is important."
+        },
+        {
+          "chinese": "文化交流促进了友谊。",
+          "pinyin": "Wén huà jiāo liú cù jìn le yǒu yì.",
+          "english": "Cultural exchange promotes friendship."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "文",
+          "pinyin": "wén",
+          "meaning": "script; literature"
+        },
+        {
+          "character": "化",
+          "pinyin": "huà",
+          "meaning": "to change; to transform"
+        }
+      ]
+    },
+    {
+      "character": "健康",
+      "pinyin": "jiàn kāng",
+      "english": "health",
+      "examples": [
+        {
+          "chinese": "保持健康的生活方式。",
+          "pinyin": "Bǎo chí jiàn kāng de shēng huó fāng shì.",
+          "english": "Maintain a healthy lifestyle."
+        },
+        {
+          "chinese": "运动对身体健康有益。",
+          "pinyin": "Yùn dòng duì shēn tǐ jiàn kāng yǒu yì.",
+          "english": "Exercise is beneficial for health."
+        },
+        {
+          "chinese": "健康是最大的财富。",
+          "pinyin": "Jiàn kāng shì zuì dà de cái fù.",
+          "english": "Health is the greatest wealth."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "亻",
+          "pinyin": "rén",
+          "meaning": "person"
+        },
+        {
+          "character": "康",
+          "pinyin": "kāng",
+          "meaning": "healthy; peaceful"
+        }
+      ]
+    },
+    {
+      "character": "教育",
+      "pinyin": "jiào yù",
+      "english": "education",
+      "examples": [
+        {
+          "chinese": "教育是国家的未来。",
+          "pinyin": "Jiào yù shì guó jiā de wèi lái.",
+          "english": "Education is the future of the country."
+        },
+        {
+          "chinese": "良好的教育可以改变命运。",
+          "pinyin": "Liáng hǎo de jiào yù kě yǐ gǎi biàn mìng yùn.",
+          "english": "Good education can change destiny."
+        },
+        {
+          "chinese": "教育需要耐心和爱心。",
+          "pinyin": "Jiào yù xū yào nài xīn hé ài xīn.",
+          "english": "Education requires patience and love."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "教",
+          "pinyin": "jiào",
+          "meaning": "to teach; religion"
+        },
+        {
+          "character": "育",
+          "pinyin": "yù",
+          "meaning": "to raise; to educate"
         }
       ]
     }
