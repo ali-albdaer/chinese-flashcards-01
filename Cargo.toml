@@ -10,5 +10,5 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 web-sys = { version = "0.3", features = ["HtmlSelectElement", "HtmlInputElement", "HtmlElement"] }
 
-# Force getrandom → wasm JS backend
+# Ensure getrandom uses the JS backend on wasm:
 getrandom = { version = "0.2", default-features = false, features = ["js"] }

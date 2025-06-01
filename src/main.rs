@@ -33,23 +33,23 @@ struct Card {
 
 type DecksMap = HashMap<String, Vec<Card>>;
 
-
 //───────────────────────────────────────────────────────────────────────────────
-// 2. Animation state
+// 2. Animation state enum
 //───────────────────────────────────────────────────────────────────────────────
 
 enum AnimationState {
     None,
     Removing,
     Replacing,
+    Shuffling,
 }
-
 
 //───────────────────────────────────────────────────────────────────────────────
 // 3. Main App component
 //───────────────────────────────────────────────────────────────────────────────
 
 struct App {
+    // All decks from JSON
     decks: DecksMap,
     current_deck: String,
     cards: Vec<Card>,
@@ -65,10 +65,10 @@ struct App {
     show_examples_english: bool,
     show_radicals: bool,
 
-    // Initial count for “Removed” counter
+    // For “Removed” counter
     initial_count: usize,
 
-    // For capturing keyboard focus
+    // For keyboard focus
     container_ref: NodeRef,
     focus_set: bool,
 }
@@ -77,6 +77,7 @@ enum Msg {
     Flip,
     StartRemove,
     StartReplace,
+    StartShuffle,
     AnimDone,
     SelectDeck(String),
     AddToFavorites,
@@ -93,12 +94,12 @@ impl Component for App {
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        // Load JSON at compile time
+        // Include JSON at compile time
         let raw_json = include_str!("cards.json");
         let mut decks: DecksMap = serde_json::from_str(raw_json)
-            .expect("Error parsing cards.json");
+            .expect("cards.json must be valid JSON");
 
-        // Guarantee “Favorites” deck exists
+        // Ensure "Favorites" exists
         if !decks.contains_key("Favorites") {
             decks.insert("Favorites".to_string(), Vec::new());
         }
@@ -121,7 +122,7 @@ impl Component for App {
             show_examples: true,
             show_examples_pinyin: true,
             show_examples_english: true,
-            show_radicals: true,
+            show_radicals: false, // disabled by default
 
             initial_count,
             container_ref: NodeRef::default(),
@@ -130,7 +131,7 @@ impl Component for App {
     }
 
     fn rendered(&mut self, _ctx: &Context<Self>, first_render: bool) {
-        // On first render, focus the container so arrow keys work immediately
+        // Focus the container on first render so arrow keys work
         if first_render && !self.focus_set {
             if let Some(elem) = self.container_ref.cast::<HtmlElement>() {
                 let _ = elem.focus();
@@ -170,7 +171,17 @@ impl Component for App {
                 }
             }
 
+            Msg::StartShuffle => {
+                if let AnimationState::None = self.anim_state {
+                    self.anim_state = AnimationState::Shuffling;
+                    true
+                } else {
+                    false
+                }
+            }
+
             Msg::AnimDone => {
+                // After any animation ends, finalize the action
                 match std::mem::replace(&mut self.anim_state, AnimationState::None) {
                     AnimationState::Removing => {
                         if !self.cards.is_empty() {
@@ -189,7 +200,6 @@ impl Component for App {
                     }
                     AnimationState::Replacing => {
                         if !self.cards.is_empty() {
-                            // Clone and remove current card
                             let card = self.cards[self.current_index].clone();
                             self.cards.remove(self.current_index);
                             if self.current_deck != "Favorites" {
@@ -199,28 +209,34 @@ impl Component for App {
                                     }
                                 }
                             }
-
-                            // reinsert at random index ≠ 0
                             let mut rng = rand::thread_rng();
                             let len = self.cards.len();
                             if len == 0 {
-                                // If no other cards, just push to end (still index 0)
                                 self.cards.push(card.clone());
                                 if self.current_deck != "Favorites" {
                                     self.decks.get_mut(&self.current_deck).unwrap().push(card);
                                 }
                                 self.current_index = 0;
                             } else {
-                                // Choose a random index in 1..=len
+                                // Insert at random index ≥ 1 so that top card always changes
                                 let idx = rng.gen_range(1..=len);
                                 self.cards.insert(idx, card.clone());
                                 if self.current_deck != "Favorites" {
                                     self.decks.get_mut(&self.current_deck).unwrap().insert(idx, card);
                                 }
-                                // current_index remains pointing at the new “top” card (index 0)
                                 self.current_index = 0;
                             }
                         }
+                    }
+                    AnimationState::Shuffling => {
+                        // Fisher–Yates shuffle
+                        let mut rng = rand::thread_rng();
+                        let len = self.cards.len();
+                        for i in (1..len).rev() {
+                            let j = rng.gen_range(0..=i);
+                            self.cards.swap(i, j);
+                        }
+                        self.current_index = 0;
                     }
                     AnimationState::None => {}
                 }
@@ -296,10 +312,20 @@ impl Component for App {
         let remaining = self.cards.len();
         let removed = self.initial_count.saturating_sub(remaining);
 
-        // Current card & next card (for pile peek)
+        // Current card & next three cards (for the multi‐level pile)
         let card_opt = self.cards.get(self.current_index);
-        let next_card_opt = if self.cards.len() > 1 {
+        let next1 = if self.cards.len() > 1 {
             Some(self.cards.get((self.current_index + 1) % self.cards.len()).unwrap())
+        } else {
+            None
+        };
+        let next2 = if self.cards.len() > 2 {
+            Some(self.cards.get((self.current_index + 2) % self.cards.len()).unwrap())
+        } else {
+            None
+        };
+        let next3 = if self.cards.len() > 3 {
+            Some(self.cards.get((self.current_index + 3) % self.cards.len()).unwrap())
         } else {
             None
         };
@@ -312,8 +338,9 @@ impl Component for App {
         match self.anim_state {
             AnimationState::Removing => inner_classes.push("removing"),
             AnimationState::Replacing => inner_classes.push("replacing"),
+            AnimationState::Shuffling => inner_classes.push("shuffling"),
             AnimationState::None => {}
-        }
+        };
 
         html! {
             <div class="app-container"
@@ -323,11 +350,13 @@ impl Component for App {
                      match e.key().as_str() {
                          "ArrowLeft"  => Msg::StartRemove,
                          "ArrowRight" => Msg::StartReplace,
+                         "s" | "S"    => Msg::StartShuffle,
                          _ => Msg::Flip,
                      }
                  }) }
             >
-                // Controls row: deck, shuffle, counter
+                //──────────────────────────────────────────────────────────────────────
+                // Controls row: Deck, Shuffle, Counter
                 <div class="controls">
                   <div class="controls-left">
                     <label for="deck-select"><b>{ "Deck:" }</b></label>
@@ -339,8 +368,8 @@ impl Component for App {
                     >
                       { for deck_options }
                     </select>
-                    <button onclick={ ctx.link().callback(|_| Msg::StartReplace) }>
-                      { "Shuffle (Replace)" }
+                    <button onclick={ ctx.link().callback(|_| Msg::StartShuffle) }>
+                      { "Shuffle" }
                     </button>
                   </div>
                   <div class="controls-right">
@@ -348,14 +377,15 @@ impl Component for App {
                   </div>
                 </div>
 
+                //──────────────────────────────────────────────────────────────────────
                 // Toggle checkboxes
                 <div class="toggles">
                   <label>
                     <input type="checkbox"
                            checked={ self.show_pinyin }
                            onchange={ ctx.link().callback(|e: Event| {
-                               let chk = e.target_unchecked_into::<HtmlInputElement>();
-                               Msg::TogglePinyin(chk.checked())
+                             let chk = e.target_unchecked_into::<HtmlInputElement>();
+                             Msg::TogglePinyin(chk.checked())
                            }) } />
                     { "Pinyin" }
                   </label>
@@ -363,8 +393,8 @@ impl Component for App {
                     <input type="checkbox"
                            checked={ self.show_english }
                            onchange={ ctx.link().callback(|e: Event| {
-                               let chk = e.target_unchecked_into::<HtmlInputElement>();
-                               Msg::ToggleEnglish(chk.checked())
+                             let chk = e.target_unchecked_into::<HtmlInputElement>();
+                             Msg::ToggleEnglish(chk.checked())
                            }) } />
                     { "English" }
                   </label>
@@ -372,8 +402,8 @@ impl Component for App {
                     <input type="checkbox"
                            checked={ self.show_examples }
                            onchange={ ctx.link().callback(|e: Event| {
-                               let chk = e.target_unchecked_into::<HtmlInputElement>();
-                               Msg::ToggleExamples(chk.checked())
+                             let chk = e.target_unchecked_into::<HtmlInputElement>();
+                             Msg::ToggleExamples(chk.checked())
                            }) } />
                     { "Examples" }
                   </label>
@@ -381,8 +411,8 @@ impl Component for App {
                     <input type="checkbox"
                            checked={ self.show_examples_pinyin }
                            onchange={ ctx.link().callback(|e: Event| {
-                               let chk = e.target_unchecked_into::<HtmlInputElement>();
-                               Msg::ToggleExamplesPinyin(chk.checked())
+                             let chk = e.target_unchecked_into::<HtmlInputElement>();
+                             Msg::ToggleExamplesPinyin(chk.checked())
                            }) } />
                     { "Ex. Pinyin" }
                   </label>
@@ -390,8 +420,8 @@ impl Component for App {
                     <input type="checkbox"
                            checked={ self.show_examples_english }
                            onchange={ ctx.link().callback(|e: Event| {
-                               let chk = e.target_unchecked_into::<HtmlInputElement>();
-                               Msg::ToggleExamplesEnglish(chk.checked())
+                             let chk = e.target_unchecked_into::<HtmlInputElement>();
+                             Msg::ToggleExamplesEnglish(chk.checked())
                            }) } />
                     { "Ex. Eng." }
                   </label>
@@ -399,23 +429,59 @@ impl Component for App {
                     <input type="checkbox"
                            checked={ self.show_radicals }
                            onchange={ ctx.link().callback(|e: Event| {
-                               let chk = e.target_unchecked_into::<HtmlInputElement>();
-                               Msg::ToggleRadicals(chk.checked())
+                             let chk = e.target_unchecked_into::<HtmlInputElement>();
+                             Msg::ToggleRadicals(chk.checked())
                            }) } />
                     { "Radicals" }
                   </label>
                 </div>
 
+                //──────────────────────────────────────────────────────────────────────
                 // Card “pile” + active card
                 <div class="card-container">
                   {
-                    // Show the “peek” of the next card behind
-                    if let Some(next_card) = next_card_opt {
+                    // Show up to three peek cards behind
+                    if let Some(c) = next3 {
                       html! {
-                        <div class="pile-card">
-                          <div class="card-face front">
-                            { &next_card.character }
-                          </div>
+                        <div class="pile-card-3" style={
+                          // When animating top card, ramp opacity -> 1
+                          if !matches!(self.anim_state, AnimationState::None) {
+                            "opacity:1;"
+                          } else {
+                            ""
+                          }
+                        }>
+                          <div class="card-face front">{ &c.character }</div>
+                        </div>
+                      }
+                    } else {
+                      html! {}
+                    }
+                  }
+                  {
+                    if let Some(c) = next2 {
+                      html! {
+                        <div class="pile-card-2" style={
+                          if !matches!(self.anim_state, AnimationState::None){
+                            "opacity:1;"
+                          } else { "" }
+                        }>
+                          <div class="card-face front">{ &c.character }</div>
+                        </div>
+                      }
+                    } else {
+                      html! {}
+                    }
+                  }
+                  {
+                    if let Some(c) = next1 {
+                      html! {
+                        <div class="pile-card-1" style={
+                          if !matches!(self.anim_state, AnimationState::None) {
+                            "opacity:1;"
+                          } else { "" }
+                        }>
+                          <div class="card-face front">{ &c.character }</div>
                         </div>
                       }
                     } else {
@@ -423,7 +489,7 @@ impl Component for App {
                     }
                   }
 
-                  // The active, flipping/animating card
+                  // The active, flipping/animating card on top
                   <div class={ inner_classes.clone() }
                        onclick={ ctx.link().callback(|_| Msg::Flip) }
                        onanimationend={ ctx.link().callback(|_| Msg::AnimDone) }
@@ -432,39 +498,52 @@ impl Component for App {
                     <div class="card-face front">
                       {
                         if let Some(card) = card_opt {
-                          html! { <div> { &card.character } </div> }
+                          html! { <div>{ &card.character }</div> }
                         } else {
                           html! { <div style="color:#888;">{ "No cards." }</div> }
                         }
                       }
                     </div>
 
-                    // Back face: tidy layout
+                    // Back face: fixed layout
                     <div class="card-face back">
                       {
                         if let Some(card) = card_opt {
                           html! {
                             <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden;">
-                              // Line 1 (centered): CHARACTER (pinyin) Radical(s)
-                              <div style="font-size:2.5em; font-weight:bold; text-align:center; color:#333; margin-bottom:0.5em;">
+                              /*─── Line 1 (center): CHARACTER (pinyin) {Radicals} */
+                              <div style="font-size:2.8em; font-weight:bold; text-align:center; color:#333; margin-bottom:0.4em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;">
                                 { &card.character }
-                                { " (" }{ &card.pinyin }{ ")" }
-                                { if self.show_radicals {
-                                    let radials = card.radicals.iter()
-                                      .map(|r| r.character.clone())
-                                      .collect::<Vec<_>>()
-                                      .join(", ");
-                                    html! { <span style="margin-left:0.5em; font-size:1.2em; color:#555;">{ radials }</span> }
-                                  } else { html!{} } }
+                                <span style="margin-left:0.4em; font-size:1.15em; color:#555;">
+                                  { "(" }{ &card.pinyin }{ ")" }
+                                </span>
+                                {
+                                  if self.show_radicals {
+                                    html! {
+                                      <span style="margin-left:0.6em; font-size:1em; color:#777; display:inline-block; margin-top:0.2em;">
+                                        { for card.radicals.iter().map(|r| {
+                                          html! {
+                                            <>
+                                              <span style="font-size:1.1em;">{ &r.character }</span>
+                                              <span style="font-size:0.85em;">{ "(" }{ &r.pinyin }{ "－" }{ &r.meaning }{ ")" }</span>
+                                              { " " }
+                                            </>
+                                          }
+                                        })}
+                                      </span>
+                                    }
+                                  } else {
+                                    html! {}
+                                  }
+                                }
                               </div>
 
-                              // Line 2: all definitions, comma-separated
+                              /*─── Line 2 (definitions) */
                               {
                                 if self.show_english {
-                                  let defs = card.english.clone();
                                   html! {
-                                    <div style="text-align:center; font-size:1.1em; margin-bottom:0.5em; color:#444;">
-                                      { defs }
+                                    <div style="text-align:center; font-size:1.2em; margin-bottom:0.6em; color:#444;">
+                                      { &card.english }
                                     </div>
                                   }
                                 } else {
@@ -472,26 +551,22 @@ impl Component for App {
                                 }
                               }
 
-                              // Lines 3+: example sentences
+                              /*─── Lines 3+: example sentences */
                               {
                                 if self.show_examples {
                                   html! {
                                     <div style="flex-grow:1; overflow:hidden; margin-top:0.3em;">
                                       { for card.examples.iter().map(|ex| html! {
-                                        <div style="margin-bottom:0.4em;">
-                                          <div style="font-style:italic; color:#222;">{ &ex.chinese }</div>
+                                        <div style="margin-bottom:0.6em;">
+                                          <div class="example-chinese">{ &ex.chinese }</div>
                                           { if self.show_examples_pinyin {
                                               html! {
-                                                <div style="font-size:0.9em; color:gray;">
-                                                  { &ex.pinyin }
-                                                </div>
+                                                <div class="example-pinyin">{ &ex.pinyin }</div>
                                               }
                                             } else { html!{} } }
                                           { if self.show_examples_english {
                                               html! {
-                                                <div style="font-size:0.9em; color:gray;">
-                                                  { &ex.english }
-                                                </div>
+                                                <div class="example-english">{ &ex.english }</div>
                                               }
                                             } else { html!{} } }
                                         </div>
@@ -512,18 +587,27 @@ impl Component for App {
                   </div>
                 </div>
 
+                /*──────────────────────────────────────────────────────────────────────*/
                 // Buttons
                 <div style="margin-top:1em; text-align:center;">
                   <button
                     onclick={ ctx.link().callback(|_| Msg::StartRemove) }
-                    disabled={ self.cards.is_empty() ||
-                              matches!(self.anim_state, AnimationState::Removing|AnimationState::Replacing) }
+                    disabled={
+                      self.cards.is_empty()
+                      || matches!(self.anim_state, AnimationState::Removing
+                                               | AnimationState::Replacing
+                                               | AnimationState::Shuffling)
+                    }
                   >{ "I know this (Remove)" }</button>
 
                   <button
                     onclick={ ctx.link().callback(|_| Msg::StartReplace) }
-                    disabled={ self.cards.is_empty() ||
-                              matches!(self.anim_state, AnimationState::Removing|AnimationState::Replacing) }
+                    disabled={
+                      self.cards.is_empty()
+                      || matches!(self.anim_state, AnimationState::Removing
+                                               | AnimationState::Replacing
+                                               | AnimationState::Shuffling)
+                    }
                     style="margin-left:1em;"
                   >{ "I don't know (Replace)" }</button>
 

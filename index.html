@@ -5,15 +5,16 @@
   <title>Chinese Flashcards</title>
   <style>
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Animation durations (tweak as needed) */
+    /* CSS variables: tweak these to adjust animation speeds */
     :root {
-      --flip-duration: 0.6s;      /* flip speed */
+      --flip-duration: 0.6s;      /* how long the flip takes */
       --remove-duration: 0.5s;    /* remove (fly left) speed */
-      --replace-duration: 0.6s;   /* replace (fly right) speed */
+      --replace-duration: 0.8s;   /* replace (dart+retract) speed */
+      --shuffle-duration: 0.7s;   /* shuffle (shake) speed */
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Basic reset & center */
+    /* Basic reset & centering; a bit of extra top margin so UI is lower */
     body {
       margin: 0;
       padding: 0;
@@ -25,19 +26,19 @@
       min-height: 100vh;
     }
     #root {
-      margin-top: 20px;
+      margin-top: 40px; /* moved down a bit */
       width: 100%;
-      max-width: 650px;
+      max-width: 700px;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Outer container to capture keyboard focus */
+    /* Outer container: captures keyboard focus */
     .app-container {
       outline: none;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Control bar: deck selector, shuffle, and counter in one row */
+    /* Control bar: deck selector, shuffle, and counter all in one row */
     .controls {
       display: flex;
       align-items: center;
@@ -50,9 +51,13 @@
     }
     .controls-left select {
       margin-left: 0.5em;
+      font-size: 1em;
+      padding: 0.3em;
     }
     .controls-left button {
       margin-left: 1em;
+      font-size: 0.9em;
+      padding: 0.5em 1em;
     }
     .controls-right {
       font-size: 1em;
@@ -73,41 +78,61 @@
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Card “pile” container: show next card peeking behind */
+    /* Card “pile” container: shows multiple cards peeking behind */
     .card-container {
       position: relative;
       width: 100%;
-      max-width: 500px;   /* increased from 450 */
-      height: 320px;      /* increased from 280 */
+      max-width: 550px;   /* slightly bigger */
+      height: 380px;      /* slightly bigger */
       margin: 0 auto;
       perspective: 1200px;
     }
 
-    /* “Peek” of the next card behind, slightly scaled and shifted */
-    .pile-card {
+    /* Configure up to three “peek” cards behind: each has a different offset/scale */
+    .pile-card-1, .pile-card-2, .pile-card-3 {
       position: absolute;
-      top: 8px;
-      left: 8px;
       width: 100%;
       height: 100%;
       background-color: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transform: scale(0.97);
+      overflow: hidden;
+      opacity: 0.7; /* dimmed by default */
+      transition: opacity var(--remove-duration) ease-in-out;
       z-index: 0;
     }
-    .pile-card .card-face.front {
+    /* Next card peek (offset + scale) */
+    .pile-card-1 {
+      top: 10px;
+      left: 10px;
+      transform: scale(0.96);
+    }
+    /* Second behind */
+    .pile-card-2 {
+      top: 20px;
+      left: 20px;
+      transform: scale(0.92);
+    }
+    /* Third behind */
+    .pile-card-3 {
+      top: 30px;
+      left: 30px;
+      transform: scale(0.88);
+    }
+    .pile-card-1 .card-face.front,
+    .pile-card-2 .card-face.front,
+    .pile-card-3 .card-face.front {
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 4em;
       font-weight: bold;
-      color: #aaa;
+      color: #ccc;
       user-select: none;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* The top card that flips/animates */
+    /* Active “card” splitting front/back, flipping, etc. */
     .card-inner {
       position: absolute;
       width: 100%;
@@ -115,7 +140,7 @@
       transform-style: preserve-3d;
       transition: transform var(--flip-duration);
       border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
       background-color: #ffffff;
       z-index: 1;
     }
@@ -124,7 +149,7 @@
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* The two faces */
+    /* Card faces (front/back) */
     .card-face {
       position: absolute;
       width: 100%;
@@ -134,7 +159,7 @@
       overflow: hidden;
       box-sizing: border-box;
     }
-    /* Front face: big character */
+    /* Front face: large character centered */
     .card-face.front {
       background-color: #fff;
       display: flex;
@@ -145,18 +170,18 @@
       color: #333;
       user-select: none;
     }
-    /* Back face: 180deg rotated */
+    /* Back face: rotated 180°, tidy vertical layout, no scrollbars */
     .card-face.back {
       background-color: #fff;
       transform: rotateY(180deg);
-      padding: 1em;
+      padding: 1em 1.2em;
       display: flex;
       flex-direction: column;
-      overflow: hidden; /* hide scrollbars */
+      overflow: hidden;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Remove (fly left) animation */
+    /* Remove animation (fly left + fade out) */
     .card-inner.removing {
       animation: remove-card var(--remove-duration) forwards ease-in;
     }
@@ -168,15 +193,27 @@
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Replace (fly right) animation: card flies off to the right, then disappears */
+    /* Replace animation (dart halfway right → retract under stack) */
     .card-inner.replacing {
       animation: replace-card var(--replace-duration) forwards ease-in-out;
     }
     @keyframes replace-card {
-      to {
-        transform: translateX(120%) rotate(20deg);
-        opacity: 0;
-      }
+      0%   { transform: translateX(0) rotate(0); opacity: 1; }
+      50%  { transform: translateX(80%) rotate(10deg); opacity: 1; }
+      100% { transform: translateX(40%) scale(0.5) translateY(40%); opacity: 0; }
+    }
+
+    /*─────────────────────────────────────────────────────────────────────────*/
+    /* Shuffle animation (quick “shake”) */
+    .card-inner.shuffling {
+      animation: shuffle-card var(--shuffle-duration) forwards ease-in-out;
+    }
+    @keyframes shuffle-card {
+      0%   { transform: translateX(0) rotate(0deg); }
+      25%  { transform: translateX(-10%) rotate(-2deg); }
+      50%  { transform: translateX(10%) rotate(2deg); }
+      75%  { transform: translateX(-6%) rotate(-1deg); }
+      100% { transform: translateX(0) rotate(0deg); }
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
@@ -203,7 +240,12 @@
     /*─────────────────────────────────────────────────────────────────────────*/
     select, input[type="checkbox"] {
       cursor: pointer;
+      transform: scale(0.95);
     }
+    /* Increased sentence font size on back */
+    .example-chinese { font-size: 1.1em; }
+    .example-pinyin,
+    .example-english { font-size: 1em; color: gray; }
   </style>
 </head>
 <body>
