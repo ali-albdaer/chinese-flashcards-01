@@ -1,127 +1,73 @@
-use once_cell::sync::Lazy;
-use rand::seq::SliceRandom;
-use rand::thread_rng;
 use std::collections::HashMap;
+use rand::Rng;
+use serde::Deserialize;
 use yew::prelude::*;
+use web_sys::{HtmlSelectElement, HtmlInputElement};
 
-struct Card {
-    front: &'static str,
-    pinyin: &'static str,
-    english: &'static str,
-    example: &'static str,
-    example_pinyin: &'static str,
-    example_english: &'static str,
-    radicals: Vec<&'static str>,
+// -------------------------------
+// 1. Define data structures
+// -------------------------------
+
+#[derive(Debug, Clone, PartialEq, Deserialize)]
+struct Example {
+    chinese: String,
+    pinyin:  String,
+    english: String,
 }
 
-static ALL_DECKS: Lazy<HashMap<&'static str, Vec<Card>>> = Lazy::new(|| {
-    let mut m = HashMap::new();
+#[derive(Debug, Clone, PartialEq, Deserialize)]
+struct Radical {
+    character: String,
+    pinyin:    String,
+    meaning:   String,
+}
 
-    m.insert(
-        "HSK3",
-        vec![
-            Card {
-                front: "我",
-                pinyin: "wǒ",
-                english: "I; me",
-                example: "我喜欢学习中文。",
-                example_pinyin: "Wǒ xǐhuān xuéxí Zhōngwén.",
-                example_english: "I like studying Chinese.",
-                radicals: vec!["手"],
-            },
-            Card {
-                front: "家",
-                pinyin: "jiā",
-                english: "home; family",
-                example: "这是我的家。",
-                example_pinyin: "Zhè shì wǒ de jiā.",
-                example_english: "This is my home.",
-                radicals: vec!["宀"],
-            },
-            Card {
-                front: "爱",
-                pinyin: "ài",
-                english: "to love",
-                example: "我爱学习新东西。",
-                example_pinyin: "Wǒ ài xuéxí xīn dōngxī.",
-                example_english: "I love learning new things.",
-                radicals: vec!["爪", "心"],
-            },
-        ],
-    );
+#[derive(Debug, Clone, PartialEq, Deserialize)]
+struct Card {
+    character: String,
+    pinyin:    String,
+    english:   String,
+    examples:  Vec<Example>,   // Three example sentences
+    radicals:  Vec<Radical>,   // Each radical has character + pinyin + meaning
+}
 
-    m.insert(
-        "HSK4",
-        vec![
-            Card {
-                front: "努力",
-                pinyin: "nǔlì",
-                english: "to strive; effort",
-                example: "你得多努力才能成功。",
-                example_pinyin: "Nǐ děi duō nǔlì cáinéng chénggōng.",
-                example_english: "You have to work harder to succeed.",
-                radicals: vec!["力", "女"],
-            },
-            Card {
-                front: "机会",
-                pinyin: "jīhuì",
-                english: "opportunity",
-                example: "这是一个难得的机会。",
-                example_pinyin: "Zhè shì yī gè nándé de jīhuì.",
-                example_english: "This is a rare opportunity.",
-                radicals: vec!["口", "木"],
-            },
-        ],
-    );
+// We’ll parse the entire JSON into a HashMap<String, Vec<Card>>:
+type DecksMap = HashMap<String, Vec<Card>>;
 
-    m.insert("Favorites", Vec::new());
 
-    m
-});
+// -------------------------------
+// 2. Main App Component
+// -------------------------------
 
-#[derive(Clone)]
-struct Settings {
+struct App {
+    decks: DecksMap,
+    current_deck: String,
+    cards: Vec<Card>,
+    current_index: usize,
+    show_back: bool,
+
+    // Toggles for each field on back:
     show_pinyin: bool,
     show_english: bool,
-    show_example: bool,
-    show_example_pinyin: bool,
-    show_example_english: bool,
+    show_examples: bool,
+    show_examples_pinyin: bool,
+    show_examples_english: bool,
     show_radicals: bool,
-}
-
-impl Default for Settings {
-    fn default() -> Self {
-        Self {
-            show_pinyin: true,
-            show_english: true,
-            show_example: true,
-            show_example_pinyin: true,
-            show_example_english: true,
-            show_radicals: true,
-        }
-    }
 }
 
 enum Msg {
     Flip,
-    KnowThis,
-    DontKnow,
-    ShuffleDeck,
-    ChangeDeck(String),
+    Next,
+    Remove,
+    Shuffle,
+    SelectDeck(String),
+    AddToFavorites,
     TogglePinyin(bool),
     ToggleEnglish(bool),
-    ToggleExample(bool),
-    ToggleExamplePinyin(bool),
-    ToggleExampleEnglish(bool),
+    ToggleExamples(bool),
+    ToggleExamplesPinyin(bool),
+    ToggleExamplesEnglish(bool),
     ToggleRadicals(bool),
-}
-
-struct App {
-    decks: HashMap<String, Vec<Card>>,
-    current_deck_name: String,
-    cards: Vec<Card>,
-    flipped: bool,
-    settings: Settings,
 }
 
 impl Component for App {
@@ -129,302 +75,357 @@ impl Component for App {
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        // Clone ALL_DECKS into owned HashMap<String, Vec<Card>>
-        let mut decks_owned = HashMap::new();
-        for (k, v) in ALL_DECKS.iter() {
-            decks_owned.insert(k.to_string(), v.clone());
+        // 1. At compile time, include the JSON file:
+        let raw_json = include_str!("cards.json");
+        let mut decks: DecksMap = serde_json::from_str(raw_json)
+            .expect("cards.json should be valid JSON with correct structure");
+
+        // Ensure there's a "Favorites" deck even if absent:
+        if !decks.contains_key("Favorites") {
+            decks.insert("Favorites".to_string(), Vec::new());
         }
-        let initial_deck_name = "HSK3".to_string();
-        let mut cards = decks_owned
-            .get(&initial_deck_name)
-            .unwrap()
-            .clone();
-        cards.shuffle(&mut thread_rng());
+
+        // Start with HSK3 as default:
+        let current_deck = "HSK3".to_string();
+        let cards = decks.get(&current_deck).unwrap().to_vec();
+
         Self {
-            decks: decks_owned,
-            current_deck_name: initial_deck_name,
+            decks,
+            current_deck,
             cards,
-            flipped: false,
-            settings: Settings::default(),
+            current_index: 0,
+            show_back: false,
+
+            show_pinyin: true,
+            show_english: true,
+            show_examples: true,
+            show_examples_pinyin: true,
+            show_examples_english: true,
+            show_radicals: true,
         }
     }
 
     fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
         match msg {
             Msg::Flip => {
-                self.flipped = !self.flipped;
+                self.show_back = !self.show_back;
                 true
             }
-            Msg::ShuffleDeck => {
-                self.cards.shuffle(&mut thread_rng());
-                self.flipped = false;
+            Msg::Next => {
+                if !self.cards.is_empty() {
+                    self.current_index = (self.current_index + 1) % self.cards.len();
+                }
+                self.show_back = false;
                 true
             }
-            Msg::ChangeDeck(name) => {
-                if &name != &self.current_deck_name {
-                    self.current_deck_name = name.clone();
-                    let original = self.decks.get(&name).unwrap().clone();
-                    self.cards = original;
-                    self.cards.shuffle(&mut thread_rng());
-                    self.flipped = false;
+            Msg::Remove => {
+                if !self.cards.is_empty() {
+                    self.cards.remove(self.current_index);
+                    // Also remove from the underlying deck if it's not "Favorites"
+                    if self.current_deck != "Favorites" {
+                        if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
+                            if self.current_index < deck_vec.len() {
+                                deck_vec.remove(self.current_index);
+                            }
+                        }
+                    }
+                    if self.current_index >= self.cards.len() && !self.cards.is_empty() {
+                        self.current_index = 0;
+                    }
+                }
+                self.show_back = false;
+                true
+            }
+            Msg::Shuffle => {
+                let mut rng = rand::thread_rng();
+                let len = self.cards.len();
+                for i in (1..len).rev() {
+                    let j = rng.gen_range(0..=i);
+                    self.cards.swap(i, j);
+                }
+                self.current_index = 0;
+                self.show_back = false;
+                true
+            }
+            Msg::SelectDeck(name) => {
+                if let Some(deck_cards) = self.decks.get(&name) {
+                    self.current_deck = name.clone();
+                    self.cards = deck_cards.clone();
+                    self.current_index = 0;
+                    self.show_back = false;
                     true
                 } else {
                     false
                 }
             }
-            Msg::KnowThis => {
-                // Remove current card (at index 0) permanently
-                if !self.cards.is_empty() {
-                    self.cards.remove(0);
+            Msg::AddToFavorites => {
+                if let Some(card) = self.cards.get(self.current_index).cloned() {
+                    // Check if it already exists
+                    let fav_deck = self.decks.get_mut("Favorites").unwrap();
+                    let already = fav_deck.iter().any(|c| c.character == card.character);
+                    if !already {
+                        fav_deck.push(card);
+                    }
                 }
-                self.flipped = false;
+                false
+            }
+            Msg::TogglePinyin(val) => {
+                self.show_pinyin = val;
                 true
             }
-            Msg::DontKnow => {
-                // Take out first card, reinsert at random position > 0
-                if self.cards.len() > 1 {
-                    let card = self.cards.remove(0);
-                    let len = self.cards.len();
-                    let idx = thread_rng().gen_range(0..=len);
-                    self.cards.insert(idx, card);
-                }
-                self.flipped = false;
+            Msg::ToggleEnglish(val) => {
+                self.show_english = val;
                 true
             }
-            Msg::TogglePinyin(v) => {
-                self.settings.show_pinyin = v;
+            Msg::ToggleExamples(val) => {
+                self.show_examples = val;
                 true
             }
-            Msg::ToggleEnglish(v) => {
-                self.settings.show_english = v;
+            Msg::ToggleExamplesPinyin(val) => {
+                self.show_examples_pinyin = val;
                 true
             }
-            Msg::ToggleExample(v) => {
-                self.settings.show_example = v;
+            Msg::ToggleExamplesEnglish(val) => {
+                self.show_examples_english = val;
                 true
             }
-            Msg::ToggleExamplePinyin(v) => {
-                self.settings.show_example_pinyin = v;
-                true
-            }
-            Msg::ToggleExampleEnglish(v) => {
-                self.settings.show_example_english = v;
-                true
-            }
-            Msg::ToggleRadicals(v) => {
-                self.settings.show_radicals = v;
+            Msg::ToggleRadicals(val) => {
+                self.show_radicals = val;
                 true
             }
         }
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        let deck_options = self
-            .decks
-            .keys()
-            .map(|name| html! {
-                <option value={name.clone()} selected={*name == self.current_deck_name}>{name.clone()}</option>
-            })
-            .collect::<Html>();
+        // Build a <select> with deck names:
+        let deck_options = self.decks.keys().map(|deck_name| {
+            let selected = *deck_name == self.current_deck;
+            html! {
+                <option value={deck_name.clone()} selected={selected}>{ deck_name.clone() }</option>
+            }
+        });
 
-        let current_card = self.cards.get(0);
+        // Current card (if any):
+        let card_opt = self.cards.get(self.current_index);
 
         html! {
-            <div style="max-width: 500px; margin: auto; font-family: sans-serif;">
-                <h2>{ "Chinese Flashcards (Rust + Yew)" }</h2>
+            <div style="padding: 1em;">
+                <h1>{ "Chinese Flashcards" }</h1>
 
-                // Deck Controls
-                <div style="margin-bottom: 10px;">
-                    <label for="deck-select">{ "Deck: " }</label>
+                // Deck selector + Shuffle
+                <div style="margin-bottom: 1em;">
+                    <label for="deck-select"><b>{ "Deck: " }</b></label>
                     <select id="deck-select"
                         onchange={ctx.link().callback(|e: Event| {
-                            let select = e.target_unchecked_into::<web_sys::HtmlSelectElement>();
-                            Msg::ChangeDeck(select.value())
-                        })}>
-                        { deck_options }
+                            let sel = e.target_unchecked_into::<HtmlSelectElement>();
+                            Msg::SelectDeck(sel.value())
+                        })}
+                    >
+                        { for deck_options }
                     </select>
-                    <button onclick={ctx.link().callback(|_| Msg::ShuffleDeck)} style="margin-left: 10px;">
+                    <button onclick={ctx.link().callback(|_| Msg::Shuffle)} style="margin-left: 1em;">
                         { "Shuffle" }
                     </button>
                 </div>
 
-                // Settings
-                <details style="margin-bottom: 20px;">
-                    <summary>{ "Settings (toggle fields)" }</summary>
-                    <div style="margin-top: 5px;">
+                // Toggles
+                <div style="margin-bottom: 1em;">
+                    <label style="margin-right: 1em;">
                         <input type="checkbox"
-                            id="chk_pinyin"
-                            checked={self.settings.show_pinyin}
-                            onchange={ctx.link().callback(|e: Event| {
-                                let chk = e.target_unchecked_into::<web_sys::HtmlInputElement>();
+                            checked={self.show_pinyin}
+                            onchange={ctx.link().callback(|e:Event| {
+                                let chk = e.target_unchecked_into::<HtmlInputElement>();
                                 Msg::TogglePinyin(chk.checked())
-                            })} />
-                        <label for="chk_pinyin">{ "Pinyin" }</label>
-                        <br/>
-
+                            })}
+                        />{ "Pinyin" }
+                    </label>
+                    <label style="margin-right: 1em;">
                         <input type="checkbox"
-                            id="chk_english"
-                            checked={self.settings.show_english}
-                            onchange={ctx.link().callback(|e: Event| {
-                                let chk = e.target_unchecked_into::<web_sys::HtmlInputElement>();
+                            checked={self.show_english}
+                            onchange={ctx.link().callback(|e:Event| {
+                                let chk = e.target_unchecked_into::<HtmlInputElement>();
                                 Msg::ToggleEnglish(chk.checked())
-                            })} />
-                        <label for="chk_english">{ "English" }</label>
-                        <br/>
-
+                            })}
+                        />{ "English" }
+                    </label>
+                    <label style="margin-right: 1em;">
                         <input type="checkbox"
-                            id="chk_example"
-                            checked={self.settings.show_example}
-                            onchange={ctx.link().callback(|e: Event| {
-                                let chk = e.target_unchecked_into::<web_sys::HtmlInputElement>();
-                                Msg::ToggleExample(chk.checked())
-                            })} />
-                        <label for="chk_example">{ "Example Sentence" }</label>
-                        <br/>
-
+                            checked={self.show_examples}
+                            onchange={ctx.link().callback(|e:Event| {
+                                let chk = e.target_unchecked_into::<HtmlInputElement>();
+                                Msg::ToggleExamples(chk.checked())
+                            })}
+                        />{ "Examples" }
+                    </label>
+                    <label style="margin-right: 1em;">
                         <input type="checkbox"
-                            id="chk_example_pinyin"
-                            checked={self.settings.show_example_pinyin}
-                            onchange={ctx.link().callback(|e: Event| {
-                                let chk = e.target_unchecked_into::<web_sys::HtmlInputElement>();
-                                Msg::ToggleExamplePinyin(chk.checked())
-                            })} />
-                        <label for="chk_example_pinyin">{ "Example Pinyin" }</label>
-                        <br/>
-
+                            checked={self.show_examples_pinyin}
+                            onchange={ctx.link().callback(|e:Event| {
+                                let chk = e.target_unchecked_into::<HtmlInputElement>();
+                                Msg::ToggleExamplesPinyin(chk.checked())
+                            })}
+                        />{ "Examples Pinyin" }
+                    </label>
+                    <label style="margin-right: 1em;">
                         <input type="checkbox"
-                            id="chk_example_english"
-                            checked={self.settings.show_example_english}
-                            onchange={ctx.link().callback(|e: Event| {
-                                let chk = e.target_unchecked_into::<web_sys::HtmlInputElement>();
-                                Msg::ToggleExampleEnglish(chk.checked())
-                            })} />
-                        <label for="chk_example_english">{ "Example English" }</label>
-                        <br/>
-
+                            checked={self.show_examples_english}
+                            onchange={ctx.link().callback(|e:Event| {
+                                let chk = e.target_unchecked_into::<HtmlInputElement>();
+                                Msg::ToggleExamplesEnglish(chk.checked())
+                            })}
+                        />{ "Examples Eng." }
+                    </label>
+                    <label>
                         <input type="checkbox"
-                            id="chk_radicals"
-                            checked={self.settings.show_radicals}
-                            onchange={ctx.link().callback(|e: Event| {
-                                let chk = e.target_unchecked_into::<web_sys::HtmlInputElement>();
+                            checked={self.show_radicals}
+                            onchange={ctx.link().callback(|e:Event| {
+                                let chk = e.target_unchecked_into::<HtmlInputElement>();
                                 Msg::ToggleRadicals(chk.checked())
-                            })} />
-                        <label for="chk_radicals">{ "Radicals" }</label>
-                    </div>
-                </details>
+                            })}
+                        />{ "Radicals" }
+                    </label>
+                </div>
 
-                // Card Display
-                {
-                    if let Some(card) = current_card {
-                        html! {
-                            <div style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; text-align: center;">
-                                {
-                                    if !self.flipped {
-                                        html! {
-                                            <>
-                                                <div style="font-size: 48px; margin-bottom: 20px;">{ card.front }</div>
-                                                <button onclick={ctx.link().callback(|_| Msg::Flip)}>
-                                                    { "Flip" }
-                                                </button>
-                                            </>
-                                        }
-                                    } else {
-                                        html! {
-                                            <>
-                                                // Pinyin
-                                                {
-                                                    if self.settings.show_pinyin {
-                                                        html! {
-                                                            <div style="font-size: 24px; margin-bottom: 10px;">
-                                                                { card.pinyin }
-                                                            </div>
-                                                        }
-                                                    } else { html! { <></> } }
-                                                }
-
-                                                // English
-                                                {
-                                                    if self.settings.show_english {
-                                                        html! {
-                                                            <div style="font-size: 18px; margin-bottom: 10px;">
-                                                                { card.english }
-                                                            </div>
-                                                        }
-                                                    } else { html! { <></> } }
-                                                }
-
-                                                // Example Sentence
-                                                {
-                                                    if self.settings.show_example {
-                                                        html! {
-                                                            <div style="margin-top: 10px;">
-                                                                <em>{ card.example }</em>
-                                                            </div>
-                                                        }
-                                                    } else { html! { <></> } }
-                                                }
-
-                                                // Example Pinyin
-                                                {
-                                                    if self.settings.show_example_pinyin {
-                                                        html! {
-                                                            <div style="font-size: 14px; color: gray;">
-                                                                { card.example_pinyin }
-                                                            </div>
-                                                        }
-                                                    } else { html! { <></> } }
-                                                }
-
-                                                // Example English
-                                                {
-                                                    if self.settings.show_example_english {
-                                                        html! {
-                                                            <div style="font-size: 14px; color: gray; margin-bottom: 10px;">
-                                                                { card.example_english }
-                                                            </div>
-                                                        }
-                                                    } else { html! { <></> } }
-                                                }
-
-                                                // Radicals
-                                                {
-                                                    if self.settings.show_radicals {
-                                                        html! {
-                                                            <div style="font-size: 14px; color: #555; margin-bottom: 20px;">
-                                                                { format!("Radical(s): {}", card.radicals.join(", ")) }
-                                                            </div>
-                                                        }
-                                                    } else { html! { <></> } }
-                                                }
-
-                                                // Buttons
-                                                <div>
-                                                    <button onclick={ctx.link().callback(|_| Msg::KnowThis)} style="margin-right: 10px;">
-                                                        { "I know this" }
-                                                    </button>
-                                                    <button onclick={ctx.link().callback(|_| Msg::DontKnow)}>
-                                                        { "I don't know" }
-                                                    </button>
-                                                </div>
-                                            </>
-                                        }
-                                    }
+                // Card container (fixed size so it always looks like a “card”)
+                <div
+                    style="
+                        width: 100%;
+                        max-width: 400px;
+                        height: 300px;
+                        margin: 0 auto;
+                        border: 1px solid #ccc;
+                        border-radius: 8px;
+                        background-color: #fff;
+                        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+                        padding: 1em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        overflow-y: auto;
+                        cursor: pointer;
+                    "
+                    onclick={ctx.link().callback(|_| Msg::Flip)}
+                >
+                    {
+                        if let Some(card) = card_opt {
+                            if !self.show_back {
+                                html! {
+                                    <div style="font-size: 3em; line-height: 1; margin-bottom: 0.5em;">
+                                        { &card.character }
+                                    </div>
                                 }
-                            </div>
-                        }
-                    } else {
-                        html! {
-                            <div style="padding: 20px; text-align: center;">
-                                { "No more cards in this deck!"}
-                            </div>
+                            } else {
+                                html! {
+                                    <div>
+                                        // Pinyin
+                                        { if self.show_pinyin {
+                                            html! {
+                                                <p style="font-size: 1.2em; margin: 0.2em 0;">
+                                                    <b>{ "Pinyin: " }</b>{ &card.pinyin }
+                                                </p>
+                                            }
+                                        } else { html!{} } }
+
+                                        // English
+                                        { if self.show_english {
+                                            html! {
+                                                <p style="font-size: 1em; margin: 0.2em 0;">
+                                                    <b>{ "English: " }</b>{ &card.english }
+                                                </p>
+                                            }
+                                        } else { html!{} } }
+
+                                        // Examples (three)
+                                        { if self.show_examples {
+                                            html! {
+                                                <div style="margin-top: 0.5em; text-align: left;">
+                                                    { for card.examples.iter().map(|ex| html! {
+                                                        <div style="margin-bottom: 0.5em;">
+                                                          <p style="margin:0;"><i>{ &ex.chinese }</i></p>
+                                                          { if self.show_examples_pinyin {
+                                                              html! {
+                                                                <p style="margin:0; font-size:0.9em; color:gray;">
+                                                                  { &ex.pinyin }
+                                                                </p>
+                                                              }
+                                                            } else { html!{} } }
+                                                          { if self.show_examples_english {
+                                                              html! {
+                                                                <p style="margin:0; font-size:0.9em; color:gray;">
+                                                                  { &ex.english }
+                                                                </p>
+                                                              }
+                                                            } else { html!{} } }
+                                                        </div>
+                                                    })}
+                                                </div>
+                                            }
+                                        } else { html!{} } }
+
+                                        // Radicals
+                                        { if self.show_radicals {
+                                            html! {
+                                                <div style="margin-top: 0.5em; text-align:left;">
+                                                    <b>{ "Radicals: " }</b>
+                                                    { for card.radicals.iter().map(|r| html! {
+                                                        <div style="margin: 0.2em 0;">
+                                                          <span style="font-size:1.1em;">{ &r.character }</span>
+                                                          <span style="margin-left:0.5em; font-size:0.9em;">
+                                                            { "(" }{ &r.pinyin }{ " – " }{ &r.meaning }{ ")" }
+                                                          </span>
+                                                        </div>
+                                                    })}
+                                                </div>
+                                            }
+                                        } else { html!{} } }
+                                    </div>
+                                }
+                            }
+                        } else {
+                            html! {
+                                <p style="font-size:1.2em; color: #888;">
+                                    { "No cards in this deck." }
+                                </p>
+                            }
                         }
                     }
-                }
+                </div>
+
+                // Buttons under the card
+                <div style="margin-top: 1em; text-align:center;">
+                    <button
+                        onclick={ctx.link().callback(|_| Msg::Next)}
+                        disabled={self.cards.is_empty()}
+                    >
+                        { "Next" }
+                    </button>
+                    <button
+                        onclick={ctx.link().callback(|_| Msg::Remove)}
+                        disabled={self.cards.is_empty()}
+                        style="margin-left: 1em;"
+                    >
+                        { "Remove" }
+                    </button>
+                    <button
+                        onclick={ctx.link().callback(|_| Msg::AddToFavorites)}
+                        disabled={self.cards.is_empty() || self.current_deck == "Favorites"}
+                        style="margin-left: 1em;"
+                    >
+                        { "Add to Favorites" }
+                    </button>
+                </div>
             </div>
         }
     }
 }
 
+// -------------------------------
+// 3. Boot the App
+// -------------------------------
+
 fn main() {
+    // Yew 0.20+ uses Renderer rather than start_app
     yew::Renderer::<App>::new().render();
 }

@@ -81,8 +81,10 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 name = "chinese_flashcards"
 version = "0.1.0"
 dependencies = [
- "once_cell",
+ "getrandom",
  "rand",
+ "serde",
+ "serde_json",
  "web-sys",
  "yew",
 ]
@@ -196,8 +198,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "335ff9f135e4384c8150d6f27c6daed433577f86b4750418338c01a1a2528592"
 dependencies = [
  "cfg-if",
+ "js-sys",
  "libc",
  "wasi",
+ "wasm-bindgen",
 ]
 
 [[package]]

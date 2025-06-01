@@ -1,0 +1,143 @@
+{
+  "HSK3": [
+    {
+      "character": "学习",
+      "pinyin": "xué xí",
+      "english": "to study; to learn",
+      "examples": [
+        {
+          "chinese": "我喜欢学习中文。",
+          "pinyin": "Wǒ xǐ huān xué xí Zhōng wén.",
+          "english": "I like studying Chinese."
+        },
+        {
+          "chinese": "他们每天都在学习数学。",
+          "pinyin": "Tā men měi tiān dōu zài xué xí shù xué.",
+          "english": "They study math every day."
+        },
+        {
+          "chinese": "学习可以让我们成长。",
+          "pinyin": "Xué xí kě yǐ ràng wǒ men chéng zhǎng.",
+          "english": "Learning can help us grow."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "⺍",
+          "pinyin": "wǎng",
+          "meaning": "small"
+        },
+        {
+          "character": "子",
+          "pinyin": "zǐ",
+          "meaning": "child"
+        }
+      ]
+    },
+    {
+      "character": "朋友",
+      "pinyin": "péng yǒu",
+      "english": "friend",
+      "examples": [
+        {
+          "chinese": "他是我的好朋友。",
+          "pinyin": "Tā shì wǒ de hǎo péng yǒu.",
+          "english": "He is my good friend."
+        },
+        {
+          "chinese": "我们一起去看电影，成为了好朋友。",
+          "pinyin": "Wǒ men yī qǐ qù kàn diàn yǐng, chéng wéi le hǎo péng yǒu.",
+          "english": "We went to the movies together and became good friends."
+        },
+        {
+          "chinese": "朋友之间要互相帮助。",
+          "pinyin": "Péng yǒu zhī jiān yào hù xiāng bāng zhù.",
+          "english": "Friends should help each other."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "月",
+          "pinyin": "yuè",
+          "meaning": "moon; flesh"
+        },
+        {
+          "character": "又",
+          "pinyin": "yòu",
+          "meaning": "again; also"
+        }
+      ]
+    }
+  ],
+  "HSK4": [
+    {
+      "character": "努力",
+      "pinyin": "nǔ lì",
+      "english": "to strive; effort",
+      "examples": [
+        {
+          "chinese": "他很努力地学习。",
+          "pinyin": "Tā hěn nǔ lì de xué xí.",
+          "english": "He studies very hard."
+        },
+        {
+          "chinese": "只要努力就能成功。",
+          "pinyin": "Zhǐ yào nǔ lì jiù néng chéng gōng.",
+          "english": "As long as you work hard, you can succeed."
+        },
+        {
+          "chinese": "努力工作会有回报。",
+          "pinyin": "Nǔ lì gōng zuò huì yǒu huí bào.",
+          "english": "Working hard will be rewarded."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "力",
+          "pinyin": "lì",
+          "meaning": "power; strength"
+        },
+        {
+          "character": "女",
+          "pinyin": "nǚ",
+          "meaning": "female"
+        }
+      ]
+    },
+    {
+      "character": "机会",
+      "pinyin": "jī huì",
+      "english": "opportunity",
+      "examples": [
+        {
+          "chinese": "这是一个难得的机会。",
+          "pinyin": "Zhè shì yī gè nán dé de jī huì.",
+          "english": "This is a rare opportunity."
+        },
+        {
+          "chinese": "把握机会去尝试。",
+          "pinyin": "Bǎ wò jī huì qù cháng shì.",
+          "english": "Seize the opportunity to try."
+        },
+        {
+          "chinese": "每个人都应该珍惜机会。",
+          "pinyin": "Měi gè rén dōu yīng gāi zhēn xī jī huì.",
+          "english": "Everyone should cherish opportunities."
+        }
+      ],
+      "radicals": [
+        {
+          "character": "口",
+          "pinyin": "kǒu",
+          "meaning": "mouth; opening"
+        },
+        {
+          "character": "木",
+          "pinyin": "mù",
+          "meaning": "wood; tree"
+        }
+      ]
+    }
+  ],
+  "Favorites": []
+}
