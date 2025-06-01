@@ -1,6 +1,6 @@
 # Cargo.toml
 [package]
-name = "chinese_flashcards"
+name = "chinese-flashcards-01"
 version = "0.1.0"
 edition = "2021"
 
