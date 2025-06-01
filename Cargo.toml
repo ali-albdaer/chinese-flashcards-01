@@ -1,6 +1,13 @@
+# Cargo.toml
 [package]
-name = "chinese-flashcards-01"
+name = "chinese_flashcards"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
+yew = { version = "0.20", features = ["csr"] }
+rand = "0.8"
+once_cell = "1.18"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
