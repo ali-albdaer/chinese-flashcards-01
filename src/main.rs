@@ -183,15 +183,20 @@ impl Component for App {
             }
 
             Msg::AnimDone => {
-                // Finalize animation logic
                 match std::mem::replace(&mut self.anim_state, AnimationState::None) {
                     AnimationState::Removing => {
                         if !self.cards.is_empty() {
+                            // Remove from self.cards
                             let _ = self.cards.remove(self.current_index);
+                            // Only remove from decks map if not Favorites
                             if self.current_deck != "Favorites" {
                                 if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
-                                    if self.current_index < deck_vec.len() {
-                                        deck_vec.remove(self.current_index);
+                                    // Only remove if the deck_vec is not the same as self.cards
+                                    // (to avoid removing from all decks due to shared Vec)
+                                    if !std::ptr::eq(deck_vec, &self.cards) {
+                                        if self.current_index < deck_vec.len() {
+                                            deck_vec.remove(self.current_index);
+                                        }
                                     }
                                 }
                             }
@@ -206,8 +211,10 @@ impl Component for App {
                             self.cards.remove(self.current_index);
                             if self.current_deck != "Favorites" {
                                 if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
-                                    if self.current_index < deck_vec.len() {
-                                        deck_vec.remove(self.current_index);
+                                    if !std::ptr::eq(deck_vec, &self.cards) {
+                                        if self.current_index < deck_vec.len() {
+                                            deck_vec.remove(self.current_index);
+                                        }
                                     }
                                 }
                             }
@@ -216,22 +223,28 @@ impl Component for App {
                             if len == 0 {
                                 self.cards.push(card.clone());
                                 if self.current_deck != "Favorites" {
-                                    self.decks.get_mut(&self.current_deck).unwrap().push(card);
+                                    if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
+                                        if !std::ptr::eq(deck_vec, &self.cards) {
+                                            deck_vec.push(card);
+                                        }
+                                    }
                                 }
                                 self.current_index = 0;
                             } else {
-                                // Insert at a random index ≥ 1
                                 let idx = rng.gen_range(1..=len);
                                 self.cards.insert(idx, card.clone());
                                 if self.current_deck != "Favorites" {
-                                    self.decks.get_mut(&self.current_deck).unwrap().insert(idx, card);
+                                    if let Some(deck_vec) = self.decks.get_mut(&self.current_deck) {
+                                        if !std::ptr::eq(deck_vec, &self.cards) {
+                                            deck_vec.insert(idx, card);
+                                        }
+                                    }
                                 }
                                 self.current_index = 0;
                             }
                         }
                     }
                     AnimationState::Shuffling => {
-                        // Fisher–Yates shuffle
                         let mut rng = rand::thread_rng();
                         let len = self.cards.len();
                         for i in (1..len).rev() {
@@ -245,10 +258,10 @@ impl Component for App {
                 self.show_back = false;
                 true
             }
-
             Msg::SelectDeck(name) => {
                 if self.anim_state == AnimationState::None {
                     if let Some(deck_cards) = self.decks.get(&name) {
+                        // Clone the deck's Vec so self.cards is independent
                         self.current_deck = name.clone();
                         self.cards = deck_cards.clone();
                         self.current_index = 0;
@@ -262,7 +275,6 @@ impl Component for App {
                     false
                 }
             }
-
             Msg::AddToFavorites => {
                 if let Some(card) = self.cards.get(self.current_index).cloned() {
                     let fav = self.decks.get_mut("Favorites").unwrap();
@@ -272,7 +284,6 @@ impl Component for App {
                 }
                 false
             }
-
             Msg::TogglePinyin(v) => {
                 self.show_pinyin = v;
                 true
