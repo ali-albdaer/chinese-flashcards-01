@@ -1,170 +1,72 @@
 [
   {
-    "character": "努力",
-    "pinyin": "nǔlì",
-    "english": "to strive, effort",
+    "character": "爱情",
+    "pinyin": "àiqíng",
+    "english": "love, affection",
     "examples": [
-      { "chinese": "他很努力地学习。", "pinyin": "Tā hěn nǔlì de xuéxí。", "english": "He studies very hard." },
-      { "chinese": "只要努力就能成功。", "pinyin": "Zhǐyào nǔlì jiù néng chénggōng。", "english": "If you work hard, you can succeed." },
-      { "chinese": "努力工作会有回报。", "pinyin": "Nǔlì gōngzuò huì yǒu huíbào。", "english": "Hard work will be rewarded." }
+      { "chinese": "他们的爱情故事很感人。", "pinyin": "Tāmen de àiqíng gùshì hěn gǎnrén。", "english": "Their love story is very touching." },
+      { "chinese": "爱情需要时间来培养。", "pinyin": "Àiqíng xūyào shíjiān lái péiyǎng。", "english": "Love needs time to develop." },
+      { "chinese": "爱情是生活中最美好的东西。", "pinyin": "Àiqíng shì shēnghuó zhōng zuì měihǎo de dōngxī。", "english": "Love is the most beautiful thing in life." }
     ],
     "radicals": [
-      { "character": "力", "pinyin": "lì", "meaning": "power, strength" },
-      { "character": "女", "pinyin": "nǚ", "meaning": "female" }
+      { "character": "爱", "pinyin": "ài", "meaning": "love" },
+      { "character": "情", "pinyin": "qíng", "meaning": "feeling, emotion" }
     ]
   },
   {
-    "character": "机会",
-    "pinyin": "jīhuì",
-    "english": "opportunity",
+    "character": "安排",
+    "pinyin": "ānpái",
+    "english": "to arrange, to plan, to set up",
     "examples": [
-      { "chinese": "这是一个难得的机会。", "pinyin": "Zhè shì yí gè nándé de jīhuì。", "english": "This is a rare opportunity." },
-      { "chinese": "把握机会去尝试。", "pinyin": "Bǎwò jīhuì qù chángshì。", "english": "Seize the opportunity to try." },
-      { "chinese": "每个人都应该珍惜机会。", "pinyin": "Měi gè rén dōu yīnggāi zhēnxī jīhuì。", "english": "Everyone should cherish opportunities." }
+      { "chinese": "我们需要安排一个会议。", "pinyin": "wǒmen xūyào ānpái yīgè huìyì。", "english": "We need to arrange a meeting." },
+      { "chinese": "他已经安排好了旅行的细节。", "pinyin": "Tā yǐjīng ānpái hǎole lǚxíng de xìjié。", "english": "He has already arranged the details of the trip." },
+      { "chinese": "请你帮我安排一下明天的日程。", "pinyin": "Qǐng nǐ bāng wǒ ānpái yīxià míngtiān de rìchéng。", "english": "Please help me arrange tomorrow's schedule." }
     ],
     "radicals": [
-      { "character": "口", "pinyin": "kǒu", "meaning": "mouth, opening" },
-      { "character": "木", "pinyin": "mù", "meaning": "wood, tree" }
+      { "character": "安", "pinyin": "ān", "meaning": "peace, safe" },
+      { "character": "排", "pinyin": "pái", "meaning": "to arrange, to line up" }
     ]
   },
   {
-    "character": "电脑",
-    "pinyin": "diànnǎo",
-    "english": "computer",
+    "character": "安全",
+    "pinyin": "ānquán",
+    "english": "safety, security",
     "examples": [
-      { "chinese": "我的电脑坏了。", "pinyin": "Wǒ de diànnǎo huài le。", "english": "My computer broke." },
-      { "chinese": "他在电脑上工作。", "pinyin": "Tā zài diànnǎo shàng gōngzuò。", "english": "He works on a computer." },
-      { "chinese": "你会用电脑吗？", "pinyin": "Nǐ huì yòng diànnǎo ma？", "english": "Can you use a computer?" }
+      { "chinese": "安全第一，其他都可以放在后面。", "pinyin": "Ānquán dì yī, qítā dōu kěyǐ fàng zài hòumiàn。", "english": "Safety first, everything else can come later." },
+      { "chinese": "请确保你的行李是安全的。", "pinyin": "Qǐng quèbǎo nǐ de xínglǐ shì ānquán de。", "english": "Please ensure that your luggage is secure." },
+      { "chinese": "这座城市的治安很好。", "pinyin": "Zhè zuò chéngshì de zhì'ān hěn hǎo。", "english": "The public safety in this city is very good." }
     ],
     "radicals": [
-      { "character": "电", "pinyin": "diàn", "meaning": "electricity" },
-      { "character": "脑", "pinyin": "nǎo", "meaning": "brain" }
+      { "character": "安", "pinyin": "ān", "meaning": "peace, safe" },
+      { "character": "全", "pinyin": "quán", "meaning": "whole, complete" }
     ]
   },
   {
-    "character": "森林",
-    "pinyin": "sēnlín",
-    "english": "forest",
+    "character": "按时",
+    "pinyin": "ànshí",
+    "english": "on time, punctually",
     "examples": [
-      { "chinese": "这座森林很美丽。", "pinyin": "Zhè zuò sēnlín hěn měilì。", "english": "This forest is very beautiful." },
-      { "chinese": "我们去森林里散步。", "pinyin": "Wǒmen qù sēnlín lǐ sànbù。", "english": "We go for a walk in the forest." },
-      { "chinese": "森林里有很多动物。", "pinyin": "Sēnlín lǐ yǒu hěn duō dòngwù。", "english": "There are many animals in the forest." }
+      { "chinese": "请按时到达会议室。", "pinyin": "Qǐng ànshí dàodá huìyì shì。", "english": "Please arrive at the meeting room on time." },
+      { "chinese": "他总是按时完成工作。", "pinyin": "Tā zǒng shì ànshí wánchéng gōngzuò。", "english": "He always completes his work on time." },
+      { "chinese": "我们需要按时提交报告。", "pinyin": "Wǒmen xūyào ànshí tíjiāo bàogào。", "english": "We need to submit the report on time." }
     ],
     "radicals": [
-      { "character": "木", "pinyin": "mù", "meaning": "wood, tree" },
-      { "character": "林", "pinyin": "lín", "meaning": "grove, forest" }
+      { "character": "按", "pinyin": "àn", "meaning": "to press, to push" },
+      { "character": "时", "pinyin": "shí", "meaning": "time, hour" }
     ]
   },
   {
-    "character": "文化",
-    "pinyin": "wénhuà",
-    "english": "culture",
+    "character": "按照",
+    "pinyin": "ànzhào",
+    "english": "according to, in accordance with, on the basis of",
     "examples": [
-      { "chinese": "我们要了解不同的文化。", "pinyin": "Wǒmen yào liǎojiě bùtóng de wénhuà。", "english": "We need to understand different cultures." },
-      { "chinese": "文化遗产很重要。", "pinyin": "Wénhuà yíchǎn hěn zhòngyào。", "english": "Cultural heritage is very important." },
-      { "chinese": "城市的文化氛围很浓。", "pinyin": "Chéngshì de wénhuà fēnwéi hěn nóng。", "english": "The city has a strong cultural atmosphere." }
+      { "chinese": "按照规定，我们需要提交申请。", "pinyin": "Ànzhào guīdìng, wǒmen xūyào tíjiāo shēnqǐng。", "english": "According to the regulations, we need to submit an application." },
+      { "chinese": "请按照说明书操作。", "pinyin": "Qǐng ànzhào shuōmíngshū cāozuò。", "english": "Please operate according to the manual." },
+      { "chinese": "按照你的建议，我已经做了调整。", "pinyin": "Ànzhào nǐ de jiànyì, wǒ yǐjīng zuòle tiáozhěng。", "english": "I have made adjustments according to your suggestions." }
     ],
     "radicals": [
-      { "character": "文", "pinyin": "wén", "meaning": "script, culture" },
-      { "character": "化", "pinyin": "huà", "meaning": "to transform" }
-    ]
-  },
-  {
-    "character": "健康",
-    "pinyin": "jiànkāng",
-    "english": "health",
-    "examples": [
-      { "chinese": "运动对健康很重要。", "pinyin": "Yùndòng duì jiànkāng hěn zhòngyào。", "english": "Exercise is important for health." },
-      { "chinese": "饮食要均衡才能保持健康。", "pinyin": "Yǐnshí yào jūnhéng cái néng bǎochí jiànkāng。", "english": "You need a balanced diet to stay healthy." },
-      { "chinese": "医生说我的身体很健康。", "pinyin": "Yīshēng shuō wǒ de shēntǐ hěn jiànkāng。", "english": "The doctor says I’m very healthy." }
-    ],
-    "radicals": [
-      { "character": "健", "pinyin": "jiàn", "meaning": "healthy" },
-      { "character": "康", "pinyin": "kāng", "meaning": "peaceful, health" }
-    ]
-  },
-  {
-    "character": "旅游",
-    "pinyin": "lǚyóu",
-    "english": "to travel, tourism",
-    "examples": [
-      { "chinese": "我们下个月去旅游。", "pinyin": "Wǒmen xià gè yuè qù lǚyóu。", "english": "We will travel next month." },
-      { "chinese": "旅游可以开阔视野。", "pinyin": "Lǚyóu kěyǐ kāikuò shìyě。", "english": "Traveling can broaden one’s horizons." },
-      { "chinese": "我喜欢跟团旅游。", "pinyin": "Wǒ xǐhuān gēntuán lǚyóu。", "english": "I like package tours." }
-    ],
-    "radicals": [
-      { "character": "旅", "pinyin": "lǚ", "meaning": "travel" },
-      { "character": "游", "pinyin": "yóu", "meaning": "to roam, to travel" }
-    ]
-  },
-  {
-    "character": "教育",
-    "pinyin": "jiàoyù",
-    "english": "education",
-    "examples": [
-      { "chinese": "教育对一个人很重要。", "pinyin": "Jiàoyù duì yí gè rén hěn zhòngyào。", "english": "Education is important for a person." },
-      { "chinese": "政府要提高教育质量。", "pinyin": "Zhèngfǔ yào tígāo jiàoyù zhìliàng。", "english": "The government must improve education quality." },
-      { "chinese": "家庭教育也很关键。", "pinyin": "Jiātíng jiàoyù yě hěn guānjiàn。", "english": "Family education is also crucial." }
-    ],
-    "radicals": [
-      { "character": "教", "pinyin": "jiào", "meaning": "to teach" },
-      { "character": "育", "pinyin": "yù", "meaning": "to raise, to educate" }
-    ]
-  },
-  {
-    "character": "发展",
-    "pinyin": "fāzhǎn",
-    "english": "development",
-    "examples": [
-      { "chinese": "经济发展很快。", "pinyin": "Jīngjì fāzhǎn hěn kuài。", "english": "The economy is developing quickly." },
-      { "chinese": "他在职业上有很大发展。", "pinyin": "Tā zài zhíyè shàng yǒu hěn dà fāzhǎn。", "english": "He has great development in his career." },
-      { "chinese": "发展中国家需要更多帮助。", "pinyin": "Fāzhǎn zhōngguójiā xūyào gèng duō bāngzhù。", "english": "Developing countries need more assistance." }
-    ],
-    "radicals": [
-      { "character": "发", "pinyin": "fā", "meaning": "to emit, to develop" },
-      { "character": "展", "pinyin": "zhǎn", "meaning": "to expand" }
-    ]
-  },
-  {
-    "character": "科学",
-    "pinyin": "kēxué",
-    "english": "science",
-    "examples": [
-      { "chinese": "他喜欢学习科学。", "pinyin": "Tā xǐhuān xuéxí kēxué。", "english": "He likes studying science." },
-      { "chinese": "科学技术在进步。", "pinyin": "Kēxué jìshù zài jìnbù。", "english": "Science and technology are advancing." },
-      { "chinese": "科学家在实验室工作。", "pinyin": "Kēxuéjiā zài shíyànshì gōngzuò。", "english": "Scientists work in a lab." }
-    ],
-    "radicals": [
-      { "character": "科", "pinyin": "kē", "meaning": "branch of study" },
-      { "character": "学", "pinyin": "xué", "meaning": "study, learn" }
-    ]
-  },
-  {
-    "character": "经济",
-    "pinyin": "jīngjì",
-    "english": "economy",
-    "examples": [
-      { "chinese": "中国的经济在增长。", "pinyin": "Zhōngguó de jīngjì zài zēngzhǎng。", "english": "China’s economy is growing." },
-      { "chinese": "我们要学会管理经济。", "pinyin": "Wǒmen yào xuéhuì guǎnlǐ jīngjì。", "english": "We need to learn economic management." },
-      { "chinese": "经济危机影响很大。", "pinyin": "Jīngjì wēijī yǐngxiǎng hěn dà。", "english": "The economic crisis had a huge impact." }
-    ],
-    "radicals": [
-      { "character": "经", "pinyin": "jīng", "meaning": "to pass through; classics" },
-      { "character": "济", "pinyin": "jì", "meaning": "to help; aid" }
-    ]
-  },
-  {
-    "character": "艺术",
-    "pinyin": "yìshù",
-    "english": "art",
-    "examples": [
-      { "chinese": "他对艺术很感兴趣。", "pinyin": "Tā duì yìshù hěn gǎnxìngqù。", "english": "He is very interested in art." },
-      { "chinese": "这幅画是一件艺术品。", "pinyin": "Zhè fú huà shì yí jiàn yìshùpǐn。", "english": "This painting is a piece of art." },
-      { "chinese": "艺术节下周举行。", "pinyin": "Yìshùjié xià zhōu jǔxíng。", "english": "The arts festival is next week." }
-    ],
-    "radicals": [
-      { "character": "艺", "pinyin": "yì", "meaning": "craft; art" },
-      { "character": "术", "pinyin": "shù", "meaning": "technique" }
+      { "character": "按", "pinyin": "àn", "meaning": "to press, to push" },
+      { "character": "照", "pinyin": "zhào", "meaning": "to shine, to illuminate" }
     ]
   }
 ]
