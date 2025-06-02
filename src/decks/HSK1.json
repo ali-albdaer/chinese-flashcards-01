@@ -1,0 +1,1590 @@
+[
+  {
+    "character": "爱",
+    "pinyin": "ài",
+    "english": "love",
+    "examples": [
+      { "chinese": "我爱我的家人。", "pinyin": "Wǒ ài wǒ de jiārén。", "english": "I love my family." },
+      { "chinese": "她爱看书。", "pinyin": "Tā ài kàn shū。", "english": "She loves reading books." },
+      { "chinese": "爱是世界上最美好的感情。", "pinyin": "Ài shì shìjiè shàng zuì měihǎo de gǎnqíng。", "english": "Love is the most beautiful feeling in the world." }
+    ],
+    "radicals": [
+      { "character": "爫", "pinyin": "zhǎo", "meaning": "claw" },
+      { "character": "冖", "pinyin": "mì", "meaning": "cover" }
+    ]
+  },
+  {
+    "character": "八",
+    "pinyin": "bā",
+    "english": "eight",
+    "examples": [
+      { "chinese": "我有八本书。", "pinyin": "Wǒ yǒu bā běn shū。", "english": "I have eight books." }
+    ],
+    "radicals": [
+      { "character": "八", "pinyin": "bā", "meaning": "eight" }
+    ]
+  },
+  {
+    "character": "爸爸",
+    "pinyin": "bàba",
+    "english": "dad, father",
+    "examples": [
+      { "chinese": "我爸爸是老师。", "pinyin": "Wǒ bàba shì lǎoshī。", "english": "My dad is a teacher." }
+    ],
+    "radicals": [
+      { "character": "父", "pinyin": "fù", "meaning": "father" }
+    ]
+  },
+  {
+    "character": "杯子",
+    "pinyin": "bēizi",
+    "english": "cup, glass",
+    "examples": [
+      { "chinese": "请给我一个杯子。", "pinyin": "Qǐng gěi wǒ yí gè bēizi。", "english": "Please give me a cup." }
+    ],
+    "radicals": [
+      { "character": "木", "pinyin": "mù", "meaning": "wood" }
+    ]
+  },
+  {
+    "character": "北京",
+    "pinyin": "Běijīng",
+    "english": "Beijing",
+    "examples": [
+      { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." }
+    ],
+    "radicals": [
+      { "character": "北", "pinyin": "běi", "meaning": "north" },
+      { "character": "京", "pinyin": "jīng", "meaning": "capital" }
+    ]
+  },
+  {
+    "character": "本",
+    "pinyin": "běn",
+    "english": "measure word for books",
+    "examples": [
+      { "chinese": "我有三本书。", "pinyin": "Wǒ yǒu sān běn shū。", "english": "I have three books." }
+    ],
+    "radicals": [
+      { "character": "木", "pinyin": "mù", "meaning": "wood" }
+    ]
+  },
+  {
+    "character": "不",
+    "pinyin": "bù",
+    "english": "not, no",
+    "examples": [
+      { "chinese": "我不是老师。", "pinyin": "Wǒ bù shì lǎoshī。", "english": "I am not a teacher." }
+    ],
+    "radicals": [
+      { "character": "一", "pinyin": "yī", "meaning": "one" }
+    ]
+  },
+  {
+    "character": "菜",
+    "pinyin": "cài",
+    "english": "dish, vegetable",
+    "examples": [
+      { "chinese": "我喜欢吃中国菜。", "pinyin": "Wǒ xǐhuān chī Zhōngguó cài。", "english": "I like eating Chinese food." }
+    ],
+    "radicals": [
+      { "character": "艹", "pinyin": "cǎo", "meaning": "grass" }
+    ]
+  },
+  {
+    "character": "茶",
+    "pinyin": "chá",
+    "english": "tea",
+    "examples": [
+      { "chinese": "我喜欢喝茶。", "pinyin": "Wǒ xǐhuān hē chá。", "english": "I like drinking tea." }
+    ],
+    "radicals": [
+      { "character": "艹", "pinyin": "cǎo", "meaning": "grass" }
+    ]
+  },
+  {
+    "character": "吃",
+    "pinyin": "chī",
+    "english": "to eat",
+    "examples": [
+      { "chinese": "我喜欢吃米饭。", "pinyin": "Wǒ xǐhuān chī mǐfàn。", "english": "I like eating rice." }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "出租车",
+    "pinyin": "chūzūchē",
+    "english": "taxi",
+    "examples": [
+      { "chinese": "我坐出租车去公司。", "pinyin": "Wǒ zuò chūzūchē qù gōngsī。", "english": "I take a taxi to the company." }
+    ],
+    "radicals": [
+      { "character": "车", "pinyin": "chē", "meaning": "vehicle" }
+    ]
+  },
+  {
+    "character": "打电话",
+    "pinyin": "dǎdiànhuà",
+    "english": "to make a phone call",
+    "examples": [
+      { "chinese": "我给妈妈打电话。", "pinyin": "Wǒ gěi māma dǎdiànhuà。", "english": "I call my mom." }
+    ],
+    "radicals": [
+      { "character": "手", "pinyin": "shǒu", "meaning": "hand" }
+    ]
+  },
+  {
+    "character": "大",
+    "pinyin": "dà",
+    "english": "big",
+    "examples": [
+      { "chinese": "这只狗很大。", "pinyin": "Zhè zhī gǒu hěn dà。", "english": "This dog is big." }
+    ],
+    "radicals": [
+      { "character": "大", "pinyin": "dà", "meaning": "big" }
+    ]
+  },
+  {
+    "character": "的",
+    "pinyin": "de",
+    "english": "of, (possessive particle)",
+    "examples": [
+      { "chinese": "这是我的书。", "pinyin": "Zhè shì wǒ de shū。", "english": "This is my book." }
+    ],
+    "radicals": [
+      { "character": "白", "pinyin": "bái", "meaning": "white" }
+    ]
+  },
+  {
+    "character": "点",
+    "pinyin": "diǎn",
+    "english": "o'clock, dot",
+    "examples": [
+      { "chinese": "现在几点？", "pinyin": "Xiànzài jǐ diǎn？", "english": "What time is it now?" }
+    ],
+    "radicals": [
+      { "character": "火", "pinyin": "huǒ", "meaning": "fire" }
+    ]
+  },
+  {
+    "character": "电脑",
+    "pinyin": "diànnǎo",
+    "english": "computer",
+    "examples": [
+      { "chinese": "我有一台电脑。", "pinyin": "Wǒ yǒu yì tái diànnǎo。", "english": "I have a computer." }
+    ],
+    "radicals": [
+      { "character": "电", "pinyin": "diàn", "meaning": "electricity" }
+    ]
+  },
+  {
+    "character": "电视",
+    "pinyin": "diànshì",
+    "english": "television",
+    "examples": [
+      { "chinese": "我喜欢看电视。", "pinyin": "Wǒ xǐhuān kàn diànshì。", "english": "I like watching TV." }
+    ],
+    "radicals": [
+      { "character": "电", "pinyin": "diàn", "meaning": "electricity" }
+    ]
+  },
+  {
+    "character": "电影",
+    "pinyin": "diànyǐng",
+    "english": "movie",
+    "examples": [
+      { "chinese": "我们去看电影吧。", "pinyin": "Wǒmen qù kàn diànyǐng ba。", "english": "Let's go watch a movie." }
+    ],
+    "radicals": [
+      { "character": "电", "pinyin": "diàn", "meaning": "electricity" }
+    ]
+  },
+  {
+    "character": "东西",
+    "pinyin": "dōngxi",
+    "english": "thing, stuff",
+    "examples": [
+      { "chinese": "我买了一些东西。", "pinyin": "Wǒ mǎi le yìxiē dōngxi。", "english": "I bought some things." }
+    ],
+    "radicals": [
+      { "character": "东", "pinyin": "dōng", "meaning": "east" }
+    ]
+  },
+  {
+    "character": "都",
+    "pinyin": "dōu",
+    "english": "all, both",
+    "examples": [
+      { "chinese": "我们都是学生。", "pinyin": "Wǒmen dōu shì xuéshēng。", "english": "We are all students." }
+    ],
+    "radicals": [
+      { "character": "阝", "pinyin": "fù", "meaning": "mound" }
+    ]
+  },
+  {
+    "character": "读",
+    "pinyin": "dú",
+    "english": "to read",
+    "examples": [
+      { "chinese": "我喜欢读书。", "pinyin": "Wǒ xǐhuān dú shū。", "english": "I like reading books." }
+    ],
+    "radicals": [
+      { "character": "讠", "pinyin": "yán", "meaning": "speech" }
+    ]
+  },
+  {
+    "character": "对不起",
+    "pinyin": "duìbuqǐ",
+    "english": "sorry",
+    "examples": [
+      { "chinese": "对不起，我迟到了。", "pinyin": "Duìbuqǐ, wǒ chídào le。", "english": "Sorry, I am late." }
+    ],
+    "radicals": [
+      { "character": "寸", "pinyin": "cùn", "meaning": "inch" }
+    ]
+  },
+  {
+    "character": "多",
+    "pinyin": "duō",
+    "english": "many, much",
+    "examples": [
+      { "chinese": "这里有很多人。", "pinyin": "Zhèlǐ yǒu hěn duō rén。", "english": "There are many people here." }
+    ],
+    "radicals": [
+      { "character": "夕", "pinyin": "xī", "meaning": "evening" }
+    ]
+  },
+  {
+    "character": "多少",
+    "pinyin": "duōshǎo",
+    "english": "how many, how much",
+    "examples": [
+      { "chinese": "这个多少钱？", "pinyin": "Zhège duōshǎo qián？", "english": "How much is this?" }
+    ],
+    "radicals": [
+      { "character": "夕", "pinyin": "xī", "meaning": "evening" }
+    ]
+  },
+  {
+    "character": "儿子",
+    "pinyin": "érzi",
+    "english": "son",
+    "examples": [
+      { "chinese": "我有一个儿子。", "pinyin": "Wǒ yǒu yí gè érzi。", "english": "I have a son." }
+    ],
+    "radicals": [
+      { "character": "儿", "pinyin": "ér", "meaning": "child" }
+    ]
+  },
+  {
+    "character": "二",
+    "pinyin": "èr",
+    "english": "two",
+    "examples": [
+      { "chinese": "我有两个苹果。", "pinyin": "Wǒ yǒu liǎng gè píngguǒ。", "english": "I have two apples." }
+    ],
+    "radicals": [
+      { "character": "二", "pinyin": "èr", "meaning": "two" }
+    ]
+  },
+  {
+    "character": "饭店",
+    "pinyin": "fàndiàn",
+    "english": "restaurant, hotel",
+    "examples": [
+      { "chinese": "我们去饭店吃饭。", "pinyin": "Wǒmen qù fàndiàn chīfàn。", "english": "We go to the restaurant to eat." }
+    ],
+    "radicals": [
+      { "character": "饣", "pinyin": "shí", "meaning": "food" }
+    ]
+  },
+  {
+    "character": "飞机",
+    "pinyin": "fēijī",
+    "english": "airplane",
+    "examples": [
+      { "chinese": "我坐飞机去北京。", "pinyin": "Wǒ zuò fēijī qù Běijīng。", "english": "I go to Beijing by plane." }
+    ],
+    "radicals": [
+      { "character": "飞", "pinyin": "fēi", "meaning": "to fly" }
+    ]
+  },
+  {
+    "character": "分钟",
+    "pinyin": "fēnzhōng",
+    "english": "minute",
+    "examples": [
+      { "chinese": "请等我五分钟。", "pinyin": "Qǐng děng wǒ wǔ fēnzhōng。", "english": "Please wait for me five minutes." }
+    ],
+    "radicals": [
+      { "character": "分", "pinyin": "fēn", "meaning": "divide" }
+    ]
+  },
+  {
+    "character": "高兴",
+    "pinyin": "gāoxìng",
+    "english": "happy, glad",
+    "examples": [
+      { "chinese": "我很高兴认识你。", "pinyin": "Wǒ hěn gāoxìng rènshi nǐ。", "english": "I'm glad to meet you." }
+    ],
+    "radicals": [
+      { "character": "高", "pinyin": "gāo", "meaning": "tall" }
+    ]
+  },
+  {
+    "character": "个",
+    "pinyin": "gè",
+    "english": "measure word (general)",
+    "examples": [
+      { "chinese": "一个人", "pinyin": "yí gè rén", "english": "one person" }
+    ],
+    "radicals": [
+      { "character": "个", "pinyin": "gè", "meaning": "individual" }
+    ]
+  },
+  {
+    "character": "工作",
+    "pinyin": "gōngzuò",
+    "english": "work, job",
+    "examples": [
+      { "chinese": "我在医院工作。", "pinyin": "Wǒ zài yīyuàn gōngzuò。", "english": "I work at a hospital." }
+    ],
+    "radicals": [
+      { "character": "工", "pinyin": "gōng", "meaning": "work" }
+    ]
+  },
+  {
+    "character": "狗",
+    "pinyin": "gǒu",
+    "english": "dog",
+    "examples": [
+      { "chinese": "我有一只狗。", "pinyin": "Wǒ yǒu yì zhī gǒu。", "english": "I have a dog." }
+    ],
+    "radicals": [
+      { "character": "犭", "pinyin": "quǎn", "meaning": "dog" }
+    ]
+  },
+  {
+    "character": "汉语",
+    "pinyin": "Hànyǔ",
+    "english": "Chinese language",
+    "examples": [
+      { "chinese": "我会说汉语。", "pinyin": "Wǒ huì shuō Hànyǔ。", "english": "I can speak Chinese." }
+    ],
+    "radicals": [
+      { "character": "氵", "pinyin": "shuǐ", "meaning": "water" }
+    ]
+  },
+  {
+    "character": "好",
+    "pinyin": "hǎo",
+    "english": "good",
+    "examples": [
+      { "chinese": "你好吗？", "pinyin": "Nǐ hǎo ma？", "english": "How are you?" }
+    ],
+    "radicals": [
+      { "character": "女", "pinyin": "nǚ", "meaning": "female" }
+    ]
+  },
+  {
+    "character": "号",
+    "pinyin": "hào",
+    "english": "number, date",
+    "examples": [
+      { "chinese": "今天几号？", "pinyin": "Jīntiān jǐ hào？", "english": "What is the date today?" }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "喝",
+    "pinyin": "hē",
+    "english": "to drink",
+    "examples": [
+      { "chinese": "我想喝水。", "pinyin": "Wǒ xiǎng hē shuǐ。", "english": "I want to drink water." }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "和",
+    "pinyin": "hé",
+    "english": "and, with",
+    "examples": [
+      { "chinese": "我和你都是学生。", "pinyin": "Wǒ hé nǐ dōu shì xuéshēng。", "english": "You and I are both students." }
+    ],
+    "radicals": [
+      { "character": "禾", "pinyin": "hé", "meaning": "grain" }
+    ]
+  },
+  {
+    "character": "很",
+    "pinyin": "hěn",
+    "english": "very",
+    "examples": [
+      { "chinese": "我很高兴。", "pinyin": "Wǒ hěn gāoxìng。", "english": "I am very happy." }
+    ],
+    "radicals": [
+      { "character": "彳", "pinyin": "chì", "meaning": "step" }
+    ]
+  },
+  {
+    "character": "后面",
+    "pinyin": "hòumiàn",
+    "english": "behind, back",
+    "examples": [
+      { "chinese": "学校后面有一个公园。", "pinyin": "Xuéxiào hòumiàn yǒu yí gè gōngyuán。", "english": "There is a park behind the school." }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "回",
+    "pinyin": "huí",
+    "english": "to return",
+    "examples": [
+      { "chinese": "我回家了。", "pinyin": "Wǒ huí jiā le。", "english": "I went home." }
+    ],
+    "radicals": [
+      { "character": "囗", "pinyin": "wéi", "meaning": "enclosure" }
+    ]
+  },
+  {
+    "character": "会",
+    "pinyin": "huì",
+    "english": "can, be able to",
+    "examples": [
+      { "chinese": "我会说英语。", "pinyin": "Wǒ huì shuō Yīngyǔ。", "english": "I can speak English." }
+    ],
+    "radicals": [
+      { "character": "人", "pinyin": "rén", "meaning": "person" }
+    ]
+  },
+  {
+    "character": "几",
+    "pinyin": "jǐ",
+    "english": "how many, several",
+    "examples": [
+      { "chinese": "你有几个孩子？", "pinyin": "Nǐ yǒu jǐ gè háizi？", "english": "How many children do you have?" }
+    ],
+    "radicals": [
+      { "character": "几", "pinyin": "jǐ", "meaning": "table" }
+    ]
+  },
+  {
+    "character": "家",
+    "pinyin": "jiā",
+    "english": "home, family",
+    "examples": [
+      { "chinese": "我家在北京。", "pinyin": "Wǒ jiā zài Běijīng。", "english": "My home is in Beijing." }
+    ],
+    "radicals": [
+      { "character": "宀", "pinyin": "mián", "meaning": "roof" }
+    ]
+  },
+  {
+    "character": "叫",
+    "pinyin": "jiào",
+    "english": "to be called",
+    "examples": [
+      { "chinese": "我叫王明。", "pinyin": "Wǒ jiào Wáng Míng。", "english": "My name is Wang Ming." }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "今天",
+    "pinyin": "jīntiān",
+    "english": "today",
+    "examples": [
+      { "chinese": "今天是星期几？", "pinyin": "Jīntiān shì xīngqī jǐ？", "english": "What day is it today?" }
+    ],
+    "radicals": [
+      { "character": "日", "pinyin": "rì", "meaning": "sun" }
+    ]
+  },
+  {
+    "character": "九",
+    "pinyin": "jiǔ",
+    "english": "nine",
+    "examples": [
+      { "chinese": "他有九个苹果。", "pinyin": "Tā yǒu jiǔ gè píngguǒ。", "english": "He has nine apples." }
+    ],
+    "radicals": [
+      { "character": "乙", "pinyin": "yǐ", "meaning": "second" }
+    ]
+  },
+  {
+    "character": "开",
+    "pinyin": "kāi",
+    "english": "to open, to drive",
+    "examples": [
+      { "chinese": "请开门。", "pinyin": "Qǐng kāi mén。", "english": "Please open the door." }
+    ],
+    "radicals": [
+      { "character": "廾", "pinyin": "gǒng", "meaning": "two hands" }
+    ]
+  },
+  {
+    "character": "看",
+    "pinyin": "kàn",
+    "english": "to see, to look at",
+    "examples": [
+      { "chinese": "我喜欢看电影。", "pinyin": "Wǒ xǐhuān kàn diànyǐng。", "english": "I like watching movies." }
+    ],
+    "radicals": [
+      { "character": "目", "pinyin": "mù", "meaning": "eye" }
+    ]
+  },
+  {
+    "character": "看见",
+    "pinyin": "kànjiàn",
+    "english": "to see",
+    "examples": [
+      { "chinese": "我看见他了。", "pinyin": "Wǒ kànjiàn tā le。", "english": "I saw him." }
+    ],
+    "radicals": [
+      { "character": "见", "pinyin": "jiàn", "meaning": "see" }
+    ]
+  },
+  {
+    "character": "块",
+    "pinyin": "kuài",
+    "english": "piece, yuan (money)",
+    "examples": [
+      { "chinese": "一块钱", "pinyin": "yí kuài qián", "english": "one yuan" }
+    ],
+    "radicals": [
+      { "character": "土", "pinyin": "tǔ", "meaning": "earth" }
+    ]
+  },
+  {
+    "character": "来",
+    "pinyin": "lái",
+    "english": "to come",
+    "examples": [
+      { "chinese": "请你来我家。", "pinyin": "Qǐng nǐ lái wǒ jiā。", "english": "Please come to my home." }
+    ],
+    "radicals": [
+      { "character": "木", "pinyin": "mù", "meaning": "wood" }
+    ]
+  },
+  {
+    "character": "老师",
+    "pinyin": "lǎoshī",
+    "english": "teacher",
+    "examples": [
+      { "chinese": "我的老师很严格。", "pinyin": "Wǒ de lǎoshī hěn yángé。", "english": "My teacher is very strict." }
+    ],
+    "radicals": [
+      { "character": "师", "pinyin": "shī", "meaning": "master; teacher" }
+    ]
+  },
+  {
+    "character": "了",
+    "pinyin": "le",
+    "english": "completed action marker",
+    "examples": [
+      { "chinese": "我吃饭了。", "pinyin": "Wǒ chīfàn le。", "english": "I have eaten." }
+    ],
+    "radicals": [
+      { "character": "亅", "pinyin": "jué", "meaning": "hook" }
+    ]
+  },
+  {
+    "character": "冷",
+    "pinyin": "lěng",
+    "english": "cold",
+    "examples": [
+      { "chinese": "今天很冷。", "pinyin": "Jīntiān hěn lěng。", "english": "It's very cold today." }
+    ],
+    "radicals": [
+      { "character": "冫", "pinyin": "bīng", "meaning": "ice" }
+    ]
+  },
+  {
+    "character": "里",
+    "pinyin": "lǐ",
+    "english": "inside",
+    "examples": [
+      { "chinese": "家里有三个人。", "pinyin": "Jiā lǐ yǒu sān gè rén。", "english": "There are three people in the family." }
+    ],
+    "radicals": [
+      { "character": "里", "pinyin": "lǐ", "meaning": "village" }
+    ]
+  },
+  {
+    "character": "六",
+    "pinyin": "liù",
+    "english": "six",
+    "examples": [
+      { "chinese": "我有六个苹果。", "pinyin": "Wǒ yǒu liù gè píngguǒ。", "english": "I have six apples." }
+    ],
+    "radicals": [
+      { "character": "八", "pinyin": "bā", "meaning": "eight" }
+    ]
+  },
+  {
+    "character": "妈妈",
+    "pinyin": "māma",
+    "english": "mom, mother",
+    "examples": [
+      { "chinese": "我妈妈是医生。", "pinyin": "Wǒ māma shì yīshēng。", "english": "My mom is a doctor." }
+    ],
+    "radicals": [
+      { "character": "女", "pinyin": "nǚ", "meaning": "female" }
+    ]
+  },
+  {
+    "character": "吗",
+    "pinyin": "ma",
+    "english": "question particle",
+    "examples": [
+      { "chinese": "你好吗？", "pinyin": "Nǐ hǎo ma？", "english": "How are you?" }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "买",
+    "pinyin": "mǎi",
+    "english": "to buy",
+    "examples": [
+      { "chinese": "我买了一本书。", "pinyin": "Wǒ mǎi le yì běn shū。", "english": "I bought a book." }
+    ],
+    "radicals": [
+      { "character": "乛", "pinyin": "yà", "meaning": "second" }
+    ]
+  },
+  {
+    "character": "猫",
+    "pinyin": "māo",
+    "english": "cat",
+    "examples": [
+      { "chinese": "我家有一只猫。", "pinyin": "Wǒ jiā yǒu yì zhī māo。", "english": "There is a cat in my home." }
+    ],
+    "radicals": [
+      { "character": "犭", "pinyin": "quǎn", "meaning": "dog" }
+    ]
+  },
+  {
+    "character": "没关系",
+    "pinyin": "méiguānxi",
+    "english": "it doesn't matter",
+    "examples": [
+      { "chinese": "没关系，我不忙。", "pinyin": "Méiguānxi, wǒ bù máng。", "english": "It's okay, I'm not busy." }
+    ],
+    "radicals": [
+      { "character": "氵", "pinyin": "shuǐ", "meaning": "water" }
+    ]
+  },
+  {
+    "character": "没有",
+    "pinyin": "méiyǒu",
+    "english": "not have, there is not",
+    "examples": [
+      { "chinese": "我没有钱。", "pinyin": "Wǒ méiyǒu qián。", "english": "I don't have money." }
+    ],
+    "radicals": [
+      { "character": "氵", "pinyin": "shuǐ", "meaning": "water" }
+    ]
+  },
+  {
+    "character": "米饭",
+    "pinyin": "mǐfàn",
+    "english": "cooked rice",
+    "examples": [
+      { "chinese": "我喜欢吃米饭。", "pinyin": "Wǒ xǐhuān chī mǐfàn。", "english": "I like eating rice." }
+    ],
+    "radicals": [
+      { "character": "米", "pinyin": "mǐ", "meaning": "rice" }
+    ]
+  },
+  {
+    "character": "明天",
+    "pinyin": "míngtiān",
+    "english": "tomorrow",
+    "examples": [
+      { "chinese": "明天见！", "pinyin": "Míngtiān jiàn！", "english": "See you tomorrow!" }
+    ],
+    "radicals": [
+      { "character": "日", "pinyin": "rì", "meaning": "sun" }
+    ]
+  },
+  {
+    "character": "名字",
+    "pinyin": "míngzi",
+    "english": "name",
+    "examples": [
+      { "chinese": "你的名字是什么？", "pinyin": "Nǐ de míngzi shì shénme？", "english": "What is your name?" }
+    ],
+    "radicals": [
+      { "character": "夕", "pinyin": "xī", "meaning": "evening" }
+    ]
+  },
+  {
+    "character": "哪",
+    "pinyin": "nǎ",
+    "english": "which",
+    "examples": [
+      { "chinese": "你是哪国人？", "pinyin": "Nǐ shì nǎ guó rén？", "english": "Which country are you from?" }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "哪儿",
+    "pinyin": "nǎr",
+    "english": "where",
+    "examples": [
+      { "chinese": "你去哪儿？", "pinyin": "Nǐ qù nǎr？", "english": "Where are you going?" }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "那",
+    "pinyin": "nà",
+    "english": "that",
+    "examples": [
+      { "chinese": "那是我的书。", "pinyin": "Nà shì wǒ de shū。", "english": "That is my book." }
+    ],
+    "radicals": [
+      { "character": "阝", "pinyin": "fù", "meaning": "mound" }
+    ]
+  },
+  {
+    "character": "那儿",
+    "pinyin": "nàr",
+    "english": "there",
+    "examples": [
+      { "chinese": "我在那儿。", "pinyin": "Wǒ zài nàr。", "english": "I am there." }
+    ],
+    "radicals": [
+      { "character": "阝", "pinyin": "fù", "meaning": "mound" }
+    ]
+  },
+  {
+    "character": "呢",
+    "pinyin": "ne",
+    "english": "question particle (for context)",
+    "examples": [
+      { "chinese": "你呢？", "pinyin": "Nǐ ne？", "english": "And you?" }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "能",
+    "pinyin": "néng",
+    "english": "can, be able to",
+    "examples": [
+      { "chinese": "我能帮你。", "pinyin": "Wǒ néng bāng nǐ。", "english": "I can help you." }
+    ],
+    "radicals": [
+      { "character": "月", "pinyin": "yuè", "meaning": "moon" }
+    ]
+  },
+  {
+    "character": "你",
+    "pinyin": "nǐ",
+    "english": "you",
+    "examples": [
+      { "chinese": "你叫什么名字？", "pinyin": "Nǐ jiào shénme míngzi？", "english": "What is your name?" }
+    ],
+    "radicals": [
+      { "character": "亻", "pinyin": "rén", "meaning": "person" }
+    ]
+  },
+  {
+    "character": "年",
+    "pinyin": "nián",
+    "english": "year",
+    "examples": [
+      { "chinese": "今年是2024年。", "pinyin": "Jīnnián shì èr líng èr sì nián。", "english": "This year is 2024." }
+    ],
+    "radicals": [
+      { "character": "干", "pinyin": "gān", "meaning": "dry" }
+    ]
+  },
+  {
+    "character": "女儿",
+    "pinyin": "nǚ'ér",
+    "english": "daughter",
+    "examples": [
+      { "chinese": "我有一个女儿。", "pinyin": "Wǒ yǒu yí gè nǚ'ér。", "english": "I have a daughter." }
+    ],
+    "radicals": [
+      { "character": "女", "pinyin": "nǚ", "meaning": "female" }
+    ]
+  },
+  {
+    "character": "朋友",
+    "pinyin": "péngyǒu",
+    "english": "friend",
+    "examples": [
+      { "chinese": "他是我的好朋友。", "pinyin": "Tā shì wǒ de hǎo péngyǒu。", "english": "He is my good friend." }
+    ],
+    "radicals": [
+      { "character": "月", "pinyin": "yuè", "meaning": "moon; flesh" }
+    ]
+  },
+  {
+    "character": "漂亮",
+    "pinyin": "piàoliang",
+    "english": "pretty, beautiful",
+    "examples": [
+      { "chinese": "她很漂亮。", "pinyin": "Tā hěn piàoliang。", "english": "She is very beautiful." }
+    ],
+    "radicals": [
+      { "character": "亠", "pinyin": "tóu", "meaning": "lid" }
+    ]
+  },
+  {
+    "character": "苹果",
+    "pinyin": "píngguǒ",
+    "english": "apple",
+    "examples": [
+      { "chinese": "我喜欢吃苹果。", "pinyin": "Wǒ xǐhuān chī píngguǒ。", "english": "I like eating apples." }
+    ],
+    "radicals": [
+      { "character": "木", "pinyin": "mù", "meaning": "wood" }
+    ]
+  },
+  {
+    "character": "七",
+    "pinyin": "qī",
+    "english": "seven",
+    "examples": [
+      { "chinese": "我有七个朋友。", "pinyin": "Wǒ yǒu qī gè péngyǒu。", "english": "I have seven friends." }
+    ],
+    "radicals": [
+      { "character": "一", "pinyin": "yī", "meaning": "one" }
+    ]
+  },
+  {
+    "character": "钱",
+    "pinyin": "qián",
+    "english": "money",
+    "examples": [
+      { "chinese": "我没有钱。", "pinyin": "Wǒ méiyǒu qián。", "english": "I don't have money." }
+    ],
+    "radicals": [
+      { "character": "钅", "pinyin": "jīn", "meaning": "metal" }
+    ]
+  },
+  {
+    "character": "前面",
+    "pinyin": "qiánmiàn",
+    "english": "in front of",
+    "examples": [
+      { "chinese": "学校前面有一棵树。", "pinyin": "Xuéxiào qiánmiàn yǒu yì kē shù。", "english": "There is a tree in front of the school." }
+    ],
+    "radicals": [
+      { "character": "刂", "pinyin": "dāo", "meaning": "knife" }
+    ]
+  },
+  {
+    "character": "请",
+    "pinyin": "qǐng",
+    "english": "please, to invite",
+    "examples": [
+      { "chinese": "请进。", "pinyin": "Qǐng jìn。", "english": "Please come in." }
+    ],
+    "radicals": [
+      { "character": "讠", "pinyin": "yán", "meaning": "speech" }
+    ]
+  },
+  {
+    "character": "去",
+    "pinyin": "qù",
+    "english": "to go",
+    "examples": [
+      { "chinese": "我去学校。", "pinyin": "Wǒ qù xuéxiào。", "english": "I go to school." }
+    ],
+    "radicals": [
+      { "character": "厶", "pinyin": "sī", "meaning": "private" }
+    ]
+  },
+  {
+    "character": "热",
+    "pinyin": "rè",
+    "english": "hot",
+    "examples": [
+      { "chinese": "今天很热。", "pinyin": "Jīntiān hěn rè。", "english": "It's very hot today." }
+    ],
+    "radicals": [
+      { "character": "灬", "pinyin": "huǒ", "meaning": "fire" }
+    ]
+  },
+  {
+    "character": "人",
+    "pinyin": "rén",
+    "english": "person",
+    "examples": [
+      { "chinese": "我是中国人。", "pinyin": "Wǒ shì Zhōngguó rén。", "english": "I am Chinese." }
+    ],
+    "radicals": [
+      { "character": "人", "pinyin": "rén", "meaning": "person" }
+    ]
+  },
+  {
+    "character": "认识",
+    "pinyin": "rènshi",
+    "english": "to know (somebody)",
+    "examples": [
+      { "chinese": "我认识他。", "pinyin": "Wǒ rènshi tā。", "english": "I know him." }
+    ],
+    "radicals": [
+      { "character": "讠", "pinyin": "yán", "meaning": "speech" }
+    ]
+  },
+  {
+    "character": "三",
+    "pinyin": "sān",
+    "english": "three",
+    "examples": [
+      { "chinese": "我有三个苹果。", "pinyin": "Wǒ yǒu sān gè píngguǒ。", "english": "I have three apples." }
+    ],
+    "radicals": [
+      { "character": "一", "pinyin": "yī", "meaning": "one" }
+    ]
+  },
+  {
+    "character": "商店",
+    "pinyin": "shāngdiàn",
+    "english": "shop, store",
+    "examples": [
+      { "chinese": "我去商店买东西。", "pinyin": "Wǒ qù shāngdiàn mǎi dōngxi。", "english": "I go to the shop to buy things." }
+    ],
+    "radicals": [
+      { "character": "商", "pinyin": "shāng", "meaning": "commerce" }
+    ]
+  },
+  {
+    "character": "上",
+    "pinyin": "shàng",
+    "english": "up, above",
+    "examples": [
+      { "chinese": "他在楼上。", "pinyin": "Tā zài lóu shàng。", "english": "He is upstairs." }
+    ],
+    "radicals": [
+      { "character": "卜", "pinyin": "bǔ", "meaning": "divination" }
+    ]
+  },
+  {
+    "character": "上午",
+    "pinyin": "shàngwǔ",
+    "english": "morning",
+    "examples": [
+      { "chinese": "我上午去上班。", "pinyin": "Wǒ shàngwǔ qù shàngbān。", "english": "I go to work in the morning." }
+    ],
+    "radicals": [
+      { "character": "午", "pinyin": "wǔ", "meaning": "noon" }
+    ]
+  },
+  {
+    "character": "少",
+    "pinyin": "shǎo",
+    "english": "few, little",
+    "examples": [
+      { "chinese": "我有很少的钱。", "pinyin": "Wǒ yǒu hěn shǎo de qián。", "english": "I have very little money." }
+    ],
+    "radicals": [
+      { "character": "小", "pinyin": "xiǎo", "meaning": "small" }
+    ]
+  },
+  {
+    "character": "谁",
+    "pinyin": "shéi",
+    "english": "who",
+    "examples": [
+      { "chinese": "他是谁？", "pinyin": "Tā shì shéi？", "english": "Who is he?" }
+    ],
+    "radicals": [
+      { "character": "讠", "pinyin": "yán", "meaning": "speech" }
+    ]
+  },
+  {
+    "character": "什么",
+    "pinyin": "shénme",
+    "english": "what",
+    "examples": [
+      { "chinese": "你喜欢什么？", "pinyin": "Nǐ xǐhuān shénme？", "english": "What do you like?" }
+    ],
+    "radicals": [
+      { "character": "亻", "pinyin": "rén", "meaning": "person" }
+    ]
+  },
+  {
+    "character": "十",
+    "pinyin": "shí",
+    "english": "ten",
+    "examples": [
+      { "chinese": "我有十个苹果。", "pinyin": "Wǒ yǒu shí gè píngguǒ。", "english": "I have ten apples." }
+    ],
+    "radicals": [
+      { "character": "十", "pinyin": "shí", "meaning": "ten" }
+    ]
+  },
+  {
+    "character": "时候",
+    "pinyin": "shíhou",
+    "english": "time, moment",
+    "examples": [
+      { "chinese": "你什么时候来？", "pinyin": "Nǐ shénme shíhou lái？", "english": "When will you come?" }
+    ],
+    "radicals": [
+      { "character": "日", "pinyin": "rì", "meaning": "sun" }
+    ]
+  },
+  {
+    "character": "是",
+    "pinyin": "shì",
+    "english": "to be",
+    "examples": [
+      { "chinese": "我是学生。", "pinyin": "Wǒ shì xuéshēng。", "english": "I am a student." }
+    ],
+    "radicals": [
+      { "character": "日", "pinyin": "rì", "meaning": "sun" }
+    ]
+  },
+  {
+    "character": "书",
+    "pinyin": "shū",
+    "english": "book",
+    "examples": [
+      { "chinese": "我喜欢看书。", "pinyin": "Wǒ xǐhuān kàn shū。", "english": "I like reading books." }
+    ],
+    "radicals": [
+      { "character": "乛", "pinyin": "yà", "meaning": "second" }
+    ]
+  },
+  {
+    "character": "水",
+    "pinyin": "shuǐ",
+    "english": "water",
+    "examples": [
+      { "chinese": "我每天喝很多水。", "pinyin": "Wǒ měitiān hē hěn duō shuǐ。", "english": "I drink a lot of water every day." }
+    ],
+    "radicals": [
+      { "character": "水", "pinyin": "shuǐ", "meaning": "water" }
+    ]
+  },
+  {
+    "character": "水果",
+    "pinyin": "shuǐguǒ",
+    "english": "fruit",
+    "examples": [
+      { "chinese": "我喜欢吃水果。", "pinyin": "Wǒ xǐhuān chī shuǐguǒ。", "english": "I like eating fruit." }
+    ],
+    "radicals": [
+      { "character": "水", "pinyin": "shuǐ", "meaning": "water" }
+    ]
+  },
+  {
+    "character": "睡觉",
+    "pinyin": "shuìjiào",
+    "english": "to sleep",
+    "examples": [
+      { "chinese": "我想睡觉了。", "pinyin": "Wǒ xiǎng shuìjiào le。", "english": "I want to sleep." }
+    ],
+    "radicals": [
+      { "character": "目", "pinyin": "mù", "meaning": "eye" }
+    ]
+  },
+  {
+    "character": "说",
+    "pinyin": "shuō",
+    "english": "to speak, to say",
+    "examples": [
+      { "chinese": "请你说慢一点。", "pinyin": "Qǐng nǐ shuō màn yìdiǎn。", "english": "Please speak a little slower." }
+    ],
+    "radicals": [
+      { "character": "讠", "pinyin": "yán", "meaning": "speech" }
+    ]
+  },
+  {
+    "character": "四",
+    "pinyin": "sì",
+    "english": "four",
+    "examples": [
+      { "chinese": "我有四个苹果。", "pinyin": "Wǒ yǒu sì gè píngguǒ。", "english": "I have four apples." }
+    ],
+    "radicals": [
+      { "character": "囗", "pinyin": "wéi", "meaning": "enclosure" }
+    ]
+  },
+  {
+    "character": "岁",
+    "pinyin": "suì",
+    "english": "year (of age)",
+    "examples": [
+      { "chinese": "我八岁了。", "pinyin": "Wǒ bā suì le。", "english": "I am eight years old." }
+    ],
+    "radicals": [
+      { "character": "山", "pinyin": "shān", "meaning": "mountain" }
+    ]
+  },
+  {
+    "character": "他",
+    "pinyin": "tā",
+    "english": "he, him",
+    "examples": [
+      { "chinese": "他是我的朋友。", "pinyin": "Tā shì wǒ de péngyǒu。", "english": "He is my friend." }
+    ],
+    "radicals": [
+      { "character": "亻", "pinyin": "rén", "meaning": "person" }
+    ]
+  },
+  {
+    "character": "她",
+    "pinyin": "tā",
+    "english": "she, her",
+    "examples": [
+      { "chinese": "她是我的老师。", "pinyin": "Tā shì wǒ de lǎoshī。", "english": "She is my teacher." }
+    ],
+    "radicals": [
+      { "character": "女", "pinyin": "nǚ", "meaning": "female" }
+    ]
+  },
+  {
+    "character": "太",
+    "pinyin": "tài",
+    "english": "too, extremely",
+    "examples": [
+      { "chinese": "太好了！", "pinyin": "Tài hǎo le！", "english": "Great!" }
+    ],
+    "radicals": [
+      { "character": "大", "pinyin": "dà", "meaning": "big" }
+    ]
+  },
+  {
+    "character": "天气",
+    "pinyin": "tiānqì",
+    "english": "weather",
+    "examples": [
+      { "chinese": "今天天气很好。", "pinyin": "Jīntiān tiānqì hěn hǎo。", "english": "The weather is very good today." }
+    ],
+    "radicals": [
+      { "character": "天", "pinyin": "tiān", "meaning": "sky" }
+    ]
+  },
+  {
+    "character": "听",
+    "pinyin": "tīng",
+    "english": "to listen",
+    "examples": [
+      { "chinese": "我喜欢听音乐。", "pinyin": "Wǒ xǐhuān tīng yīnyuè。", "english": "I like listening to music." }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "同学",
+    "pinyin": "tóngxué",
+    "english": "classmate",
+    "examples": [
+      { "chinese": "他是我的同学。", "pinyin": "Tā shì wǒ de tóngxué。", "english": "He is my classmate." }
+    ],
+    "radicals": [
+      { "character": "冂", "pinyin": "jiōng", "meaning": "down box" }
+    ]
+  },
+  {
+    "character": "喂",
+    "pinyin": "wèi",
+    "english": "hello (on the phone)",
+    "examples": [
+      { "chinese": "喂，你好！", "pinyin": "Wèi, nǐ hǎo！", "english": "Hello!" }
+    ],
+    "radicals": [
+      { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+    ]
+  },
+  {
+    "character": "我",
+    "pinyin": "wǒ",
+    "english": "I, me",
+    "examples": [
+      { "chinese": "我是学生。", "pinyin": "Wǒ shì xuéshēng。", "english": "I am a student." }
+    ],
+    "radicals": [
+      { "character": "戈", "pinyin": "gē", "meaning": "halberd" }
+    ]
+  },
+  {
+    "character": "我们",
+    "pinyin": "wǒmen",
+    "english": "we, us",
+    "examples": [
+      { "chinese": "我们都是中国人。", "pinyin": "Wǒmen dōu shì Zhōngguó rén。", "english": "We are all Chinese." }
+    ],
+    "radicals": [
+      { "character": "亻", "pinyin": "rén", "meaning": "person" }
+    ]
+  },
+  {
+    "character": "五",
+    "pinyin": "wǔ",
+    "english": "five",
+    "examples": [
+      { "chinese": "我有五个苹果。", "pinyin": "Wǒ yǒu wǔ gè píngguǒ。", "english": "I have five apples." }
+    ],
+    "radicals": [
+      { "character": "二", "pinyin": "èr", "meaning": "two" }
+    ]
+  },
+  {
+    "character": "下",
+    "pinyin": "xià",
+    "english": "down, below",
+    "examples": [
+      { "chinese": "他在楼下。", "pinyin": "Tā zài lóu xià。", "english": "He is downstairs." }
+    ],
+    "radicals": [
+      { "character": "一", "pinyin": "yī", "meaning": "one" }
+    ]
+  },
+  {
+    "character": "下午",
+    "pinyin": "xiàwǔ",
+    "english": "afternoon",
+    "examples": [
+      { "chinese": "我下午去商店。", "pinyin": "Wǒ xiàwǔ qù shāngdiàn。", "english": "I go to the shop in the afternoon." }
+    ],
+    "radicals": [
+      { "character": "午", "pinyin": "wǔ", "meaning": "noon" }
+    ]
+  },
+  {
+    "character": "下雨",
+    "pinyin": "xiàyǔ",
+    "english": "to rain",
+    "examples": [
+      { "chinese": "今天下雨了。", "pinyin": "Jīntiān xiàyǔ le。", "english": "It rained today." }
+    ],
+    "radicals": [
+      { "character": "雨", "pinyin": "yǔ", "meaning": "rain" }
+    ]
+  },
+  {
+    "character": "先生",
+    "pinyin": "xiānsheng",
+    "english": "Mr., sir",
+    "examples": [
+      { "chinese": "王先生是我的老师。", "pinyin": "Wáng xiānsheng shì wǒ de lǎoshī。", "english": "Mr. Wang is my teacher." }
+    ],
+    "radicals": [
+      { "character": "生", "pinyin": "shēng", "meaning": "life" }
+    ]
+  },
+  {
+    "character": "现在",
+    "pinyin": "xiànzài",
+    "english": "now",
+    "examples": [
+      { "chinese": "现在几点？", "pinyin": "Xiànzài jǐ diǎn？", "english": "What time is it now?" }
+    ],
+    "radicals": [
+      { "character": "王", "pinyin": "wáng", "meaning": "king" }
+    ]
+  },
+  {
+    "character": "想",
+    "pinyin": "xiǎng",
+    "english": "to want, to think",
+    "examples": [
+      { "chinese": "我想吃米饭。", "pinyin": "Wǒ xiǎng chī mǐfàn。", "english": "I want to eat rice." }
+    ],
+    "radicals": [
+      { "character": "心", "pinyin": "xīn", "meaning": "heart" }
+    ]
+  },
+  {
+    "character": "小",
+    "pinyin": "xiǎo",
+    "english": "small, little",
+    "examples": [
+      { "chinese": "这只猫很小。", "pinyin": "Zhè zhī māo hěn xiǎo。", "english": "This cat is small." }
+    ],
+    "radicals": [
+      { "character": "小", "pinyin": "xiǎo", "meaning": "small" }
+    ]
+  },
+  {
+    "character": "小姐",
+    "pinyin": "xiǎojiě",
+    "english": "Miss, young lady",
+    "examples": [
+      { "chinese": "李小姐很漂亮。", "pinyin": "Lǐ xiǎojiě hěn piàoliang。", "english": "Miss Li is very pretty." }
+    ],
+    "radicals": [
+      { "character": "女", "pinyin": "nǚ", "meaning": "female" }
+    ]
+  },
+  {
+    "character": "写",
+    "pinyin": "xiě",
+    "english": "to write",
+    "examples": [
+      { "chinese": "我会写汉字。", "pinyin": "Wǒ huì xiě Hànzì。", "english": "I can write Chinese characters." }
+    ],
+    "radicals": [
+      { "character": "冖", "pinyin": "mì", "meaning": "cover" }
+    ]
+  },
+  {
+    "character": "谢谢",
+    "pinyin": "xièxie",
+    "english": "thank you",
+    "examples": [
+      { "chinese": "谢谢你的帮助。", "pinyin": "Xièxie nǐ de bāngzhù。", "english": "Thank you for your help." }
+    ],
+    "radicals": [
+      { "character": "讠", "pinyin": "yán", "meaning": "speech" }
+    ]
+  },
+  {
+    "character": "星期",
+    "pinyin": "xīngqī",
+    "english": "week",
+    "examples": [
+      { "chinese": "今天星期几？", "pinyin": "Jīntiān xīngqī jǐ？", "english": "What day of the week is it today?" }
+    ],
+    "radicals": [
+      { "character": "日", "pinyin": "rì", "meaning": "sun" }
+    ]
+  },
+  {
+    "character": "学生",
+    "pinyin": "xuéshēng",
+    "english": "student",
+    "examples": [
+      { "chinese": "我是学生。", "pinyin": "Wǒ shì xuéshēng。", "english": "I am a student." }
+    ],
+    "radicals": [
+      { "character": "子", "pinyin": "zǐ", "meaning": "child" }
+    ]
+  },
+  {
+    "character": "学校",
+    "pinyin": "xuéxiào",
+    "english": "school",
+    "examples": [
+      { "chinese": "我在学校学习。", "pinyin": "Wǒ zài xuéxiào xuéxí。", "english": "I study at school." }
+    ],
+    "radicals": [
+      { "character": "学", "pinyin": "xué", "meaning": "study" }
+    ]
+  },
+  {
+    "character": "一",
+    "pinyin": "yī",
+    "english": "one",
+    "examples": [
+      { "chinese": "我有一个苹果。", "pinyin": "Wǒ yǒu yí gè píngguǒ。", "english": "I have an apple." }
+    ],
+    "radicals": [
+      { "character": "一", "pinyin": "yī", "meaning": "one" }
+    ]
+  },
+  {
+    "character": "一点儿",
+    "pinyin": "yìdiǎnr",
+    "english": "a little, a bit",
+    "examples": [
+      { "chinese": "我会说一点儿汉语。", "pinyin": "Wǒ huì shuō yìdiǎnr Hànyǔ。", "english": "I can speak a little Chinese." }
+    ],
+    "radicals": [
+      { "character": "小", "pinyin": "xiǎo", "meaning": "small" }
+    ]
+  },
+  {
+    "character": "衣服",
+    "pinyin": "yīfu",
+    "english": "clothes",
+    "examples": [
+      { "chinese": "我买了新衣服。", "pinyin": "Wǒ mǎi le xīn yīfu。", "english": "I bought new clothes." }
+    ],
+    "radicals": [
+      { "character": "衤", "pinyin": "yī", "meaning": "clothes" }
+    ]
+  },
+  {
+    "character": "医生",
+    "pinyin": "yīshēng",
+    "english": "doctor",
+    "examples": [
+      { "chinese": "我妈妈是医生。", "pinyin": "Wǒ māma shì yīshēng。", "english": "My mom is a doctor." }
+    ],
+    "radicals": [
+      { "character": "医", "pinyin": "yī", "meaning": "medicine" }
+    ]
+  },
+  {
+    "character": "医院",
+    "pinyin": "yīyuàn",
+    "english": "hospital",
+    "examples": [
+      { "chinese": "我在医院工作。", "pinyin": "Wǒ zài yīyuàn gōngzuò。", "english": "I work at a hospital." }
+    ],
+    "radicals": [
+      { "character": "医", "pinyin": "yī", "meaning": "medicine" }
+    ]
+  },
+  {
+    "character": "有",
+    "pinyin": "yǒu",
+    "english": "to have, there is",
+    "examples": [
+      { "chinese": "我有一个妹妹。", "pinyin": "Wǒ yǒu yí gè mèimei。", "english": "I have a younger sister." }
+    ],
+    "radicals": [
+      { "character": "月", "pinyin": "yuè", "meaning": "moon" }
+    ]
+  },
+  {
+    "character": "月",
+    "pinyin": "yuè",
+    "english": "month, moon",
+    "examples": [
+      { "chinese": "今年是几月？", "pinyin": "Jīnnián shì jǐ yuè？", "english": "Which month is it this year?" }
+    ],
+    "radicals": [
+      { "character": "月", "pinyin": "yuè", "meaning": "moon" }
+    ]
+  },
+  {
+    "character": "在",
+    "pinyin": "zài",
+    "english": "at, in, on",
+    "examples": [
+      { "chinese": "我在家。", "pinyin": "Wǒ zài jiā。", "english": "I am at home." }
+    ],
+    "radicals": [
+      { "character": "土", "pinyin": "tǔ", "meaning": "earth" }
+    ]
+  },
+  {
+    "character": "再见",
+    "pinyin": "zàijiàn",
+    "english": "goodbye",
+    "examples": [
+      { "chinese": "再见！", "pinyin": "Zàijiàn！", "english": "Goodbye!" }
+    ],
+    "radicals": [
+      { "character": "见", "pinyin": "jiàn", "meaning": "see" }
+    ]
+  },
+  {
+    "character": "怎么",
+    "pinyin": "zěnme",
+    "english": "how",
+    "examples": [
+      { "chinese": "你怎么去学校？", "pinyin": "Nǐ zěnme qù xuéxiào？", "english": "How do you go to school?" }
+    ],
+    "radicals": [
+      { "character": "心", "pinyin": "xīn", "meaning": "heart" }
+    ]
+  },
+  {
+    "character": "怎么样",
+    "pinyin": "zěnmeyàng",
+    "english": "how about, how is",
+    "examples": [
+      { "chinese": "这个怎么样？", "pinyin": "Zhège zěnmeyàng？", "english": "How about this one?" }
+    ],
+    "radicals": [
+      { "character": "心", "pinyin": "xīn", "meaning": "heart" }
+    ]
+  },
+  {
+    "character": "这",
+    "pinyin": "zhè",
+    "english": "this",
+    "examples": [
+      { "chinese": "这是我的老师。", "pinyin": "Zhè shì wǒ de lǎoshī。", "english": "This is my teacher." }
+    ],
+    "radicals": [
+      { "character": "辶", "pinyin": "chuò", "meaning": "walk" }
+    ]
+  },
+  {
+    "character": "这里",
+    "pinyin": "zhèlǐ",
+    "english": "here",
+    "examples": [
+      { "chinese": "我在这里。", "pinyin": "Wǒ zài zhèlǐ。", "english": "I am here." }
+    ],
+    "radicals": [
+      { "character": "里", "pinyin": "lǐ", "meaning": "village" }
+    ]
+  },
+  {
+    "character": "中国",
+    "pinyin": "Zhōngguó",
+    "english": "China",
+    "examples": [
+      { "chinese": "我住在中国。", "pinyin": "Wǒ zhù zài Zhōngguó。", "english": "I live in China." }
+    ],
+    "radicals": [
+      { "character": "囗", "pinyin": "wéi", "meaning": "enclosure" }
+    ]
+  },
+  {
+    "character": "中午",
+    "pinyin": "zhōngwǔ",
+    "english": "noon",
+    "examples": [
+      { "chinese": "我中午吃饭。", "pinyin": "Wǒ zhōngwǔ chīfàn。", "english": "I eat at noon." }
+    ],
+    "radicals": [
+      { "character": "午", "pinyin": "wǔ", "meaning": "noon" }
+    ]
+  },
+  {
+    "character": "住",
+    "pinyin": "zhù",
+    "english": "to live",
+    "examples": [
+      { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." }
+    ],
+    "radicals": [
+      { "character": "亻", "pinyin": "rén", "meaning": "person" }
+    ]
+  },
+  {
+    "character": "桌子",
+    "pinyin": "zhuōzi",
+    "english": "table, desk",
+    "examples": [
+      { "chinese": "桌子上有一本书。", "pinyin": "Zhuōzi shàng yǒu yì běn shū。", "english": "There is a book on the table." }
+    ],
+    "radicals": [
+      { "character": "木", "pinyin": "mù", "meaning": "wood" }
+    ]
+  },
+  {
+    "character": "字",
+    "pinyin": "zì",
+    "english": "character, word",
+    "examples": [
+      { "chinese": "我会写汉字。", "pinyin": "Wǒ huì xiě Hànzì。", "english": "I can write Chinese characters." }
+    ],
+    "radicals": [
+      { "character": "子", "pinyin": "zǐ", "meaning": "child" }
+    ]
+  }
+]

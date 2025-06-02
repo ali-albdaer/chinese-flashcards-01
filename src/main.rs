@@ -96,11 +96,18 @@ impl Component for App {
     fn create(_ctx: &Context<Self>) -> Self {
         // Load each deck’s JSON via include_str! macros
         let mut decks: DecksMap = HashMap::new();
+        let hsk1: Vec<Card> = serde_json::from_str(include_str!("decks/HSK1.json"))
+            .expect("Failed to parse decks/HSK1.json");
+        let hsk2: Vec<Card> = serde_json::from_str(include_str!("decks/HSK2.json"))
+            .expect("Failed to parse decks/HSK2.json");
         let hsk3: Vec<Card> = serde_json::from_str(include_str!("decks/HSK3.json"))
             .expect("Failed to parse decks/HSK3.json");
         let hsk4: Vec<Card> = serde_json::from_str(include_str!("decks/HSK4.json"))
             .expect("Failed to parse decks/HSK4.json");
 
+        // Insert decks into the map
+        decks.insert("HSK1".into(), hsk1.clone());
+        decks.insert("HSK2".into(), hsk2.clone());
         decks.insert("HSK3".into(), hsk3.clone());
         decks.insert("HSK4".into(), hsk4.clone());
         // Empty “Favorites”

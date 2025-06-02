@@ -1,0 +1,15 @@
+[
+    {
+        "character": "我",
+        "pinyin": "wǒ",
+        "english": "I, me",
+        "examples": [
+        { "chinese": "我是学生。", "pinyin": "Wǒ shì xuéshēng。", "english": "I am a student." },
+        { "chinese": "我喜欢吃苹果。", "pinyin": "Wǒ xǐhuān chī píngguǒ。", "english": "I like to eat apples." },
+        { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." }
+        ],
+        "radicals": [
+        { "character": "戈", "pinyin": "gē", "meaning": "spear" }
+        ]
+    }
+]
