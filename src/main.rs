@@ -433,47 +433,33 @@ impl Component for App {
                     { "Radicals" }
                   </label>
                 </div>
-
-                // Card pile + top card
+                
                 <div class="card-container">
                   {
-                    // Three “peek” cards behind, each fades in on any animation
                     if let Some(c) = nxt3 {
-                      html! {
-                        <div class={ if self.anim_state != AnimationState::None {
-                                        "pile-card pile-card-3 pile-visible"
-                                      } else {
-                                        "pile-card pile-card-3"
-                                      }}>
-                          <div class="card-face front">{ &c.character }</div>
-                        </div>
-                      }
+                        html! {
+                          <div class="pile-card pile-card-3">
+                            <div class="card-face front">{ &c.character }</div>
+                          </div>
+                        }
                     } else { html!{} }
                   }
                   {
                     if let Some(c) = nxt2 {
-                      html! {
-                        <div class={ if self.anim_state != AnimationState::None {
-                                        "pile-card pile-card-2 pile-visible"
-                                      } else {
-                                        "pile-card pile-card-2"
-                                      }}>
-                          <div class="card-face front">{ &c.character }</div>
-                        </div>
-                      }
+                        html! {
+                          <div class="pile-card pile-card-2">
+                            <div class="card-face front">{ &c.character }</div>
+                          </div>
+                        }
                     } else { html!{} }
                   }
                   {
                     if let Some(c) = nxt1 {
-                      html! {
-                        <div class={ if self.anim_state != AnimationState::None {
-                                        "pile-card pile-card-1 pile-visible"
-                                      } else {
-                                        "pile-card pile-card-1"
-                                      }}>
-                          <div class="card-face front">{ &c.character }</div>
-                        </div>
-                      }
+                        html! {
+                          <div class="pile-card pile-card-1">
+                            <div class="card-face front">{ &c.character }</div>
+                          </div>
+                        }
                     } else { html!{} }
                   }
 

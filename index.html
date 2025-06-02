@@ -97,24 +97,24 @@
       height: 100%;
       background-color: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 40px rgba(0,0,0,0.19);
       overflow: hidden;
       opacity: 1;
-      transition: opacity var(--remove-duration) ease-in-out;
+      transition: none;
       z-index: 0;
     }
     .pile-card-1 {
-      top: 10px;
-      left: 10px;
-      transform: scale(0.96);
+      top: 0px;
+      left: 0px;
+      transform: scale(1);
     }
     .pile-card-2 {
-      top: 20px;
-      left: 20px;
-      transform: scale(0.92);
+      top: 10px;
+      left: 6px;
+      transform: scale(0.96);
     }
     .pile-card-3 {
-      top: 30px;
+      top: 12px;
       left: 30px;
       transform: scale(0.88);
     }
@@ -124,12 +124,8 @@
       align-items: center;
       font-size: 10em;
       font-weight: bold;
-      color: #ccc;
+      color: #333;
       user-select: none;
-    }
-    /* When animating, add “visible” to fade in */
-    .pile-visible {
-      opacity: 1 !important;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
@@ -141,7 +137,7 @@
       transform-style: preserve-3d;
       transition: transform var(--flip-duration);
       border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
       background-color: #ffffff;
       z-index: 1;
     }

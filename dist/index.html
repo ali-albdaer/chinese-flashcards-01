@@ -97,24 +97,24 @@
       height: 100%;
       background-color: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 40px rgba(0,0,0,0.19);
       overflow: hidden;
       opacity: 1;
-      transition: opacity var(--remove-duration) ease-in-out;
+      transition: none;
       z-index: 0;
     }
     .pile-card-1 {
-      top: 10px;
-      left: 10px;
-      transform: scale(0.96);
+      top: 0px;
+      left: 0px;
+      transform: scale(1);
     }
     .pile-card-2 {
-      top: 20px;
-      left: 20px;
-      transform: scale(0.92);
+      top: 10px;
+      left: 6px;
+      transform: scale(0.96);
     }
     .pile-card-3 {
-      top: 30px;
+      top: 12px;
       left: 30px;
       transform: scale(0.88);
     }
@@ -124,12 +124,8 @@
       align-items: center;
       font-size: 10em;
       font-weight: bold;
-      color: #ccc;
+      color: #333;
       user-select: none;
-    }
-    /* When animating, add “visible” to fade in */
-    .pile-visible {
-      opacity: 1 !important;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
@@ -141,7 +137,7 @@
       transform-style: preserve-3d;
       transition: transform var(--flip-duration);
       border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
       background-color: #ffffff;
       z-index: 1;
     }
@@ -248,7 +244,7 @@
     .example-pinyin,
     .example-english { font-size: 0.9em; color: gray; }
   </style>
-<link rel="modulepreload" href="/chinese_flashcards-ca4eca668856b293.js" crossorigin="anonymous" integrity="sha384-zjVMAPsTuHm7FxvCqZpKnbg/b/55oBXc+xlIRuzKwhgDGh+Dy+ceOdJsQ84ftvIt"><link rel="preload" href="/chinese_flashcards-ca4eca668856b293_bg.wasm" crossorigin="anonymous" integrity="sha384-FvIxE+M/prlDOx3PmZQVp4MP49NMXUd4JpqGmXexQ79cB0eQJbJNXWVO2ED24I7K" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/chinese_flashcards-eb47b8552c87b332.js" crossorigin="anonymous" integrity="sha384-P+NMhUX/IqtinYeIA+D6daPdJQ5cH/KhYI26nI2IwU54wFRdRVPn/v6oLkSUO04G"><link rel="preload" href="/chinese_flashcards-eb47b8552c87b332_bg.wasm" crossorigin="anonymous" integrity="sha384-tC5RVwlxs9n3Hq7bVlEYgm+X511POLI8sm0Z8au8U7IxsgScUo03hu5Z3s1KnxQq" as="fetch" type="application/wasm"></head>
 <body>
   <div id="root"></div>
   <script type="module">
@@ -257,8 +253,8 @@
   </script>
 
 <script type="module">
-import init, * as bindings from '/chinese_flashcards-ca4eca668856b293.js';
-const wasm = await init({ module_or_path: '/chinese_flashcards-ca4eca668856b293_bg.wasm' });
+import init, * as bindings from '/chinese_flashcards-eb47b8552c87b332.js';
+const wasm = await init({ module_or_path: '/chinese_flashcards-eb47b8552c87b332_bg.wasm' });
 
 
 window.wasmBindings = bindings;
