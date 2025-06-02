@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=0.7, user-scalable=no" />
   <title>Chinese Flashcards</title>
   <style>
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* CSS variables: tweak these to adjust animation speeds */
+    /* CSS variables for animation durations (tweak as desired) */
     :root {
       --flip-duration: 0.6s;      /* how long the flip takes */
       --remove-duration: 0.5s;    /* remove (fly left) speed */
@@ -14,7 +15,7 @@
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Basic reset & centering; a bit of extra top margin so UI is lower */
+    /* Basic reset & centering; extra top margin */
     body {
       margin: 0;
       padding: 0;
@@ -25,24 +26,23 @@
       align-items: flex-start;
       min-height: 100vh;
     }
-    #root {
-      margin-top: 40px; /* moved down a bit */
-      width: 100%;
-      max-width: 700px;
-    }
 
     /*─────────────────────────────────────────────────────────────────────────*/
     /* Outer container: captures keyboard focus */
     .app-container {
       outline: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Control bar: deck selector, shuffle, and counter all in one row */
+    /* Controls row: deck selector, shuffle, counter */
     .controls {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
       margin-bottom: 0.75em;
     }
     .controls-left {
@@ -72,24 +72,26 @@
       flex-wrap: wrap;
       gap: 1em;
       font-size: 0.9em;
+      width: 100%;
+      justify-content: center;
     }
     .toggles label {
       cursor: pointer;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Card “pile” container: shows multiple cards peeking behind */
+    /* Card “pile” container: multiple cards peeking behind */
     .card-container {
       position: relative;
       width: 100%;
-      max-width: 550px;   /* slightly bigger */
-      height: 380px;      /* slightly bigger */
-      margin: 0 auto;
+      max-width: 550px;   /* bigger card */
+      height: 380px;      /* bigger card */
+      margin-bottom: 1em;
       perspective: 1200px;
     }
 
-    /* Configure up to three “peek” cards behind: each has a different offset/scale */
-    .pile-card-1, .pile-card-2, .pile-card-3 {
+    /* Up to three “peek” cards behind, each offset & scaled */
+    .pile-card {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -97,42 +99,41 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       overflow: hidden;
-      opacity: 0.7; /* dimmed by default */
+      opacity: 1;
       transition: opacity var(--remove-duration) ease-in-out;
       z-index: 0;
     }
-    /* Next card peek (offset + scale) */
     .pile-card-1 {
       top: 10px;
       left: 10px;
       transform: scale(0.96);
     }
-    /* Second behind */
     .pile-card-2 {
       top: 20px;
       left: 20px;
       transform: scale(0.92);
     }
-    /* Third behind */
     .pile-card-3 {
       top: 30px;
       left: 30px;
       transform: scale(0.88);
     }
-    .pile-card-1 .card-face.front,
-    .pile-card-2 .card-face.front,
-    .pile-card-3 .card-face.front {
+    .pile-card .card-face.front {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 4em;
+      font-size: 10em;
       font-weight: bold;
       color: #ccc;
       user-select: none;
     }
+    /* When animating, add “visible” to fade in */
+    .pile-visible {
+      opacity: 1 !important;
+    }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Active “card” splitting front/back, flipping, etc. */
+    /* Active card: flips and animates on top */
     .card-inner {
       position: absolute;
       width: 100%;
@@ -159,29 +160,29 @@
       overflow: hidden;
       box-sizing: border-box;
     }
-    /* Front face: large character centered */
+    /* Front: large character */
     .card-face.front {
       background-color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 4em;
+      font-size: 10em;
       font-weight: bold;
       color: #333;
       user-select: none;
     }
-    /* Back face: rotated 180°, tidy vertical layout, no scrollbars */
+    /* Back: rotated 180deg, vertical layout, no scrollbars */
     .card-face.back {
       background-color: #fff;
       transform: rotateY(180deg);
-      padding: 1em 1.2em;
+      padding: 0.6em 0.8em;
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Remove animation (fly left + fade out) */
+    /* Remove (fly left + fade out) */
     .card-inner.removing {
       animation: remove-card var(--remove-duration) forwards ease-in;
     }
@@ -193,7 +194,7 @@
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Replace animation (dart halfway right → retract under stack) */
+    /* Replace (dart halfway right → retract under stack) */
     .card-inner.replacing {
       animation: replace-card var(--replace-duration) forwards ease-in-out;
     }
@@ -204,7 +205,7 @@
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
-    /* Shuffle animation (quick “shake”) */
+    /* Shuffle (shake) */
     .card-inner.shuffling {
       animation: shuffle-card var(--shuffle-duration) forwards ease-in-out;
     }
@@ -242,10 +243,10 @@
       cursor: pointer;
       transform: scale(0.95);
     }
-    /* Increased sentence font size on back */
-    .example-chinese { font-size: 1.1em; }
+    /* Increase example font sizes */
+    .example-chinese { font-size: 1.4em; }
     .example-pinyin,
-    .example-english { font-size: 1em; color: gray; }
+    .example-english { font-size: 0.9em; color: gray; }
   </style>
 </head>
 <body>
