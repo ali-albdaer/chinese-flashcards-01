@@ -18,7 +18,9 @@
     "pinyin": "bā",
     "english": "eight",
     "examples": [
-      { "chinese": "我有八本书。", "pinyin": "Wǒ yǒu bā běn shū。", "english": "I have eight books." }
+      { "chinese": "我有八个苹果。", "pinyin": "Wǒ yǒu bā gè píngguǒ。", "english": "I have eight apples." },
+      { "chinese": "他八点去学校。", "pinyin": "Tā bā diǎn qù xuéxiào。", "english": "He goes to school at eight o'clock." },
+      { "chinese": "我们班有八个人。", "pinyin": "Wǒmen bān yǒu bā gè rén。", "english": "There are eight people in our class." }
     ],
     "radicals": [
       { "character": "八", "pinyin": "bā", "meaning": "eight" }
@@ -29,7 +31,9 @@
     "pinyin": "bàba",
     "english": "dad, father",
     "examples": [
-      { "chinese": "我爸爸是老师。", "pinyin": "Wǒ bàba shì lǎoshī。", "english": "My dad is a teacher." }
+      { "chinese": "我爸爸是老师。", "pinyin": "Wǒ bàba shì lǎoshī。", "english": "My dad is a teacher." },
+      { "chinese": "爸爸喜欢喝茶。", "pinyin": "Bàba xǐhuān hē chá。", "english": "Dad likes to drink tea." },
+      { "chinese": "晚上爸爸回家。", "pinyin": "Wǎnshang bàba huí jiā。", "english": "Dad comes home in the evening." }
     ],
     "radicals": [
       { "character": "父", "pinyin": "fù", "meaning": "father" }
@@ -40,7 +44,9 @@
     "pinyin": "bēizi",
     "english": "cup, glass",
     "examples": [
-      { "chinese": "请给我一个杯子。", "pinyin": "Qǐng gěi wǒ yí gè bēizi。", "english": "Please give me a cup." }
+      { "chinese": "请给我一个杯子。", "pinyin": "Qǐng gěi wǒ yí gè bēizi。", "english": "Please give me a cup." },
+      { "chinese": "杯子里有水。", "pinyin": "Bēizi lǐ yǒu shuǐ。", "english": "There is water in the cup." },
+      { "chinese": "这个杯子很大。", "pinyin": "Zhège bēizi hěn dà。", "english": "This cup is big." }
     ],
     "radicals": [
       { "character": "木", "pinyin": "mù", "meaning": "wood" }
@@ -51,7 +57,9 @@
     "pinyin": "Běijīng",
     "english": "Beijing",
     "examples": [
-      { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." }
+      { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." },
+      { "chinese": "北京很大。", "pinyin": "Běijīng hěn dà。", "english": "Beijing is very big." },
+      { "chinese": "你去过北京吗？", "pinyin": "Nǐ qù guò Běijīng ma？", "english": "Have you been to Beijing?" }
     ],
     "radicals": [
       { "character": "北", "pinyin": "běi", "meaning": "north" },
@@ -63,7 +71,9 @@
     "pinyin": "běn",
     "english": "measure word for books",
     "examples": [
-      { "chinese": "我有三本书。", "pinyin": "Wǒ yǒu sān běn shū。", "english": "I have three books." }
+      { "chinese": "我有三本书。", "pinyin": "Wǒ yǒu sān běn shū。", "english": "I have three books." },
+      { "chinese": "这本书很好。", "pinyin": "Zhè běn shū hěn hǎo。", "english": "This book is very good." },
+      { "chinese": "你喜欢哪本书？", "pinyin": "Nǐ xǐhuān nǎ běn shū？", "english": "Which book do you like?" }
     ],
     "radicals": [
       { "character": "木", "pinyin": "mù", "meaning": "wood" }
@@ -74,7 +84,9 @@
     "pinyin": "bù",
     "english": "not, no",
     "examples": [
-      { "chinese": "我不是老师。", "pinyin": "Wǒ bù shì lǎoshī。", "english": "I am not a teacher." }
+      { "chinese": "我不是老师。", "pinyin": "Wǒ bù shì lǎoshī。", "english": "I am not a teacher." },
+      { "chinese": "他不喝茶。", "pinyin": "Tā bù hē chá。", "english": "He doesn't drink tea." },
+      { "chinese": "今天不下雨。", "pinyin": "Jīntiān bù xiàyǔ。", "english": "It is not raining today." }
     ],
     "radicals": [
       { "character": "一", "pinyin": "yī", "meaning": "one" }
@@ -85,7 +97,9 @@
     "pinyin": "cài",
     "english": "dish, vegetable",
     "examples": [
-      { "chinese": "我喜欢吃中国菜。", "pinyin": "Wǒ xǐhuān chī Zhōngguó cài。", "english": "I like eating Chinese food." }
+      { "chinese": "我喜欢吃中国菜。", "pinyin": "Wǒ xǐhuān chī Zhōngguó cài。", "english": "I like eating Chinese food." },
+      { "chinese": "你会做菜吗？", "pinyin": "Nǐ huì zuò cài ma？", "english": "Can you cook?" },
+      { "chinese": "桌子上有很多菜。", "pinyin": "Zhuōzi shàng yǒu hěn duō cài。", "english": "There are many dishes on the table." }
     ],
     "radicals": [
       { "character": "艹", "pinyin": "cǎo", "meaning": "grass" }
@@ -96,7 +110,9 @@
     "pinyin": "chá",
     "english": "tea",
     "examples": [
-      { "chinese": "我喜欢喝茶。", "pinyin": "Wǒ xǐhuān hē chá。", "english": "I like drinking tea." }
+      { "chinese": "我喜欢喝茶。", "pinyin": "Wǒ xǐhuān hē chá。", "english": "I like drinking tea." },
+      { "chinese": "你喝什么茶？", "pinyin": "Nǐ hē shénme chá？", "english": "What tea do you drink?" },
+      { "chinese": "杯子里有茶。", "pinyin": "Bēizi lǐ yǒu chá。", "english": "There is tea in the cup." }
     ],
     "radicals": [
       { "character": "艹", "pinyin": "cǎo", "meaning": "grass" }
@@ -107,7 +123,9 @@
     "pinyin": "chī",
     "english": "to eat",
     "examples": [
-      { "chinese": "我喜欢吃米饭。", "pinyin": "Wǒ xǐhuān chī mǐfàn。", "english": "I like eating rice." }
+      { "chinese": "我喜欢吃米饭。", "pinyin": "Wǒ xǐhuān chī mǐfàn。", "english": "I like eating rice." },
+      { "chinese": "你吃苹果吗？", "pinyin": "Nǐ chī píngguǒ ma？", "english": "Do you eat apples?" },
+      { "chinese": "我们中午吃饭。", "pinyin": "Wǒmen zhōngwǔ chīfàn。", "english": "We eat at noon." }
     ],
     "radicals": [
       { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
@@ -239,7 +257,9 @@
     "pinyin": "duìbuqǐ",
     "english": "sorry",
     "examples": [
-      { "chinese": "对不起，我迟到了。", "pinyin": "Duìbuqǐ, wǒ chídào le。", "english": "Sorry, I am late." }
+      { "chinese": "对不起，我迟到了。", "pinyin": "Duìbuqǐ, wǒ chídào le。", "english": "Sorry, I am late." },
+      { "chinese": "对不起，我不明白。", "pinyin": "Duìbuqǐ, wǒ bù míngbái。", "english": "Sorry, I don't understand." },
+      { "chinese": "对不起，我忘了带书。", "pinyin": "Duìbuqǐ, wǒ wàng le dài shū。", "english": "Sorry, I forgot to bring the book." }
     ],
     "radicals": [
       { "character": "寸", "pinyin": "cùn", "meaning": "inch" }
@@ -250,7 +270,9 @@
     "pinyin": "duō",
     "english": "many, much",
     "examples": [
-      { "chinese": "这里有很多人。", "pinyin": "Zhèlǐ yǒu hěn duō rén。", "english": "There are many people here." }
+      { "chinese": "这里有很多人。", "pinyin": "Zhèlǐ yǒu hěn duō rén。", "english": "There are many people here." },
+      { "chinese": "你有多少苹果？", "pinyin": "Nǐ yǒu duōshǎo píngguǒ？", "english": "How many apples do you have?" },
+      { "chinese": "他知道很多事情。", "pinyin": "Tā zhīdào hěn duō shìqíng。", "english": "He knows many things." }
     ],
     "radicals": [
       { "character": "夕", "pinyin": "xī", "meaning": "evening" }
@@ -261,7 +283,9 @@
     "pinyin": "duōshǎo",
     "english": "how many, how much",
     "examples": [
-      { "chinese": "这个多少钱？", "pinyin": "Zhège duōshǎo qián？", "english": "How much is this?" }
+      { "chinese": "这个多少钱？", "pinyin": "Zhège duōshǎo qián？", "english": "How much is this?" },
+      { "chinese": "你家有多少人？", "pinyin": "Nǐ jiā yǒu duōshǎo rén？", "english": "How many people are in your family?" },
+      { "chinese": "你知道多少汉字？", "pinyin": "Nǐ zhīdào duōshǎo Hànzì？", "english": "How many Chinese characters do you know?" }
     ],
     "radicals": [
       { "character": "夕", "pinyin": "xī", "meaning": "evening" }
@@ -272,7 +296,9 @@
     "pinyin": "érzi",
     "english": "son",
     "examples": [
-      { "chinese": "我有一个儿子。", "pinyin": "Wǒ yǒu yí gè érzi。", "english": "I have a son." }
+      { "chinese": "我有一个儿子。", "pinyin": "Wǒ yǒu yí gè érzi。", "english": "I have a son." },
+      { "chinese": "儿子在学校学习。", "pinyin": "Érzi zài xuéxiào xuéxí。", "english": "My son is studying at school." },
+      { "chinese": "儿子喜欢吃苹果。", "pinyin": "Érzi xǐhuān chī píngguǒ。", "english": "My son likes eating apples." }
     ],
     "radicals": [
       { "character": "儿", "pinyin": "ér", "meaning": "child" }
@@ -283,7 +309,9 @@
     "pinyin": "èr",
     "english": "two",
     "examples": [
-      { "chinese": "我有两个苹果。", "pinyin": "Wǒ yǒu liǎng gè píngguǒ。", "english": "I have two apples." }
+      { "chinese": "我有两个苹果。", "pinyin": "Wǒ yǒu liǎng gè píngguǒ。", "english": "I have two apples." },
+      { "chinese": "今天是二月二号。", "pinyin": "Jīntiān shì èr yuè èr hào。", "english": "Today is February 2nd." },
+      { "chinese": "他有两个孩子。", "pinyin": "Tā yǒu liǎng gè háizi。", "english": "He has two children." }
     ],
     "radicals": [
       { "character": "二", "pinyin": "èr", "meaning": "two" }
@@ -1476,7 +1504,7 @@
     "radicals": [
       { "character": "土", "pinyin": "tǔ", "meaning": "earth" }
     ]
-  },
+   },
   {
     "character": "再见",
     "pinyin": "zàijiàn",
@@ -1537,7 +1565,9 @@
     "pinyin": "Zhōngguó",
     "english": "China",
     "examples": [
-      { "chinese": "我住在中国。", "pinyin": "Wǒ zhù zài Zhōngguó。", "english": "I live in China." }
+      { "chinese": "我住在中国。", "pinyin": "Wǒ zhù zài Zhōngguó。", "english": "I live in China." },
+      { "chinese": "中国很大。", "pinyin": "Zhōngguó hěn dà。", "english": "China is very big." },
+      { "chinese": "你喜欢中国吗？", "pinyin": "Nǐ xǐhuān Zhōngguó ma？", "english": "Do you like China?" }
     ],
     "radicals": [
       { "character": "囗", "pinyin": "wéi", "meaning": "enclosure" }
@@ -1548,7 +1578,9 @@
     "pinyin": "zhōngwǔ",
     "english": "noon",
     "examples": [
-      { "chinese": "我中午吃饭。", "pinyin": "Wǒ zhōngwǔ chīfàn。", "english": "I eat at noon." }
+      { "chinese": "我中午吃饭。", "pinyin": "Wǒ zhōngwǔ chīfàn。", "english": "I eat at noon." },
+      { "chinese": "中午我们在家。", "pinyin": "Zhōngwǔ wǒmen zài jiā。", "english": "We are at home at noon." },
+      { "chinese": "中午你做什么？", "pinyin": "Zhōngwǔ nǐ zuò shénme？", "english": "What do you do at noon?" }
     ],
     "radicals": [
       { "character": "午", "pinyin": "wǔ", "meaning": "noon" }
@@ -1559,7 +1591,9 @@
     "pinyin": "zhù",
     "english": "to live",
     "examples": [
-      { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." }
+      { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." },
+      { "chinese": "你住在哪儿？", "pinyin": "Nǐ zhù zài nǎr？", "english": "Where do you live?" },
+      { "chinese": "他们住在中国。", "pinyin": "Tāmen zhù zài Zhōngguó。", "english": "They live in China." }
     ],
     "radicals": [
       { "character": "亻", "pinyin": "rén", "meaning": "person" }
@@ -1570,7 +1604,9 @@
     "pinyin": "zhuōzi",
     "english": "table, desk",
     "examples": [
-      { "chinese": "桌子上有一本书。", "pinyin": "Zhuōzi shàng yǒu yì běn shū。", "english": "There is a book on the table." }
+      { "chinese": "桌子上有一本书。", "pinyin": "Zhuōzi shàng yǒu yì běn shū。", "english": "There is a book on the table." },
+      { "chinese": "桌子很大。", "pinyin": "Zhuōzi hěn dà。", "english": "The table is big." },
+      { "chinese": "你喜欢这个桌子吗？", "pinyin": "Nǐ xǐhuān zhège zhuōzi ma？", "english": "Do you like this table?" }
     ],
     "radicals": [
       { "character": "木", "pinyin": "mù", "meaning": "wood" }
@@ -1581,7 +1617,9 @@
     "pinyin": "zì",
     "english": "character, word",
     "examples": [
-      { "chinese": "我会写汉字。", "pinyin": "Wǒ huì xiě Hànzì。", "english": "I can write Chinese characters." }
+      { "chinese": "我会写汉字。", "pinyin": "Wǒ huì xiě Hànzì。", "english": "I can write Chinese characters." },
+      { "chinese": "这个字很大。", "pinyin": "Zhège zì hěn dà。", "english": "This character is big." },
+      { "chinese": "你认识这个字吗？", "pinyin": "Nǐ rènshi zhège zì ma？", "english": "Do you know this character?" }
     ],
     "radicals": [
       { "character": "子", "pinyin": "zǐ", "meaning": "child" }
