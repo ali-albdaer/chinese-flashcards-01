@@ -453,5 +453,284 @@
       { "character": "辶", "pinyin": "chuò", "meaning": "walk" },
       { "character": "到", "pinyin": "dào", "meaning": "to arrive" }
     ]
+  },
+  {
+    "character": "出发",
+    "pinyin": "chūfā",
+    "english": "to set off, to start out",
+    "examples": [
+      { "chinese": "我们明天早上六点出发。", "pinyin": "Wǒmen míngtiān zǎoshang liù diǎn chūfā。", "english": "We will set off at 6 a.m. tomorrow." },
+      { "chinese": "他们已经出发去机场了。", "pinyin": "Tāmen yǐjing chūfā qù jīchǎng le。", "english": "They have already set off for the airport." },
+      { "chinese": "请准时出发，别迟到。", "pinyin": "Qǐng zhǔnshí chūfā, bié chídào。", "english": "Please depart on time, don't be late." }
+    ],
+    "radicals": [
+      { "character": "出", "pinyin": "chū", "meaning": "to go out" },
+      { "character": "发", "pinyin": "fā", "meaning": "to send out" }
+    ]
+  },
+  {
+    "character": "初级",
+    "pinyin": "chūjí",
+    "english": "elementary level, primary level",
+    "examples": [
+      { "chinese": "这是初级汉语课本。", "pinyin": "Zhè shì chūjí Hànyǔ kèběn。", "english": "This is an elementary Chinese textbook." },
+      { "chinese": "他还在学习初级英语。", "pinyin": "Tā hái zài xuéxí chūjí Yīngyǔ。", "english": "He is still learning elementary English." },
+      { "chinese": "这个游戏对初级玩家很友好。", "pinyin": "Zhège yóuxì duì chūjí wánjiā hěn yǒuhào。", "english": "This game is very friendly to beginner players." }
+    ],
+    "radicals": [
+      { "character": "初", "pinyin": "chū", "meaning": "beginning" },
+      { "character": "级", "pinyin": "jí", "meaning": "level" }
+    ]
+  },
+  {
+    "character": "除了",
+    "pinyin": "chúle",
+    "english": "except for, besides, apart from",
+    "examples": [
+      { "chinese": "除了小王，大家都来了。", "pinyin": "Chúle Xiǎo Wáng, dàjiā dōu lái le。", "english": "Everyone has come except for Xiao Wang." },
+      { "chinese": "除了周末，我每天都去跑步。", "pinyin": "Chúle zhōumò, wǒ měitiān dōu qù pǎobù。", "english": "I go jogging every day except on weekends." },
+      { "chinese": "除了钢琴，她还会弹吉他。", "pinyin": "Chúle gāngqín, tā hái huì tán jítā。", "english": "Besides piano, she can also play guitar." }
+    ],
+    "radicals": [
+      { "character": "阝", "pinyin": "fù", "meaning": "mound" },
+      { "character": "了", "pinyin": "le", "meaning": "to finish" }
+    ]
+  },
+  {
+    "character": "厨房",
+    "pinyin": "chúfáng",
+    "english": "kitchen",
+    "examples": [
+      { "chinese": "妈妈在厨房做饭。", "pinyin": "Māma zài chúfáng zuòfàn。", "english": "Mom is cooking in the kitchen." },
+      { "chinese": "这个厨房很大，很漂亮。", "pinyin": "Zhège chúfáng hěn dà, hěn piàoliang。", "english": "This kitchen is very big and beautiful." },
+      { "chinese": "我喜欢在厨房里尝试新菜。", "pinyin": "Wǒ xǐhuān zài chúfáng lǐ chángshì xīn cài。", "english": "I like trying new dishes in the kitchen." }
+    ],
+    "radicals": [
+      { "character": "厂", "pinyin": "chǎng", "meaning": "factory" },
+      { "character": "房", "pinyin": "fáng", "meaning": "house" }
+    ]
+  },
+  {
+    "character": "船",
+    "pinyin": "chuán",
+    "english": "boat, ship",
+    "examples": [
+      { "chinese": "我喜欢坐船旅行。", "pinyin": "Wǒ xǐhuān zuò chuán lǚxíng。", "english": "I like traveling by boat." },
+      { "chinese": "那艘船是我爷爷的。", "pinyin": "Nà sōu chuán shì wǒ yéye de。", "english": "That ship belongs to my grandfather." },
+      { "chinese": "河上有很多小船。", "pinyin": "Hé shàng yǒu hěn duō xiǎo chuán。", "english": "There are many small boats on the river." }
+    ],
+    "radicals": [
+      { "character": "舟", "pinyin": "zhōu", "meaning": "boat" }
+    ]
+  },
+  {
+    "character": "春",
+    "pinyin": "chūn",
+    "english": "spring (season)",
+    "examples": [
+      { "chinese": "春天来了，花儿开了。", "pinyin": "Chūntiān lái le, huār kāi le。", "english": "Spring has come, and the flowers are blooming." },
+      { "chinese": "我最喜欢春天的天气。", "pinyin": "Wǒ zuì xǐhuān chūntiān de tiānqì。", "english": "I like spring weather the most." },
+      { "chinese": "春节是中国最重要的节日。", "pinyin": "Chūnjié shì Zhōngguó zuì zhòngyào de jiérì。", "english": "Spring Festival is China's most important holiday." }
+    ],
+    "radicals": [
+      { "character": "日", "pinyin": "rì", "meaning": "sun" }
+    ]
+  },
+  {
+    "character": "词典",
+    "pinyin": "cídiǎn",
+    "english": "dictionary",
+    "examples": [
+      { "chinese": "我需要一本汉英词典。", "pinyin": "Wǒ xūyào yì běn Hàn-Yīng cídiǎn。", "english": "I need a Chinese-English dictionary." },
+      { "chinese": "这本词典很有用。", "pinyin": "Zhè běn cídiǎn hěn yǒuyòng。", "english": "This dictionary is very useful." },
+      { "chinese": "你可以在词典里查这个词。", "pinyin": "Nǐ kěyǐ zài cídiǎn lǐ chá zhège cí。", "english": "You can look up this word in the dictionary." }
+    ],
+    "radicals": [
+      { "character": "讠", "pinyin": "yán", "meaning": "speech" },
+      { "character": "典", "pinyin": "diǎn", "meaning": "dictionary" }
+    ]
+  },
+  {
+    "character": "聪明",
+    "pinyin": "cōngming",
+    "english": "clever, intelligent",
+    "examples": [
+      { "chinese": "你的孩子真聪明！", "pinyin": "Nǐ de háizi zhēn cōngming！", "english": "Your child is so clever!" },
+      { "chinese": "她是班上最聪明的学生。", "pinyin": "Tā shì bān shàng zuì cōngming de xuésheng。", "english": "She is the most intelligent student in the class." },
+      { "chinese": "那只狗非常聪明，会做很多动作。", "pinyin": "Nà zhī gǒu fēicháng cōngming, huì zuò hěn duō dòngzuò。", "english": "That dog is very smart and can do many tricks." }
+    ],
+    "radicals": [
+      { "character": "耳", "pinyin": "ěr", "meaning": "ear" },
+      { "character": "明", "pinyin": "míng", "meaning": "bright" }
+    ]
+  },
+  {
+    "character": "打扮",
+    "pinyin": "dǎban",
+    "english": "to dress up, to decorate",
+    "examples": [
+      { "chinese": "她今天打扮得很漂亮。", "pinyin": "Tā jīntiān dǎban de hěn piàoliang。", "english": "She is dressed up beautifully today." },
+      { "chinese": "我们要打扮房间迎接新年。", "pinyin": "Wǒmen yào dǎban fángjiān yíngjiē xīnnián。", "english": "We need to decorate the room to welcome the new year." },
+      { "chinese": "小女孩喜欢打扮她的娃娃。", "pinyin": "Xiǎo nǚhái xǐhuān dǎban tā de wáwa。", "english": "The little girl likes to dress up her dolls." }
+    ],
+    "radicals": [
+      { "character": "扌", "pinyin": "shǒu", "meaning": "hand" },
+      { "character": "扮", "pinyin": "bàn", "meaning": "to dress up" }
+    ]
+  },
+  {
+    "character": "打算",
+    "pinyin": "dǎsuàn",
+    "english": "to plan, to intend",
+    "examples": [
+      { "chinese": "我打算明年去中国旅游。", "pinyin": "Wǒ dǎsuàn míngnián qù Zhōngguó lǚyóu。", "english": "I plan to travel to China next year." },
+      { "chinese": "你打算什么时候结婚？", "pinyin": "Nǐ dǎsuàn shénme shíhou jiéhūn？", "english": "When do you intend to get married?" },
+      { "chinese": "他们打算买一套新房子。", "pinyin": "Tāmen dǎsuàn mǎi yí tào xīn fángzi。", "english": "They plan to buy a new house." }
+    ],
+    "radicals": [
+      { "character": "扌", "pinyin": "shǒu", "meaning": "hand" },
+      { "character": "算", "pinyin": "suàn", "meaning": "to calculate" }
+    ]
+  },
+  {
+    "character": "担心",
+    "pinyin": "dānxīn",
+    "english": "to worry, to be concerned",
+    "examples": [
+      { "chinese": "别担心，一切都会好的。", "pinyin": "Bié dānxīn, yíqiè dōu huì hǎo de。", "english": "Don't worry, everything will be fine." },
+      { "chinese": "我担心他的健康状况。", "pinyin": "Wǒ dānxīn tā de jiànkāng zhuàngkuàng。", "english": "I'm worried about his health condition." },
+      { "chinese": "妈妈总是担心我的学习。", "pinyin": "Māma zǒngshì dānxīn wǒ de xuéxí。", "english": "Mom always worries about my studies." }
+    ],
+    "radicals": [
+      { "character": "忄", "pinyin": "xīn", "meaning": "heart" },
+      { "character": "心", "pinyin": "xīn", "meaning": "heart" }
+    ]
+  },
+  {
+    "character": "蛋糕",
+    "pinyin": "dàngāo",
+    "english": "cake",
+    "examples": [
+      { "chinese": "这是我给你买的生日蛋糕。", "pinyin": "Zhè shì wǒ gěi nǐ mǎi de shēngrì dàngāo。", "english": "This is the birthday cake I bought for you." },
+      { "chinese": "巧克力蛋糕是我的最爱。", "pinyin": "Qiǎokèlì dàngāo shì wǒ de zuì'ài。", "english": "Chocolate cake is my favorite." },
+      { "chinese": "她会做很好吃的蛋糕。", "pinyin": "Tā huì zuò hěn hǎochī de dàngāo。", "english": "She can make very delicious cakes." }
+    ],
+    "radicals": [
+      { "character": "饣", "pinyin": "shí", "meaning": "food" },
+      { "character": "高", "pinyin": "gāo", "meaning": "tall" }
+    ]
+  },
+  {
+    "character": "当然",
+    "pinyin": "dāngrán",
+    "english": "of course, certainly",
+    "examples": [
+      { "chinese": "你当然可以来参加我的生日派对。", "pinyin": "Nǐ dāngrán kěyǐ lái cānjiā wǒ de shēngrì pàiduì。", "english": "Of course, you can come to my birthday party." },
+      { "chinese": "当然，我很乐意帮助你。", "pinyin": "Dāngrán, wǒ hěn lèyì bāngzhù nǐ。", "english": "Of course, I'm happy to help you." },
+      { "chinese": "他当然知道这件事。", "pinyin": "Tā dāngrán zhīdào zhè jiàn shì。", "english": "Of course, he knows about this." }
+    ],
+    "radicals": [
+      { "character": "当", "pinyin": "dāng", "meaning": "to be" },
+      { "character": "灬", "pinyin": "rán", "meaning": "so" }
+    ]
+  },
+  {
+    "character": "灯",
+    "pinyin": "dēng",
+    "english": "lamp, light",
+    "examples": [
+      { "chinese": "请把灯打开。", "pinyin": "Qǐng bǎ dēng dǎkāi。", "english": "Please turn on the light." },
+      { "chinese": "房间里有一盏灯。", "pinyin": "Fángjiān lǐ yǒu yì zhǎn dēng。", "english": "There is a lamp in the room." },
+      { "chinese": "路灯很亮。", "pinyin": "Lùdēng hěn liàng。", "english": "The streetlights are very bright." }
+    ],
+    "radicals": [
+      { "character": "火", "pinyin": "huǒ", "meaning": "fire" },
+      { "character": "丁", "pinyin": "dīng", "meaning": "nail" }
+    ]
+  },
+  {
+    "character": "低",
+    "pinyin": "dī",
+    "english": "low",
+    "examples": [
+      { "chinese": "他的头很低。", "pinyin": "Tā de tóu hěn dī。", "english": "His head is low." },
+      { "chinese": "这个价格太低了。", "pinyin": "Zhège jiàgé tài dī le。", "english": "This price is too low." },
+      { "chinese": "请把声音调低一点。", "pinyin": "Qǐng bǎ shēngyīn tiáo dī yìdiǎn。", "english": "Please turn the volume down a little." }
+    ],
+    "radicals": [
+      { "character": "亻", "pinyin": "rén", "meaning": "person" },
+      { "character": "氐", "pinyin": "dī", "meaning": "low" }
+    ]
+  },
+  {
+    "character": "地方",
+    "pinyin": "dìfang",
+    "english": "place",
+    "examples": [
+      { "chinese": "这个地方很漂亮。", "pinyin": "Zhège dìfang hěn piàoliang。", "english": "This place is very beautiful." },
+      { "chinese": "你喜欢什么地方？", "pinyin": "Nǐ xǐhuān shénme dìfang？", "english": "What place do you like?" },
+      { "chinese": "我找不到这个地方。", "pinyin": "Wǒ zhǎo bù dào zhège dìfang。", "english": "I can't find this place." }
+    ],
+    "radicals": [
+      { "character": "土", "pinyin": "tǔ", "meaning": "earth" },
+      { "character": "方", "pinyin": "fāng", "meaning": "square" }
+    ]
+  },
+  {
+    "character": "地铁",
+    "pinyin": "dìtiě",
+    "english": "subway",
+    "examples": [
+      { "chinese": "我坐地铁去上班。", "pinyin": "Wǒ zuò dìtiě qù shàngbān。", "english": "I take the subway to work." },
+      { "chinese": "地铁站就在附近。", "pinyin": "Dìtiězhàn jiù zài fùjìn。", "english": "The subway station is nearby." },
+      { "chinese": "坐地铁很方便。", "pinyin": "Zuò dìtiě hěn fāngbiàn。", "english": "Taking the subway is very convenient." }
+    ],
+    "radicals": [
+      { "character": "土", "pinyin": "tǔ", "meaning": "earth" },
+      { "character": "铁", "pinyin": "tiě", "meaning": "iron" }
+    ]
+  },
+  {
+    "character": "地图",
+    "pinyin": "dìtú",
+    "english": "map",
+    "examples": [
+      { "chinese": "我需要一张地图。", "pinyin": "Wǒ xūyào yì zhāng dìtú。", "english": "I need a map." },
+      { "chinese": "请在地图上找到北京。", "pinyin": "Qǐng zài dìtú shàng zhǎo dào Běijīng。", "english": "Please find Beijing on the map." },
+      { "chinese": "这张地图很旧了。", "pinyin": "Zhè zhāng dìtú hěn jiù le。", "english": "This map is very old." }
+    ],
+    "radicals": [
+      { "character": "土", "pinyin": "tǔ", "meaning": "earth" },
+      { "character": "图", "pinyin": "tú", "meaning": "map" }
+    ]
+  },
+  {
+    "character": "电梯",
+    "pinyin": "diàntī",
+    "english": "elevator",
+    "examples": [
+      { "chinese": "请坐电梯上楼。", "pinyin": "Qǐng zuò diàntī shàng lóu。", "english": "Please take the elevator upstairs." },
+      { "chinese": "电梯坏了，我们走楼梯吧。", "pinyin": "Diàntī huài le, wǒmen zǒu lóutī ba。", "english": "The elevator is broken, let's take the stairs." },
+      { "chinese": "电梯里很挤。", "pinyin": "Diàntī lǐ hěn jǐ。", "english": "The elevator is very crowded." }
+    ],
+    "radicals": [
+      { "character": "电", "pinyin": "diàn", "meaning": "electricity" },
+      { "character": "梯", "pinyin": "tī", "meaning": "ladder" }
+    ]
+  },
+  {
+    "character": "电子邮件",
+    "pinyin": "diànzǐ yóujiàn",
+    "english": "email",
+    "examples": [
+      { "chinese": "请给我发电子邮件。", "pinyin": "Qǐng gěi wǒ fā diànzǐ yóujiàn。", "english": "Please send me an email." },
+      { "chinese": "我每天都收到很多电子邮件。", "pinyin": "Wǒ měitiān dōu shōudào hěn duō diànzǐ yóujiàn。", "english": "I receive many emails every day." },
+      { "chinese": "我的电子邮件地址是...", "pinyin": "Wǒ de diànzǐ yóujiàn dìzhǐ shì...", "english": "My email address is..." }
+    ],
+    "radicals": [
+      { "character": "电", "pinyin": "diàn", "meaning": "electricity" },
+      { "character": "子", "pinyin": "zǐ", "meaning": "child" },
+      { "character": "邮件", "pinyin": "yóujiàn", "meaning": "mail" }
+    ]
   }
 ]
