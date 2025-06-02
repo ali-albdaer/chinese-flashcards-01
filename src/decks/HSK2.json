@@ -1,15 +1,288 @@
 [
     {
-        "character": "我",
-        "pinyin": "wǒ",
-        "english": "I, me",
+        "character": "吧",
+        "pinyin": "ba",
+        "english": "particle indicating suggestion or assumption",
         "examples": [
-        { "chinese": "我是学生。", "pinyin": "Wǒ shì xuéshēng。", "english": "I am a student." },
-        { "chinese": "我喜欢吃苹果。", "pinyin": "Wǒ xǐhuān chī píngguǒ。", "english": "I like to eat apples." },
-        { "chinese": "我住在北京。", "pinyin": "Wǒ zhù zài Běijīng。", "english": "I live in Beijing." }
+            { "chinese": "我们去吧。", "pinyin": "wǒmen qù ba.", "english": "Let's go." },
+            { "chinese": "你先走吧。", "pinyin": "nǐ xiān zǒu ba.", "english": "You go first." },
+            { "chinese": "他可能不来了吧。", "pinyin": "tā kěnéng bù lái le ba.", "english": "He probably won't come." }
         ],
         "radicals": [
-        { "character": "戈", "pinyin": "gē", "meaning": "spear" }
+            { "character": "口", "pinyin": "kǒu", "meaning": "mouth, opening" }
+        ]
+    },
+    {
+        "character": "白",
+        "pinyin": "bái",
+        "english": "white, clear",
+        "examples": [
+            { "chinese": "天空是白色的。", "pinyin": "tiānkōng shì báisè de.", "english": "The sky is white." },
+            { "chinese": "这张纸是白色的。", "pinyin": "zhè zhāng zhǐ shì báisè de.", "english": "This paper is white." },
+            { "chinese": "我最喜欢白色的花。", "pinyin": "wǒ zuì xǐhuān báisè de huā.", "english": "I like white flowers the most." }
+        ],
+        "radicals": [
+            { "character": "白", "pinyin": "bái", "meaning": "white" }
+        ]
+    },
+    {
+        "character": "百",
+        "pinyin": "bǎi",
+        "english": "hundred",
+        "examples": [
+            { "chinese": "一百元。", "pinyin": "Yī bǎi yuán。", "english": "One hundred yuan." },
+            { "chinese": "他有一百本书。", "pinyin": "Tā yǒu yī bǎi běn shū。", "english": "He has one hundred books." },
+            { "chinese": "我们班有一百个学生。", "pinyin": "Wǒmen bān yǒu yī bǎi gè xuéshēng。", "english": "There are one hundred students in our class." }
+        ],
+        "radicals": [
+            { "character": "白", "pinyin": "bái", "meaning": "white" }
+        ]
+    },
+    {
+        "character": "比",
+        "pinyin": "bǐ",
+        "english": "to compare; than",
+        "examples": [
+            { "chinese": "他比我高。", "pinyin": "Tā bǐ wǒ gāo。", "english": "He is taller than me." },
+            { "chinese": "今天比昨天冷。", "pinyin": "Jīntiān bǐ zuótiān lěng。", "english": "Today is colder than yesterday." },
+            { "chinese": "我的中文比他好。", "pinyin": "Wǒ de Zhōngwén bǐ tā hǎo。", "english": "My Chinese is better than his." }
+        ],
+        "radicals": [
+            { "character": "比", "pinyin": "bǐ", "meaning": "compare" }
+        ]
+    },
+    {
+        "character": "别",
+        "pinyin": "bié",
+        "english": "don't; other",
+        "examples": [
+            { "chinese": "别说话。", "pinyin": "Bié shuōhuà。", "english": "Don't talk." },
+            { "chinese": "请别走。", "pinyin": "Qǐng bié zǒu。", "english": "Please don't leave." },
+            { "chinese": "还有别的人吗？", "pinyin": "Hái yǒu bié de rén ma？", "english": "Are there other people?" }
+        ],
+        "radicals": [
+            { "character": "刂", "pinyin": "dāo", "meaning": "knife" }
+        ]
+    },
+    {
+        "character": "长",
+        "pinyin": "cháng",
+        "english": "long",
+        "examples": [
+            { "chinese": "这条路很长。", "pinyin": "Zhè tiáo lù hěn cháng。", "english": "This road is very long." },
+            { "chinese": "她的头发很长。", "pinyin": "Tā de tóufa hěn cháng。", "english": "Her hair is very long." },
+            { "chinese": "我学中文学了很长时间。", "pinyin": "Wǒ xué Zhōngwén xué le hěn cháng shíjiān。", "english": "I have studied Chinese for a long time." }
+        ],
+        "radicals": [
+            { "character": "长", "pinyin": "cháng", "meaning": "long" }
+        ]
+    },
+    {
+        "character": "唱歌",
+        "pinyin": "chànggē",
+        "english": "to sing",
+        "examples": [
+            { "chinese": "我喜欢唱歌。", "pinyin": "Wǒ xǐhuān chànggē。", "english": "I like singing." },
+            { "chinese": "她唱歌唱得很好。", "pinyin": "Tā chànggē chàng de hěn hǎo。", "english": "She sings very well." },
+            { "chinese": "我们一起唱歌吧。", "pinyin": "Wǒmen yìqǐ chànggē ba。", "english": "Let's sing together." }
+        ],
+        "radicals": [
+            { "character": "口", "pinyin": "kǒu", "meaning": "mouth" }
+        ]
+    },
+    {
+        "character": "出",
+        "pinyin": "chū",
+        "english": "to go out; to come out",
+        "examples": [
+            { "chinese": "我每天七点出门。", "pinyin": "Wǒ měitiān qī diǎn chūmén。", "english": "I go out at seven every day." },
+            { "chinese": "他出去了。", "pinyin": "Tā chūqù le。", "english": "He went out." },
+            { "chinese": "请你出教室。", "pinyin": "Qǐng nǐ chū jiàoshì。", "english": "Please leave the classroom." }
+        ],
+        "radicals": [
+            { "character": "凵", "pinyin": "kǎn", "meaning": "container" }
+        ]
+    },
+    {
+        "character": "穿",
+        "pinyin": "chuān",
+        "english": "to wear; to put on",
+        "examples": [
+            { "chinese": "今天你穿什么？", "pinyin": "Jīntiān nǐ chuān shénme？", "english": "What are you wearing today?" },
+            { "chinese": "他喜欢穿红色的衣服。", "pinyin": "Tā xǐhuān chuān hóngsè de yīfu。", "english": "He likes to wear red clothes." },
+            { "chinese": "我穿了一件新衣服。", "pinyin": "Wǒ chuān le yí jiàn xīn yīfu。", "english": "I wore a new piece of clothing." }
+        ],
+        "radicals": [
+            { "character": "牙", "pinyin": "yá", "meaning": "tooth" }
+        ]
+    },
+    {
+        "character": "次",
+        "pinyin": "cì",
+        "english": "time (frequency)",
+        "examples": [
+            { "chinese": "我去过两次北京。", "pinyin": "Wǒ qù guò liǎng cì Běijīng。", "english": "I have been to Beijing twice." },
+            { "chinese": "请再说一次。", "pinyin": "Qǐng zài shuō yí cì。", "english": "Please say it again." },
+            { "chinese": "这次考试很重要。", "pinyin": "Zhè cì kǎoshì hěn zhòngyào。", "english": "This exam is very important." }
+        ],
+        "radicals": [
+            { "character": "欠", "pinyin": "qiàn", "meaning": "owe" }
+        ]
+    },
+    {
+        "character": "从",
+        "pinyin": "cóng",
+        "english": "from",
+        "examples": [
+            { "chinese": "我从中国来。", "pinyin": "Wǒ cóng Zhōngguó lái。", "english": "I come from China." },
+            { "chinese": "他从家去学校。", "pinyin": "Tā cóng jiā qù xuéxiào。", "english": "He goes to school from home." },
+            { "chinese": "我们从早上开始学习。", "pinyin": "Wǒmen cóng zǎoshang kāishǐ xuéxí。", "english": "We start studying in the morning." }
+        ],
+        "radicals": [
+            { "character": "人", "pinyin": "rén", "meaning": "person" }
+        ]
+    },
+    {
+        "character": "错",
+        "pinyin": "cuò",
+        "english": "wrong; mistake",
+        "examples": [
+            { "chinese": "你写错了。", "pinyin": "Nǐ xiě cuò le。", "english": "You wrote it wrong." },
+            { "chinese": "对不起，是我的错。", "pinyin": "Duìbuqǐ, shì wǒ de cuò。", "english": "Sorry, it's my fault." },
+            { "chinese": "这个答案不对，是错的。", "pinyin": "Zhège dá'àn bú duì, shì cuò de。", "english": "This answer is not correct, it's wrong." }
+        ],
+        "radicals": [
+            { "character": "钅", "pinyin": "jīn", "meaning": "metal" }
+        ]
+    },
+    {
+        "character": "打篮球",
+        "pinyin": "dǎlánqiú",
+        "english": "to play basketball",
+        "examples": [
+            { "chinese": "我喜欢打篮球。", "pinyin": "Wǒ xǐhuān dǎ lánqiú。", "english": "I like playing basketball." },
+            { "chinese": "他每天都打篮球。", "pinyin": "Tā měitiān dōu dǎ lánqiú。", "english": "He plays basketball every day." },
+            { "chinese": "我们一起去打篮球吧。", "pinyin": "Wǒmen yìqǐ qù dǎ lánqiú ba。", "english": "Let's go play basketball together." }
+        ],
+        "radicals": [
+            { "character": "手", "pinyin": "shǒu", "meaning": "hand" }
+        ]
+    },
+    {
+        "character": "大家",
+        "pinyin": "dàjiā",
+        "english": "everybody",
+        "examples": [
+            { "chinese": "大家好！", "pinyin": "Dàjiā hǎo！", "english": "Hello, everyone!" },
+            { "chinese": "大家都来了。", "pinyin": "Dàjiā dōu lái le。", "english": "Everyone has come." },
+            { "chinese": "谢谢大家的帮助。", "pinyin": "Xièxie dàjiā de bāngzhù。", "english": "Thank you all for your help." }
+        ],
+        "radicals": [
+            { "character": "大", "pinyin": "dà", "meaning": "big" }
+        ]
+    },
+    {
+        "character": "但是",
+        "pinyin": "dànshì",
+        "english": "but, however",
+        "examples": [
+            { "chinese": "我喜欢苹果，但是不喜欢香蕉。", "pinyin": "Wǒ xǐhuān píngguǒ, dànshì bù xǐhuān xiāngjiāo。", "english": "I like apples, but I don't like bananas." },
+            { "chinese": "他很高，但是很瘦。", "pinyin": "Tā hěn gāo, dànshì hěn shòu。", "english": "He is tall, but thin." },
+            { "chinese": "我想去，但是没有时间。", "pinyin": "Wǒ xiǎng qù, dànshì méiyǒu shíjiān。", "english": "I want to go, but I don't have time." }
+        ],
+        "radicals": [
+            { "character": "但", "pinyin": "dàn", "meaning": "but" }
+        ]
+    },
+    {
+        "character": "到",
+        "pinyin": "dào",
+        "english": "to arrive; to reach",
+        "examples": [
+            { "chinese": "我到家了。", "pinyin": "Wǒ dào jiā le。", "english": "I have arrived home." },
+            { "chinese": "你几点到学校？", "pinyin": "Nǐ jǐ diǎn dào xuéxiào？", "english": "What time do you arrive at school?" },
+            { "chinese": "火车到了。", "pinyin": "Huǒchē dào le。", "english": "The train has arrived." }
+        ],
+        "radicals": [
+            { "character": "至", "pinyin": "zhì", "meaning": "arrive" }
+        ]
+    },
+    {
+        "character": "得",
+        "pinyin": "de",
+        "english": "particle (used after a verb to indicate degree or result)",
+        "examples": [
+            { "chinese": "他说汉语说得很好。", "pinyin": "Tā shuō Hànyǔ shuō de hěn hǎo。", "english": "He speaks Chinese very well." },
+            { "chinese": "你跑得很快。", "pinyin": "Nǐ pǎo de hěn kuài。", "english": "You run very fast." },
+            { "chinese": "我写字写得很慢。", "pinyin": "Wǒ xiězì xiě de hěn màn。", "english": "I write very slowly." }
+        ],
+        "radicals": [
+            { "character": "彳", "pinyin": "chì", "meaning": "step" }
+        ]
+    },
+    {
+        "character": "等",
+        "pinyin": "děng",
+        "english": "to wait",
+        "examples": [
+            { "chinese": "请等一下。", "pinyin": "Qǐng děng yíxià。", "english": "Please wait a moment." },
+            { "chinese": "我在门口等你。", "pinyin": "Wǒ zài ménkǒu děng nǐ。", "english": "I'll wait for you at the door." },
+            { "chinese": "他等了很久。", "pinyin": "Tā děng le hěn jiǔ。", "english": "He waited for a long time." }
+        ],
+        "radicals": [
+            { "character": "竹", "pinyin": "zhú", "meaning": "bamboo" }
+        ]
+    },
+    {
+        "character": "弟弟",
+        "pinyin": "dìdi",
+        "english": "younger brother",
+        "examples": [
+            { "chinese": "我有一个弟弟。", "pinyin": "Wǒ yǒu yí gè dìdi。", "english": "I have a younger brother." },
+            { "chinese": "弟弟喜欢玩游戏。", "pinyin": "Dìdi xǐhuān wán yóuxì。", "english": "My younger brother likes playing games." },
+            { "chinese": "弟弟在家看电视。", "pinyin": "Dìdi zài jiā kàn diànshì。", "english": "My younger brother is watching TV at home." }
+        ],
+        "radicals": [
+            { "character": "弓", "pinyin": "gōng", "meaning": "bow" }
+        ]
+    },
+    {
+        "character": "第一",
+        "pinyin": "dìyī",
+        "english": "first",
+        "examples": [
+            { "chinese": "他是第一名。", "pinyin": "Tā shì dì yī míng。", "english": "He is the first." },
+            { "chinese": "我第一天来中国。", "pinyin": "Wǒ dì yī tiān lái Zhōngguó。", "english": "It's my first day in China." },
+            { "chinese": "请做第一题。", "pinyin": "Qǐng zuò dì yī tí。", "english": "Please do the first question." }
+        ],
+        "radicals": [
+            { "character": "竹", "pinyin": "zhú", "meaning": "bamboo" }
+        ]
+    },
+    {
+        "character": "懂",
+        "pinyin": "dǒng",
+        "english": "to understand",
+        "examples": [
+            { "chinese": "我听不懂。", "pinyin": "Wǒ tīng bù dǒng。", "english": "I don't understand (by listening)." },
+            { "chinese": "你说得太快，我不懂。", "pinyin": "Nǐ shuō de tài kuài, wǒ bù dǒng。", "english": "You speak too fast, I don't understand." },
+            { "chinese": "他懂中文。", "pinyin": "Tā dǒng Zhōngwén。", "english": "He understands Chinese." }
+        ],
+        "radicals": [
+            { "character": "心", "pinyin": "xīn", "meaning": "heart" }
+        ]
+    },
+    {
+        "character": "对",
+        "pinyin": "duì",
+        "english": "correct; to; for",
+        "examples": [
+            { "chinese": "你的答案是对的。", "pinyin": "Nǐ de dá'àn shì duì de。", "english": "Your answer is correct." },
+            { "chinese": "我对中国很感兴趣。", "pinyin": "Wǒ duì Zhōngguó hěn gǎn xìngqù。", "english": "I'm interested in China." },
+            { "chinese": "对不起，我来晚了。", "pinyin": "Duìbuqǐ, wǒ lái wǎn le。", "english": "Sorry, I'm late." }
+        ],
+        "radicals": [
+            { "character": "寸", "pinyin": "cùn", "meaning": "inch" }
         ]
     }
 ]
