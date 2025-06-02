@@ -23,17 +23,17 @@
       background-color: #f0f2f5;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: flex-start; /* restore stacking/animation context */
       min-height: 100vh;
+      /* Remove overflow: hidden here */
     }
 
-    /*─────────────────────────────────────────────────────────────────────────*/
-    /* Outer container: captures keyboard focus */
     .app-container {
       outline: none;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 60px; /* moderate top margin for centering */
     }
 
     /*─────────────────────────────────────────────────────────────────────────*/
@@ -88,6 +88,7 @@
       height: 380px;      /* bigger card */
       margin-bottom: 1em;
       perspective: 1200px;
+      /* Remove overflow: hidden here to allow animations to move cards out */
     }
 
     /* Up to three “peek” cards behind, each offset & scaled */

@@ -435,6 +435,12 @@ impl Component for App {
                 </div>
                 
                 <div class="card-container">
+                  // Always render the "No cards" card at the very bottom
+                  <div class="pile-card pile-card-1" style="z-index:0;">
+                    <div class="card-face front">
+                      <div style="color:#888;">{ "No cards." }</div>
+                    </div>
+                  </div>
                   {
                     if let Some(c) = nxt3 {
                         html! {
@@ -464,95 +470,104 @@ impl Component for App {
                   }
 
                   // Active card
-                  <div class={ inner_cls.clone() }
-                       onclick={ ctx.link().callback(|_| Msg::Flip) }
-                       onanimationend={ ctx.link().callback(|_| Msg::AnimDone) }
-                  >
-                    // Front face
-                    <div class="card-face front">
-                      {
-                        if let Some(card) = curr {
-                          html! { <div>{ &card.character }</div> }
-                        } else {
-                          html! { <div style="color:#888;">{ "No cards." }</div> }
-                        }
-                      }
-                    </div>
-
-                    // Back face
-                    <div class="card-face back">
-                      {
-                        if let Some(card) = curr {
-                          html! {
-                            <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden;">
-                              /* Line 1: CHARACTER + (pinyin) + radicals */
-                              <div style="font-size:2.8em; font-weight:bold; text-align:center; color:#333; margin-bottom:0.4em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;">
-                                { &card.character }
-                                {
-                                  if self.show_pinyin {
-                                    html! {
-                                      <span style="margin-left:0.4em; font-size:1.15em; color:#555;">
-                                        { "(" }{ &card.pinyin }{ ")" }
-                                      </span>
-                                    }
-                                  } else {
-                                    html! {}
-                                  }
-                                }
-                                {
-                                  if self.show_radicals {
-                                    html! {
-                                      <span style="margin-left:0.6em; font-size:1em; color:#777; display:inline-block; margin-top:0.2em;">
-                                        { for card.radicals.iter().map(|r| {
-                                          html! {
-                                            <>
-                                              <span style="font-size:1.1em;">{ &r.character }</span>
-                                              <span style="font-size:0.85em;">{ "(" }{ &r.pinyin }{ "－" }{ &r.meaning }{ ")" }</span>
-                                              { " " }
-                                            </>
-                                          }
-                                        })}
-                                      </span>
-                                    }
-                                  } else {
-                                    html! {}
-                                  }
-                                }
-                              </div>
-
-                              /* Line 2: definitions */
+                  {
+                    if !self.cards.is_empty() {
+                        html! {
+                          <div class={ inner_cls.clone() }
+                               onclick={ ctx.link().callback(|_| Msg::Flip) }
+                               onanimationend={ ctx.link().callback(|_| Msg::AnimDone) }
+                          >
+                            // Front face
+                            <div class="card-face front">
                               {
-                                if self.show_english {
-                                  html! {
-                                    <div style="text-align:center; font-size:1.2em; margin-bottom:0.6em; color:#444;">
-                                      { &card.english }
-                                    </div>
-                                  }
+                                if let Some(card) = curr {
+                                  html! { <div>{ &card.character }</div> }
                                 } else {
                                   html! {}
                                 }
                               }
+                            </div>
 
-                              /* Lines 3+: examples */
+                            // Back face
+                            <div class="card-face back">
                               {
-                                if self.show_examples {
+                                if let Some(card) = curr {
                                   html! {
-                                    <div style="flex-grow:1; overflow:hidden; margin-top:0.3em;">
-                                      { for card.examples.iter().map(|ex| html! {
-                                        <div style="margin-bottom:0.6em;">
-                                          <div class="example-chinese">{ &ex.chinese }</div>
-                                          { if self.show_examples_pinyin {
-                                              html! {
-                                                <div class="example-pinyin">{ &ex.pinyin }</div>
-                                              }
-                                            } else { html!{} } }
-                                          { if self.show_examples_english {
-                                              html! {
-                                                <div class="example-english">{ &ex.english }</div>
-                                              }
-                                            } else { html!{} } }
-                                        </div>
-                                      })}
+                                    <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden;">
+                                      /* Line 1: CHARACTER + (pinyin) + radicals */
+                                      <div style="font-size:2.8em; font-weight:bold; text-align:center; color:#333; margin-bottom:0.4em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;">
+                                        { &card.character }
+                                        {
+                                          if self.show_pinyin {
+                                            html! {
+                                              <span style="margin-left:0.4em; font-size:1.15em; color:#555;">
+                                                { "(" }{ &card.pinyin }{ ")" }
+                                              </span>
+                                            }
+                                          } else {
+                                            html! {}
+                                          }
+                                        }
+                                        {
+                                          if self.show_radicals {
+                                            html! {
+                                              <span style="margin-left:0.6em; font-size:1em; color:#777; display:inline-block; margin-top:0.2em;">
+                                                { for card.radicals.iter().map(|r| {
+                                                  html! {
+                                                    <>
+                                                      <span style="font-size:1.1em;">{ &r.character }</span>
+                                                      <span style="font-size:0.85em;">{ "(" }{ &r.pinyin }{ "－" }{ &r.meaning }{ ")" }</span>
+                                                      { " " }
+                                                    </>
+                                                  }
+                                                })}
+                                              </span>
+                                            }
+                                          } else {
+                                            html! {}
+                                          }
+                                        }
+                                      </div>
+
+                                      /* Line 2: definitions */
+                                      {
+                                        if self.show_english {
+                                          html! {
+                                            <div style="text-align:center; font-size:1.2em; margin-bottom:0.6em; color:#444;">
+                                              { &card.english }
+                                            </div>
+                                          }
+                                        } else {
+                                          html! {}
+                                        }
+                                      }
+
+                                      /* Lines 3+: examples */
+                                      {
+                                        if self.show_examples {
+                                          html! {
+                                            <div style="flex-grow:1; overflow:hidden; margin-top:0.3em;">
+                                              { for card.examples.iter().map(|ex| html! {
+                                                <div style="margin-bottom:0.6em;">
+                                                  <div class="example-chinese">{ &ex.chinese }</div>
+                                                  { if self.show_examples_pinyin {
+                                                      html! {
+                                                        <div class="example-pinyin">{ &ex.pinyin }</div>
+                                                      }
+                                                    } else { html!{} } }
+                                                  { if self.show_examples_english {
+                                                      html! {
+                                                        <div class="example-english">{ &ex.english }</div>
+                                                      }
+                                                    } else { html!{} } }
+                                                </div>
+                                              })}
+                                            </div>
+                                          }
+                                        } else {
+                                          html! {}
+                                        }
+                                      }
                                     </div>
                                   }
                                 } else {
@@ -560,13 +575,12 @@ impl Component for App {
                                 }
                               }
                             </div>
-                          }
-                        } else {
-                          html! { <div style="color:#888;">{ "No cards in this deck." }</div> }
+                          </div>
                         }
-                      }
-                    </div>
-                  </div>
+                    } else {
+                        html! {}
+                    }
+                  }
                 </div>
 
                 // Buttons under card
