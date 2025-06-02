@@ -244,6 +244,22 @@
     .example-chinese { font-size: 1.4em; }
     .example-pinyin,
     .example-english { font-size: 0.9em; color: gray; }
+
+    /* Add this for radicals in the bottom right */
+    .radicals-corner {
+      position: absolute;
+      right: 0.7em;
+      bottom: 0.5em;
+      background: rgba(245,245,245,0.92);
+      border-radius: 7px;
+      padding: 0.25em 0.7em;
+      font-size: 0.85em;
+      color: #666;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+      z-index: 2;
+      max-width: 60%;
+      text-align: right;
+    }
   </style>
 </head>
 <body>

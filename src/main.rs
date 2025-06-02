@@ -500,12 +500,12 @@ impl Component for App {
                             </div>
 
                             // Back face
-                            <div class="card-face back">
+                            <div class="card-face back" style="position:relative;">
                               {
                                 if let Some(card) = curr {
                                   html! {
-                                    <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden;">
-                                      /* Line 1: CHARACTER + (pinyin) + radicals */
+                                    <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden; position:relative;">
+                                      // Line 1: CHARACTER + (pinyin)
                                       <div style="font-size:2.8em; font-weight:bold; text-align:center; color:#333; margin-bottom:0.4em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;">
                                         { &card.character }
                                         {
@@ -519,28 +519,8 @@ impl Component for App {
                                             html! {}
                                           }
                                         }
-                                        {
-                                          if self.show_radicals {
-                                            html! {
-                                              <span style="margin-left:0.6em; font-size:1em; color:#777; display:inline-block; margin-top:0.2em;">
-                                                { for card.radicals.iter().map(|r| {
-                                                  html! {
-                                                    <>
-                                                      <span style="font-size:1.1em;">{ &r.character }</span>
-                                                      <span style="font-size:0.85em;">{ "(" }{ &r.pinyin }{ "－" }{ &r.meaning }{ ")" }</span>
-                                                      { " " }
-                                                    </>
-                                                  }
-                                                })}
-                                              </span>
-                                            }
-                                          } else {
-                                            html! {}
-                                          }
-                                        }
                                       </div>
-
-                                      /* Line 2: definitions */
+                                      // Line 2: definitions
                                       {
                                         if self.show_english {
                                           html! {
@@ -573,6 +553,29 @@ impl Component for App {
                                                     } else { html!{} } }
                                                 </div>
                                               })}
+                                            </div>
+                                          }
+                                        } else {
+                                          html! {}
+                                        }
+                                      }
+
+                                      // Radicals in bottom right corner
+                                      {
+                                        if self.show_radicals && !card.radicals.is_empty() {
+                                          html! {
+                                            <div class="radicals-corner" style="
+                                              display: flex;
+                                              flex-direction: column-reverse;
+                                              align-items: flex-end;
+                                              gap: 0.15em;
+                                            ">
+                                              { for card.radicals.iter().rev().map(|r| html! {
+                                                <span style="white-space:nowrap;">
+                                                  <span style="font-size:1.1em;">{ &r.character }</span>
+                                                  <span style="font-size:0.85em; margin-left:0.15em;">{ "(" }{ &r.pinyin }{ "－" }{ &r.meaning }{ ")" }</span>
+                                                </span>
+                                              }) }
                                             </div>
                                           }
                                         } else {
