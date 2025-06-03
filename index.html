@@ -97,27 +97,27 @@
       width: 100%;
       height: 100%;
       background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 40px rgba(0,0,0,0.19);
+      border-radius: 16px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.13);
       overflow: hidden;
       opacity: 1;
       transition: none;
       z-index: 0;
     }
     .pile-card-1 {
-      top: 0px;
-      left: 0px;
+      top: 0em;
+      left: 0em;
       transform: scale(1);
     }
     .pile-card-2 {
-      top: 10px;
-      left: 6px;
-      transform: scale(0.96);
+      top: 1em;
+      left: 1em;
+      transform: scale(0.97);
     }
     .pile-card-3 {
-      top: 12px;
-      left: 30px;
-      transform: scale(0.88);
+      top: 1.5em;
+      left: 1.5em;
+      transform: scale(0.955);
     }
     .pile-card .card-face.front {
       display: flex;
@@ -137,7 +137,7 @@
       height: 100%;
       transform-style: preserve-3d;
       transition: transform var(--flip-duration);
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
       background-color: #ffffff;
       z-index: 1;
@@ -153,7 +153,7 @@
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
       box-sizing: border-box;
     }
@@ -221,13 +221,18 @@
       font-size: 0.9em;
       padding: 0.5em 1em;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       background-color: #4a90e2;
       color: #fff;
       transition: background-color 0.2s;
     }
     button:hover:not(:disabled) {
       background-color: #357ab8;
+    }
+    .card-buttons-row {
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 24px;
     }
     button:disabled {
       cursor: not-allowed;
@@ -240,12 +245,10 @@
       cursor: pointer;
       transform: scale(0.95);
     }
-    /* Increase example font sizes */
     .example-chinese { font-size: 1.4em; }
     .example-pinyin,
     .example-english { font-size: 0.9em; color: gray; }
 
-    /* Add this for radicals in the bottom right */
     .radicals-corner {
       position: absolute;
       right: 0.7em;
@@ -259,6 +262,19 @@
       z-index: 2;
       max-width: 60%;
       text-align: right;
+    }
+
+    /*─────────────────────────────────────────────────────────────────────────*/
+    /* Fancy card look for all cards */
+    .pile-card,
+    .card-inner,
+    .card-face.front,
+    .card-face.back {
+      border-radius: 12px !important;
+      border: 2.2px solid #b4d2f7 !important;
+      background: linear-gradient(120deg, #f6fafd 60%, #e0f0ff 100%) !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13), 0 1.5px 0.5px 0 #e0e0e0 !important;
+      /* Subtle gradient and border for all cards */
     }
   </style>
 </head>

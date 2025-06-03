@@ -619,7 +619,7 @@ impl Component for App {
                 </div>
 
                 // Buttons under card
-                <div style="text-align:center; margin-bottom:30px;">
+                <div class="card-buttons-row">
                   <button
                     onclick={ ctx.link().callback(|_| Msg::StartRemove) }
                     disabled={
