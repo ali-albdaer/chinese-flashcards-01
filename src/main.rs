@@ -110,11 +110,16 @@ impl Component for App {
 
         // Insert decks into the map
         decks.insert("HSK1".into(), hsk1.clone());
-        decks.insert("HSK2".into(), hsk2.clone());
-        decks.insert("HSK3".into(), hsk3.clone());
-        decks.insert("HSK4".into(), hsk4.clone());
+        decks.insert("HSK2 (INCMPLT)".into(), hsk2.clone());
+        decks.insert("HSK3 (INCMPLT)".into(), hsk3.clone());
+        decks.insert("HSK4 (INCMPLT)".into(), hsk4.clone());
         decks.insert("CHN203".into(), chn203.clone());
         decks.insert("Collection".into(), collection.clone());
+
+        // Default to CHN203 deck
+        let current_deck = "CHN203".into();
+        let cards = decks.get(&current_deck).unwrap().clone();
+        let initial_count = cards.len();
 
         // Such description cards can be added:
         //   {
@@ -132,11 +137,6 @@ impl Component for App {
         //     { "character": "汇", "pinyin": "huì", "meaning": "collection" }
         //   ]
         // },
-
-        // Default to CHN203 deck
-        let current_deck = "CHN203".into();
-        let cards = decks.get(&current_deck).unwrap().clone();
-        let initial_count = cards.len();
 
         App {
             decks,
