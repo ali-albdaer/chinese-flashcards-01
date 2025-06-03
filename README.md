@@ -1,10 +1,14 @@
 # Chinese Flash Cards (v1.0)
 
-A simple flashcard application for learning Chinese vocabulary (and Rust). This is meant to be a personal project with no intentions of continuation or development. 
+A simple flashcard application for learning Chinese vocabulary (and Rust). This is meant to be a personal short-term project, and I have no intentions of continuously developing it. 
+
+## Demo
+
+- You may find the deployed app here: [Chinese Flash Cards (Heroku)](https://chinese-flashcards-fa2e8975a611.herokuapp.com/)
 
 ## Features
 
-- Select deck, save favorite words, remove and duplicate cards
+- Select a deck, replace, remove or shuffle cards
 - Choose what to see (pinyin, english, example sentences, radicals, ...)
 - Quiz mode (working on it)
 
@@ -22,8 +26,6 @@ A simple flashcard application for learning Chinese vocabulary (and Rust). This 
     ```
     trunk serve
     ```
-
-## License
 
 ## License
 
