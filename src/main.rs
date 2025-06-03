@@ -372,8 +372,9 @@ impl Component for App {
                      match e.key().as_str() {
                          "ArrowLeft"  => Msg::StartRemove,
                          "ArrowRight" => Msg::StartReplace,
+                         " " | "Spacebar" | "ArrowUp" | "ArrowDown" => Msg::Flip,
                          "s" | "S"    => Msg::StartShuffle,
-                         _ => Msg::Flip,
+                         _ => Msg::AnimDone,
                      }
                  }) }
             >
