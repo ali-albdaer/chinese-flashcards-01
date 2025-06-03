@@ -513,10 +513,21 @@ impl Component for App {
                             <div class="card-face back" style="position:relative;">
                               {
                                 if let Some(card) = curr {
+                                  let char_len = card.character.chars().count();
+                                  let char_font_size = if char_len >= 4 {
+                                    "1.7em"
+                                  } else if char_len == 3 {
+                                    "2.1em"
+                                  } else {
+                                    "2.8em"
+                                  };
                                   html! {
                                     <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden; position:relative;">
                                       // Line 1: CHARACTER + (pinyin)
-                                      <div style="font-size:2.8em; font-weight:bold; text-align:center; color:#333; margin-bottom:0.4em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;">
+                                      <div style={format!(
+                                        "font-size:{}; font-weight:bold; text-align:center; color:#333; margin-bottom:0.4em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;",
+                                        char_font_size
+                                      )}>
                                         { &card.character }
                                         {
                                           if self.show_pinyin {
