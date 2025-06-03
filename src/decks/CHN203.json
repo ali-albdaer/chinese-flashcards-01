@@ -1264,5 +1264,39 @@
     "radicals": [
       {"character": "扌", "pinyin": "shǒu", "meaning": "hand"}
     ]
+  },
+  {
+    "character": "比",
+    "pinyin": "bǐ",
+    "english": "compare",
+    "examples": [
+      {
+        "chinese": "他比我高。",
+        "pinyin": "Tā bǐ wǒ gāo.",
+        "english": "He is taller than me."
+      },
+      {
+        "chinese": "这本书比那本贵。",
+        "pinyin": "Zhè běn shū bǐ nà běn guì.",
+        "english": "This book is more expensive than that one."
+      },
+      {
+        "chinese": "你比他跑得快。",
+        "pinyin": "Nǐ bǐ tā pǎo de kuài.",
+        "english": "You run faster than him."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "匕",
+        "pinyin": "bǐ",
+        "meaning": "spoon"
+      },
+      {
+        "character": "比",
+        "pinyin": "bǐ",
+        "meaning": "compare" 
+      }
+    ]
   }
 ]
