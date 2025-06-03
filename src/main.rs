@@ -30,10 +30,6 @@ struct Card {
 
 type DecksMap = HashMap<String, Vec<Card>>;
 
-//───────────────────────────────────────────────────────────────────────────────
-// 2. Animation state enum (derive PartialEq so we can compare)
-//───────────────────────────────────────────────────────────────────────────────
-
 #[derive(PartialEq, Eq)]
 enum AnimationState {
     None,
@@ -41,10 +37,6 @@ enum AnimationState {
     Replacing,
     Shuffling,
 }
-
-//───────────────────────────────────────────────────────────────────────────────
-// 3. Main App component
-//───────────────────────────────────────────────────────────────────────────────
 
 struct App {
     decks: DecksMap,
