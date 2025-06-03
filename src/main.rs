@@ -113,8 +113,7 @@ impl Component for App {
         decks.insert("HSK3".into(), hsk3.clone());
         decks.insert("HSK4".into(), hsk4.clone());
         decks.insert("CHN203".into(), chn203.clone());
-        // Empty “Favorites”
-        decks.insert("Favorites".into(), Vec::new());
+        // Removed: Favorites deck
 
         // Default to CHN203 deck
         let current_deck = "CHN203".into();
@@ -286,12 +285,7 @@ impl Component for App {
                 }
             }
             Msg::AddToFavorites => {
-                if let Some(card) = self.cards.get(self.current_index).cloned() {
-                    let fav = self.decks.get_mut("Favorites").unwrap();
-                    if !fav.iter().any(|c| c.character == card.character) {
-                        fav.push(card);
-                    }
-                }
+                // Removed: Favorites functionality
                 false
             }
             Msg::TogglePinyin(v) => {
@@ -322,8 +316,10 @@ impl Component for App {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        // Build deck <option> tags
-        let deck_options = self.decks.keys().map(|d| {
+        // Build deck <option> tags, sorted alphabetically
+        let mut deck_names: Vec<_> = self.decks.keys().cloned().collect();
+        deck_names.sort();
+        let deck_options = deck_names.iter().map(|d| {
             let sel = *d == self.current_deck;
             html! {
                 <option value={d.clone()} selected={sel}>{ d.clone() }</option>
@@ -683,12 +679,6 @@ impl Component for App {
                     }
                     style="margin-left:1em;"
                   >{ "I don’t know – Replace" }</button>
-
-                  <button
-                    onclick={ ctx.link().callback(|_| Msg::AddToFavorites) }
-                    disabled={ self.cards.is_empty() || self.current_deck == "Favorites" }
-                    style="margin-left:1em;"
-                  >{ "Add to Favorites" }</button>
                 </div>
             </div>
         }
