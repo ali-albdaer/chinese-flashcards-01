@@ -776,25 +776,22 @@
     ]
   },
   {
-    "character": "等于",
-    "pinyin": "děng yú",
-    "english": "equal to",
+    "character": "等",
+    "pinyin": "děng",
+    "english": "wait/equal",
     "examples": [
-      {"chinese": "一加一等于二。", "pinyin": "Yī jiā yī děngyú èr.", "english": "One plus one equals two."},
-      {"chinese": "迟到等于放弃。", "pinyin": "Chídào děngyú fàngqì.", "english": "Being late equals giving up."},
-      {"chinese": "沉默等于同意。", "pinyin": "Chénmò děngyú tóngyì.", "english": "Silence equals agreement."}
+      {"chinese": "请等一下。", "pinyin": "Qǐng děng yīxià.", "english": "Please wait a moment."},
+      {"chinese": "我们等他来。", "pinyin": "Wǒmen děng tā lái.", "english": "We wait for him to come."},
+      {"chinese": "等一等，我马上来。", "pinyin": "Děng yī děng, wǒ mǎshàng lái.", "english": "Wait a moment, I'll be right there."}
     ],
     "radicals": [
-      {"character": "竹", "pinyin": "zhú", "meaning": "bamboo"},
-      {"character": "寺", "pinyin": "sì", "meaning": "temple"},
-      {"character": "二", "pinyin": "èr", "meaning": "two"},
-      {"character": "亅", "pinyin": "jué", "meaning": "hook"}
+      {"character": "竹", "pinyin": "zhú", "meaning": "bamboo"}
     ]
   },
   {
     "character": "事情",
     "pinyin": "shì qing",
-    "english": "matter",
+    "english": "matter, affair, thing",
     "examples": [
       {"chinese": "有重要事情商量。", "pinyin": "Yǒu zhòngyào shìqing shāngliáng.", "english": "There's important matter to discuss."},
       {"chinese": "别管别人的事情。", "pinyin": "Bié guǎn biérén de shìqing.", "english": "Don't interfere in others' matters."},
@@ -963,18 +960,17 @@
     ]
   },
   {
-    "character": "提",
+    "character": "题",
     "pinyin": "tí",
-    "english": "mention",
+    "english": "topic, question",
     "examples": [
-      {"chinese": "别提这件事。", "pinyin": "Bié tí zhè jiàn shì.", "english": "Don't mention this matter."},
-      {"chinese": "他提了个建议。", "pinyin": "Tā tí le gè jiànyì.", "english": "He made a suggestion."},
-      {"chinese": "提问题。", "pinyin": "Tí wèntí.", "english": "Ask a question."}
+      {"chinese": "考试题目很难。", "pinyin": "Kǎoshì tímù hěn nán.", "english": "The exam questions are very difficult."},
+      {"chinese": "讨论这个题目。", "pinyin": "Tǎolùn zhège tímù.", "english": "Discuss this topic."},
+      {"chinese": "写一篇作文题。", "pinyin": "Xiě yī piān zuòwén tí.", "english": "Write an essay on the topic."}
     ],
     "radicals": [
-      {"character": "扌", "pinyin": "shǒu", "meaning": "hand"},
-      {"character": "日", "pinyin": "rì", "meaning": "sun"},
-      {"character": "一", "pinyin": "yī", "meaning": "one"}
+      {"character": "页", "pinyin": "yè", "meaning": "page"},
+      {"character": "日", "pinyin": "rì", "meaning": "sun"}
     ]
   },
   {
@@ -1254,6 +1250,19 @@
     "radicals": [
       {"character": "辶", "pinyin": "chuò", "meaning": "walk"},
       {"character": "元", "pinyin": "yuán", "meaning": "unit"}
+    ]
+  },
+  {
+    "character": "接",
+    "pinyin": "jiē",
+    "english": "receive, pick up",
+    "examples": [
+      {"chinese": "我去接你。", "pinyin": "Wǒ qù jiē nǐ.", "english": "I will pick you up."},
+      {"chinese": "接电话。", "pinyin": "Jiē diànhuà.", "english": "Answer the phone."},
+      {"chinese": "接到消息。", "pinyin": "Jiē dào xiāoxi.", "english": "Received the news."}
+    ],
+    "radicals": [
+      {"character": "扌", "pinyin": "shǒu", "meaning": "hand"}
     ]
   }
 ]
