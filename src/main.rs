@@ -4,9 +4,6 @@ use serde::Deserialize;
 use yew::prelude::*;
 use web_sys::{HtmlSelectElement, HtmlInputElement, HtmlElement};
 
-//───────────────────────────────────────────────────────────────────────────────
-// 1. Data structures (load from JSON)
-//───────────────────────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, PartialEq, Deserialize)]
 struct Example {
