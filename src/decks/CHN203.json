@@ -667,8 +667,8 @@
     "english": "near",
     "examples": [
       {"chinese": "超市离我家很近。", "pinyin": "Chāoshì lí wǒjiā hěn jìn.", "english": "The supermarket is very close to my home."},
-      {"chinese": "最近很忙。", "pinyin": "Zuìjìn hěn máng.", "english": "I've been busy recently."},
-      {"chinese": "火车站近吗？", "pinyin": "Huǒchēzhàn jìn ma?", "english": "Is the train station nearby?"}
+      {"chinese": "远亲不如近邻。", "pinyin": "Yuǎn qīn bùrú jìn lín.", "english": "A close neighbor is better than a distant relative."},
+      {"chinese": "最近很忙。", "pinyin": "Zuìjìn hěn máng.", "english": "I've been busy recently."}
     ],
     "radicals": [
       {"character": "辶", "pinyin": "chuò", "meaning": "walk"},
@@ -1237,19 +1237,16 @@
     ]
   },
   {
-    "character": "远/近",
-    "pinyin": "yuǎn / jìn",
-    "english": "far/near",
+    "character": "远",
+    "pinyin": "yuǎn",
+    "english": "far",
     "examples": [
       {"chinese": "火车站远吗？", "pinyin": "Huǒchēzhàn yuǎn ma?", "english": "Is the train station far?"},
-      {"chinese": "我家离学校近。", "pinyin": "Wǒjiā lí xuéxiào jìn.", "english": "My home is near the school."},
-      {"chinese": "远亲不如近邻。", "pinyin": "Yuǎn qīn bùrú jìn lín.", "english": "A close neighbor is better than a distant relative."}
-    ],
+      {"chinese": "我家离学校远。", "pinyin": "Wǒjiā lí xuéxiào yuǎn.", "english": "My home is far from school."},
+      {"chinese": "远方的风景很美。", "pinyin": "Yuǎnfāng de fēngjǐng hěn měi.", "english": "The scenery in the distance is beautiful."}],
     "radicals": [
       {"character": "辶", "pinyin": "chuò", "meaning": "walk"},
-      {"character": "元", "pinyin": "yuán", "meaning": "unit"},
-      {"character": "辶", "pinyin": "chuò", "meaning": "walk"},
-      {"character": "斤", "pinyin": "jīn", "meaning": "axe"}
+      {"character": "元", "pinyin": "yuán", "meaning": "unit"}
     ]
   }
 ]
