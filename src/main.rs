@@ -134,7 +134,7 @@ impl Component for App {
             show_examples: true,
             show_examples_pinyin: true,
             show_examples_english: true,
-            show_radicals: false, // off by default
+            show_radicals: true,
 
             initial_count,
             container_ref: NodeRef::default(),
