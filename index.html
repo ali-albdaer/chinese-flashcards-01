@@ -25,7 +25,7 @@
       justify-content: center;
       align-items: flex-start; /* restore stacking/animation context */
       min-height: 100vh;
-      /* Remove overflow: hidden here */
+      overflow: hidden;
     }
 
     .app-container {
@@ -83,12 +83,10 @@
     /* Card “pile” container: multiple cards peeking behind */
     .card-container {
       position: relative;
-      width: 100%;
-      max-width: 550px;   /* bigger card */
-      height: 380px;      /* bigger card */
+      width: 520px;
+      height: 380px;
       margin-bottom: 1em;
       perspective: 1200px;
-      /* Remove overflow: hidden here to allow animations to move cards out */
     }
 
     /* Up to three “peek” cards behind, each offset & scaled */
