@@ -1668,20 +1668,6 @@
     ]
   },
   {
-    "character": "居",
-    "pinyin": "jū",
-    "english": "to reside; to live (duplicate; already above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "住",
-    "pinyin": "zhù",
-    "english": "to live; to reside; to stay (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
     "character": "清",
     "pinyin": "qīng",
     "english": "clear; pure",
@@ -1750,20 +1736,6 @@
     ]
   },
   {
-    "character": "依然",
-    "pinyin": "yīrán",
-    "english": "still; as before (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "还",
-    "pinyin": "hái / huán",
-    "english": "still / return (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
     "character": "轻",
     "pinyin": "qīng",
     "english": "light; gentle",
@@ -1796,83 +1768,6 @@
         "meaning": "blue/green"
       }
     ]
-  },
-  {
-    "character": "慢",
-    "pinyin": "màn",
-    "english": "slow (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "棵",
-    "pinyin": "kē",
-    "english": "measure word for plants (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "湖",
-    "pinyin": "hú",
-    "english": "lake (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "地",
-    "pinyin": "dì",
-    "english": "earth; ground; place (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "得",
-    "pinyin": "de / dé",
-    "english": "structural particle / to obtain (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "便",
-    "pinyin": "biàn / pián",
-    "english": "convenient; then; inexpensive (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "边",
-    "pinyin": "biān",
-    "english": "side; edge; border (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "面",
-    "pinyin": "miàn",
-    "english": "face; surface; side; noodle (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "留",
-    "pinyin": "liú",
-    "english": "to stay; to remain; to keep (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "项目",
-    "pinyin": "xiàngmù",
-    "english": "project; item (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "带",
-    "pinyin": "dài",
-    "english": "to bring; belt; to carry (duplicate; above)",
-    "examples": [],
-    "radicals": []
   },
   {
     "character": "兰",
@@ -1943,13 +1838,6 @@
     ]
   },
   {
-    "character": "莲",
-    "pinyin": "lián",
-    "english": "lotus (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
     "character": "乌",
     "pinyin": "wū",
     "english": "crow; black; prefix in food/animal names",
@@ -1977,13 +1865,6 @@
         "meaning": "bird"
       }
     ]
-  },
-  {
-    "character": "死",
-    "pinyin": "sǐ",
-    "english": "to die; death (duplicate; above)",
-    "examples": [],
-    "radicals": []
   },
   {
     "character": "鹿寨",
@@ -2061,17 +1942,17 @@
       {
         "chinese": "岑参是唐代著名的边塞诗人。",
         "pinyin": "Cén Shēn shì Tángdài zhùmíng de biānsài shīrén.",
-        "english": "Cen Shen was a famous frontier poet of the Tang Dynasty."
+        "english": "Cen Shen is a famous frontier poet of the Tang dynasty."
       },
       {
-        "chinese": "他常写边塞雄浑的风景，像《走马川行奉送封大夫出师西征》。",
-        "pinyin": "Tā cháng xiě biānsài xiónghún de fēngjǐng, xiàng “Zǒumǎchuān xíng fèngsòng Fēng Dàfū chūshī xīzhēng.”",
-        "english": "He often wrote grand frontier landscapes, such as ‘Riding to Escort the Envoy West.’"
+        "chinese": "岑参的诗风豪放，情感真挚。",
+        "pinyin": "Cén Shēn de shīfēng háofàng, qínggǎn zhēnzhì.",
+        "english": "Cen Shen’s poetry style is bold and his emotions are sincere."
       },
       {
-        "chinese": "他的诗风豪放，影响深远。",
-        "pinyin": "Tā de shīfēng háofàng, yǐngxiǎng shēnyuǎn.",
-        "english": "His poetic style was bold and influential."
+        "chinese": "他的诗作《白雪歌送武判官归京》非常著名。",
+        "pinyin": "Tā de shīzuò ‘Báixuě gē sòng Wǔ Pànguān guī jīng’ fēicháng zhùmíng.",
+        "english": "His poem (name mentioned) is very famous."
       }
     ],
     "radicals": [
@@ -2082,8 +1963,8 @@
       },
       {
         "character": "参",
-        "pinyin": "cān",
-        "meaning": "ginseng; participate"
+        "pinyin": "shēn",
+        "meaning": "ginseng; to participate"
       }
     ]
   },
@@ -2933,27 +2814,6 @@
     ]
   },
   {
-    "character": "计划",
-    "pinyin": "jìhuà",
-    "english": "plan; project (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "打算",
-    "pinyin": "dǎsuàn",
-    "english": "to intend; to plan (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "行为",
-    "pinyin": "xíngwéi",
-    "english": "behavior; conduct; action (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
     "character": "错过",
     "pinyin": "cuòguò",
     "english": "to miss (opportunity, timing)",
@@ -3224,62 +3084,6 @@
         "meaning": "also"
       }
     ]
-  },
-  {
-    "character": "不断",
-    "pinyin": "bùduàn",
-    "english": "continuously; without stopping (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "投壶",
-    "pinyin": "tóuhú",
-    "english": "pitch-pot (ancient game) (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "毽子",
-    "pinyin": "jiànzi",
-    "english": "shuttlecock (game) (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "端午节",
-    "pinyin": "Duānwǔjié",
-    "english": "Dragon Boat Festival (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "艾草",
-    "pinyin": "àicǎo",
-    "english": "mugwort (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "菖蒲",
-    "pinyin": "chāngpú",
-    "english": "calamus (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "紫外线",
-    "pinyin": "zǐwàixiàn",
-    "english": "ultraviolet rays (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "雷达图",
-    "pinyin": "léidátú",
-    "english": "radar map (duplicate; above)",
-    "examples": [],
-    "radicals": []
   },
   {
     "character": "尽",
@@ -4023,34 +3827,6 @@
         "meaning": "avoid"
       }
     ]
-  },
-  {
-    "character": "兰",
-    "pinyin": "lán",
-    "english": "orchid (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "西兰花",
-    "pinyin": "xīlánhuā",
-    "english": "broccoli (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "莲",
-    "pinyin": "lián",
-    "english": "lotus (duplicate; above)",
-    "examples": [],
-    "radicals": []
-  },
-  {
-    "character": "乌",
-    "pinyin": "wū",
-    "english": "crow; black; prefix in food/animal names (duplicate; above)",
-    "examples": [],
-    "radicals": []
   },
   {
     "character": "像",
