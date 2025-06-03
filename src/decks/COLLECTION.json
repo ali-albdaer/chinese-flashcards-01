@@ -1,36 +1,28 @@
 [
   {
-    "character": "比",
-    "pinyin": "bǐ",
-    "english": "compare",
+    "character": "随机词汇",
+    "pinyin": "suíjī cíhuì",
+    "english": "Random Vocabulary",
     "examples": [
       {
-        "chinese": "他比我高。",
-        "pinyin": "Tā bǐ wǒ gāo.",
-        "english": "He is taller than me."
+        "chinese": "这个词汇表收集了我随手查找的各种汉字和词语。",
+        "pinyin": "Zhège cíhuì biǎo shōují le wǒ suíshǒu cházhǎo de gèzhǒng hànzì hé cíyǔ.",
+        "english": "This vocabulary list collects all kinds of Chinese characters and words I looked up at random."
       },
       {
-        "chinese": "这本书比那本贵。",
-        "pinyin": "Zhè běn shū bǐ nà běn guì.",
-        "english": "This book is more expensive than that one."
+        "chinese": "内容没有特定主题，完全是随机积累。",
+        "pinyin": "Nèiróng méiyǒu tèdìng zhǔtí, wánquán shì suíjī jīlěi.",
+        "english": "There is no specific theme; it’s a completely random accumulation."
       },
       {
-        "chinese": "你比他跑得快。",
-        "pinyin": "Nǐ bǐ tā pǎo de kuài.",
-        "english": "You run faster than him."
+        "chinese": "加油！",
+        "pinyin": "Jiāyóu!",
+        "english": "Keep it up!"
       }
     ],
     "radicals": [
-      {
-        "character": "匕",
-        "pinyin": "bǐ",
-        "meaning": "spoon"
-      },
-      {
-        "character": "比",
-        "pinyin": "bǐ",
-        "meaning": "compare" 
-      }
+      { "character": "随", "pinyin": "suí", "meaning": "follow, random" },
+      { "character": "机", "pinyin": "jī", "meaning": "machine" }
     ]
   },
   {

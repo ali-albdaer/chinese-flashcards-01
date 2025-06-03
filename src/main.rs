@@ -116,6 +116,23 @@ impl Component for App {
         decks.insert("CHN203".into(), chn203.clone());
         decks.insert("Collection".into(), collection.clone());
 
+        // Such description cards can be added:
+        //   {
+        //   "character": "HSK3级词汇",
+        //   "pinyin": "HSK3 jí cíhuì",
+        //   "english": "HSK Level 3 Vocabulary",
+        //   "examples": [
+        //     { "chinese": "HSK3级词汇包括常用的汉字和词语。", "pinyin": "HSK3 jí cíhuì bāokuò chángyòng de hànzì hé cíyǔ。", "english": "HSK Level 3 vocabulary includes commonly used Chinese characters and words." },
+        //     { "chinese": "首先翻开卡片，看看它们的含义、例句等。", "pinyin": "Shǒuxiān fānkāi kǎpiàn, kàn kàn tāmen de hányì, lìjù děng。", "english": "First, open the cards and look at their meanings, example sentences, etc." },
+        //     { "chinese": "祝你学业顺利！", "pinyin": "Zhù nǐ xuéyè shùnlì！", "english": "Good luck in your studies!" }
+        //   ],
+        //   "radicals": [
+        //     { "character": "字", "pinyin": "zì", "meaning": "character" },
+        //     { "character": "词", "pinyin": "cí", "meaning": "word" },
+        //     { "character": "汇", "pinyin": "huì", "meaning": "collection" }
+        //   ]
+        // },
+
         // Default to CHN203 deck
         let current_deck = "CHN203".into();
         let cards = decks.get(&current_deck).unwrap().clone();
