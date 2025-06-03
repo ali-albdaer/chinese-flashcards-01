@@ -1087,21 +1087,28 @@
     ]
   },
   {
-    "character": "男生/女生",
-    "pinyin": "nán shēng / nǚ shēng",
-    "english": "boy/girl",
+    "character": "男生",
+    "pinyin": "nán shēng",
+    "english": "boy",
     "examples": [
       {"chinese": "男生在左边，女生在右边。", "pinyin": "Nánshēng zài zuǒbiān, nǚshēng zài yòubiān.", "english": "Boys on the left, girls on the right."},
-      {"chinese": "这个班有二十个女生。", "pinyin": "Zhège bān yǒu èrshí gè nǚshēng.", "english": "There are twenty girls in this class."},
-      {"chinese": "男生喜欢踢足球。", "pinyin": "Nánshēng xǐhuān tī zúqiú.", "english": "Boys like playing football."}
+      {"chinese": "男生喜欢踢毽子。", "pinyin": "Nánshēng xǐhuān tī jiànzi.", "english": "The boy likes to kick the shuttlecock."},
+      {"chinese": "教室里有十个男生。", "pinyin": "Jiàoshì lǐ yǒu shí gè nánshēng.", "english": "There are ten boys in the classroom."}
     ],
     "radicals": [
       {"character": "田", "pinyin": "tián", "meaning": "field"},
-      {"character": "力", "pinyin": "lì", "meaning": "power"},
-      {"character": "牛", "pinyin": "niú", "meaning": "cow"},
-      {"character": "一", "pinyin": "yī", "meaning": "one"},
+      {"character": "力", "pinyin": "lì", "meaning": "power"}
+    ]
+  },
+  {
+    "character": "女生",
+    "pinyin": "nǚ shēng",
+    "english": "girl",
+    "examples": [
+      {"chinese": "这个班有二十个女生。", "pinyin": "Zhège bān yǒu èrshí gè nǚshēng.", "english": "There are twenty girls in this class."}
+    ],
+    "radicals": [ 
       {"character": "女", "pinyin": "nǚ", "meaning": "woman"},
-      {"character": "牛", "pinyin": "niú", "meaning": "cow"},
       {"character": "一", "pinyin": "yī", "meaning": "one"}
     ]
   },
