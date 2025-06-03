@@ -465,27 +465,60 @@ impl Component for App {
                   </div>
                   {
                     if let Some(c) = nxt3 {
+                        let char_len = c.character.chars().count();
+                        let char_font_size = match char_len {
+                            1 => "10em",
+                            2 => "10em",
+                            3 => "9em",
+                            4 => "7em",
+                            5 => "5em",
+                            _ => "4em",
+                        };
                         html! {
                           <div class="pile-card pile-card-3">
-                            <div class="card-face front">{ &c.character }</div>
+                            <div class="card-face front">
+                              <div style={format!("font-size:{};", char_font_size)}>{ &c.character }</div>
+                            </div>
                           </div>
                         }
                     } else { html!{} }
                   }
                   {
                     if let Some(c) = nxt2 {
+                        let char_len = c.character.chars().count();
+                        let char_font_size = match char_len {
+                            1 => "10em",
+                            2 => "10em",
+                            3 => "9em",
+                            4 => "7em",
+                            5 => "5em",
+                            _ => "4em",
+                        };
                         html! {
                           <div class="pile-card pile-card-2">
-                            <div class="card-face front">{ &c.character }</div>
+                            <div class="card-face front">
+                              <div style={format!("font-size:{};", char_font_size)}>{ &c.character }</div>
+                            </div>
                           </div>
                         }
                     } else { html!{} }
                   }
                   {
                     if let Some(c) = nxt1 {
+                        let char_len = c.character.chars().count();
+                        let char_font_size = match char_len {
+                            1 => "10em",
+                            2 => "10em",
+                            3 => "9em",
+                            4 => "7em",
+                            5 => "5em",
+                            _ => "4em",
+                        };
                         html! {
                           <div class="pile-card pile-card-1">
-                            <div class="card-face front">{ &c.character }</div>
+                            <div class="card-face front">
+                              <div style={format!("font-size:{};", char_font_size)}>{ &c.character }</div>
+                            </div>
                           </div>
                         }
                     } else { html!{} }
@@ -503,7 +536,16 @@ impl Component for App {
                             <div class="card-face front">
                               {
                                 if let Some(card) = curr {
-                                  html! { <div>{ &card.character }</div> }
+                                  let char_len = card.character.chars().count();
+                                  let char_font_size = match char_len {
+                                    1 => "10em",
+                                    2 => "10em",
+                                    3 => "9em",
+                                    4 => "7em",
+                                    5 => "5em",
+                                    _ => "4em",
+                                  };
+                                  html! { <div style={format!("font-size:{};", char_font_size)}>{ &card.character }</div> }
                                 } else {
                                   html! {}
                                 }
