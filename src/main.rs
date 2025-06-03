@@ -104,17 +104,20 @@ impl Component for App {
             .expect("Failed to parse decks/HSK3.json");
         let hsk4: Vec<Card> = serde_json::from_str(include_str!("decks/HSK4.json"))
             .expect("Failed to parse decks/HSK4.json");
+        let chn203: Vec<Card> = serde_json::from_str(include_str!("decks/CHN203.json"))
+            .expect("Failed to parse decks/CHN203.json");
 
         // Insert decks into the map
         decks.insert("HSK1".into(), hsk1.clone());
         decks.insert("HSK2".into(), hsk2.clone());
         decks.insert("HSK3".into(), hsk3.clone());
         decks.insert("HSK4".into(), hsk4.clone());
+        decks.insert("CHN203".into(), chn203.clone());
         // Empty “Favorites”
         decks.insert("Favorites".into(), Vec::new());
 
-        // Default to HSK3
-        let current_deck = "HSK3".into();
+        // Default to CHN203 deck
+        let current_deck = "CHN203".into();
         let cards = decks.get(&current_deck).unwrap().clone();
         let initial_count = cards.len();
 
