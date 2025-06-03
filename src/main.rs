@@ -80,7 +80,6 @@ enum Msg {
     StartShuffle,
     AnimDone,
     SelectDeck(String),
-    AddToFavorites,
     TogglePinyin(bool),
     ToggleEnglish(bool),
     ToggleExamples(bool),
@@ -283,10 +282,6 @@ impl Component for App {
                 } else {
                     false
                 }
-            }
-            Msg::AddToFavorites => {
-                // Removed: Favorites functionality
-                false
             }
             Msg::TogglePinyin(v) => {
                 self.show_pinyin = v;
