@@ -574,7 +574,7 @@ impl Component for App {
                                         {
                                           if self.show_pinyin {
                                             html! {
-                                              <span style="margin-left:0.4em; font-size:1.15em; color:#555;">
+                                              <span style="margin-left:0.4em; font-size:1em; color:#555;">
                                                 { "(" }{ &card.pinyin }{ ")" }
                                               </span>
                                             }
@@ -587,7 +587,7 @@ impl Component for App {
                                       {
                                         if self.show_english {
                                           html! {
-                                            <div style="text-align:center; font-size:1.2em; margin-bottom:0.6em; color:#444;">
+                                            <div style="text-align:center; font-size:1.2em; margin-bottom:0.1em; color:#444;">
                                               { &card.english }
                                             </div>
                                           }
@@ -600,9 +600,9 @@ impl Component for App {
                                       {
                                         if self.show_examples {
                                           html! {
-                                            <div style="flex-grow:1; overflow:hidden; margin-top:0.3em;">
+                                            <div style="flex-grow:1; overflow:hidden; margin-top:0.1em;">
                                               { for card.examples.iter().map(|ex| html! {
-                                                <div style="margin-bottom:0.6em;">
+                                                <div style="margin-bottom:0.2em;">
                                                   <div class="example-chinese">{ &ex.chinese }</div>
                                                   { if self.show_examples_pinyin {
                                                       html! {
