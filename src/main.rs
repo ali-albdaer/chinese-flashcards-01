@@ -567,7 +567,7 @@ impl Component for App {
                                     <div style="width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden; position:relative;">
                                       // Line 1: CHARACTER + (pinyin)
                                       <div style={format!(
-                                        "font-size:{}; font-weight:bold; text-align:center; color:#333; margin-bottom:0.4em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;",
+                                        "font-size:{}; font-weight:bold; text-align:center; color:#333; margin-bottom:0.1em; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;",
                                         char_font_size
                                       )}>
                                         { &card.character }
@@ -602,7 +602,7 @@ impl Component for App {
                                           html! {
                                             <div style="flex-grow:1; overflow:hidden; margin-top:0.1em;">
                                               { for card.examples.iter().map(|ex| html! {
-                                                <div style="margin-bottom:0.2em;">
+                                                <div style="margin-bottom:0.1em;">
                                                   <div class="example-chinese">{ &ex.chinese }</div>
                                                   { if self.show_examples_pinyin {
                                                       html! {
