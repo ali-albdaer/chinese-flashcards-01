@@ -399,18 +399,17 @@
     ]
   },
   {
-    "character": "很小",
-    "pinyin": "hěn xiǎo",
-    "english": "very small",
+    "character": "很少",
+    "pinyin": "hěn shǎo",
+    "english": "rarely",
     "examples": [
-      {"chinese": "这个房间很小。", "pinyin": "Zhège fángjiān hěn xiǎo.", "english": "This room is very small."},
-      {"chinese": "她小时候个子很小。", "pinyin": "Tā xiǎoshíhòu gèzi hěn xiǎo.", "english": "She was very small when she was young."},
-      {"chinese": "字写得很小。", "pinyin": "Zì xiě dé hěn xiǎo.", "english": "The characters are written very small."}
+      {"chinese": "他很少去健身房。", "pinyin": "Tā hěn shǎo qù jiànshēnfáng.", "english": "He rarely goes to the gym."},
+      {"chinese": "我很少吃快餐。", "pinyin": "Wǒ hěn shǎo chī kuàicān.", "english": "I rarely eat fast food."},
+      {"chinese": "她很少看电视。", "pinyin": "Tā hěn shǎo kàn diànshì.", "english": "She rarely watches TV."}
     ],
     "radicals": [
-      {"character": "彳", "pinyin": "chì", "meaning": "step"},
-      {"character": "艮", "pinyin": "gěn", "meaning": "stopping"},
-      {"character": "小", "pinyin": "xiǎo", "meaning": "small"}
+      {"character": "亻", "pinyin": "rén", "meaning": "person"},
+      {"character": "少", "pinyin": "shǎo", "meaning": "few"}
     ]
   },
   {
