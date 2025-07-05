@@ -102,7 +102,7 @@ impl Component for App {
         decks.insert("HSK2 (INCMPLT)".into(), hsk2.clone());
         decks.insert("HSK3 (INCMPLT)".into(), hsk3.clone());
         decks.insert("HSK4 (INCMPLT)".into(), hsk4.clone());
-        decks.insert("CHN203".into(), chn203.clone());
+        decks.insert("In Class".into(), chn203.clone());
         decks.insert("Collection".into(), collection.clone());
 
         // Default to CHN203 deck
