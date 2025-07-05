@@ -106,7 +106,7 @@ impl Component for App {
         decks.insert("Collection".into(), collection.clone());
 
         // Default to CHN203 deck
-        let current_deck = "CHN203".into();
+        let current_deck = "In Class".into();
         let cards = decks.get(&current_deck).unwrap().clone();
         let initial_count = cards.len();
 
