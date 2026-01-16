@@ -1,0 +1,80 @@
+What type of atomic bonds are formed by the exchange of valence electrons to create strong atom-to-atom attractions?,Primary bonds.
+Identify the three specific categories of primary atomic bonds.,"Ionic, covalent, and metallic bonds."
+Which primary bond type relies on the 'Coulomb' effect between positively and negatively charged ions?,Ionic bonds.
+Covalent bonds are formed by the _____ of electrons to create directional bonds between atoms.,sharing
+Under what condition of electro-negativity are covalent bonds typically formed between atoms?,When atoms have small differences in electro-negativity and are close in the periodic table.
+"In metallic bonds, what acts as the 'cement' holding the positively charged ions together?",A free electron cloud.
+"Which primary bond type is characterised by high hardness, brittleness, and low electrical conductivity?",Ionic bonds.
+Secondary bonds are weak attractions between molecules also known as _____.,van der Waals forces
+What are the two types of secondary bonds mentioned in the material?,Permanent dipole bonds and fluctuating dipole bonds.
+How does the ductility of metallic bonds typically compare to ionic bonds?,"Metallic bonds are ductile, whereas ionic bonds are brittle."
+What is the typical range for the melting temperature of materials with covalent bonds?,Low to very high.
+Materials with metallic bonds generally exhibit _____ electrical and thermal conductivity.,high
+What does the acronym BCC stand for in crystalline structures?,Body Centred Cubic.
+What does the acronym FCC stand for in crystalline structures?,Face Centred Cubic.
+What does the acronym HCP stand for in crystalline structures?,Hexagonal Closed Packed.
+Name two common metals that exhibit a BCC structure at room temperature.,Iron ($Fe$) and Tungsten ($W$).
+Name two common metals that exhibit an FCC structure at room temperature.,Aluminium ($Al$) and Copper ($Cu$).
+Name two common metals that exhibit an HCP structure at room temperature.,Magnesium ($Mg$) and Zinc ($Zn$).
+"In crystalline materials, what term describes deviations from the regular pattern of the lattice structure?",Imperfections or defects.
+What specific type of line defect is responsible for the discrepancy between theoretical and practical material strength?,Dislocations.
+How is 'dislocation density' defined in a material?,The total length of dislocation lines inside a unit ($1\ cm^3$) cube.
+Compare the typical dislocation density of an annealed material to a cold-worked material.,"Annealed material is $10^4$ to $10^6\ cm/cm^3$, while cold-worked is $10^{10}$ to $10^{12}\ cm/cm^3$."
+Practical plastic deformation of metals occurs primarily through the movement of _____.,dislocations
+Along which crystallographic planes and directions does the movement of dislocations typically occur?,The most closely packed planes and directions.
+How do grain boundaries influence the movement of dislocations?,They act as obstacles to dislocation propagation.
+State the Hall-Petch Relationship formula.,$\sigma = \sigma_0 + K_Y d^{-1/2}$
+"In the Hall-Petch Relationship, what does the variable $d$ represent?",Average grain size.
+"According to the Hall-Petch Relationship, how does decreasing grain size affect yield strength?",It increases the yield strength.
+How does grain size generally affect the relationship between strength and ductility?,"Small grains provide good strength but poor ductility, while large grains provide poor strength but good ductility."
+What is the relationship between true strain ($\epsilon$) and engineering strain ($\epsilon_{eng}$)?,$\epsilon = \ln(1 + \epsilon_{eng})$
+"If a material is strained in three stages ($1, 2, 3$), how is the total true strain calculated?",By the sum of the true strains of each stage: $\sum \epsilon_i$.
+Why is true strain considered 'additive' while engineering strain is not?,"True strain is based on the instantaneous length, whereas engineering strain is based on the fixed initial length."
+"According to the volume constancy principle in plastic deformation, what is the sum of the true strains in the $x, y,$ and $z$ directions?",$\epsilon_x + \epsilon_y + \epsilon_z = 0$
+The power law equation used to model flow stress in the uniform deformation region is _____.,$\sigma_f = K \epsilon^n$
+"In the flow stress equation $\sigma_f = K \epsilon^n$, what does the exponent $n$ represent?",The strain-hardening exponent.
+What physical phenomenon begins at the point where true strain equals the strain-hardening exponent ($\epsilon = n$)?,Necking (onset of non-uniform deformation).
+How is the 'amount of cold-work' ($q$) defined in terms of cross-sectional area?,$q = \frac{A_0 - A}{A_0}$
+What is the formula relating true strain ($\epsilon$) to the amount of cold-work ($q$)?,$\epsilon = \ln\left(\frac{1}{1 - q}\right) = -\ln(1 - q)$
+What is the formula for the yield strength of a cold-worked material ($YS_{cw}$) using the power law?,$YS_{cw} \cong K \epsilon_{cw}^n$
+How is the ultimate tensile strength of an annealed material ($UTS_{ann}$) calculated using $K$ and $n$?,$UTS_{ann} = K \left( \frac{n}{e} \right)^n$
+The relationship between the UTS of a cold-worked material and an annealed material is $UTS_{cw} = UTS_{ann} \cdot$ _____.,$e^{\epsilon_{cw}}$
+What is the definition of 'ductility' ($q^*$) in a tensile test?,$q^* = \frac{A_{ref} - A_{frac}}{A_{ref}}$ where $A_{frac}$ is the area at fracture.
+What is the value of the homologous temperature at the recrystallization temperature of a material?,$0.5$
+"In the homologous temperature scale, what range defines the 'cold-working' region?",The range between $0$ and $0.3$.
+"In the homologous temperature scale, what range defines the 'hot-working' region?",The range between $0.5$ and $0.7$.
+What is the characteristic flow stress equation for materials in the hot-working regime?,$\sigma_f = C(\dot{\epsilon})^m$
+"In the hot-working flow stress equation, what does the variable $m$ represent?",The strain-rate sensitivity exponent.
+Name the three distinct phases of the annealing process.,"Recovery, recrystallization, and grain growth."
+"During which phase of annealing do new, strain-free grains form to replace cold-worked grains?",Recrystallization.
+What happens to the yield strength of a material during the grain growth phase of annealing?,It is expected to drop due to the formation of coarse grains.
+What is 'hydrogen embrittlement' in the context of annealing?,"The absorption of hydrogen creating brittle compounds at grain boundaries, reducing ductility."
+The Mathematical Theory of Plasticity involves how many total unknowns?,"10 unknowns (3 displacements, 6 stresses, 1 hydrostatic stress)."
+Which yield criterion is described as being more conservative than the von Mises criterion?,The Tresca yield criterion.
+What is the purpose of the Levy-Mises flow rule?,To relate plastic strains to stresses during deformation.
+"In the elementary theory of plasticity, the 'flow condition' is also known as the _____.",Yield Criterion
+How is the engineering strain at the UTS point related to the strain-hardening exponent $n$?,"$\epsilon_{eng, UTS} = e^n - 1$"
+True stress ($\sigma$) is related to engineering stress ($\sigma_{eng}$) by the formula $\sigma = \sigma_{eng} \cdot$ _____.,$(1 + \epsilon_{eng})$ or $e^{\epsilon}$
+What does the 'weakest link' model explain in a tensile specimen?,Why necking and fracture occur at a specific local section rather than uniformly throughout.
+What is the effect of 'overstraining' on the relationship between yield strength and UTS?,The yield strength approaches and roughly equals the UTS ($YS \cong UTS$).
+What happens to the hardness of a metal as the dislocation density increases during cold working?,The hardness increases.
+Which temperature range in the homologous scale is known as 'warm-working'?,$0.3$ to $0.5$.
+"In the context of plasticity, what does 'Py' represent in the definition of yield strength?",The load that causes a $0.2\%$ permanent change in length.
+What is the primary factor that reduces the energy required for plastic deformation in real crystals compared to theoretical ones?,Line defects (dislocations).
+"In crystalline structures, which metal structure (BCC, FCC, or HCP) is typically the most ductile?",FCC (Face Centred Cubic).
+Identify the material constant $K$ in the power law $\sigma_f = K \epsilon^n$.,Strength coefficient.
+Explain the significance of the homologous temperature value $1$.,It represents the melting temperature of the material ($T_m$).
+What is the result of applying the Maclaurin series expansion to the relation $\epsilon_{eng} = e^{\epsilon} - 1$ for small strains?,Engineering strain and true strain become approximately equal ($\epsilon_{eng} \cong \epsilon$).
+How does the flow stress in hot working behave relative to the total strain?,The effect of strain is negligible; it is primarily dependent on strain rate.
+"In the annealing process, which stage involves the reduction of internal stresses without changing grain structure?",Recovery.
+What is the primary mechanism for the 'apparent' increase in material strength during strain hardening?,The multiplication and entanglement of dislocations hindering further movement.
+Calculate the true strain if the initial length is $100\ mm$ and final length is $120\ mm$.,$\epsilon = \ln(120/100) \approx 0.1823$.
+What governs the location of the weakest site in a test specimen?,"Raw material quality, processing techniques, and manufacturing methods (geometry/tolerances)."
+Why is the von Mises yield criterion often preferred over the Tresca criterion in engineering practice?,It is generally more accurate (less conservative) for ductile materials.
+True or False: A perfect crystal would be much stronger than real engineering metals.,True (by 100 to 1000 folds).
+"According to slide 3.11, what is the mathematical condition for the maximum load $P_{max}$ in a tensile test?",$\frac{dP}{d\epsilon_{eng}} = 0$.
+What is the relationship between the area $A$ and true strain $\epsilon$ assuming volume constancy?,$A = A_0 e^{-\epsilon}$.
+What happens to the dislocation density during the 'recovery' phase of annealing?,It decreases slightly as dislocations rearrange into lower-energy configurations.
+The yield strength of an annealed material is approximately equal to which parameter of the power law?,The flow stress at very low strain ($\sigma_{f0}$).
+"If a workpiece is strained beyond the strain at UTS in a bulk-forming process like rolling, why might it not fracture?",The stress state (compressive) prevents the growth of voids that lead to necking in tension.
+What are the units for dislocation density?,$cm/cm^3$ or $cm^{-2}$.

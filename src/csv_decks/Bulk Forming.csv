@@ -1,0 +1,80 @@
+What is the basic physical mechanism behind the formation of Lüder’s lines?,Strain-aging.
+Name the two categories of strain-aging involved in material deformation.,Dynamic Strain Aging (DSA) and Static Strain Aging (SSA).
+What happens to dislocations in Dynamic Strain Aging when they encounter interstitial impurities?,They are temporarily arrested and pinned down by solute atoms.
+How do dislocations escape pinning sites in the Dynamic Strain Aging process?,By switching to other slip systems when a higher shear stress is applied.
+The repetitive process of dislocations pinning and breaking free in DSA resembles what mechanical phenomenon?,The stick-slip phenomenon.
+What are the macroscopic manifestations of Dynamic Strain Aging in sheet metal?,Lüder’s bands (or stretcher-strain marks).
+"In aged materials, how does the tensile strength correlate with dislocation density?",Higher dislocation density results in higher tensile strength.
+"Which crystal structure includes Copper, Aluminium, and $\gamma$-Fe?",Face-Centred Cubic (FCC).
+How many total slip systems exist in an FCC crystal structure?,12
+"Which crystal structure contains $\alpha$-Fe, Tungsten, and Molybdenum?",Body-Centred Cubic (BCC).
+What is the maximum number of slip systems possible in a BCC crystal structure?,"48 (comprised of systems with 12, 12, and 24 planes)."
+How many slip planes are typically found in the primary slip system of HCP metals like Cadmium and Zinc?,1
+Is it possible to return a textured material to an isotropic state through annealing?,"No, annealing usually replaces deformation texture with annealing texture."
+"In sheet-metalworking, which specific process shows the most evident effects of material anisotropy?",Deep drawing.
+How is induced anisotropy typically quantified in rolled sheet metals?,"By testing specimens cut at $0^\circ$, $45^\circ$, and $90^\circ$ to the rolling direction."
+What does a high $c/a$ ratio in HCP crystals imply regarding activated slip systems?,It favors the three slip directions inside the basal planes.
+What failure mode is characterised by a grainy appearance due to differently oriented grains deforming to varying degrees?,Orange Peel Effect.
+"In the context of sheet metal modelling, what does a 'fibre' represent?",A string of grains along a particular direction or axis.
+Why is bending strain calculated by considering only the outer fibre under tension?,"Fibres under tension are the 'weakest link', as compressive strength is usually higher or equal."
+"For ductile metals like steel, how does compressive yield strength compare to tensile strength?",They are generally comparable.
+"According to the Datsko-Yang correlation, the minimum bending radius is primarily related to what material property?",Percentile reduction in area (ductility).
+State the formula for engineering strain at fracture ($\epsilon_{eng\ frac}$) as a function of ductility ($q$).,$\epsilon_{eng\ frac} = \frac{q}{1 - q}$
+Express the minimum bending ratio ($R/h$) in terms of ductility ($q$).,$R/h > \frac{1}{2q} - 1$
+State the formula for true strain at fracture ($\epsilon_{frac\ true}$) involving ductility ($q$).,$\epsilon_{frac\ true} = \ln\left(\frac{1}{1 - q}\right)$
+What is the main assumption regarding material hardening in the simple bending moment model?,No strain-hardening is incurred during bending.
+"Under the elastic beam theory, what is the formula for the length of the elastic region ($a$) in bending?",$a = \frac{2 YS R}{E}$
+The springback ratio $R/R_b$ is primarily a function of which material property ratio?,The ratio of yield strength to Young's modulus ($YS/E$).
+"For steel, what is the typical order of magnitude for the $YS/E$ ratio?",$10^{-3}$
+What is the purpose of a Forming Limit Diagram (FLD)?,To assess formability and predict failure by identifying unsafe deformation regions.
+Which specific formability test uses specimens covered in tiny circles to generate an FLD?,Nakajima formability test.
+"In an FLD, what are the two axes used to plot the strain states?",Major Strain ($\epsilon_{major}$) and Minor Strain ($\epsilon_{minor}$).
+"In deep drawing, what does it mean to 'bend and unbend' the sheet?",The material bends over the die radius and flattens to form the wall of the cup.
+What is the definition of deep drawing (cupping)?,Converting a circular sheet into a flat-bottomed cup using a punch and draw die.
+List two factors that contribute to the total force required in deep drawing.,Friction (blankholder/die) and bending/unbending around the draw radius.
+What is the effect of a high $r$-value in sheet metal forming?,It improves the yield locus and helps the material resist thinning.
+How do tight punch and die radii affect the deep drawing process?,"They impose severe bending, increasing the required force."
+Define 'Bulk Forming' processes.,"Processes involving spatial workpieces, large cross-section changes, and multi-axial compressive stresses."
+How do stress states in sheet forming typically differ from bulk forming?,"Sheet forming is generally two-axial (tensile-tensile/compressive), while bulk is multi-axial compressive."
+What defines a 'Steady-state' bulk forming process?,"Deformation patterns are independent of time (e.g., rolling, extrusion)."
+What defines a 'Non-steady-state' bulk forming process?,"Deformation patterns are dependent on time (e.g., forging, upsetting)."
+Differentiate between hot forming and cold forming temperatures for steel.,Cold forming is at room temperature; hot forming is above the recrystallisation temperature ($1150-1250^\circ C$).
+What is the 'Bulk Workability' of a material?,The ability to deform without fracture under multi-axial stress states.
+"According to the general rule of hydrostatic stress, what condition improves bulk workability?",More compressive hydrostatic stress.
+Contrast the maximum principal stress in wire drawing versus extrusion.,It is tensile in wire drawing and compressive in extrusion.
+Why is bulk workability generally higher in extrusion than in wire drawing?,"Extrusion lacks tensile principal stress components, preventing crack formation."
+Define hydrostatic stress in the context of bulk workability.,The arithmetic mean of the three principal stress components.
+What are the two necessary conditions for 'good' bulk workability?,High material ductility and high compressive hydrostatic stress from the process.
+What is the Cockroft & Latham criterion for fracture?,Fracture occurs when the work done by the highest local tensile stress reaches a critical value.
+What is Datko’s criterion for fracture in bulk forming?,Fracture occurs when a natural tensile strain equals the strain at fracture in a uniaxial tension test.
+Which friction model is commonly used for cold forming due to its simplicity?,The Coulomb friction model.
+"In bulk forming, what is the 'Constant Shear Stress' friction model formula?","$\tau = m \cdot k$, where $m$ is the friction factor and $k$ is the shear yield strength."
+What is the primary purpose of using 'cambered' or 'crowned' rolls in flat rolling?,To compensate for roll bending and ensure a uniform sheet thickness.
+Name the three components of extrusion work according to Siebel's energy method.,"Ideal work, Friction work, and Shearing work."
+Define 'Ideal Work' in the context of extrusion.,The energy required to plastically deform the billet into its final product shape.
+What does 'Shearing Work' represent in an extrusion model?,The energy needed to shear the material as it enters and exits the die-shoulder.
+"According to Tresca, what is the relationship between principal stresses ($\sigma_1, \sigma_3$) and flow stress ($\sigma_f$)?",$\sigma_1 - \sigma_3 = \sigma_f$
+State Siebel's formula for specific ideal work ($w_{ideal}$) using mean flow stress ($\sigma_{fm}$).,$w_{ideal} = \sigma_{fm} \ln\left(\frac{A_0}{A_1}\right)$
+How is the mean flow stress ($\sigma_{fm}$) typically calculated for extrusion?,$\sigma_{fm} \cong \frac{\sigma_{f0} + \sigma_{f1}}{2}$
+What factor usually limits the extrusion ratio ($A_0/A_1$) in practice?,The strength of the die material.
+What type of lubricants are typically used for the hot-extrusion of steel?,Glass-based lubricants.
+"In Johnson’s extrusion strain formula, what is the expression for the strain factor $Q_e$?",$Q_e = 0.8 + 1.2\epsilon$
+What common defect in wire drawing is characterised by internal arrowhead-shaped cracks?,Center-burst (or Chevroning).
+Under what geometric condition is the center-burst defect most likely to occur in drawing?,When the ratio of mean diameter to draw length ($h/L$) is greater than 2.
+What is the deformation factor ($\phi$) formula for drawing round parts?,$\phi = 0.88 + 0.12 \frac{h}{L}$
+"In backward can impact extrusion, what is the formula for the primary equivalent strain ($\epsilon_1$)?",$\epsilon_1 = \ln\left(\frac{h_0}{b}\right)$
+"What process involves a punch creating a hole in a workpiece without removing material, similar to open-die forging?",Piercing
+How is the 'Extrusion Ratio' ($R$) defined?,$R = \frac{A_0}{A_1}$
+"In the Siebel model, why is bending work often neglected in direct extrusion?",It does not technically exist in direct/forward extrusion processes.
+What is the physical significance of the neutral axis in a bent sheet metal part?,"It is the region that deforms only elastically, separating tension from compression."
+"For a material with a flow curve $\sigma = K\epsilon^n$, what is the formula for mean flow stress ($\sigma_{fm}$) in cold extrusion?",$\sigma_{fm} = \frac{K \epsilon^n}{n + 1}$
+"In flat rolling, which direction typically experiences induced normal anisotropy?",The thickness (normal) direction.
+What is the 'limiting drawing ratio' dependent upon regarding material properties?,High $n$-value (strain hardening) and high $r$-value (thinning resistance).
+How does increasing the die angle ($\alpha$) affect extrusion efficiency at large reductions?,It generally improves efficiency.
+"In the Nakajima test, how are the principal strains determined after deformation?",By measuring the major and minor axes of the deformed circles (which become ellipses).
+What is the relationship between the shear yield stress ($k$) and tensile yield stress ($Y$) according to Von Mises?,$k = 0.577 Y$
+Define 'Springback' in sheet metal bending.,The elastic recovery of the part following the removal of the bending tools.
+"In the context of extrusion force, what does the term 'Container Friction' refer to?",The friction between the billet and the inner wall of the container.
+What is the function of a 'blankholder' in a deep drawing operation?,To prevent wrinkling of the flange by applying a controlled pressure.
+Why might a cold-worked wire fail by yielding outside the die during drawing?,High die friction can cause the pulling force to exceed the wire's reduced tensile strength.
+What happens to the 'ideal equivalent strain' limit as a forming process becomes more compressive?,"The limit increases, allowing more deformation before fracture."

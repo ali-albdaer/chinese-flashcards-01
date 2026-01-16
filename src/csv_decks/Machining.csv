@@ -1,0 +1,100 @@
+Machining is classified as what type of manufacturing process?,Subtractive manufacturing.
+"In machining, the unwanted portion of the workpiece is selectively removed in the form of _____.",Chips.
+What is the underlying mechanism behind the material removal process in machining?,Plastic deformation of the work material by shearing.
+"To shear or cut a material, what is required between the tool and the workpiece?",Relative motion.
+What term describes the cutting process where the cutting edge inclination angle is zero?,Orthogonal cutting.
+What term describes the cutting process where the cutting edge inclination angle is not zero?,Oblique cutting.
+What are the three basic motions needed to cut a workpiece in a turning operation?,"Spindle speed, feed rate, and depth-of-cut."
+Spindle speed ($N$) in turning provides which specific type of motion?,Primary motion.
+Feed rate ($f$) in turning provides which specific type of motion?,Feed motion.
+Depth-of-cut ($d$) adjustment is considered which type of motion in machining?,Secondary motion.
+Formula: Axial speed of the tool ($u$) using feed rate ($f$ in $mm/rev$) and spindle speed ($N$ in $rpm$).,$u = \frac{f N}{60 \cdot 1000}$
+The axial speed of a tool ($u$) is measured in which SI units?,Metres per second ($m/s$).
+What parameter specifies the diametric depth of material to be removed in turning?,Depth-of-cut ($d$).
+"In turning, the cutting tool moves along which type of path relative to the workpiece?",A helical path.
+Nomenclature: The ratio of undeformed chip thickness ($a_c$) to deformed chip thickness ($a_o$).,Chip ratio ($r_c$).
+Why is the chip ratio ($r_c$) always less than unity in practical machining?,Because the deformed chip thickness is always greater than the undeformed thickness.
+"In the nomenclature for orthogonal cutting, what does the symbol $\phi$ represent?",Shear angle.
+"In the nomenclature for orthogonal cutting, what does the symbol $\gamma_n$ represent?",Normal rake angle.
+Name one of the key reasons for measuring and estimating machining forces.,Prediction of tool wear and breakage.
+Which force components on the rake surface are created by friction as the chip rubs against the tool?,Friction force ($F_f$).
+What is the primary function of the resultant force ($F_r$) acting on the rake surface in the Theory of Lee-Shaffer?,It compresses material in the triangular zone to induce yielding along the shear plane.
+What does TLS stand for in the context of machining shear zone models?,Theory of Lee-Shaffer.
+The specific cutting energy ($E$) is typically measured in which specific units?,Watts per cubic centimetre per minute ($W/(cm^3/min)$) or $J/mm^3$.
+How does the specific cutting energy ($E$) change as the cutting speed ($v$) increases?,It decreases.
+How does the specific cutting energy ($E$) change as the undeformed chip thickness ($a_c$) increases?,It decreases.
+Which material property related to the presence of lead or sulphur favours machinability?,The existence of soft second-phase particles.
+"For different materials, specific cutting energy ($E$) ranges between what magnitudes in GPa?",0.2 GPa to 4.0 GPa.
+Which metal typically has a very low specific cutting energy of approximately 0.2 GPa?,Magnesium (Mg) or zinc alloys.
+Which type of steel typically exhibits a high specific cutting energy of approximately 4.0 GPa?,Tool steels.
+How many specific angles are utilized to define the overall geometry of a single-point cutting tool?,Six angles.
+Term: Side rake angle ($\gamma_s$).,Definition: An angle also known as the chip angle that influences turning performance.
+"To maximise tool life at a high feed rate, should the side relief angle be larger or smaller?",Smaller.
+The secondary shear zone is defined as the region where the chip is in contact with what tool surface?,The rake surface.
+Increasing the length of the major cutting edge has what specific effect on heat dissipation?,"It allows generated heat to be more effectively dissipated, improving tool life."
+An increase in radial force ($F_{rad}$) during machining typically leads to what dimensional issue?,Poor dimensional accuracy due to radial deflections.
+Tool failure can be categorised into which two main types?,Catastrophic failure and gradual (progressive) failure.
+What are the two common forms of gradual tool wear?,Crater wear and flank wear.
+On which tool surface does crater wear primarily occur?,The rake face.
+On which tool surface does flank wear primarily occur?,The flank surface.
+Which wear mechanism is primarily responsible for crater wear?,Diffusion or abrasion.
+Which wear mechanism is primarily responsible for flank wear?,Abrasion.
+A tool-life criterion is defined as a predetermined threshold value of what?,A tool-wear measure or the occurrence of a phenomenon.
+What is the standard tool-life criterion for a uniformly worn flank ($VB$) on HSS or Ceramic tools?,$VB = 0.3 \text{ mm}$.
+What is the standard tool-life criterion for an irregularly worn flank ($VB_{max}$) on sintered carbide tools?,$VB_{max} = 0.6 \text{ mm}$.
+"For sintered carbide tools, what is the life criterion related to crater wear ($KT$)?",$KT = 0.06 + 0.3f \text{ mm}$ (where $f$ is feed).
+State Taylor's tool life equation.,$v t^n = C$.
+"In Taylor's tool life equation, what does $n$ represent?","The tool life exponent, which depends on tool and work materials."
+"In Taylor's tool life equation, what does $C$ represent?","The tool life constant, numerically equal to the cutting speed for a 1-minute tool life."
+What is a typical value for the Taylor exponent ($n$) for High Speed Steel (HSS) tools?,Approximately 0.1.
+What is a typical value for the Taylor exponent ($n$) for Tungsten Carbide (WC) tools?,Approximately 0.25.
+Machinability refers to the ease with which a material can be _____.,Machined.
+Name two of the four criteria used to evaluate the machinability of a material.,Tool life and surface finish.
+How does high ductility in a workpiece material affect its machinability?,It generally decreases machinability.
+What is the primary function of a cutting fluid in a machining operation?,Cooling and lubrication.
+Name a secondary function of cutting fluids besides cooling and lubrication.,Chip removal or corrosion protection.
+In which specific machining operations are greases more convenient than oils?,Tapping and reaming operations.
+"In the economics of machining, what does 'maximising the production rate' entail?",Producing the maximum number of parts from available resources in the minimum possible time.
+"In the economics of machining, what does 'minimising the production cost' entail?",Less expenditure for the same volume of production.
+"In unit production time calculations, what is 'tool indexing time'?",The time required to change or rotate the cutting edge of a tool.
+Concept: Crater wear.,Definition: Wear that occurs on the tool's rake face caused by the chip rubbing against it.
+Concept: Flank wear.,Definition: Wear that occurs on the tool's flank surface due to friction with the newly machined workpiece surface.
+"What happens to the tool life ($t$) if the cutting velocity ($v$) is doubled, assuming $n = 0.25$?",The tool life decreases by a factor of 16 ($2^4$).
+Formula: Power required ($P$) in terms of metal removal rate ($MRR$) and specific cutting energy ($E$).,$P = MRR \cdot E$
+Metal Removal Rate ($MRR$) is defined as the volume of material removed per _____.,Unit time.
+How does the radial deflection of a tool affect the dimensional accuracy of a part?,It leads to deviations and poor dimensional accuracy.
+Nose radius on a cutting tool has a significant impact on which quality parameter?,Surface finish (roughness).
+Why is it important to cross-check magnitudes and units in machining calculations?,To ensure results are physically realistic and engineeringly sound.
+The shear angle $\phi$ represents the angle of the plane where _____.,The material yields to form a chip.
+"In a turning operation, what provides the feed motion?",The axial movement of the tool along the workpiece.
+What is the consequence of a tool reaching the end of its useful life?,It no longer performs the desired function satisfactorily.
+What can be done with a tool that has reached its life endpoint but has not suffered catastrophic failure?,It can be resharpened or used on less restrictive operations.
+Which type of tool failure occurs when the cutting edge suddenly breaks under load?,Fracture failure (Catastrophic).
+Which type of failure occurs when the tool material softens due to excessive heat?,Temperature failure (Catastrophic).
+The 'wear land' usually refers to the width of wear on which tool face?,The flank face ($VB$).
+"In the uniform wear rate zone (Zone B) of a flank wear plot, how does wear progress?","At a constant, steady rate over time."
+What characterises Zone C (Rapid breakdown) in a tool wear curve?,"The wear rate increases sharply, leading to imminent tool failure."
+How does strain hardening ability in a work material affect its machinability?,"It typically makes the material harder to machine, decreasing machinability."
+Thermal conductivity of a workpiece material affects machinability by influencing what?,The temperature at the tool-chip interface.
+The presence of abrasive particles in a workpiece material has what effect on tool life?,It decreases tool life due to increased abrasion.
+Formula: Relationship between specific cutting energy ($E$) and undeformed chip thickness ($a_c$) for two different conditions.,$\frac{E_1}{E_2} = (\frac{a_{c1}}{a_{c2}})^{-\alpha}$
+What is the typical value of the exponent $\alpha$ used in specific cutting energy calculations for steel?,Approximately 0.4.
+A twist drill is a common example of a tool used in which machining process?,Drilling.
+Machine efficiency ($\eta$) is defined as the ratio of which two power values?,Power at the tool to the power supplied by the motor.
+"In milling, what provides the primary cutting motion?",The rotation of the multi-edged tool (cutter).
+Each individual flute on an end-mill resembles what type of tool in its cutting action?,A single-point turning tool.
+What is the purpose of 'chatter detection' using machining force measurements?,To identify and suppress unstable vibrations during cutting.
+The rake surface friction angle is denoted by which Greek letter?,$\beta$.
+What does the symbol $f$ represent in drilling power calculations?,Feed rate in millimetres per revolution ($mm/rev$).
+"In OD turning, what does the quantity $d_0$ usually represent in an economics problem?",The initial diameter of the workpiece.
+"In unit production cost calculations, what does $R_m$ represent?","The machining cost rate (e.g., dollars per hour)."
+What determines the 'Taylor constant' ($C$) for a specific tool-workpiece material pair?,Experimental testing.
+How does increasing the cutting speed ($v$) affect the total machining time?,It decreases the machining time.
+How does increasing the cutting speed ($v$) affect the tool life?,It decreases the tool life.
+A throw-away type insert tool is designed to be _____ rather than resharpened.,Indexed or replaced.
+What are the standard units for Metal Removal Rate ($MRR$) in a power requirement calculation?,$mm^3/s$ or $cm^3/min$.
+"In a drilling operation, the torque required is proportional to the cutting force and the _____.",Drill radius.
+The shear angle ($\phi$) is influenced by which tool geometry angle?,The rake angle ($\gamma_n$).
+What distinguishes 'roughing' operations from 'finishing' operations in terms of feed rate?,Roughing uses higher feed rates for maximum material removal.
+What is the 'nose' of a single-point cutting tool?,The junction where the side and end cutting edges meet.
+Concept: Specific Cutting Energy.,Definition: The energy required to remove a unit volume of material.
