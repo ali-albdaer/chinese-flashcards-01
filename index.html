@@ -346,24 +346,29 @@
       display: flex !important;
       justify-content: center !important;
       align-items: center !important;
-      padding: 1.5em !important;
+      padding: 1.2em !important;
       text-align: center !important;
+      overflow: hidden !important;
     }
 
     .csv-card-content {
-      font-size: 4em;
-      font-weight: bold;
+      font-size: 1.4em;
+      font-weight: 600;
       color: #333;
-      line-height: 1.2;
+      line-height: 1.4;
       word-break: break-word;
+      overflow-y: auto;
+      max-height: 100%;
+      padding: 0.5em;
     }
 
     .csv-back {
       display: flex !important;
       justify-content: center !important;
       align-items: center !important;
-      padding: 1.5em !important;
+      padding: 1.2em !important;
       text-align: center !important;
+      overflow: hidden !important;
     }
 
     .csv-back-content {
@@ -372,14 +377,34 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
     .csv-back-text {
-      font-size: 2.5em;
+      font-size: 1.3em;
       font-weight: 500;
       color: #444;
-      line-height: 1.4;
+      line-height: 1.5;
       word-break: break-word;
+      overflow-y: auto;
+      max-height: 100%;
+      padding: 0.5em;
+    }
+
+    /* Scrollbar styling for CSV cards */
+    .csv-card-content::-webkit-scrollbar,
+    .csv-back-text::-webkit-scrollbar {
+      width: 6px;
+    }
+    .csv-card-content::-webkit-scrollbar-track,
+    .csv-back-text::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .csv-card-content::-webkit-scrollbar-thumb,
+    .csv-back-text::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2);
+      border-radius: 3px;
     }
   </style>
 </head>
