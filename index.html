@@ -273,6 +273,114 @@
       /* box-shadow: 0 8px 32px rgba(0,0,0,0.13), 0 1.5px 0.5px 0 #e0e0e0 !important; */
       /* Subtle gradient and border for all cards */
     }
+
+    /*─────────────────────────────────────────────────────────────────────────*/
+    /* Mode navigation bar */
+    .mode-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0.5em 0;
+    }
+    .mode-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-link {
+      color: #4a90e2;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 0.4em 0.8em;
+      border-radius: 6px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .nav-link:hover {
+      background-color: #4a90e2;
+      color: #fff;
+    }
+
+    /*─────────────────────────────────────────────────────────────────────────*/
+    /* Excel Mode Styles */
+    .excel-mode .mode-nav {
+      flex-direction: row-reverse;
+    }
+
+    .excel-controls {
+      flex-wrap: wrap;
+      gap: 0.5em;
+    }
+
+    .deck-checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8em;
+      margin-left: 0.5em;
+      margin-right: 1em;
+      padding: 0.5em 0.8em;
+      background: rgba(255,255,255,0.8);
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .deck-checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      cursor: pointer;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    .deck-checkbox-label:hover {
+      background-color: rgba(74, 144, 226, 0.1);
+    }
+    .deck-checkbox-label input[type="checkbox"] {
+      margin: 0;
+    }
+
+    /* Excel card front/back styling */
+    .excel-front {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 1.5em !important;
+      text-align: center !important;
+    }
+
+    .excel-card-content {
+      font-size: 4em;
+      font-weight: bold;
+      color: #333;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .excel-back {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 1.5em !important;
+      text-align: center !important;
+    }
+
+    .excel-back-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .excel-back-text {
+      font-size: 2.5em;
+      font-weight: 500;
+      color: #444;
+      line-height: 1.4;
+      word-break: break-word;
+    }
   </style>
 </head>
 <body>

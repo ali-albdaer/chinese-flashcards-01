@@ -1,9 +1,442 @@
-use std::collections::HashMap;
+﻿use std::collections::HashMap;
 use rand::Rng;
 use serde::Deserialize;
 use yew::prelude::*;
+use yew_router::prelude::*;
 use web_sys::{HtmlSelectElement, HtmlInputElement, HtmlElement};
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Routing
+// ─────────────────────────────────────────────────────────────────────────────
+
+#[derive(Clone, Routable, PartialEq)]
+enum Route {
+    #[at("/")]
+    Home,
+    #[at("/excel")]
+    Excel,
+}
+
+fn switch(routes: Route) -> Html {
+    match routes {
+        Route::Home => html! { <App /> },
+        Route::Excel => html! { <ExcelApp /> },
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Simple Excel Card (front/back only)
+// ─────────────────────────────────────────────────────────────────────────────
+
+#[derive(Debug, Clone, PartialEq)]
+struct ExcelCard {
+    front: String,
+    back: String,
+}
+
+type ExcelDecksMap = HashMap<String, Vec<ExcelCard>>;
+
+fn parse_tsv(content: &str) -> Vec<ExcelCard> {
+    content
+        .lines()
+        .filter(|line| !line.trim().is_empty())
+        .filter_map(|line| {
+            let parts: Vec<&str> = line.split('\t').collect();
+            if parts.len() >= 2 {
+                Some(ExcelCard {
+                    front: parts[0].trim().to_string(),
+                    back: parts[1].trim().to_string(),
+                })
+            } else {
+                None
+            }
+        })
+        .collect()
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Excel App Component
+// ─────────────────────────────────────────────────────────────────────────────
+
+#[derive(PartialEq, Eq)]
+enum ExcelAnimationState {
+    None,
+    Removing,
+    Replacing,
+    Shuffling,
+}
+
+struct ExcelApp {
+    decks: ExcelDecksMap,
+    selected_decks: Vec<String>,
+    cards: Vec<ExcelCard>,
+    current_index: usize,
+    show_back: bool,
+    anim_state: ExcelAnimationState,
+    initial_count: usize,
+    container_ref: NodeRef,
+    focus_set: bool,
+}
+
+enum ExcelMsg {
+    Flip,
+    StartRemove,
+    StartReplace,
+    StartShuffle,
+    AnimDone,
+    ToggleDeck(String, bool),
+    LoadSelectedDecks,
+}
+
+impl Component for ExcelApp {
+    type Message = ExcelMsg;
+    type Properties = ();
+
+    fn create(_ctx: &Context<Self>) -> Self {
+        let mut decks: ExcelDecksMap = HashMap::new();
+        
+        // Load TSV files
+        let sample = parse_tsv(include_str!("excel_decks/Sample.tsv"));
+        let numbers = parse_tsv(include_str!("excel_decks/Numbers.tsv"));
+        let colors = parse_tsv(include_str!("excel_decks/Colors.tsv"));
+
+        decks.insert("Sample".into(), sample);
+        decks.insert("Numbers".into(), numbers);
+        decks.insert("Colors".into(), colors);
+
+        // Start with Sample deck selected
+        let selected_decks = vec!["Sample".to_string()];
+        let cards: Vec<ExcelCard> = decks.get("Sample").unwrap().clone();
+        let initial_count = cards.len();
+
+        ExcelApp {
+            decks,
+            selected_decks,
+            cards,
+            current_index: 0,
+            show_back: false,
+            anim_state: ExcelAnimationState::None,
+            initial_count,
+            container_ref: NodeRef::default(),
+            focus_set: false,
+        }
+    }
+
+    fn rendered(&mut self, _ctx: &Context<Self>, first_render: bool) {
+        if first_render && !self.focus_set {
+            if let Some(elem) = self.container_ref.cast::<HtmlElement>() {
+                let _ = elem.focus();
+                self.focus_set = true;
+            }
+        }
+    }
+
+    fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
+        match msg {
+            ExcelMsg::Flip => {
+                if self.anim_state == ExcelAnimationState::None {
+                    self.show_back = !self.show_back;
+                    true
+                } else {
+                    false
+                }
+            }
+            ExcelMsg::StartRemove => {
+                if self.anim_state == ExcelAnimationState::None && !self.cards.is_empty() {
+                    self.anim_state = ExcelAnimationState::Removing;
+                    self.show_back = false;
+                    true
+                } else {
+                    false
+                }
+            }
+            ExcelMsg::StartReplace => {
+                if self.anim_state == ExcelAnimationState::None && !self.cards.is_empty() {
+                    self.anim_state = ExcelAnimationState::Replacing;
+                    self.show_back = false;
+                    true
+                } else {
+                    false
+                }
+            }
+            ExcelMsg::StartShuffle => {
+                if self.anim_state == ExcelAnimationState::None && !self.cards.is_empty() {
+                    self.anim_state = ExcelAnimationState::Shuffling;
+                    true
+                } else {
+                    false
+                }
+            }
+            ExcelMsg::AnimDone => {
+                match std::mem::replace(&mut self.anim_state, ExcelAnimationState::None) {
+                    ExcelAnimationState::Removing => {
+                        if !self.cards.is_empty() {
+                            self.cards.remove(self.current_index);
+                            if !self.cards.is_empty() {
+                                self.current_index %= self.cards.len();
+                            }
+                        }
+                    }
+                    ExcelAnimationState::Replacing => {
+                        if !self.cards.is_empty() {
+                            let card = self.cards.remove(self.current_index);
+                            let mut rng = rand::thread_rng();
+                            let len = self.cards.len();
+                            if len == 0 {
+                                self.cards.push(card);
+                                self.current_index = 0;
+                            } else {
+                                let idx = rng.gen_range(1..=len);
+                                self.cards.insert(idx, card);
+                                self.current_index = 0;
+                            }
+                        }
+                    }
+                    ExcelAnimationState::Shuffling => {
+                        let mut rng = rand::thread_rng();
+                        let len = self.cards.len();
+                        for i in (1..len).rev() {
+                            let j = rng.gen_range(0..=i);
+                            self.cards.swap(i, j);
+                        }
+                        self.current_index = 0;
+                    }
+                    ExcelAnimationState::None => {}
+                }
+                self.show_back = false;
+                true
+            }
+            ExcelMsg::ToggleDeck(name, checked) => {
+                if checked {
+                    if !self.selected_decks.contains(&name) {
+                        self.selected_decks.push(name);
+                    }
+                } else {
+                    self.selected_decks.retain(|d| d != &name);
+                }
+                // Immediately reload the cards
+                ctx.link().send_message(ExcelMsg::LoadSelectedDecks);
+                true
+            }
+            ExcelMsg::LoadSelectedDecks => {
+                // Merge all selected decks
+                let mut all_cards: Vec<ExcelCard> = Vec::new();
+                for deck_name in &self.selected_decks {
+                    if let Some(deck_cards) = self.decks.get(deck_name) {
+                        all_cards.extend(deck_cards.clone());
+                    }
+                }
+                self.cards = all_cards;
+                self.current_index = 0;
+                self.show_back = false;
+                self.initial_count = self.cards.len();
+                true
+            }
+        }
+    }
+
+    fn view(&self, ctx: &Context<Self>) -> Html {
+        // Get sorted deck names
+        let mut deck_names: Vec<_> = self.decks.keys().cloned().collect();
+        deck_names.sort();
+
+        // Remaining / Removed
+        let rem = self.cards.len();
+        let removed = self.initial_count.saturating_sub(rem);
+
+        // Current card and peek cards
+        let curr = self.cards.get(self.current_index);
+        let nxt1 = if self.cards.len() > 1 {
+            Some(&self.cards[(self.current_index + 1) % self.cards.len()])
+        } else {
+            None
+        };
+        let nxt2 = if self.cards.len() > 2 {
+            Some(&self.cards[(self.current_index + 2) % self.cards.len()])
+        } else {
+            None
+        };
+        let nxt3 = if self.cards.len() > 3 {
+            Some(&self.cards[(self.current_index + 3) % self.cards.len()])
+        } else {
+            None
+        };
+
+        // Classes for the top card
+        let mut inner_cls = classes!("card-inner");
+        if self.show_back {
+            inner_cls.push("flipped");
+        }
+        match self.anim_state {
+            ExcelAnimationState::Removing => inner_cls.push("removing"),
+            ExcelAnimationState::Replacing => inner_cls.push("replacing"),
+            ExcelAnimationState::Shuffling => inner_cls.push("shuffling"),
+            ExcelAnimationState::None => {}
+        };
+
+        html! {
+            <div class="app-container excel-mode"
+                 ref={ self.container_ref.clone() }
+                 tabindex="0"
+                 onkeydown={ ctx.link().callback(|e: KeyboardEvent| {
+                     match e.key().as_str() {
+                         "ArrowLeft"  => ExcelMsg::StartRemove,
+                         "ArrowRight" => ExcelMsg::StartReplace,
+                         " " | "Spacebar" | "ArrowUp" | "ArrowDown" => ExcelMsg::Flip,
+                         "s" | "S"    => ExcelMsg::StartShuffle,
+                         _ => ExcelMsg::AnimDone,
+                     }
+                 }) }
+            >
+                // Mode indicator and navigation
+                <div class="mode-nav">
+                    <Link<Route> to={Route::Home} classes="nav-link">{ "← Chinese Mode" }</Link<Route>>
+                    <span class="mode-title">{ "Excel Flashcards" }</span>
+                </div>
+
+                // Controls row with multi-select
+                <div class="controls excel-controls">
+                    <div class="controls-left">
+                        <label><b>{ "Decks:" }</b></label>
+                        <div class="deck-checkboxes">
+                            { for deck_names.iter().map(|d| {
+                                let deck_name = d.clone();
+                                let is_checked = self.selected_decks.contains(d);
+                                html! {
+                                    <label class="deck-checkbox-label">
+                                        <input type="checkbox"
+                                               checked={is_checked}
+                                               onchange={ ctx.link().callback(move |e: Event| {
+                                                   let chk = e.target_unchecked_into::<HtmlInputElement>();
+                                                   ExcelMsg::ToggleDeck(deck_name.clone(), chk.checked())
+                                               }) }/>
+                                        { d }
+                                    </label>
+                                }
+                            })}
+                        </div>
+                        <button onclick={ ctx.link().callback(|_| ExcelMsg::StartShuffle) }>
+                            { "Shuffle" }
+                        </button>
+                    </div>
+                    <div class="controls-right">
+                        { format!("Remaining: {} Removed: {}", rem, removed) }
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    // Always render the "No cards" card at the very bottom
+                    <div class="pile-card pile-card-1" style="z-index:0;">
+                        <div class="card-face front excel-front">
+                            <div style="color:#888; font-size:1.5em;">{ "No cards selected." }</div>
+                        </div>
+                    </div>
+                    {
+                        if let Some(c) = nxt3 {
+                            html! {
+                                <div class="pile-card pile-card-3">
+                                    <div class="card-face front excel-front">
+                                        <div class="excel-card-content">{ &c.front }</div>
+                                    </div>
+                                </div>
+                            }
+                        } else { html!{} }
+                    }
+                    {
+                        if let Some(c) = nxt2 {
+                            html! {
+                                <div class="pile-card pile-card-2">
+                                    <div class="card-face front excel-front">
+                                        <div class="excel-card-content">{ &c.front }</div>
+                                    </div>
+                                </div>
+                            }
+                        } else { html!{} }
+                    }
+                    {
+                        if let Some(c) = nxt1 {
+                            html! {
+                                <div class="pile-card pile-card-1">
+                                    <div class="card-face front excel-front">
+                                        <div class="excel-card-content">{ &c.front }</div>
+                                    </div>
+                                </div>
+                            }
+                        } else { html!{} }
+                    }
+
+                    // Active card
+                    {
+                        if !self.cards.is_empty() {
+                            html! {
+                                <div class={ inner_cls.clone() }
+                                     onclick={ ctx.link().callback(|_| ExcelMsg::Flip) }
+                                     onanimationend={ ctx.link().callback(|_| ExcelMsg::AnimDone) }
+                                >
+                                    // Front face
+                                    <div class="card-face front excel-front">
+                                        {
+                                            if let Some(card) = curr {
+                                                html! { <div class="excel-card-content">{ &card.front }</div> }
+                                            } else {
+                                                html! {}
+                                            }
+                                        }
+                                    </div>
+
+                                    // Back face
+                                    <div class="card-face back excel-back">
+                                        {
+                                            if let Some(card) = curr {
+                                                html! {
+                                                    <div class="excel-back-content">
+                                                        <div class="excel-back-text">{ &card.back }</div>
+                                                    </div>
+                                                }
+                                            } else {
+                                                html! {}
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        } else {
+                            html! {}
+                        }
+                    }
+                </div>
+
+                // Buttons under card
+                <div class="card-buttons-row">
+                    <button
+                        onclick={ ctx.link().callback(|_| ExcelMsg::StartRemove) }
+                        disabled={
+                            self.cards.is_empty()
+                            || matches!(self.anim_state, ExcelAnimationState::Removing
+                                                     | ExcelAnimationState::Replacing
+                                                     | ExcelAnimationState::Shuffling)
+                        }
+                    >{ "I know this – Remove" }</button>
+
+                    <button
+                        onclick={ ctx.link().callback(|_| ExcelMsg::StartReplace) }
+                        disabled={
+                            self.cards.is_empty()
+                            || matches!(self.anim_state, ExcelAnimationState::Removing
+                                                     | ExcelAnimationState::Replacing
+                                                     | ExcelAnimationState::Shuffling)
+                        }
+                        style="margin-left:1em;"
+                    >{ "I don't know – Replace" }</button>
+                </div>
+            </div>
+        }
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Original Chinese Flashcards Structures
+// ─────────────────────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, PartialEq, Deserialize)]
 struct Example {
@@ -377,6 +810,12 @@ impl Component for App {
                      }
                  }) }
             >
+                // Mode indicator and navigation
+                <div class="mode-nav">
+                    <span class="mode-title">{ "Chinese Flashcards" }</span>
+                    <Link<Route> to={Route::Excel} classes="nav-link">{ "Excel Mode →" }</Link<Route>>
+                </div>
+
                 // Controls row
                 <div class="controls">
                   <div class="controls-left">
@@ -688,6 +1127,15 @@ impl Component for App {
     }
 }
 
+#[function_component(Main)]
+fn app_main() -> Html {
+    html! {
+        <BrowserRouter>
+            <Switch<Route> render={switch} />
+        </BrowserRouter>
+    }
+}
+
 fn main() {
-    yew::Renderer::<App>::new().render();
+    yew::Renderer::<Main>::new().render();
 }
