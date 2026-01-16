@@ -13,37 +13,39 @@ use web_sys::{HtmlSelectElement, HtmlInputElement, HtmlElement};
 enum Route {
     #[at("/")]
     Home,
-    #[at("/excel")]
-    Excel,
+    #[at("/csv")]
+    Csv,
 }
 
 fn switch(routes: Route) -> Html {
     match routes {
         Route::Home => html! { <App /> },
-        Route::Excel => html! { <ExcelApp /> },
+        Route::Csv => html! { <CsvApp /> },
     }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Simple Excel Card (front/back only)
+// Simple CSV Card (front/back only)
 // ─────────────────────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, PartialEq)]
-struct ExcelCard {
+struct CsvCard {
     front: String,
     back: String,
 }
 
-type ExcelDecksMap = HashMap<String, Vec<ExcelCard>>;
+type CsvDecksMap = HashMap<String, Vec<CsvCard>>;
 
-fn parse_tsv(content: &str) -> Vec<ExcelCard> {
+fn parse_csv(content: &str) -> Vec<CsvCard> {
     content
         .lines()
         .filter(|line| !line.trim().is_empty())
         .filter_map(|line| {
-            let parts: Vec<&str> = line.split('\t').collect();
+            // Simple CSV parsing - handles basic comma-separated values
+            // For quoted fields with commas, we do a smarter split
+            let parts: Vec<String> = parse_csv_line(line);
             if parts.len() >= 2 {
-                Some(ExcelCard {
+                Some(CsvCard {
                     front: parts[0].trim().to_string(),
                     back: parts[1].trim().to_string(),
                 })
@@ -54,31 +56,59 @@ fn parse_tsv(content: &str) -> Vec<ExcelCard> {
         .collect()
 }
 
+fn parse_csv_line(line: &str) -> Vec<String> {
+    let mut result = Vec::new();
+    let mut current = String::new();
+    let mut in_quotes = false;
+    let mut chars = line.chars().peekable();
+    
+    while let Some(c) = chars.next() {
+        match c {
+            '"' => {
+                if in_quotes && chars.peek() == Some(&'"') {
+                    // Escaped quote
+                    current.push('"');
+                    chars.next();
+                } else {
+                    in_quotes = !in_quotes;
+                }
+            }
+            ',' if !in_quotes => {
+                result.push(current.clone());
+                current.clear();
+            }
+            _ => current.push(c),
+        }
+    }
+    result.push(current);
+    result
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
-// Excel App Component
+// CSV App Component
 // ─────────────────────────────────────────────────────────────────────────────
 
 #[derive(PartialEq, Eq)]
-enum ExcelAnimationState {
+enum CsvAnimationState {
     None,
     Removing,
     Replacing,
     Shuffling,
 }
 
-struct ExcelApp {
-    decks: ExcelDecksMap,
+struct CsvApp {
+    decks: CsvDecksMap,
     selected_decks: Vec<String>,
-    cards: Vec<ExcelCard>,
+    cards: Vec<CsvCard>,
     current_index: usize,
     show_back: bool,
-    anim_state: ExcelAnimationState,
+    anim_state: CsvAnimationState,
     initial_count: usize,
     container_ref: NodeRef,
     focus_set: bool,
 }
 
-enum ExcelMsg {
+enum CsvMsg {
     Flip,
     StartRemove,
     StartReplace,
@@ -88,17 +118,17 @@ enum ExcelMsg {
     LoadSelectedDecks,
 }
 
-impl Component for ExcelApp {
-    type Message = ExcelMsg;
+impl Component for CsvApp {
+    type Message = CsvMsg;
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        let mut decks: ExcelDecksMap = HashMap::new();
+        let mut decks: CsvDecksMap = HashMap::new();
         
-        // Load TSV files
-        let sample = parse_tsv(include_str!("excel_decks/Sample.tsv"));
-        let numbers = parse_tsv(include_str!("excel_decks/Numbers.tsv"));
-        let colors = parse_tsv(include_str!("excel_decks/Colors.tsv"));
+        // Load CSV files
+        let sample = parse_csv(include_str!("csv_decks/Sample.csv"));
+        let numbers = parse_csv(include_str!("csv_decks/Numbers.csv"));
+        let colors = parse_csv(include_str!("csv_decks/Colors.csv"));
 
         decks.insert("Sample".into(), sample);
         decks.insert("Numbers".into(), numbers);
@@ -106,16 +136,16 @@ impl Component for ExcelApp {
 
         // Start with Sample deck selected
         let selected_decks = vec!["Sample".to_string()];
-        let cards: Vec<ExcelCard> = decks.get("Sample").unwrap().clone();
+        let cards: Vec<CsvCard> = decks.get("Sample").unwrap().clone();
         let initial_count = cards.len();
 
-        ExcelApp {
+        CsvApp {
             decks,
             selected_decks,
             cards,
             current_index: 0,
             show_back: false,
-            anim_state: ExcelAnimationState::None,
+            anim_state: CsvAnimationState::None,
             initial_count,
             container_ref: NodeRef::default(),
             focus_set: false,
@@ -133,43 +163,43 @@ impl Component for ExcelApp {
 
     fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
         match msg {
-            ExcelMsg::Flip => {
-                if self.anim_state == ExcelAnimationState::None {
+            CsvMsg::Flip => {
+                if self.anim_state == CsvAnimationState::None {
                     self.show_back = !self.show_back;
                     true
                 } else {
                     false
                 }
             }
-            ExcelMsg::StartRemove => {
-                if self.anim_state == ExcelAnimationState::None && !self.cards.is_empty() {
-                    self.anim_state = ExcelAnimationState::Removing;
+            CsvMsg::StartRemove => {
+                if self.anim_state == CsvAnimationState::None && !self.cards.is_empty() {
+                    self.anim_state = CsvAnimationState::Removing;
                     self.show_back = false;
                     true
                 } else {
                     false
                 }
             }
-            ExcelMsg::StartReplace => {
-                if self.anim_state == ExcelAnimationState::None && !self.cards.is_empty() {
-                    self.anim_state = ExcelAnimationState::Replacing;
+            CsvMsg::StartReplace => {
+                if self.anim_state == CsvAnimationState::None && !self.cards.is_empty() {
+                    self.anim_state = CsvAnimationState::Replacing;
                     self.show_back = false;
                     true
                 } else {
                     false
                 }
             }
-            ExcelMsg::StartShuffle => {
-                if self.anim_state == ExcelAnimationState::None && !self.cards.is_empty() {
-                    self.anim_state = ExcelAnimationState::Shuffling;
+            CsvMsg::StartShuffle => {
+                if self.anim_state == CsvAnimationState::None && !self.cards.is_empty() {
+                    self.anim_state = CsvAnimationState::Shuffling;
                     true
                 } else {
                     false
                 }
             }
-            ExcelMsg::AnimDone => {
-                match std::mem::replace(&mut self.anim_state, ExcelAnimationState::None) {
-                    ExcelAnimationState::Removing => {
+            CsvMsg::AnimDone => {
+                match std::mem::replace(&mut self.anim_state, CsvAnimationState::None) {
+                    CsvAnimationState::Removing => {
                         if !self.cards.is_empty() {
                             self.cards.remove(self.current_index);
                             if !self.cards.is_empty() {
@@ -177,7 +207,7 @@ impl Component for ExcelApp {
                             }
                         }
                     }
-                    ExcelAnimationState::Replacing => {
+                    CsvAnimationState::Replacing => {
                         if !self.cards.is_empty() {
                             let card = self.cards.remove(self.current_index);
                             let mut rng = rand::thread_rng();
@@ -192,7 +222,7 @@ impl Component for ExcelApp {
                             }
                         }
                     }
-                    ExcelAnimationState::Shuffling => {
+                    CsvAnimationState::Shuffling => {
                         let mut rng = rand::thread_rng();
                         let len = self.cards.len();
                         for i in (1..len).rev() {
@@ -201,12 +231,12 @@ impl Component for ExcelApp {
                         }
                         self.current_index = 0;
                     }
-                    ExcelAnimationState::None => {}
+                    CsvAnimationState::None => {}
                 }
                 self.show_back = false;
                 true
             }
-            ExcelMsg::ToggleDeck(name, checked) => {
+            CsvMsg::ToggleDeck(name, checked) => {
                 if checked {
                     if !self.selected_decks.contains(&name) {
                         self.selected_decks.push(name);
@@ -215,12 +245,12 @@ impl Component for ExcelApp {
                     self.selected_decks.retain(|d| d != &name);
                 }
                 // Immediately reload the cards
-                ctx.link().send_message(ExcelMsg::LoadSelectedDecks);
+                ctx.link().send_message(CsvMsg::LoadSelectedDecks);
                 true
             }
-            ExcelMsg::LoadSelectedDecks => {
+            CsvMsg::LoadSelectedDecks => {
                 // Merge all selected decks
-                let mut all_cards: Vec<ExcelCard> = Vec::new();
+                let mut all_cards: Vec<CsvCard> = Vec::new();
                 for deck_name in &self.selected_decks {
                     if let Some(deck_cards) = self.decks.get(deck_name) {
                         all_cards.extend(deck_cards.clone());
@@ -268,34 +298,34 @@ impl Component for ExcelApp {
             inner_cls.push("flipped");
         }
         match self.anim_state {
-            ExcelAnimationState::Removing => inner_cls.push("removing"),
-            ExcelAnimationState::Replacing => inner_cls.push("replacing"),
-            ExcelAnimationState::Shuffling => inner_cls.push("shuffling"),
-            ExcelAnimationState::None => {}
+            CsvAnimationState::Removing => inner_cls.push("removing"),
+            CsvAnimationState::Replacing => inner_cls.push("replacing"),
+            CsvAnimationState::Shuffling => inner_cls.push("shuffling"),
+            CsvAnimationState::None => {}
         };
 
         html! {
-            <div class="app-container excel-mode"
+            <div class="app-container csv-mode"
                  ref={ self.container_ref.clone() }
                  tabindex="0"
                  onkeydown={ ctx.link().callback(|e: KeyboardEvent| {
                      match e.key().as_str() {
-                         "ArrowLeft"  => ExcelMsg::StartRemove,
-                         "ArrowRight" => ExcelMsg::StartReplace,
-                         " " | "Spacebar" | "ArrowUp" | "ArrowDown" => ExcelMsg::Flip,
-                         "s" | "S"    => ExcelMsg::StartShuffle,
-                         _ => ExcelMsg::AnimDone,
+                         "ArrowLeft"  => CsvMsg::StartRemove,
+                         "ArrowRight" => CsvMsg::StartReplace,
+                         " " | "Spacebar" | "ArrowUp" | "ArrowDown" => CsvMsg::Flip,
+                         "s" | "S"    => CsvMsg::StartShuffle,
+                         _ => CsvMsg::AnimDone,
                      }
                  }) }
             >
                 // Mode indicator and navigation
                 <div class="mode-nav">
                     <Link<Route> to={Route::Home} classes="nav-link">{ "← Chinese Mode" }</Link<Route>>
-                    <span class="mode-title">{ "Excel Flashcards" }</span>
+                    <span class="mode-title">{ "CSV Flashcards" }</span>
                 </div>
 
                 // Controls row with multi-select
-                <div class="controls excel-controls">
+                <div class="controls csv-controls">
                     <div class="controls-left">
                         <label><b>{ "Decks:" }</b></label>
                         <div class="deck-checkboxes">
@@ -308,14 +338,14 @@ impl Component for ExcelApp {
                                                checked={is_checked}
                                                onchange={ ctx.link().callback(move |e: Event| {
                                                    let chk = e.target_unchecked_into::<HtmlInputElement>();
-                                                   ExcelMsg::ToggleDeck(deck_name.clone(), chk.checked())
+                                                   CsvMsg::ToggleDeck(deck_name.clone(), chk.checked())
                                                }) }/>
                                         { d }
                                     </label>
                                 }
                             })}
                         </div>
-                        <button onclick={ ctx.link().callback(|_| ExcelMsg::StartShuffle) }>
+                        <button onclick={ ctx.link().callback(|_| CsvMsg::StartShuffle) }>
                             { "Shuffle" }
                         </button>
                     </div>
@@ -327,7 +357,7 @@ impl Component for ExcelApp {
                 <div class="card-container">
                     // Always render the "No cards" card at the very bottom
                     <div class="pile-card pile-card-1" style="z-index:0;">
-                        <div class="card-face front excel-front">
+                        <div class="card-face front csv-front">
                             <div style="color:#888; font-size:1.5em;">{ "No cards selected." }</div>
                         </div>
                     </div>
@@ -335,8 +365,8 @@ impl Component for ExcelApp {
                         if let Some(c) = nxt3 {
                             html! {
                                 <div class="pile-card pile-card-3">
-                                    <div class="card-face front excel-front">
-                                        <div class="excel-card-content">{ &c.front }</div>
+                                    <div class="card-face front csv-front">
+                                        <div class="csv-card-content">{ &c.front }</div>
                                     </div>
                                 </div>
                             }
@@ -346,8 +376,8 @@ impl Component for ExcelApp {
                         if let Some(c) = nxt2 {
                             html! {
                                 <div class="pile-card pile-card-2">
-                                    <div class="card-face front excel-front">
-                                        <div class="excel-card-content">{ &c.front }</div>
+                                    <div class="card-face front csv-front">
+                                        <div class="csv-card-content">{ &c.front }</div>
                                     </div>
                                 </div>
                             }
@@ -357,8 +387,8 @@ impl Component for ExcelApp {
                         if let Some(c) = nxt1 {
                             html! {
                                 <div class="pile-card pile-card-1">
-                                    <div class="card-face front excel-front">
-                                        <div class="excel-card-content">{ &c.front }</div>
+                                    <div class="card-face front csv-front">
+                                        <div class="csv-card-content">{ &c.front }</div>
                                     </div>
                                 </div>
                             }
@@ -370,14 +400,14 @@ impl Component for ExcelApp {
                         if !self.cards.is_empty() {
                             html! {
                                 <div class={ inner_cls.clone() }
-                                     onclick={ ctx.link().callback(|_| ExcelMsg::Flip) }
-                                     onanimationend={ ctx.link().callback(|_| ExcelMsg::AnimDone) }
+                                     onclick={ ctx.link().callback(|_| CsvMsg::Flip) }
+                                     onanimationend={ ctx.link().callback(|_| CsvMsg::AnimDone) }
                                 >
                                     // Front face
-                                    <div class="card-face front excel-front">
+                                    <div class="card-face front csv-front">
                                         {
                                             if let Some(card) = curr {
-                                                html! { <div class="excel-card-content">{ &card.front }</div> }
+                                                html! { <div class="csv-card-content">{ &card.front }</div> }
                                             } else {
                                                 html! {}
                                             }
@@ -385,12 +415,12 @@ impl Component for ExcelApp {
                                     </div>
 
                                     // Back face
-                                    <div class="card-face back excel-back">
+                                    <div class="card-face back csv-back">
                                         {
                                             if let Some(card) = curr {
                                                 html! {
-                                                    <div class="excel-back-content">
-                                                        <div class="excel-back-text">{ &card.back }</div>
+                                                    <div class="csv-back-content">
+                                                        <div class="csv-back-text">{ &card.back }</div>
                                                     </div>
                                                 }
                                             } else {
@@ -409,22 +439,22 @@ impl Component for ExcelApp {
                 // Buttons under card
                 <div class="card-buttons-row">
                     <button
-                        onclick={ ctx.link().callback(|_| ExcelMsg::StartRemove) }
+                        onclick={ ctx.link().callback(|_| CsvMsg::StartRemove) }
                         disabled={
                             self.cards.is_empty()
-                            || matches!(self.anim_state, ExcelAnimationState::Removing
-                                                     | ExcelAnimationState::Replacing
-                                                     | ExcelAnimationState::Shuffling)
+                            || matches!(self.anim_state, CsvAnimationState::Removing
+                                                     | CsvAnimationState::Replacing
+                                                     | CsvAnimationState::Shuffling)
                         }
                     >{ "I know this – Remove" }</button>
 
                     <button
-                        onclick={ ctx.link().callback(|_| ExcelMsg::StartReplace) }
+                        onclick={ ctx.link().callback(|_| CsvMsg::StartReplace) }
                         disabled={
                             self.cards.is_empty()
-                            || matches!(self.anim_state, ExcelAnimationState::Removing
-                                                     | ExcelAnimationState::Replacing
-                                                     | ExcelAnimationState::Shuffling)
+                            || matches!(self.anim_state, CsvAnimationState::Removing
+                                                     | CsvAnimationState::Replacing
+                                                     | CsvAnimationState::Shuffling)
                         }
                         style="margin-left:1em;"
                     >{ "I don't know – Replace" }</button>
@@ -813,7 +843,7 @@ impl Component for App {
                 // Mode indicator and navigation
                 <div class="mode-nav">
                     <span class="mode-title">{ "Chinese Flashcards" }</span>
-                    <Link<Route> to={Route::Excel} classes="nav-link">{ "Excel Mode →" }</Link<Route>>
+                    <Link<Route> to={Route::Csv} classes="nav-link">{ "CSV Mode →" }</Link<Route>>
                 </div>
 
                 // Controls row
