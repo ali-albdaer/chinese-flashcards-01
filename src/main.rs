@@ -126,17 +126,23 @@ impl Component for CsvApp {
         let mut decks: CsvDecksMap = HashMap::new();
         
         // Load CSV files
-        let sample = parse_csv(include_str!("csv_decks/Sample.csv"));
-        let numbers = parse_csv(include_str!("csv_decks/Numbers.csv"));
-        let colors = parse_csv(include_str!("csv_decks/Colors.csv"));
+        // let sample = parse_csv(include_str!("csv_decks/Sample.csv"));
+        // let numbers = parse_csv(include_str!("csv_decks/Numbers.csv"));
+        // let colors = parse_csv(include_str!("csv_decks/Colors.csv"));
+        let machining = parse_csv(include_str!("csv_decks/Machining.csv"));
+        let bulk_forming = parse_csv(include_str!("csv_decks/Bulk_Forming.csv"));
+        let materials = parse_csv(include_str!("csv_decks/Materials.csv"));
 
-        decks.insert("Sample".into(), sample);
-        decks.insert("Numbers".into(), numbers);
-        decks.insert("Colors".into(), colors);
+        // decks.insert("Sample".into(), sample);
+        // decks.insert("Numbers".into(), numbers);
+        // decks.insert("Colors".into(), colors);
+        decks.insert("Machining".into(), machining);
+        decks.insert("Bulk Forming".into(), bulk_forming);
+        decks.insert("Materials".into(), materials);
 
         // Start with Sample deck selected
-        let selected_decks = vec!["Sample".to_string()];
-        let cards: Vec<CsvCard> = decks.get("Sample").unwrap().clone();
+        let selected_decks = vec!["Machining".to_string()];
+        let cards: Vec<CsvCard> = decks.get("Machining").unwrap().clone();
         let initial_count = cards.len();
 
         CsvApp {
