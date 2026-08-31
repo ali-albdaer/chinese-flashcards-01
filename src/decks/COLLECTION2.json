@@ -1,0 +1,21 @@
+[
+  {
+    "character": "示例",
+    "pinyin": "shìlì",
+    "english": "example",
+    "examples": [
+      {
+        "chinese": "这是一个例句。",
+        "pinyin": "Zhè shì yí gè lìjù.",
+        "english": "This is an example sentence."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "示",
+        "pinyin": "shì",
+        "meaning": "show"
+      }
+    ]
+  }
+]
