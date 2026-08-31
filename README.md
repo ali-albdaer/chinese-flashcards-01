@@ -29,4 +29,4 @@ A simple flashcard application for learning Chinese vocabulary (and Rust). This 
 
 ## License
 
-This project is licensed under the [Unlicense](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
