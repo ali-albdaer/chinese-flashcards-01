@@ -1,0 +1,3355 @@
+[
+  {
+    "character": "怀疑",
+    "pinyin": "huáiyí",
+    "english": "to suspect; doubt",
+    "examples": [
+      {
+        "chinese": "我怀疑他在说谎。",
+        "pinyin": "Wǒ huáiyí tā zài shuōhuǎng.",
+        "english": "I suspect he is lying."
+      },
+      {
+        "chinese": "我开始怀疑这个消息是不是真的。",
+        "pinyin": "Wǒ kāishǐ huáiyí zhège xiāoxi shì bú shì zhēn de.",
+        "english": "I started to doubt whether this news was true."
+      },
+      {
+        "chinese": "你为什么怀疑我？",
+        "pinyin": "Nǐ wèishénme huáiyí wǒ?",
+        "english": "Why do you suspect me?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "忄",
+        "pinyin": "xīn",
+        "meaning": "heart radical"
+      },
+      {
+        "character": "疋",
+        "pinyin": "pǐ",
+        "meaning": "foot radical; step"
+      }
+    ]
+  },
+  {
+    "character": "地址",
+    "pinyin": "dìzhǐ",
+    "english": "address; location",
+    "examples": [
+      {
+        "chinese": "你的地址是什么？",
+        "pinyin": "Nǐ de dìzhǐ shì shénme?",
+        "english": "What is your address?"
+      },
+      {
+        "chinese": "请把地址发给我。",
+        "pinyin": "Qǐng bǎ dìzhǐ fā gěi wǒ.",
+        "english": "Please send me the address."
+      },
+      {
+        "chinese": "我找不到这个地址。",
+        "pinyin": "Wǒ zhǎo bú dào zhège dìzhǐ.",
+        "english": "I can’t find this address."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "土",
+        "pinyin": "tǔ",
+        "meaning": "earth; soil radical"
+      },
+      {
+        "character": "阝",
+        "pinyin": "fù",
+        "meaning": "mound/city radical"
+      }
+    ]
+  },
+  {
+    "character": "失业",
+    "pinyin": "shīyè",
+    "english": "to become unemployed; unemployment",
+    "examples": [
+      {
+        "chinese": "他失业了。",
+        "pinyin": "Tā shīyè le.",
+        "english": "He became unemployed."
+      },
+      {
+        "chinese": "失业以后，他开始找工作。",
+        "pinyin": "Shīyè yǐhòu, tā kāishǐ zhǎo gōngzuò.",
+        "english": "After becoming unemployed, he started looking for work."
+      },
+      {
+        "chinese": "失业对他的生活影响很大。",
+        "pinyin": "Shīyè duì tā de shēnghuó yǐngxiǎng hěn dà.",
+        "english": "Unemployment has had a major impact on his life."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "大",
+        "pinyin": "dà",
+        "meaning": "big; large"
+      },
+      {
+        "character": "一",
+        "pinyin": "yī",
+        "meaning": "one; horizontal stroke"
+      }
+    ]
+  },
+  {
+    "character": "辞职",
+    "pinyin": "cízhí",
+    "english": "to resign; quit one’s job",
+    "examples": [
+      {
+        "chinese": "他决定辞职。",
+        "pinyin": "Tā juédìng cízhí.",
+        "english": "He decided to resign."
+      },
+      {
+        "chinese": "我已经辞职了。",
+        "pinyin": "Wǒ yǐjīng cízhí le.",
+        "english": "I’ve already resigned."
+      },
+      {
+        "chinese": "她为什么辞职？",
+        "pinyin": "Tā wèishénme cízhí?",
+        "english": "Why did she quit her job?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "讠",
+        "pinyin": "yán",
+        "meaning": "speech radical"
+      },
+      {
+        "character": "耳",
+        "pinyin": "ěr",
+        "meaning": "ear"
+      }
+    ]
+  },
+  {
+    "character": "后悔",
+    "pinyin": "hòuhuǐ",
+    "english": "to regret; feel sorry about a past decision/action",
+    "examples": [
+      {
+        "chinese": "我后悔了。",
+        "pinyin": "Wǒ hòuhuǐ le.",
+        "english": "I regret it."
+      },
+      {
+        "chinese": "我后悔辞职了。",
+        "pinyin": "Wǒ hòuhuǐ cízhí le.",
+        "english": "I regret quitting my job."
+      },
+      {
+        "chinese": "我后悔没有早点告诉他。",
+        "pinyin": "Wǒ hòuhuǐ méiyǒu zǎodiǎn gàosu tā.",
+        "english": "I regret not telling him earlier."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "忄",
+        "pinyin": "xīn",
+        "meaning": "heart radical"
+      },
+      {
+        "character": "口",
+        "pinyin": "kǒu",
+        "meaning": "mouth"
+      }
+    ]
+  },
+  {
+    "character": "速度",
+    "pinyin": "sùdù",
+    "english": "speed; rate; velocity",
+    "examples": [
+      {
+        "chinese": "速度太快了。",
+        "pinyin": "Sùdù tài kuài le.",
+        "english": "The speed is too high."
+      },
+      {
+        "chinese": "请放慢速度。",
+        "pinyin": "Qǐng fàngmàn sùdù.",
+        "english": "Please slow down."
+      },
+      {
+        "chinese": "网速很慢，下载速度也很慢。",
+        "pinyin": "Wǎngsù hěn màn, xiàzài sùdù yě hěn màn.",
+        "english": "The internet is slow, and the download speed is slow too."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "辶",
+        "pinyin": "chuò",
+        "meaning": "walk radical; movement"
+      },
+      {
+        "character": "广",
+        "pinyin": "guǎng",
+        "meaning": "shelter; broad"
+      }
+    ]
+  },
+  {
+    "character": "提供",
+    "pinyin": "tígōng",
+    "english": "to provide; supply; offer",
+    "examples": [
+      {
+        "chinese": "请提供你的地址。",
+        "pinyin": "Qǐng tígōng nǐ de dìzhǐ.",
+        "english": "Please provide your address."
+      },
+      {
+        "chinese": "公司提供免费的服务。",
+        "pinyin": "Gōngsī tígōng miǎnfèi de fúwù.",
+        "english": "The company provides free services."
+      },
+      {
+        "chinese": "他给我们提供了很多帮助。",
+        "pinyin": "Tā gěi wǒmen tígōng le hěn duō bāngzhù.",
+        "english": "He provided us with a lot of help."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "扌",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      }
+    ]
+  },
+  {
+    "character": "有趣",
+    "pinyin": "yǒuqù",
+    "english": "interesting; fascinating; amusing",
+    "examples": [
+      {
+        "chinese": "这个游戏很有趣。",
+        "pinyin": "Zhège yóuxì hěn yǒuqù.",
+        "english": "This game is very interesting/fun."
+      },
+      {
+        "chinese": "他是一个非常有趣的人。",
+        "pinyin": "Tā shì yí ge fēicháng yǒuqù de rén.",
+        "english": "He is a very interesting person."
+      },
+      {
+        "chinese": "这件事越来越有趣了。",
+        "pinyin": "Zhè jiàn shì yuèláiyuè yǒuqù le.",
+        "english": "This is getting more and more interesting."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "月",
+        "pinyin": "yuè",
+        "meaning": "moon/flesh radical (in 有)"
+      },
+      {
+        "character": "走",
+        "pinyin": "zǒu",
+        "meaning": "walk; run (in 趣)"
+      }
+    ]
+  },
+  {
+    "character": "愿意",
+    "pinyin": "yuànyì",
+    "english": "to be willing to; to want to",
+    "examples": [
+      {
+        "chinese": "你愿意帮我吗？",
+        "pinyin": "Nǐ yuànyì bāng wǒ ma?",
+        "english": "Are you willing to help me?"
+      },
+      {
+        "chinese": "我愿意试试看。",
+        "pinyin": "Wǒ yuànyì shìshi kàn.",
+        "english": "I’m willing to give it a try."
+      },
+      {
+        "chinese": "他不愿意告诉我。",
+        "pinyin": "Tā bù yuànyì gàosu wǒ.",
+        "english": "He isn’t willing to tell me."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "心",
+        "pinyin": "xīn",
+        "meaning": "heart (in 愿 and 意)"
+      },
+      {
+        "character": "音",
+        "pinyin": "yīn",
+        "meaning": "sound; note (in 意)"
+      }
+    ]
+  },
+  {
+    "character": "凶",
+    "pinyin": "xiōng",
+    "english": "fierce; scary; vicious; harsh",
+    "examples": [
+      {
+        "chinese": "这只狗看起来很凶。",
+        "pinyin": "Zhè zhī gǒu kàn qǐlái hěn xiōng.",
+        "english": "This dog looks fierce."
+      },
+      {
+        "chinese": "别这么凶。",
+        "pinyin": "Bié zhème xiōng.",
+        "english": "Don’t be so harsh."
+      },
+      {
+        "chinese": "那个人看起来很凶，其实人很好。",
+        "pinyin": "Nàge rén kàn qǐlái hěn xiōng, qíshí rén hěn hǎo.",
+        "english": "That person looks intimidating, but is actually very nice."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "凵",
+        "pinyin": "qū",
+        "meaning": "receptacle/open box radical"
+      },
+      {
+        "character": "乂",
+        "pinyin": "yì",
+        "meaning": "crossed strokes"
+      }
+    ]
+  },
+  {
+    "character": "提示",
+    "pinyin": "tíshì",
+    "english": "to remind; prompt; give a hint; indicate",
+    "examples": [
+      {
+        "chinese": "谢谢你的提示。",
+        "pinyin": "Xièxie nǐ de tíshì.",
+        "english": "Thanks for the reminder/hint."
+      },
+      {
+        "chinese": "系统会提示你输入密码。",
+        "pinyin": "Xìtǒng huì tíshì nǐ shūrù mìmǎ.",
+        "english": "The system will prompt you to enter a password."
+      },
+      {
+        "chinese": "请提示我一下。",
+        "pinyin": "Qǐng tíshì wǒ yíxià.",
+        "english": "Please remind me."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "扌",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      },
+      {
+        "character": "日",
+        "pinyin": "rì",
+        "meaning": "sun; day"
+      }
+    ]
+  },
+  {
+    "character": "紫",
+    "pinyin": "zǐ",
+    "english": "purple; violet",
+    "examples": [
+      {
+        "chinese": "我喜欢紫色。",
+        "pinyin": "Wǒ xǐhuan zǐsè.",
+        "english": "I like purple."
+      },
+      {
+        "chinese": "她穿了一件紫色的衣服。",
+        "pinyin": "Tā chuān le yí jiàn zǐsè de yīfu.",
+        "english": "She wore a purple outfit."
+      },
+      {
+        "chinese": "天空慢慢变成了紫色。",
+        "pinyin": "Tiānkōng mànmàn biàn chéng le zǐsè.",
+        "english": "The sky gradually turned purple."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "糸",
+        "pinyin": "mì",
+        "meaning": "silk radical"
+      },
+      {
+        "character": "此",
+        "pinyin": "cǐ",
+        "meaning": "this"
+      }
+    ]
+  },
+  {
+    "character": "认亲",
+    "pinyin": "rènqīn",
+    "english": "to acknowledge/recognize someone as a relative; establish or reunite a family relationship",
+    "examples": [
+      {
+        "chinese": "他们终于认亲了。",
+        "pinyin": "Tāmen zhōngyú rènqīn le.",
+        "english": "They finally acknowledged/reunited as relatives."
+      },
+      {
+        "chinese": "她决定去认亲。",
+        "pinyin": "Tā juédìng qù rènqīn.",
+        "english": "She decided to meet and acknowledge her biological relatives."
+      },
+      {
+        "chinese": "他们发现彼此是亲人，准备认亲。",
+        "pinyin": "Tāmen fāxiàn bǐcǐ shì qīnrén, zhǔnbèi rènqīn.",
+        "english": "They discovered they were relatives and prepared to acknowledge their family relationship."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "讠",
+        "pinyin": "yán",
+        "meaning": "speech radical"
+      },
+      {
+        "character": "见",
+        "pinyin": "jiàn",
+        "meaning": "see"
+      }
+    ]
+  },
+  {
+    "character": "对峙",
+    "pinyin": "duìzhì",
+    "english": "to confront; to face off; to be in a confrontation/standoff",
+    "examples": [
+      {
+        "chinese": "两个人面对面地对峙。",
+        "pinyin": "Liǎng ge rén miànduìmiàn de duìzhì.",
+        "english": "The two people faced each other in a confrontation."
+      },
+      {
+        "chinese": "警察和歹徒对峙了几个小时。",
+        "pinyin": "Jǐngchá hé dāitú duìzhì le jǐ ge xiǎoshí.",
+        "english": "The police and the criminal were in a standoff for several hours."
+      },
+      {
+        "chinese": "他们在会议上公开对峙。",
+        "pinyin": "Tāmen zài huìyì shàng gōngkāi duìzhì.",
+        "english": "They openly confronted each other at the meeting."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "寸",
+        "pinyin": "cùn",
+        "meaning": "inch; hand measure"
+      },
+      {
+        "character": "山",
+        "pinyin": "shān",
+        "meaning": "mountain"
+      }
+    ]
+  },
+  {
+    "character": "认床",
+    "pinyin": "rènchuáng",
+    "english": "to have trouble sleeping in an unfamiliar bed; be particular about one’s bed",
+    "examples": [
+      {
+        "chinese": "我有点认床，换个酒店就睡不着。",
+        "pinyin": "Wǒ yǒudiǎn rènchuáng, huàn ge jiǔdiàn jiù shuìbuzháo.",
+        "english": "I’m a bit particular about my bed; I can’t sleep when I stay in a different hotel."
+      },
+      {
+        "chinese": "他不认床，去哪里都能睡。",
+        "pinyin": "Tā bù rènchuáng, qù nǎlǐ dōu néng shuì.",
+        "english": "He doesn’t have this problem; he can sleep anywhere."
+      },
+      {
+        "chinese": "她第一次住朋友家，发现自己还挺认床。",
+        "pinyin": "Tā dì-yī cì zhù péngyou jiā, fāxiàn zìjǐ hái tǐng rènchuáng.",
+        "english": "The first time she stayed at a friend’s house, she realized she really is particular about her bed."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "讠",
+        "pinyin": "yán",
+        "meaning": "speech radical"
+      },
+      {
+        "character": "广",
+        "pinyin": "guǎng",
+        "meaning": "shelter"
+      }
+    ]
+  },
+  {
+    "character": "对战",
+    "pinyin": "duìzhàn",
+    "english": "to fight against; battle; compete head-to-head",
+    "examples": [
+      {
+        "chinese": "两支队伍今晚正式对战。",
+        "pinyin": "Liǎng zhī duìwǔ jīnwǎn zhèngshì duìzhàn.",
+        "english": "The two teams face each other officially tonight."
+      },
+      {
+        "chinese": "我们下一局对战吧。",
+        "pinyin": "Wǒmen xià yì jú duìzhàn ba.",
+        "english": "Let’s play against each other next round."
+      },
+      {
+        "chinese": "他第一次和职业选手对战。",
+        "pinyin": "Tā dì-yī cì hé zhíyè xuǎnshǒu duìzhàn.",
+        "english": "It’s his first time competing against a professional player."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "寸",
+        "pinyin": "cùn",
+        "meaning": "inch; hand measure"
+      },
+      {
+        "character": "戈",
+        "pinyin": "gē",
+        "meaning": "halberd; weapon"
+      }
+    ]
+  },
+  {
+    "character": "卷",
+    "pinyin": "juǎn / juàn",
+    "english": "juǎn: roll; roll up. juàn: volume/booklet; exam paper",
+    "examples": [
+      {
+        "chinese": "把地图卷起来。",
+        "pinyin": "Bǎ dìtú juǎn qǐlái.",
+        "english": "Roll up the map."
+      },
+      {
+        "chinese": "她把袖子卷起来了。",
+        "pinyin": "Tā bǎ xiùzi juǎn qǐlái le.",
+        "english": "She rolled up her sleeves."
+      },
+      {
+        "chinese": "这张纸太大了，先卷起来吧。",
+        "pinyin": "Zhè zhāng zhǐ tài dà le, xiān juǎn qǐlái ba.",
+        "english": "This sheet of paper is too large, so roll it up."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "⺋",
+        "pinyin": "juǎn",
+        "meaning": "scroll-like component"
+      },
+      {
+        "character": "卩",
+        "pinyin": "jié",
+        "meaning": "seal/kneeling-person radical"
+      }
+    ]
+  },
+  {
+    "character": "享受",
+    "pinyin": "xiǎngshòu",
+    "english": "to enjoy; take pleasure in; benefit from",
+    "examples": [
+      {
+        "chinese": "我很享受一个人安静地看书。",
+        "pinyin": "Wǒ hěn xiǎngshòu yí ge rén ānjìng de kàn shū.",
+        "english": "I really enjoy reading quietly by myself."
+      },
+      {
+        "chinese": "好好享受你的假期吧！",
+        "pinyin": "Hǎohāo xiǎngshòu nǐ de jiàqī ba!",
+        "english": "Enjoy your vacation!"
+      },
+      {
+        "chinese": "她喜欢坐在阳台上享受阳光。",
+        "pinyin": "Tā xǐhuan zuò zài yángtái shàng xiǎngshòu yángguāng.",
+        "english": "She likes sitting on the balcony and enjoying the sunshine."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "亠",
+        "pinyin": "tóu",
+        "meaning": "lid; top radical"
+      },
+      {
+        "character": "又",
+        "pinyin": "yòu",
+        "meaning": "hand"
+      }
+    ]
+  },
+  {
+    "character": "光",
+    "pinyin": "guāng",
+    "english": "besides light: completely/all gone; only/just; bare/naked",
+    "examples": [
+      {
+        "chinese": "钱花光了。",
+        "pinyin": "Qián huā guāng le.",
+        "english": "The money is all spent."
+      },
+      {
+        "chinese": "饭已经吃光了。",
+        "pinyin": "Fàn yǐjīng chī guāng le.",
+        "english": "All the food has been eaten."
+      },
+      {
+        "chinese": "他把桌上的东西都拿光了。",
+        "pinyin": "Tā bǎ zhuō shàng de dōngxi dōu ná guāng le.",
+        "english": "He took everything off the table."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "儿",
+        "pinyin": "ér",
+        "meaning": "legs/person radical"
+      },
+      {
+        "character": "⺌",
+        "pinyin": "guǎng",
+        "meaning": "small upper component"
+      }
+    ]
+  },
+  {
+    "character": "草拟",
+    "pinyin": "cǎonǐ",
+    "english": "to draft; draw up",
+    "examples": [
+      {
+        "chinese": "他正在草拟一份报告。",
+        "pinyin": "Tā zhèngzài cǎonǐ yí fèn bàogào.",
+        "english": "He is drafting a report."
+      },
+      {
+        "chinese": "法务部门负责草拟合同。",
+        "pinyin": "Fǎwù bùmén fùzé cǎonǐ hétóng.",
+        "english": "The legal department is responsible for drafting the contract."
+      },
+      {
+        "chinese": "我先草拟一个方案，大家再一起修改。",
+        "pinyin": "Wǒ xiān cǎonǐ yí ge fāng'àn, dàjiā zài yìqǐ xiūgǎi.",
+        "english": "I’ll draft a proposal first, and then we can revise it together."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "艹",
+        "pinyin": "cǎo",
+        "meaning": "grass radical"
+      },
+      {
+        "character": "扌",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      }
+    ]
+  },
+  {
+    "character": "与",
+    "pinyin": "yǔ",
+    "english": "and; with; to",
+    "examples": [
+      {
+        "chinese": "中国与美国正在进行会谈。",
+        "pinyin": "Zhōngguó yǔ Měiguó zhèngzài jìnxíng huìtán.",
+        "english": "China and the United States are holding talks."
+      },
+      {
+        "chinese": "这个问题与每个人都有关系。",
+        "pinyin": "Zhège wèntí yǔ měi ge rén dōu yǒu guānxi.",
+        "english": "This issue is related to everyone."
+      },
+      {
+        "chinese": "他与朋友一起完成了这个项目。",
+        "pinyin": "Tā yǔ péngyou yìqǐ wánchéng le zhège xiàngmù.",
+        "english": "He completed the project together with his friends."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "一",
+        "pinyin": "yī",
+        "meaning": "one; horizontal stroke"
+      }
+    ]
+  },
+  {
+    "character": "集",
+    "pinyin": "jí",
+    "english": "episode; collect/gather; set/collection (in compounds)",
+    "examples": [
+      {
+        "chinese": "这部电视剧一共有三十集。",
+        "pinyin": "Zhè bù diànshìjù yígòng yǒu sānshí jí.",
+        "english": "This TV series has 30 episodes in total."
+      },
+      {
+        "chinese": "我昨天看了两集。",
+        "pinyin": "Wǒ zuótiān kàn le liǎng jí.",
+        "english": "I watched two episodes yesterday."
+      },
+      {
+        "chinese": "下一集会发生什么？",
+        "pinyin": "Xià yì jí huì fāshēng shénme?",
+        "english": "What will happen in the next episode?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "隹",
+        "pinyin": "zhuī",
+        "meaning": "short-tailed bird"
+      },
+      {
+        "character": "木",
+        "pinyin": "mù",
+        "meaning": "wood"
+      }
+    ]
+  },
+  {
+    "character": "有益",
+    "pinyin": "yǒuyì",
+    "english": "beneficial; useful; advantageous",
+    "examples": [
+      {
+        "chinese": "运动对身体有益。",
+        "pinyin": "Yùndòng duì shēntǐ yǒuyì.",
+        "english": "Exercise is beneficial to the body."
+      },
+      {
+        "chinese": "多读书对我们有益。",
+        "pinyin": "Duō dú shū duì wǒmen yǒuyì.",
+        "english": "Reading more is beneficial to us."
+      },
+      {
+        "chinese": "保持充足的睡眠对健康很有益。",
+        "pinyin": "Bǎochí chōngzú de shuìmián duì jiànkāng hěn yǒuyì.",
+        "english": "Getting enough sleep is very beneficial to health."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "月",
+        "pinyin": "yuè",
+        "meaning": "moon/flesh radical (in 有)"
+      },
+      {
+        "character": "皿",
+        "pinyin": "mǐn",
+        "meaning": "dish; vessel radical (in 益)"
+      }
+    ]
+  },
+  {
+    "character": "集思广益",
+    "pinyin": "jí sī guǎng yì",
+    "english": "to pool everyone’s ideas; brainstorm together; draw on collective wisdom",
+    "examples": [
+      {
+        "chinese": "大家一起集思广益，想办法解决这个问题。",
+        "pinyin": "Dàjiā yìqǐ jí sī guǎng yì, xiǎng bànfǎ jiějué zhège wèntí.",
+        "english": "Let’s pool our ideas and find a way to solve this problem."
+      },
+      {
+        "chinese": "这个项目很复杂，最好集思广益。",
+        "pinyin": "Zhège xiàngmù hěn fùzá, zuìhǎo jí sī guǎng yì.",
+        "english": "This project is complicated; it’s best to draw on everyone’s ideas."
+      },
+      {
+        "chinese": "遇到这种难题，我们应该集思广益。",
+        "pinyin": "Yùdào zhè zhǒng nántí, wǒmen yīnggāi jí sī guǎng yì.",
+        "english": "When we face a problem like this, we should put our heads together."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "隹",
+        "pinyin": "zhuī",
+        "meaning": "short-tailed bird"
+      },
+      {
+        "character": "心",
+        "pinyin": "xīn",
+        "meaning": "heart"
+      },
+      {
+        "character": "广",
+        "pinyin": "guǎng",
+        "meaning": "shelter; broad"
+      },
+      {
+        "character": "皿",
+        "pinyin": "mǐn",
+        "meaning": "dish; vessel radical"
+      }
+    ]
+  },
+  {
+    "character": "划",
+    "pinyin": "huá / huà",
+    "english": "huá: paddle/row; scrape/strike. huà: plan (in 计划)",
+    "examples": [
+      {
+        "chinese": "我们去湖上划船吧。",
+        "pinyin": "Wǒmen qù hú shàng huáchuán ba.",
+        "english": "Let’s go boating on the lake."
+      },
+      {
+        "chinese": "他正在划船。",
+        "pinyin": "Tā zhèngzài huáchuán.",
+        "english": "He is rowing/paddling."
+      },
+      {
+        "chinese": "我已经计划好了。",
+        "pinyin": "Wǒ yǐjīng jìhuà hǎo le.",
+        "english": "I’ve already made the plan."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "刂",
+        "pinyin": "dāo",
+        "meaning": "knife radical"
+      },
+      {
+        "character": "戈",
+        "pinyin": "gē",
+        "meaning": "halberd; weapon"
+      }
+    ]
+  },
+  {
+    "character": "败露",
+    "pinyin": "bàilù",
+    "english": "to be exposed; be found out; a secret/crime to come to light",
+    "examples": [
+      {
+        "chinese": "他的阴谋终于败露了。",
+        "pinyin": "Tā de yīnmóu zhōngyú bàilù le.",
+        "english": "His scheme was finally exposed."
+      },
+      {
+        "chinese": "事情很快就败露了。",
+        "pinyin": "Shìqing hěn kuài jiù bàilù le.",
+        "english": "The matter was soon found out."
+      },
+      {
+        "chinese": "他的身份一旦败露，就很危险。",
+        "pinyin": "Tā de shēnfèn yídàn bàilù, jiù hěn wēixiǎn.",
+        "english": "Once his identity is exposed, it will be dangerous."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "贝",
+        "pinyin": "bèi",
+        "meaning": "shell; money radical"
+      },
+      {
+        "character": "雨",
+        "pinyin": "yǔ",
+        "meaning": "rain radical"
+      }
+    ]
+  },
+  {
+    "character": "暴露",
+    "pinyin": "bàolù",
+    "english": "to expose; reveal; become exposed/revealed",
+    "examples": [
+      {
+        "chinese": "他的身份暴露了。",
+        "pinyin": "Tā de shēnfèn bàolù le.",
+        "english": "His identity was exposed."
+      },
+      {
+        "chinese": "不要暴露自己的位置。",
+        "pinyin": "Bú yào bàolù zìjǐ de wèizhi.",
+        "english": "Don’t reveal your location."
+      },
+      {
+        "chinese": "这个错误暴露了系统的问题。",
+        "pinyin": "Zhège cuòwù bàolù le xìtǒng de wèntí.",
+        "english": "This mistake exposed a problem with the system."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "日",
+        "pinyin": "rì",
+        "meaning": "sun; day"
+      },
+      {
+        "character": "雨",
+        "pinyin": "yǔ",
+        "meaning": "rain radical"
+      }
+    ]
+  },
+  {
+    "character": "设计",
+    "pinyin": "shèjì",
+    "english": "to design; design; plan",
+    "examples": [
+      {
+        "chinese": "我负责设计这个系统。",
+        "pinyin": "Wǒ fùzé shèjì zhège xìtǒng.",
+        "english": "I’m responsible for designing this system."
+      },
+      {
+        "chinese": "这个房子的设计很特别。",
+        "pinyin": "Zhège fángzi de shèjì hěn tèbié.",
+        "english": "The design of this house is very unique."
+      },
+      {
+        "chinese": "他正在设计一个新的产品。",
+        "pinyin": "Tā zhèngzài shèjì yí ge xīn de chǎnpǐn.",
+        "english": "He is designing a new product."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "讠",
+        "pinyin": "yán",
+        "meaning": "speech radical"
+      },
+      {
+        "character": "殳",
+        "pinyin": "shū",
+        "meaning": "weapon/strike radical"
+      }
+    ]
+  },
+  {
+    "character": "卡",
+    "pinyin": "kǎ",
+    "english": "card; get stuck; block; lag",
+    "examples": [
+      {
+        "chinese": "我的银行卡丢了。",
+        "pinyin": "Wǒ de yínhángkǎ diū le.",
+        "english": "I lost my bank card."
+      },
+      {
+        "chinese": "记得带公交卡。",
+        "pinyin": "Jìde dài gōngjiāokǎ.",
+        "english": "Remember to bring your transit card."
+      },
+      {
+        "chinese": "门卡住了。",
+        "pinyin": "Mén kǎzhù le.",
+        "english": "The door is stuck."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "丨",
+        "pinyin": "gǔn",
+        "meaning": "vertical stroke"
+      },
+      {
+        "character": "卜",
+        "pinyin": "bǔ",
+        "meaning": "divination radical"
+      }
+    ]
+  },
+  {
+    "character": "存",
+    "pinyin": "cún",
+    "english": "to save/store; deposit money; exist (in 存在)",
+    "examples": [
+      {
+        "chinese": "把这些照片存起来。",
+        "pinyin": "Bǎ zhèxiē zhàopiàn cún qǐlái.",
+        "english": "Save these photos."
+      },
+      {
+        "chinese": "我想把钱存进银行。",
+        "pinyin": "Wǒ xiǎng bǎ qián cún jìn yínháng.",
+        "english": "I want to deposit the money in the bank."
+      },
+      {
+        "chinese": "这个文件存在哪里？",
+        "pinyin": "Zhège wénjiàn cún zài nǎlǐ?",
+        "english": "Where is this file saved?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "子",
+        "pinyin": "zǐ",
+        "meaning": "child"
+      }
+    ]
+  },
+  {
+    "character": "显示",
+    "pinyin": "xiǎnshì",
+    "english": "to display; show; appear/be displayed",
+    "examples": [
+      {
+        "chinese": "屏幕上显示了一条消息。",
+        "pinyin": "Píngmù shàng xiǎnshì le yì tiáo xiāoxi.",
+        "english": "A message appeared on the screen."
+      },
+      {
+        "chinese": "这个软件可以显示地图。",
+        "pinyin": "Zhège ruǎnjiàn kěyǐ xiǎnshì dìtú.",
+        "english": "This software can display maps."
+      },
+      {
+        "chinese": "系统会显示结果。",
+        "pinyin": "Xìtǒng huì xiǎnshì jiéguǒ.",
+        "english": "The system will display the result."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "日",
+        "pinyin": "rì",
+        "meaning": "sun; day"
+      },
+      {
+        "character": "礻",
+        "pinyin": "shì",
+        "meaning": "spirit radical"
+      }
+    ]
+  },
+  {
+    "character": "懂礼貌",
+    "pinyin": "dǒng lǐmào",
+    "english": "to be polite; know how to behave politely",
+    "examples": [
+      {
+        "chinese": "他是个很懂礼貌的孩子。",
+        "pinyin": "Tā shì ge hěn dǒng lǐmào de háizi.",
+        "english": "He’s a very polite child."
+      },
+      {
+        "chinese": "见到长辈要懂礼貌。",
+        "pinyin": "Jiàndào zhǎngbèi yào dǒng lǐmào.",
+        "english": "You should be polite when meeting elders."
+      },
+      {
+        "chinese": "这个孩子很懂礼貌，见人总会主动打招呼。",
+        "pinyin": "Zhège háizi hěn dǒng lǐmào, jiàn rén zǒng huì zhǔdòng dǎzhāohu.",
+        "english": "This child has good manners and always greets people first."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "忄",
+        "pinyin": "xīn",
+        "meaning": "heart radical"
+      },
+      {
+        "character": "礻",
+        "pinyin": "shì",
+        "meaning": "spirit radical"
+      },
+      {
+        "character": "豸",
+        "pinyin": "zhì",
+        "meaning": "badger/animal radical"
+      }
+    ]
+  },
+  {
+    "character": "打猎",
+    "pinyin": "dǎliè",
+    "english": "to hunt; go hunting",
+    "examples": [
+      {
+        "chinese": "猎人带着狗进山打猎。",
+        "pinyin": "Lièrén dàizhe gǒu jìn shān dǎliè.",
+        "english": "The hunter took a dog into the mountains to hunt."
+      },
+      {
+        "chinese": "他周末喜欢去山里打猎。",
+        "pinyin": "Tā zhōumò xǐhuan qù shānlǐ dǎliè.",
+        "english": "He likes going to the mountains to hunt on weekends."
+      },
+      {
+        "chinese": "这里禁止打猎。",
+        "pinyin": "Zhèlǐ jìnzhǐ dǎliè.",
+        "english": "Hunting is prohibited here."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "扌",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      },
+      {
+        "character": "犭",
+        "pinyin": "quǎn",
+        "meaning": "dog/animal radical"
+      }
+    ]
+  },
+  {
+    "character": "罪",
+    "pinyin": "zuì",
+    "english": "crime; guilt; offense",
+    "examples": [
+      {
+        "chinese": "他因犯罪被警方逮捕。",
+        "pinyin": "Tā yīn fànzuì bèi jǐngfāng dàibǔ.",
+        "english": "He was arrested by the police for committing a crime."
+      },
+      {
+        "chinese": "法院认定他有罪。",
+        "pinyin": "Fǎyuàn rèndìng tā yǒuzuì.",
+        "english": "The court found him guilty."
+      },
+      {
+        "chinese": "这种行为可能构成犯罪。",
+        "pinyin": "Zhè zhǒng xíngwéi kěnéng gòuchéng fànzuì.",
+        "english": "This behavior may constitute a crime."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "罒",
+        "pinyin": "wǎng",
+        "meaning": "net radical"
+      },
+      {
+        "character": "非",
+        "pinyin": "fēi",
+        "meaning": "wrong; not"
+      }
+    ]
+  },
+  {
+    "character": "图鉴",
+    "pinyin": "tújiàn",
+    "english": "illustrated guide; visual catalog/encyclopedia",
+    "examples": [
+      {
+        "chinese": "游戏里有一个怪物图鉴。",
+        "pinyin": "Yóuxì lǐ yǒu yí ge guàiwù tújiàn.",
+        "english": "The game has a monster catalog."
+      },
+      {
+        "chinese": "我买了一本植物图鉴。",
+        "pinyin": "Wǒ mǎi le yì běn zhíwù tújiàn.",
+        "english": "I bought an illustrated guide to plants."
+      },
+      {
+        "chinese": "这本动物图鉴有很多高清图片。",
+        "pinyin": "Zhè běn dòngwù tújiàn yǒu hěn duō gāoqīng túpiàn.",
+        "english": "This animal guide contains many high-resolution pictures."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "囗",
+        "pinyin": "wéi",
+        "meaning": "enclosure radical"
+      },
+      {
+        "character": "金",
+        "pinyin": "jīn",
+        "meaning": "metal radical"
+      },
+      {
+        "character": "皿",
+        "pinyin": "mǐn",
+        "meaning": "dish; vessel radical"
+      }
+    ]
+  },
+  {
+    "character": "遇害",
+    "pinyin": "yùhài",
+    "english": "to be killed; become a victim of a crime/attack",
+    "examples": [
+      {
+        "chinese": "他昨晚遇害了。",
+        "pinyin": "Tā zuówǎn yùhài le.",
+        "english": "He was killed last night."
+      },
+      {
+        "chinese": "受害者在家中遇害。",
+        "pinyin": "Shòuhàizhě zài jiā zhōng yùhài.",
+        "english": "The victim was killed at home."
+      },
+      {
+        "chinese": "警方正在调查这名女子遇害的原因。",
+        "pinyin": "Jǐngfāng zhèngzài diàochá zhè míng nǚzǐ yùhài de yuányīn.",
+        "english": "The police are investigating why this woman was killed."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "辶",
+        "pinyin": "chuò",
+        "meaning": "walk radical; movement"
+      },
+      {
+        "character": "宀",
+        "pinyin": "mián",
+        "meaning": "roof radical"
+      }
+    ]
+  },
+  {
+    "character": "原本",
+    "pinyin": "yuánběn",
+    "english": "originally; at first; as things were before",
+    "examples": [
+      {
+        "chinese": "我原本不想参加。",
+        "pinyin": "Wǒ yuánběn bù xiǎng cānjiā.",
+        "english": "I originally didn’t want to participate."
+      },
+      {
+        "chinese": "他原本住在北京。",
+        "pinyin": "Tā yuánběn zhù zài Běijīng.",
+        "english": "He originally lived in Beijing."
+      },
+      {
+        "chinese": "事情原本很简单，后来越来越复杂。",
+        "pinyin": "Shìqing yuánběn hěn jiǎndān, hòulái yuèláiyuè fùzá.",
+        "english": "Things were originally simple, but later became more and more complicated."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "厂",
+        "pinyin": "hǎn",
+        "meaning": "cliff radical"
+      },
+      {
+        "character": "木",
+        "pinyin": "mù",
+        "meaning": "wood"
+      }
+    ]
+  },
+  {
+    "character": "原始",
+    "pinyin": "yuánshǐ",
+    "english": "original; raw; primitive; initial",
+    "examples": [
+      {
+        "chinese": "这是原始资料，不是最终版本。",
+        "pinyin": "Zhè shì yuánshǐ zīliào, bú shì zuìzhōng bǎnběn.",
+        "english": "This is the raw/original data, not the final version."
+      },
+      {
+        "chinese": "请保留原始文件。",
+        "pinyin": "Qǐng bǎoliú yuánshǐ wénjiàn.",
+        "english": "Please keep the original file."
+      },
+      {
+        "chinese": "原始社会的人们过着完全不同的生活。",
+        "pinyin": "Yuánshǐ shèhuì de rénmen guòzhe wánquán bù tóng de shēnghuó.",
+        "english": "People in primitive society lived very different lives."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "厂",
+        "pinyin": "hǎn",
+        "meaning": "cliff radical"
+      },
+      {
+        "character": "口",
+        "pinyin": "kǒu",
+        "meaning": "mouth"
+      }
+    ]
+  },
+  {
+    "character": "现场",
+    "pinyin": "xiànchǎng",
+    "english": "scene; site; on the spot",
+    "examples": [
+      {
+        "chinese": "警察已经到了现场。",
+        "pinyin": "Jǐngchá yǐjīng dào le xiànchǎng.",
+        "english": "The police have already arrived at the scene."
+      },
+      {
+        "chinese": "现场没有发现凶器。",
+        "pinyin": "Xiànchǎng méiyǒu fāxiàn xiōngqì.",
+        "english": "No murder weapon was found at the scene."
+      },
+      {
+        "chinese": "他当时就在现场。",
+        "pinyin": "Tā dāngshí jiù zài xiànchǎng.",
+        "english": "He was at the scene at the time."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "土",
+        "pinyin": "tǔ",
+        "meaning": "earth; soil radical"
+      },
+      {
+        "character": "土",
+        "pinyin": "tǔ",
+        "meaning": "earth; soil radical"
+      }
+    ]
+  },
+  {
+    "character": "并没有",
+    "pinyin": "bìng méiyǒu",
+    "english": "actually did not; by no means; contrary to expectation",
+    "examples": [
+      {
+        "chinese": "他并没有杀人。",
+        "pinyin": "Tā bìng méiyǒu shārén.",
+        "english": "He did not kill anyone."
+      },
+      {
+        "chinese": "事情并没有那么简单。",
+        "pinyin": "Shìqing bìng méiyǒu nàme jiǎndān.",
+        "english": "Things aren’t actually that simple."
+      },
+      {
+        "chinese": "现场并没有发现任何证据。",
+        "pinyin": "Xiànchǎng bìng méiyǒu fāxiàn rènhé zhèngjù.",
+        "english": "No evidence was actually found at the scene."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "丷",
+        "pinyin": "bā",
+        "meaning": "eight; split form"
+      },
+      {
+        "character": "氵",
+        "pinyin": "shuǐ",
+        "meaning": "water radical"
+      }
+    ]
+  },
+  {
+    "character": "任何",
+    "pinyin": "rènhé",
+    "english": "any; whatever; any kind of",
+    "examples": [
+      {
+        "chinese": "我没有任何问题。",
+        "pinyin": "Wǒ méiyǒu rènhé wèntí.",
+        "english": "I don’t have any problems."
+      },
+      {
+        "chinese": "你可以问我任何问题。",
+        "pinyin": "Nǐ kěyǐ wèn wǒ rènhé wèntí.",
+        "english": "You can ask me any question."
+      },
+      {
+        "chinese": "任何人都可能犯错。",
+        "pinyin": "Rènhé rén dōu kěnéng fàncuò.",
+        "english": "Anyone can make mistakes."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "彳",
+        "pinyin": "chì",
+        "meaning": "step radical"
+      }
+    ]
+  },
+  {
+    "character": "一共",
+    "pinyin": "yígòng",
+    "english": "altogether; in total",
+    "examples": [
+      {
+        "chinese": "我们一共去了六个人。",
+        "pinyin": "Wǒmen yígòng qù le liù ge rén.",
+        "english": "Six of us went in total."
+      },
+      {
+        "chinese": "这部电视剧一共有三十集。",
+        "pinyin": "Zhè bù diànshìjù yígòng yǒu sānshí jí.",
+        "english": "This TV series has 30 episodes in total."
+      },
+      {
+        "chinese": "一共多少钱？",
+        "pinyin": "Yígòng duōshao qián?",
+        "english": "How much is it altogether?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "一",
+        "pinyin": "yī",
+        "meaning": "one"
+      },
+      {
+        "character": "八",
+        "pinyin": "bā",
+        "meaning": "eight"
+      }
+    ]
+  },
+  {
+    "character": "报案人",
+    "pinyin": "bào'ànrén",
+    "english": "person who reports a crime/case; reporting person/complainant",
+    "examples": [
+      {
+        "chinese": "报案人是谁？",
+        "pinyin": "Bào'ànrén shì shéi?",
+        "english": "Who reported the case?"
+      },
+      {
+        "chinese": "警察正在询问报案人。",
+        "pinyin": "Jǐngchá zhèngzài xúnwèn bào'ànrén.",
+        "english": "The police are questioning the person who reported the case."
+      },
+      {
+        "chinese": "报案人说他昨天晚上发现了尸体。",
+        "pinyin": "Bào'ànrén shuō tā zuótiān wǎnshang fāxiàn le shītǐ.",
+        "english": "The reporting person said he discovered the body last night."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "扌",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      },
+      {
+        "character": "宀",
+        "pinyin": "mián",
+        "meaning": "roof radical"
+      },
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      }
+    ]
+  },
+  {
+    "character": "熬",
+    "pinyin": "áo",
+    "english": "to stay up/endure; simmer slowly",
+    "examples": [
+      {
+        "chinese": "我昨天晚上熬夜了。",
+        "pinyin": "Wǒ zuótiān wǎnshang áoyè le.",
+        "english": "I stayed up late last night."
+      },
+      {
+        "chinese": "别总是熬夜。",
+        "pinyin": "Bié zǒngshì áoyè.",
+        "english": "Don’t always stay up late."
+      },
+      {
+        "chinese": "再熬几天就好了。",
+        "pinyin": "Zài áo jǐ tiān jiù hǎo le.",
+        "english": "Just tough it out for a few more days and it’ll be fine."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "灬",
+        "pinyin": "huǒ",
+        "meaning": "fire radical"
+      },
+      {
+        "character": "攵",
+        "pinyin": "pū",
+        "meaning": "action radical; strike"
+      }
+    ]
+  },
+  {
+    "character": "通宵",
+    "pinyin": "tōngxiāo",
+    "english": "to stay up all night; all night long",
+    "examples": [
+      {
+        "chinese": "我昨晚通宵了。",
+        "pinyin": "Wǒ zuówǎn tōngxiāo le.",
+        "english": "I stayed up all night last night."
+      },
+      {
+        "chinese": "我们通宵打游戏。",
+        "pinyin": "Wǒmen tōngxiāo dǎ yóuxì.",
+        "english": "We played games all night."
+      },
+      {
+        "chinese": "他为了赶项目通宵工作。",
+        "pinyin": "Tā wèile gǎn xiàngmù tōngxiāo gōngzuò.",
+        "english": "He worked through the night to finish the project."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "辶",
+        "pinyin": "chuò",
+        "meaning": "walk radical; movement"
+      },
+      {
+        "character": "宀",
+        "pinyin": "mián",
+        "meaning": "roof radical"
+      }
+    ]
+  },
+  {
+    "character": "取消",
+    "pinyin": "qǔxiāo",
+    "english": "to cancel; call off; revoke",
+    "examples": [
+      {
+        "chinese": "我们取消了今天的会议。",
+        "pinyin": "Wǒmen qǔxiāo le jīntiān de huìyì.",
+        "english": "We cancelled today’s meeting."
+      },
+      {
+        "chinese": "航班因为天气原因被取消了。",
+        "pinyin": "Hángbān yīnwèi tiānqì yuányīn bèi qǔxiāo le.",
+        "english": "The flight was cancelled because of the weather."
+      },
+      {
+        "chinese": "如果你不想去，可以取消预约。",
+        "pinyin": "Rúguǒ nǐ bù xiǎng qù, kěyǐ qǔxiāo yùyuē.",
+        "english": "If you don’t want to go, you can cancel the appointment."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "扌",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      }
+    ]
+  },
+  {
+    "character": "宽",
+    "pinyin": "kuān",
+    "english": "wide; broad; spacious; generous",
+    "examples": [
+      {
+        "chinese": "这条路很宽。",
+        "pinyin": "Zhè tiáo lù hěn kuān.",
+        "english": "This road is very wide."
+      },
+      {
+        "chinese": "把门开宽一点。",
+        "pinyin": "Bǎ mén kāi kuān yìdiǎn.",
+        "english": "Open the door a little wider."
+      },
+      {
+        "chinese": "他的心胸很宽。",
+        "pinyin": "Tā de xīnxiōng hěn kuān.",
+        "english": "He is broad-minded."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "宀",
+        "pinyin": "mián",
+        "meaning": "roof radical"
+      },
+      {
+        "character": "儿",
+        "pinyin": "ér",
+        "meaning": "legs/person radical"
+      }
+    ]
+  },
+  {
+    "character": "倒",
+    "pinyin": "dào",
+    "english": "in contrast/disagreement: actually; rather; on the contrary",
+    "examples": [
+      {
+        "chinese": "我倒觉得不一定。",
+        "pinyin": "Wǒ dào juéde bù yídìng.",
+        "english": "I actually don’t think that’s necessarily true."
+      },
+      {
+        "chinese": "你说得有道理，我倒觉得还有别的可能。",
+        "pinyin": "Nǐ shuō de yǒu dàoli, wǒ dào juéde hái yǒu bié de kěnéng.",
+        "english": "What you said makes sense, but I actually think there are other possibilities."
+      },
+      {
+        "chinese": "他倒不是不想去，只是没时间。",
+        "pinyin": "Tā dào bú shì bù xiǎng qù, zhǐshì méi shíjiān.",
+        "english": "It’s not that he doesn’t want to go; rather, he just doesn’t have time."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "刂",
+        "pinyin": "dāo",
+        "meaning": "knife radical"
+      }
+    ]
+  },
+  {
+    "character": "例子",
+    "pinyin": "lìzi",
+    "english": "example; instance",
+    "examples": [
+      {
+        "chinese": "你能给我一个例子吗？",
+        "pinyin": "Nǐ néng gěi wǒ yí ge lìzi ma?",
+        "english": "Can you give me an example?"
+      },
+      {
+        "chinese": "这个例子很简单。",
+        "pinyin": "Zhège lìzi hěn jiǎndān.",
+        "english": "This example is very simple."
+      },
+      {
+        "chinese": "我不太明白，你再举个例子吧。",
+        "pinyin": "Wǒ bú tài míngbai, nǐ zài jǔ ge lìzi ba.",
+        "english": "I don’t quite understand. Give another example."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "亻",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      }
+    ]
+  },
+  {
+    "character": "老狐狸",
+    "pinyin": "lǎo húli",
+    "english": "old fox; sly/cunning and experienced person",
+    "examples": [
+      {
+        "chinese": "他可是个老狐狸，没那么容易被骗。",
+        "pinyin": "Tā kě shì ge lǎo húli, méi nàme róngyì bèi piàn.",
+        "english": "He’s a real old fox; he’s not easy to fool."
+      },
+      {
+        "chinese": "你别装了，你这个老狐狸！",
+        "pinyin": "Nǐ bié zhuāng le, nǐ zhège lǎo húli!",
+        "english": "Stop pretending, you sly old fox!"
+      },
+      {
+        "chinese": "那个老狐狸早就看出来了。",
+        "pinyin": "Nàge lǎo húli zǎo jiù kàn chūlái le.",
+        "english": "That old fox had figured it out long ago."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "老",
+        "pinyin": "lǎo",
+        "meaning": "old"
+      },
+      {
+        "character": "犭",
+        "pinyin": "quǎn",
+        "meaning": "dog/animal radical"
+      },
+      {
+        "character": "里",
+        "pinyin": "lǐ",
+        "meaning": "inside"
+      }
+    ]
+  },
+  {
+    "character": "遇到",
+    "pinyin": "yùdào",
+    "english": "to encounter; to run into; to meet",
+    "examples": [
+      {
+        "chinese": "我昨天遇到一个老朋友。",
+        "pinyin": "Wǒ zuótiān yùdào yí ge lǎo péngyou.",
+        "english": "I ran into an old friend yesterday."
+      },
+      {
+        "chinese": "遇到问题不要害怕。",
+        "pinyin": "Yùdào wèntí bú yào hàipà.",
+        "english": "Don’t be afraid when you encounter a problem."
+      },
+      {
+        "chinese": "我们在路上遇到了堵车。",
+        "pinyin": "Wǒmen zài lùshang yùdào le dǔchē.",
+        "english": "We encountered a traffic jam on the road."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "辶",
+        "pinyin": "chuò",
+        "meaning": "walk radical; movement"
+      },
+      {
+        "character": "刂",
+        "pinyin": "dāo",
+        "meaning": "knife radical (in 到)"
+      }
+    ]
+  },
+  {
+    "character": "如何",
+    "pinyin": "rúhé",
+    "english": "how; in what way; how to",
+    "examples": [
+      {
+        "chinese": "你打算如何解决这个问题？",
+        "pinyin": "Nǐ dǎsuàn rúhé jiějué zhège wèntí?",
+        "english": "How do you plan to solve this problem?"
+      },
+      {
+        "chinese": "我不知道该如何回答。",
+        "pinyin": "Wǒ bù zhīdào gāi rúhé huídá.",
+        "english": "I don’t know how to answer."
+      },
+      {
+        "chinese": "你认为我们应该如何处理？",
+        "pinyin": "Nǐ rènwéi wǒmen yīnggāi rúhé chǔlǐ?",
+        "english": "How do you think we should handle this?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "女",
+        "pinyin": "nǚ",
+        "meaning": "woman radical"
+      },
+      {
+        "character": "口",
+        "pinyin": "kǒu",
+        "meaning": "mouth"
+      }
+    ]
+  },
+  {
+    "character": "无比",
+    "pinyin": "wúbǐ",
+    "english": "incomparably; immensely; extremely",
+    "examples": [
+      {
+        "chinese": "我感到无比幸福。",
+        "pinyin": "Wǒ gǎndào wúbǐ xìngfú.",
+        "english": "I feel incredibly happy."
+      },
+      {
+        "chinese": "他对自己的成绩感到无比自豪。",
+        "pinyin": "Tā duì zìjǐ de chéngjì gǎndào wúbǐ zìháo.",
+        "english": "He feels immensely proud of his achievements."
+      },
+      {
+        "chinese": "这个消息让她无比震惊。",
+        "pinyin": "Zhège xiāoxi ràng tā wúbǐ zhènjīng.",
+        "english": "The news shocked her immensely."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "一",
+        "pinyin": "yī",
+        "meaning": "one"
+      },
+      {
+        "character": "比",
+        "pinyin": "bǐ",
+        "meaning": "compare"
+      }
+    ]
+  },
+  {
+    "character": "留着",
+    "pinyin": "liúzhe",
+    "english": "keep it; leave it there; save it for later",
+    "examples": [
+      {
+        "chinese": "这个你留着吧，以后可能有用。",
+        "pinyin": "Zhège nǐ liúzhe ba, yǐhòu kěnéng yǒuyòng.",
+        "english": "Keep this; it might be useful later."
+      },
+      {
+        "chinese": "这张票别扔，留着。",
+        "pinyin": "Zhè zhāng piào bié rēng, liúzhe.",
+        "english": "Don’t throw away this ticket. Keep it."
+      },
+      {
+        "chinese": "钱先留着，以后再用。",
+        "pinyin": "Qián xiān liúzhe, yǐhòu zài yòng.",
+        "english": "Save the money for now and use it later."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "田",
+        "pinyin": "tián",
+        "meaning": "field"
+      },
+      {
+        "character": "目",
+        "pinyin": "mù",
+        "meaning": "eye"
+      }
+    ]
+  },
+  {
+    "character": "调查",
+    "pinyin": "diàochá",
+    "english": "to investigate; investigation; survey",
+    "examples": [
+      {
+        "chinese": "警察正在调查这起案件。",
+        "pinyin": "Jǐngchá zhèngzài diàochá zhè qǐ ànjiàn.",
+        "english": "The police are investigating this case."
+      },
+      {
+        "chinese": "我们需要调查事情的真相。",
+        "pinyin": "Wǒmen xūyào diàochá shìqing de zhēnxiàng.",
+        "english": "We need to investigate the truth of what happened."
+      },
+      {
+        "chinese": "警方调查了现场。",
+        "pinyin": "Jǐngfāng diàochá le xiànchǎng.",
+        "english": "The police investigated the scene."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "讠",
+        "pinyin": "yán",
+        "meaning": "speech radical"
+      },
+      {
+        "character": "言",
+        "pinyin": "yán",
+        "meaning": "speech"
+      }
+    ]
+  },
+  {
+    "character": "批改",
+    "pinyin": "pīgǎi",
+    "english": "to mark/correct; grade and correct work",
+    "examples": [
+      {
+        "chinese": "老师正在批改作业。",
+        "pinyin": "Lǎoshī zhèngzài pīgǎi zuòyè.",
+        "english": "The teacher is marking the homework."
+      },
+      {
+        "chinese": "老师昨天批改了我们的试卷。",
+        "pinyin": "Lǎoshī zuótiān pīgǎi le wǒmen de shìjuàn.",
+        "english": "The teacher marked our exam papers yesterday."
+      },
+      {
+        "chinese": "这些作文还没批改完。",
+        "pinyin": "Zhèxiē zuòwén hái méi pīgǎi wán.",
+        "english": "These essays haven’t been marked yet."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "扌",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      },
+      {
+        "character": "攵",
+        "pinyin": "pū",
+        "meaning": "action radical; strike"
+      }
+    ]
+  },
+  {
+    "character": "辫子",
+    "pinyin": "biànzi",
+    "english": "braid; plait; pigtail",
+    "examples": [
+      {
+        "chinese": "她留着一条长辫子。",
+        "pinyin": "Tā liúzhe yì tiáo cháng biànzi.",
+        "english": "She has a long braid."
+      },
+      {
+        "chinese": "她正在给女儿扎辫子。",
+        "pinyin": "Tā zhèngzài gěi nǚ'ér zā biànzi.",
+        "english": "She is braiding her daughter’s hair."
+      },
+      {
+        "chinese": "这个女孩有两条辫子。",
+        "pinyin": "Zhège nǚhái yǒu liǎng tiáo biànzi.",
+        "english": "This girl has two braids."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "辛",
+        "pinyin": "xīn",
+        "meaning": "bitter; pungent"
+      },
+      {
+        "character": "糸",
+        "pinyin": "mì",
+        "meaning": "silk radical"
+      },
+      {
+        "character": "子",
+        "pinyin": "zǐ",
+        "meaning": "child"
+      }
+    ]
+  },
+  {
+    "character": "评分",
+    "pinyin": "píngfēn",
+    "english": "to score/rate; rating; score",
+    "examples": [
+      {
+        "chinese": "这部电影的评分很高。",
+        "pinyin": "Zhè bù diànyǐng de píngfēn hěn gāo.",
+        "english": "This movie has a high rating."
+      },
+      {
+        "chinese": "你给这部电视剧评分多少？",
+        "pinyin": "Nǐ gěi zhè bù diànshìjù píngfēn duōshao?",
+        "english": "What rating would you give this TV series?"
+      },
+      {
+        "chinese": "老师正在给我们的作业评分。",
+        "pinyin": "Lǎoshī zhèngzài gěi wǒmen de zuòyè píngfēn.",
+        "english": "The teacher is grading our homework."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "讠",
+        "pinyin": "yán",
+        "meaning": "speech radical"
+      },
+      {
+        "character": "贝",
+        "pinyin": "bèi",
+        "meaning": "shell; money radical"
+      }
+    ]
+  },
+  {
+    "character": "平凡",
+    "pinyin": "píngfán",
+    "english": "ordinary; commonplace; unremarkable",
+    "examples": [
+      {
+        "chinese": "他只是一个平凡的人。",
+        "pinyin": "Tā zhǐshì yí ge píngfán de rén.",
+        "english": "He is just an ordinary person."
+      },
+      {
+        "chinese": "我希望过平凡而幸福的生活。",
+        "pinyin": "Wǒ xīwàng guò píngfán ér xìngfú de shēnghuó.",
+        "english": "I hope to live an ordinary but happy life."
+      },
+      {
+        "chinese": "看起来很平凡，其实很不简单。",
+        "pinyin": "Kàn qǐlái hěn píngfán, qíshí hěn bù jiǎndān.",
+        "english": "It looks ordinary, but it’s actually far from simple."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "干",
+        "pinyin": "gān",
+        "meaning": "dry; stem"
+      },
+      {
+        "character": "几",
+        "pinyin": "jī",
+        "meaning": "table; how many"
+      }
+    ]
+  },
+  {
+    "character": "台阶",
+    "pinyin": "táijiē",
+    "english": "step/stair; figuratively a way out or room to save face",
+    "examples": [
+      {
+        "chinese": "小心，前面有台阶。",
+        "pinyin": "Xiǎoxīn, qiánmiàn yǒu táijiē.",
+        "english": "Careful, there’s a step ahead."
+      },
+      {
+        "chinese": "他慢慢走下台阶。",
+        "pinyin": "Tā mànmàn zǒu xià táijiē.",
+        "english": "He slowly walked down the steps."
+      },
+      {
+        "chinese": "给他个台阶下吧。",
+        "pinyin": "Gěi tā ge táijiē xià ba.",
+        "english": "Give him a way to back down gracefully."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "口",
+        "pinyin": "kǒu",
+        "meaning": "mouth"
+      },
+      {
+        "character": "阝",
+        "pinyin": "fù",
+        "meaning": "mound/city radical"
+      }
+    ]
+  },
+  {
+    "character": "吃一堑，长一智",
+    "pinyin": "chī yí qiàn, zhǎng yí zhì",
+    "english": "learn from one’s mistakes; a setback makes one wiser",
+    "examples": [
+      {
+        "chinese": "这次失败让我吃一堑，长一智。",
+        "pinyin": "Zhè cì shībài ràng wǒ chī yí qiàn, zhǎng yí zhì.",
+        "english": "This failure taught me a lesson."
+      },
+      {
+        "chinese": "别太难过，吃一堑，长一智。",
+        "pinyin": "Bié tài nánguò, chī yí qiàn, zhǎng yí zhì.",
+        "english": "Don’t be too upset. Learn from the experience."
+      },
+      {
+        "chinese": "这次被骗以后，他终于吃一堑，长一智了。",
+        "pinyin": "Zhè cì bèi piàn yǐhòu, tā zhōngyú chī yí qiàn, zhǎng yí zhì le.",
+        "english": "After being scammed this time, he finally learned his lesson."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "口",
+        "pinyin": "kǒu",
+        "meaning": "mouth"
+      },
+      {
+        "character": "土",
+        "pinyin": "tǔ",
+        "meaning": "earth; soil radical"
+      },
+      {
+        "character": "长",
+        "pinyin": "cháng",
+        "meaning": "long; grow"
+      },
+      {
+        "character": "日",
+        "pinyin": "rì",
+        "meaning": "sun; day"
+      }
+    ]
+  },
+  {
+    "character": "引用",
+    "pinyin": "yǐnyòng",
+    "english": "to quote; cite; quotation/citation",
+    "examples": [
+      {
+        "chinese": "写论文的时候要正确引用资料。",
+        "pinyin": "Xiě lùnwén de shíhou yào zhèngquè yǐnyòng zīliào.",
+        "english": "When writing a paper, you need to cite sources correctly."
+      },
+      {
+        "chinese": "他经常引用名人的话来支持自己的观点。",
+        "pinyin": "Tā jīngcháng yǐnyòng míngrén de huà lái zhīchí zìjǐ de guāndiǎn.",
+        "english": "He often quotes famous people to support his views."
+      },
+      {
+        "chinese": "这篇文章引用了很多历史资料。",
+        "pinyin": "Zhè piān wénzhāng yǐnyòng le hěn duō lìshǐ zīliào.",
+        "english": "This article cites a lot of historical sources."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "弓",
+        "pinyin": "gōng",
+        "meaning": "bow radical"
+      },
+      {
+        "character": "用",
+        "pinyin": "yòng",
+        "meaning": "use"
+      }
+    ]
+  },
+  {
+    "character": "内卷",
+    "pinyin": "nèijuǎn",
+    "english": "involution; excessive/pointless competition; rat-race competition",
+    "examples": [
+      {
+        "chinese": "大家都在内卷，谁也不敢放松。",
+        "pinyin": "Dàjiā dōu zài nèijuǎn, shéi yě bù gǎn fàngsōng.",
+        "english": "Everyone is caught up in the rat race, and nobody dares to relax."
+      },
+      {
+        "chinese": "为了考高分，学生们越来越内卷。",
+        "pinyin": "Wèile kǎo gāofēn, xuéshengmen yuèláiyuè nèijuǎn.",
+        "english": "To get high scores, the students are becoming increasingly caught up in excessive competition."
+      },
+      {
+        "chinese": "别再内卷了，早点睡吧。",
+        "pinyin": "Bié zài nèijuǎn le, zǎodiǎn shuì ba.",
+        "english": "Stop competing so obsessively and go to bed earlier."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "冂",
+        "pinyin": "jiōng",
+        "meaning": "border/enclosure radical"
+      },
+      {
+        "character": "⺋",
+        "pinyin": "juǎn",
+        "meaning": "scroll-like component"
+      }
+    ]
+  },
+  {
+    "character": "相反",
+    "pinyin": "xiāngfǎn",
+    "english": "opposite; contrary; conversely; on the contrary",
+    "examples": [
+      {
+        "chinese": "他们的观点完全相反。",
+        "pinyin": "Tāmen de guāndiǎn wánquán xiāngfǎn.",
+        "english": "Their views are completely opposite."
+      },
+      {
+        "chinese": "我不觉得他很冷漠，相反，他非常热心。",
+        "pinyin": "Wǒ bù juéde tā hěn lěngmò, xiāngfǎn, tā fēicháng rèxīn.",
+        "english": "I don’t think he’s cold-hearted. On the contrary, he’s very warm-hearted."
+      },
+      {
+        "chinese": "他的做法看起来很冒险，相反，另一个方案更加稳妥。",
+        "pinyin": "Tā de zuòfǎ kàn qǐlái hěn màoxiǎn, xiāngfǎn, lìng yí ge fāng'àn gèng jiā wěntuǒ.",
+        "english": "His approach looks risky; by contrast, the other plan is more cautious."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "木",
+        "pinyin": "mù",
+        "meaning": "wood"
+      },
+      {
+        "character": "又",
+        "pinyin": "yòu",
+        "meaning": "hand"
+      }
+    ]
+  },
+  {
+    "character": "突破",
+    "pinyin": "tūpò",
+    "english": "to break through; make a breakthrough; overcome",
+    "examples": [
+      {
+        "chinese": "我们终于突破了这个技术难题。",
+        "pinyin": "Wǒmen zhōngyú tūpò le zhège jìshù nántí.",
+        "english": "We finally overcame this technical challenge."
+      },
+      {
+        "chinese": "他在比赛中突破了自己的最好成绩。",
+        "pinyin": "Tā zài bǐsài zhōng tūpò le zìjǐ de zuì hǎo chéngjì.",
+        "english": "He surpassed his previous best performance in the competition."
+      },
+      {
+        "chinese": "这个项目取得了重大突破。",
+        "pinyin": "Zhège xiàngmù qǔdé le zhòngdà tūpò.",
+        "english": "This project achieved a major breakthrough."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "石",
+        "pinyin": "shí",
+        "meaning": "stone radical"
+      },
+      {
+        "character": "辶",
+        "pinyin": "chuò",
+        "meaning": "walk radical; movement"
+      }
+    ]
+  },
+  {
+    "character": "捣乱",
+    "pinyin": "dǎluàn",
+    "english": "make trouble; cause trouble; mess around",
+    "examples": [
+      {
+        "chinese": "你别在这里捣乱。",
+        "pinyin": "Nǐ bié zài zhèlǐ dǎluàn.",
+        "english": "Don’t cause trouble here."
+      },
+      {
+        "chinese": "孩子们一来就喜欢捣乱。",
+        "pinyin": "Háizimen yì lái jiù xǐhuan dǎluàn.",
+        "english": "Whenever the kids come, they like to mess around."
+      },
+      {
+        "chinese": "别在别人工作的时候捣乱。",
+        "pinyin": "Bié zài biérén gōngzuò de shíhou dǎluàn.",
+        "english": "Don’t cause trouble while other people are working."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "捣",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      },
+      {
+        "character": "乱",
+        "pinyin": "yǐ",
+        "meaning": "second; bent-stroke radical"
+      }
+    ]
+  },
+  {
+    "character": "乖乖",
+    "pinyin": "guāiguāi",
+    "english": "obediently; nicely; be a good kid",
+    "examples": [
+      {
+        "chinese": "你乖乖在家等我。",
+        "pinyin": "Nǐ guāiguāi zài jiā děng wǒ.",
+        "english": "Stay home and wait for me."
+      },
+      {
+        "chinese": "乖乖坐着，别乱跑。",
+        "pinyin": "Guāiguāi zuòzhe, bié luàn pǎo.",
+        "english": "Sit nicely and don’t run around."
+      },
+      {
+        "chinese": "你先乖乖吃饭。",
+        "pinyin": "Nǐ xiān guāiguāi chīfàn.",
+        "english": "Be a good kid and eat first."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "乖",
+        "pinyin": "piě",
+        "meaning": "slanting-stroke radical"
+      }
+    ]
+  },
+  {
+    "character": "组合",
+    "pinyin": "zǔhé",
+    "english": "group; band; ensemble; combination",
+    "examples": [
+      {
+        "chinese": "他们是一个音乐组合。",
+        "pinyin": "Tāmen shì yí ge yīnyuè zǔhé.",
+        "english": "They are a musical group."
+      },
+      {
+        "chinese": "这个组合有四个成员。",
+        "pinyin": "Zhège zǔhé yǒu sì ge chéngyuán.",
+        "english": "This group has four members."
+      },
+      {
+        "chinese": "这个颜色组合很好看。",
+        "pinyin": "Zhège yánsè zǔhé hěn hǎokàn.",
+        "english": "This color combination looks good."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "组",
+        "pinyin": "sī",
+        "meaning": "silk radical"
+      },
+      {
+        "character": "合",
+        "pinyin": "kǒu",
+        "meaning": "mouth radical"
+      }
+    ]
+  },
+  {
+    "character": "彩排",
+    "pinyin": "cǎipái",
+    "english": "rehearsal; rehearse",
+    "examples": [
+      {
+        "chinese": "下午我们要彩排。",
+        "pinyin": "Xiàwǔ wǒmen yào cǎipái.",
+        "english": "We have rehearsal this afternoon."
+      },
+      {
+        "chinese": "彩排内容临时改了。",
+        "pinyin": "Cǎipái nèiróng línshí gǎi le.",
+        "english": "The rehearsal material was changed at the last minute."
+      },
+      {
+        "chinese": "大家正在为演出彩排。",
+        "pinyin": "Dàjiā zhèngzài wèi yǎnchū cǎipái.",
+        "english": "Everyone is rehearsing for the performance."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "彩",
+        "pinyin": "shān",
+        "meaning": "hair; decorative-pattern radical"
+      },
+      {
+        "character": "排",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      }
+    ]
+  },
+  {
+    "character": "随意",
+    "pinyin": "suíyì",
+    "english": "casually; as one likes; arbitrarily",
+    "examples": [
+      {
+        "chinese": "你可以随意看看。",
+        "pinyin": "Nǐ kěyǐ suíyì kànkan.",
+        "english": "You can have a look around."
+      },
+      {
+        "chinese": "不要随意改变计划。",
+        "pinyin": "Bú yào suíyì gǎibiàn jìhuà.",
+        "english": "Don’t change the plan arbitrarily."
+      },
+      {
+        "chinese": "大家随意坐吧。",
+        "pinyin": "Dàjiā suíyì zuò ba.",
+        "english": "Everyone, sit wherever you like."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "随",
+        "pinyin": "fù",
+        "meaning": "mound radical"
+      },
+      {
+        "character": "意",
+        "pinyin": "xīn",
+        "meaning": "heart; mind radical"
+      }
+    ]
+  },
+  {
+    "character": "录制",
+    "pinyin": "lùzhì",
+    "english": "to record; recording",
+    "examples": [
+      {
+        "chinese": "他们正在录制节目。",
+        "pinyin": "Tāmen zhèngzài lùzhì jiémù.",
+        "english": "They are recording a program."
+      },
+      {
+        "chinese": "节目录制还没结束。",
+        "pinyin": "Jiémù lùzhì hái méi jiéshù.",
+        "english": "The program recording isn’t finished yet."
+      },
+      {
+        "chinese": "我们下午录制一个视频。",
+        "pinyin": "Wǒmen xiàwǔ lùzhì yí ge shìpín.",
+        "english": "We are recording a video this afternoon."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "录",
+        "pinyin": "jì",
+        "meaning": "snout radical"
+      },
+      {
+        "character": "制",
+        "pinyin": "dāo",
+        "meaning": "knife; blade radical"
+      }
+    ]
+  },
+  {
+    "character": "期间",
+    "pinyin": "qījiān",
+    "english": "during; in the period of",
+    "examples": [
+      {
+        "chinese": "上课期间不能玩手机。",
+        "pinyin": "Shàngkè qījiān bù néng wán shǒujī.",
+        "english": "You can’t use your phone during class."
+      },
+      {
+        "chinese": "在旅行期间我拍了很多照片。",
+        "pinyin": "Zài lǚxíng qījiān wǒ pāi le hěn duō zhàopiàn.",
+        "english": "I took many photos during the trip."
+      },
+      {
+        "chinese": "考试期间大家都很忙。",
+        "pinyin": "Kǎoshì qījiān dàjiā dōu hěn máng.",
+        "english": "Everyone is very busy during exam period."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "期",
+        "pinyin": "yuè",
+        "meaning": "moon; month radical"
+      },
+      {
+        "character": "间",
+        "pinyin": "mén",
+        "meaning": "gate; door radical"
+      }
+    ]
+  },
+  {
+    "character": "可疑",
+    "pinyin": "kěyí",
+    "english": "suspicious; questionable",
+    "examples": [
+      {
+        "chinese": "那个人看起来很可疑。",
+        "pinyin": "Nàge rén kàn qǐlái hěn kěyí.",
+        "english": "That person looks suspicious."
+      },
+      {
+        "chinese": "没发现可疑人员。",
+        "pinyin": "Méi fāxiàn kěyí rényuán.",
+        "english": "No suspicious person was found."
+      },
+      {
+        "chinese": "他的行为很可疑。",
+        "pinyin": "Tā de xíngwéi hěn kěyí.",
+        "english": "His behavior is very suspicious."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "可",
+        "pinyin": "kǒu",
+        "meaning": "mouth radical"
+      },
+      {
+        "character": "疑",
+        "pinyin": "pǐ",
+        "meaning": "bolt-of-cloth radical"
+      }
+    ]
+  },
+  {
+    "character": "监控",
+    "pinyin": "jiānkòng",
+    "english": "surveillance; security camera footage; monitor",
+    "examples": [
+      {
+        "chinese": "你看一下监控。",
+        "pinyin": "Nǐ kàn yíxià jiānkòng.",
+        "english": "Check the surveillance footage."
+      },
+      {
+        "chinese": "监控拍到了他。",
+        "pinyin": "Jiānkòng pāi dào le tā.",
+        "english": "The security camera caught him."
+      },
+      {
+        "chinese": "我们先查监控。",
+        "pinyin": "Wǒmen xiān chá jiānkòng.",
+        "english": "Let’s check the surveillance footage first."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "监",
+        "pinyin": "mǐn",
+        "meaning": "vessel; dish radical"
+      },
+      {
+        "character": "控",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      }
+    ]
+  },
+  {
+    "character": "平静",
+    "pinyin": "píngjìng",
+    "english": "calm; peaceful; composed",
+    "examples": [
+      {
+        "chinese": "他的表情很平静。",
+        "pinyin": "Tā de biǎoqíng hěn píngjìng.",
+        "english": "His expression is very calm."
+      },
+      {
+        "chinese": "发生这种事以后，她还是很平静。",
+        "pinyin": "Fāshēng zhè zhǒng shì yǐhòu, tā háishi hěn píngjìng.",
+        "english": "Even after that happened, she remained calm."
+      },
+      {
+        "chinese": "你先冷静一点，保持平静。",
+        "pinyin": "Nǐ xiān lěngjìng yìdiǎn, bǎochí píngjìng.",
+        "english": "Calm down a little and stay composed."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "平",
+        "pinyin": "gān",
+        "meaning": "dry; stem radical"
+      },
+      {
+        "character": "静",
+        "pinyin": "qīng",
+        "meaning": "green; blue-green radical"
+      }
+    ]
+  },
+  {
+    "character": "刻意",
+    "pinyin": "kèyì",
+    "english": "deliberately; intentionally",
+    "examples": [
+      {
+        "chinese": "他不是刻意这么做的。",
+        "pinyin": "Tā bú shì kèyì zhème zuò de.",
+        "english": "He didn’t do it intentionally."
+      },
+      {
+        "chinese": "她刻意避开了这个问题。",
+        "pinyin": "Tā kèyì bìkāi le zhège wèntí.",
+        "english": "She deliberately avoided this issue."
+      },
+      {
+        "chinese": "我没有刻意隐瞒。",
+        "pinyin": "Wǒ méiyǒu kèyì yǐnmán.",
+        "english": "I didn’t deliberately hide it."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "刻",
+        "pinyin": "dāo",
+        "meaning": "knife; blade radical"
+      },
+      {
+        "character": "意",
+        "pinyin": "xīn",
+        "meaning": "heart; mind radical"
+      }
+    ]
+  },
+  {
+    "character": "打扫",
+    "pinyin": "dǎsǎo",
+    "english": "clean; clean up",
+    "examples": [
+      {
+        "chinese": "我周末要打扫房间。",
+        "pinyin": "Wǒ zhōumò yào dǎsǎo fángjiān.",
+        "english": "I need to clean my room this weekend."
+      },
+      {
+        "chinese": "她每天早上打扫办公室。",
+        "pinyin": "Tā měitiān zǎoshang dǎsǎo bàngōngshì.",
+        "english": "She cleans the office every morning."
+      },
+      {
+        "chinese": "先把桌子打扫干净。",
+        "pinyin": "Xiān bǎ zhuōzi dǎsǎo gānjìng.",
+        "english": "Clean the table first."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "打",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      },
+      {
+        "character": "扫",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      }
+    ]
+  },
+  {
+    "character": "万一",
+    "pinyin": "wànyī",
+    "english": "what if; in case; should something unexpected happen",
+    "examples": [
+      {
+        "chinese": "万一迟到了怎么办？",
+        "pinyin": "Wànyī chídào le zěnme bàn?",
+        "english": "What if we’re late?"
+      },
+      {
+        "chinese": "带把伞吧，万一下雨呢？",
+        "pinyin": "Dài bǎ sǎn ba, wànyī xiàyǔ ne?",
+        "english": "Take an umbrella, in case it rains."
+      },
+      {
+        "chinese": "万一他不同意呢？",
+        "pinyin": "Wànyī tā bù tóngyì ne?",
+        "english": "What if he doesn’t agree?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "万",
+        "pinyin": "yī",
+        "meaning": "one; one radical"
+      }
+    ]
+  },
+  {
+    "character": "不得不",
+    "pinyin": "bùdébù",
+    "english": "have no choice but to; be forced to",
+    "examples": [
+      {
+        "chinese": "我不得不回去了。",
+        "pinyin": "Wǒ bùdébù huíqù le.",
+        "english": "I have no choice but to go back."
+      },
+      {
+        "chinese": "下雨了，我们不得不取消计划。",
+        "pinyin": "Xiàyǔ le, wǒmen bùdébù qǔxiāo jìhuà.",
+        "english": "It rained, so we had to cancel the plan."
+      },
+      {
+        "chinese": "我不得不重新开始。",
+        "pinyin": "Wǒ bùdébù chóngxīn kāishǐ.",
+        "english": "I had no choice but to start over."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "不",
+        "pinyin": "yī",
+        "meaning": "one radical"
+      },
+      {
+        "character": "得",
+        "pinyin": "chì",
+        "meaning": "step radical"
+      }
+    ]
+  },
+  {
+    "character": "渐渐",
+    "pinyin": "jiànjiàn",
+    "english": "gradually; little by little",
+    "examples": [
+      {
+        "chinese": "天渐渐亮了。",
+        "pinyin": "Tiān jiànjiàn liàng le.",
+        "english": "It gradually became light."
+      },
+      {
+        "chinese": "我渐渐习惯了这里的生活。",
+        "pinyin": "Wǒ jiànjiàn xíguàn le zhèlǐ de shēnghuó.",
+        "english": "I gradually got used to life here."
+      },
+      {
+        "chinese": "雨渐渐停了。",
+        "pinyin": "Yǔ jiànjiàn tíng le.",
+        "english": "The rain gradually stopped."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "渐",
+        "pinyin": "shuǐ",
+        "meaning": "water radical"
+      }
+    ]
+  },
+  {
+    "character": "重视",
+    "pinyin": "zhòngshì",
+    "english": "attach importance to; value; take seriously",
+    "examples": [
+      {
+        "chinese": "我很重视这次机会。",
+        "pinyin": "Wǒ hěn zhòngshì zhè cì jīhuì.",
+        "english": "I really value this opportunity."
+      },
+      {
+        "chinese": "公司非常重视安全问题。",
+        "pinyin": "Gōngsī fēicháng zhòngshì ānquán wèntí.",
+        "english": "The company takes safety issues very seriously."
+      },
+      {
+        "chinese": "我们要重视这个问题。",
+        "pinyin": "Wǒmen yào zhòngshì zhège wèntí.",
+        "english": "We need to take this issue seriously."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "重",
+        "pinyin": "lǐ",
+        "meaning": "village; inside radical"
+      },
+      {
+        "character": "视",
+        "pinyin": "jiàn",
+        "meaning": "see; sight radical"
+      }
+    ]
+  },
+  {
+    "character": "理想",
+    "pinyin": "lǐxiǎng",
+    "english": "ideal; satisfactory; desirable",
+    "examples": [
+      {
+        "chinese": "今天的天气不太理想。",
+        "pinyin": "Jīntiān de tiānqì bú tài lǐxiǎng.",
+        "english": "Today’s weather isn’t ideal."
+      },
+      {
+        "chinese": "结果比我们想象的更理想。",
+        "pinyin": "Jiéguǒ bǐ wǒmen xiǎngxiàng de gèng lǐxiǎng.",
+        "english": "The result was better than we expected."
+      },
+      {
+        "chinese": "这个方案的效果不太理想。",
+        "pinyin": "Zhège fāng’àn de xiàoguǒ bú tài lǐxiǎng.",
+        "english": "The result of this plan is not very satisfactory."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "理",
+        "pinyin": "wáng",
+        "meaning": "jade; king radical"
+      },
+      {
+        "character": "想",
+        "pinyin": "xīn",
+        "meaning": "heart; mind radical"
+      }
+    ]
+  },
+  {
+    "character": "停留",
+    "pinyin": "tíngliú",
+    "english": "stay; remain; linger",
+    "examples": [
+      {
+        "chinese": "他在那里停留了十分钟。",
+        "pinyin": "Tā zài nàlǐ tíngliú le shí fēnzhōng.",
+        "english": "He stayed there for ten minutes."
+      },
+      {
+        "chinese": "不要在门口停留。",
+        "pinyin": "Bú yào zài ménkǒu tíngliú.",
+        "english": "Don’t linger at the entrance."
+      },
+      {
+        "chinese": "我只在那里停留了一晚。",
+        "pinyin": "Wǒ zhǐ zài nàlǐ tíngliú le yì wǎn.",
+        "english": "I only stayed there for one night."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "停",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "留",
+        "pinyin": "tián",
+        "meaning": "field radical"
+      }
+    ]
+  },
+  {
+    "character": "整整",
+    "pinyin": "zhěngzhěng",
+    "english": "a full; entire; whole",
+    "examples": [
+      {
+        "chinese": "我等了你整整一个小时。",
+        "pinyin": "Wǒ děng le nǐ zhěngzhěng yí ge xiǎoshí.",
+        "english": "I waited for you for a full hour."
+      },
+      {
+        "chinese": "他整整睡了十二个小时。",
+        "pinyin": "Tā zhěngzhěng shuì le shí’èr ge xiǎoshí.",
+        "english": "He slept for a full twelve hours."
+      },
+      {
+        "chinese": "我们走了整整一天。",
+        "pinyin": "Wǒmen zǒu le zhěngzhěng yì tiān.",
+        "english": "We walked for an entire day."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "整",
+        "pinyin": "pū",
+        "meaning": "action; strike radical"
+      }
+    ]
+  },
+  {
+    "character": "犹豫",
+    "pinyin": "yóuyù",
+    "english": "hesitate; be undecided",
+    "examples": [
+      {
+        "chinese": "我还在犹豫要不要去。",
+        "pinyin": "Wǒ hái zài yóuyù yào bú yào qù.",
+        "english": "I’m still deciding whether to go."
+      },
+      {
+        "chinese": "别犹豫了，快走吧。",
+        "pinyin": "Bié yóuyù le, kuài zǒu ba.",
+        "english": "Don’t hesitate anymore; let’s go."
+      },
+      {
+        "chinese": "她犹豫了一下才回答。",
+        "pinyin": "Tā yóuyù le yíxià cái huídá.",
+        "english": "She hesitated for a moment before answering."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "犹",
+        "pinyin": "quǎn",
+        "meaning": "dog radical"
+      },
+      {
+        "character": "豫",
+        "pinyin": "shǐ",
+        "meaning": "pig radical"
+      }
+    ]
+  },
+  {
+    "character": "争取",
+    "pinyin": "zhēngqǔ",
+    "english": "strive for; fight for; try to obtain",
+    "examples": [
+      {
+        "chinese": "我要争取这个机会。",
+        "pinyin": "Wǒ yào zhēngqǔ zhège jīhuì.",
+        "english": "I want to fight for this opportunity."
+      },
+      {
+        "chinese": "我们争取明天完成。",
+        "pinyin": "Wǒmen zhēngqǔ míngtiān wánchéng.",
+        "english": "We’ll try our best to finish tomorrow."
+      },
+      {
+        "chinese": "她一直在争取更多时间。",
+        "pinyin": "Tā yìzhí zài zhēngqǔ gèng duō shíjiān.",
+        "english": "She has been trying to gain more time."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "争",
+        "pinyin": "dāo",
+        "meaning": "knife radical"
+      },
+      {
+        "character": "取",
+        "pinyin": "yòu",
+        "meaning": "again; hand radical"
+      }
+    ]
+  },
+  {
+    "character": "晕倒",
+    "pinyin": "yūndǎo",
+    "english": "faint; pass out",
+    "examples": [
+      {
+        "chinese": "他突然晕倒了。",
+        "pinyin": "Tā tūrán yūndǎo le.",
+        "english": "He suddenly fainted."
+      },
+      {
+        "chinese": "她昨天在办公室晕倒了。",
+        "pinyin": "Tā zuótiān zài bàngōngshì yūndǎo le.",
+        "english": "She fainted at the office yesterday."
+      },
+      {
+        "chinese": "他差点晕倒。",
+        "pinyin": "Tā chàdiǎn yūndǎo.",
+        "english": "He almost fainted."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "晕",
+        "pinyin": "rì",
+        "meaning": "sun radical"
+      },
+      {
+        "character": "倒",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      }
+    ]
+  },
+  {
+    "character": "突然间",
+    "pinyin": "tūránjiān",
+    "english": "suddenly; all of a sudden",
+    "examples": [
+      {
+        "chinese": "天突然间黑了。",
+        "pinyin": "Tiān tūránjiān hēi le.",
+        "english": "It suddenly became dark."
+      },
+      {
+        "chinese": "他突然间不说话了。",
+        "pinyin": "Tā tūránjiān bù shuōhuà le.",
+        "english": "He suddenly stopped talking."
+      },
+      {
+        "chinese": "她突然间笑了。",
+        "pinyin": "Tā tūránjiān xiào le.",
+        "english": "She suddenly laughed."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "突",
+        "pinyin": "xué",
+        "meaning": "cave radical"
+      },
+      {
+        "character": "然",
+        "pinyin": "huǒ",
+        "meaning": "fire radical"
+      },
+      {
+        "character": "间",
+        "pinyin": "mén",
+        "meaning": "gate; door radical"
+      }
+    ]
+  },
+  {
+    "character": "千万",
+    "pinyin": "qiānwàn",
+    "english": "by all means; definitely; whatever you do",
+    "examples": [
+      {
+        "chinese": "千万别告诉他。",
+        "pinyin": "Qiānwàn bié gàosu tā.",
+        "english": "Whatever you do, don’t tell him."
+      },
+      {
+        "chinese": "千万不要迟到。",
+        "pinyin": "Qiānwàn bú yào chídào.",
+        "english": "Whatever you do, don’t be late."
+      },
+      {
+        "chinese": "这件事你千万要小心。",
+        "pinyin": "Zhè jiàn shì nǐ qiānwàn yào xiǎoxīn.",
+        "english": "Be very careful about this."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "千",
+        "pinyin": "shí",
+        "meaning": "ten radical"
+      },
+      {
+        "character": "万",
+        "pinyin": "yī",
+        "meaning": "one radical"
+      }
+    ]
+  },
+  {
+    "character": "市面上",
+    "pinyin": "shìmiàn shàng",
+    "english": "on the market; commercially available",
+    "examples": [
+      {
+        "chinese": "市面上有很多类似的产品。",
+        "pinyin": "Shìmiàn shàng yǒu hěn duō lèisì de chǎnpǐn.",
+        "english": "There are many similar products on the market."
+      },
+      {
+        "chinese": "这种产品市面上还没有。",
+        "pinyin": "Zhè zhǒng chǎnpǐn shìmiàn shàng hái méiyǒu.",
+        "english": "This product isn’t on the market yet."
+      },
+      {
+        "chinese": "市面上很难找到这种配件。",
+        "pinyin": "Shìmiàn shàng hěn nán zhǎodào zhè zhǒng pèijiàn.",
+        "english": "It’s hard to find this kind of part on the market."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "市",
+        "pinyin": "jīn",
+        "meaning": "cloth radical"
+      },
+      {
+        "character": "面",
+        "pinyin": "miàn",
+        "meaning": "face radical"
+      },
+      {
+        "character": "上",
+        "pinyin": "yī",
+        "meaning": "one radical"
+      }
+    ]
+  },
+  {
+    "character": "出入",
+    "pinyin": "chūrù",
+    "english": "enter and leave; go in and out",
+    "examples": [
+      {
+        "chinese": "这里禁止出入。",
+        "pinyin": "Zhèlǐ jìnzhǐ chūrù.",
+        "english": "Entry and exit are prohibited here."
+      },
+      {
+        "chinese": "他可以随意出入办公室。",
+        "pinyin": "Tā kěyǐ suíyì chūrù bàngōngshì.",
+        "english": "He can freely enter and leave the office."
+      },
+      {
+        "chinese": "人员出入要登记。",
+        "pinyin": "Rényuán chūrù yào dēngjì.",
+        "english": "People entering and leaving have to register."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "出",
+        "pinyin": "kǎn",
+        "meaning": "open-box radical"
+      },
+      {
+        "character": "入",
+        "pinyin": "rù",
+        "meaning": "enter radical"
+      }
+    ]
+  },
+  {
+    "character": "愚蠢",
+    "pinyin": "yúchǔn",
+    "english": "stupid; foolish; stupidity",
+    "examples": [
+      {
+        "chinese": "这是个愚蠢的决定。",
+        "pinyin": "Zhè shì ge yúchǔn de juédìng.",
+        "english": "This is a foolish decision."
+      },
+      {
+        "chinese": "不要做这么愚蠢的事。",
+        "pinyin": "Bú yào zuò zhème yúchǔn de shì.",
+        "english": "Don’t do something so stupid."
+      },
+      {
+        "chinese": "我承认这个想法有点愚蠢。",
+        "pinyin": "Wǒ chéngrèn zhège xiǎngfǎ yǒudiǎn yúchǔn.",
+        "english": "I admit this idea is a little foolish."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "愚",
+        "pinyin": "xīn",
+        "meaning": "heart; mind radical"
+      },
+      {
+        "character": "蠢",
+        "pinyin": "chóng",
+        "meaning": "insect radical"
+      }
+    ]
+  },
+  {
+    "character": "凭什么",
+    "pinyin": "píng shénme",
+    "english": "why should…?; on what grounds…?",
+    "examples": [
+      {
+        "chinese": "你凭什么这么说？",
+        "pinyin": "Nǐ píng shénme zhème shuō?",
+        "english": "What gives you the right to say that?"
+      },
+      {
+        "chinese": "凭什么我要听你的？",
+        "pinyin": "Píng shénme wǒ yào tīng nǐ de?",
+        "english": "Why should I listen to you?"
+      },
+      {
+        "chinese": "你凭什么不让我进去？",
+        "pinyin": "Nǐ píng shénme bù ràng wǒ jìnqù?",
+        "english": "Why won’t you let me go in?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "凭",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "什",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "么",
+        "pinyin": "piě",
+        "meaning": "slanting-stroke radical"
+      }
+    ]
+  },
+  {
+    "character": "跟我没有关系",
+    "pinyin": "gēn wǒ méiyǒu guānxi",
+    "english": "have nothing to do with me",
+    "examples": [
+      {
+        "chinese": "这跟我没有关系。",
+        "pinyin": "Zhè gēn wǒ méiyǒu guānxi.",
+        "english": "This has nothing to do with me."
+      },
+      {
+        "chinese": "那件事跟我没有关系。",
+        "pinyin": "Nà jiàn shì gēn wǒ méiyǒu guānxi.",
+        "english": "That matter has nothing to do with me."
+      },
+      {
+        "chinese": "你们的争论跟我没有关系。",
+        "pinyin": "Nǐmen de zhēnglùn gēn wǒ méiyǒu guānxi.",
+        "english": "Your argument has nothing to do with me."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "跟",
+        "pinyin": "zú",
+        "meaning": "foot radical"
+      },
+      {
+        "character": "没",
+        "pinyin": "shuǐ",
+        "meaning": "water radical"
+      },
+      {
+        "character": "有",
+        "pinyin": "yuè",
+        "meaning": "moon; flesh radical"
+      },
+      {
+        "character": "关",
+        "pinyin": "bā",
+        "meaning": "eight radical"
+      },
+      {
+        "character": "系",
+        "pinyin": "mì",
+        "meaning": "silk radical"
+      }
+    ]
+  },
+  {
+    "character": "我还至于……吗？",
+    "pinyin": "wǒ hái zhìyú…ma?",
+    "english": "would I really…?; do you really think I would…?",
+    "examples": [
+      {
+        "chinese": "我还至于骗你吗？",
+        "pinyin": "Wǒ hái zhìyú piàn nǐ ma?",
+        "english": "Would I really lie to you?"
+      },
+      {
+        "chinese": "我还至于因为这点小事生气吗？",
+        "pinyin": "Wǒ hái zhìyú yīnwèi zhè diǎn xiǎoshì shēngqì ma?",
+        "english": "Would I really get angry over such a small thing?"
+      },
+      {
+        "chinese": "我还至于这么做吗？",
+        "pinyin": "Wǒ hái zhìyú zhème zuò ma?",
+        "english": "Would I really do something like that?"
+      }
+    ],
+    "radicals": [
+      {
+        "character": "至",
+        "pinyin": "zhì",
+        "meaning": "arrive; reach radical"
+      },
+      {
+        "character": "于",
+        "pinyin": "èr",
+        "meaning": "two radical"
+      }
+    ]
+  },
+  {
+    "character": "把……做好",
+    "pinyin": "bǎ … zuò hǎo",
+    "english": "do/get something done properly; do something well",
+    "examples": [
+      {
+        "chinese": "我一定把这件事做好。",
+        "pinyin": "Wǒ yídìng bǎ zhè jiàn shì zuò hǎo.",
+        "english": "I’ll make sure to do this properly."
+      },
+      {
+        "chinese": "先把工作做好。",
+        "pinyin": "Xiān bǎ gōngzuò zuò hǎo.",
+        "english": "First, get the work done properly."
+      },
+      {
+        "chinese": "我们要把这个项目做好。",
+        "pinyin": "Wǒmen yào bǎ zhège xiàngmù zuò hǎo.",
+        "english": "We need to do this project properly."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "把",
+        "pinyin": "shǒu",
+        "meaning": "hand radical"
+      },
+      {
+        "character": "做",
+        "pinyin": "rén",
+        "meaning": "person radical"
+      },
+      {
+        "character": "好",
+        "pinyin": "nǚ",
+        "meaning": "woman radical"
+      }
+    ]
+  },
+  {
+    "character": "还得",
+    "pinyin": "hái děi",
+    "english": "still have to; still need to",
+    "examples": [
+      {
+        "chinese": "我还得工作。",
+        "pinyin": "Wǒ hái děi gōngzuò.",
+        "english": "I still have to work."
+      },
+      {
+        "chinese": "我还得回去一趟。",
+        "pinyin": "Wǒ hái děi huíqù yí tàng.",
+        "english": "I still have to go back once."
+      },
+      {
+        "chinese": "今天我还得学习。",
+        "pinyin": "Jīntiān wǒ hái děi xuéxí.",
+        "english": "I still have to study today."
+      }
+    ],
+    "radicals": [
+      {
+        "character": "还",
+        "pinyin": "chuò",
+        "meaning": "movement radical"
+      },
+      {
+        "character": "得",
+        "pinyin": "chì",
+        "meaning": "step radical"
+      }
+    ]
+  }
+]

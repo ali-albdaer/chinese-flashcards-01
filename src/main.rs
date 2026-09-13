@@ -96,6 +96,8 @@ impl Component for App {
             .expect("Failed to parse decks/COLLECTION1.json");
         let collection2: Vec<Card> = serde_json::from_str(include_str!("decks/COLLECTION2.json"))
             .expect("Failed to parse decks/COLLECTION2.json");
+        let collection3: Vec<Card> = serde_json::from_str(include_str!("decks/COLLECTION3.json"))
+          .expect("Failed to parse decks/COLLECTION3.json");
 
         // Insert decks into the map
         decks.insert("HSK1".into(), hsk1.clone());
@@ -104,6 +106,7 @@ impl Component for App {
         decks.insert("In Class".into(), chn203.clone());
         decks.insert("COLLECTION1".into(), collection1.clone());
         decks.insert("COLLECTION2".into(), collection2.clone());
+        decks.insert("COLLECTION3".into(), collection3.clone());
 
         // Default to CHN203 deck
         let current_deck = "In Class".into();
